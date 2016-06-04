@@ -1,2 +1,4 @@
 ospec/*.js
+test-utils/*.js
+querystring/*.js
 interfaces/*.js

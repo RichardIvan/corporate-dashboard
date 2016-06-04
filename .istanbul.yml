@@ -1,0 +1,11 @@
+instrumentation:
+    root: .
+    default-excludes: true
+    excludes: ['ospec/ospec.js']
+    # embed-source: false
+    # variable: __coverage__
+    # compact: true
+    # preserve-comments: false
+    # complete-copy: false
+    # save-baseline: false
+    # baseline-file: ./coverage/coverage-baseline.json

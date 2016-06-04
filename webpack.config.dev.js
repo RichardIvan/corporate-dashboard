@@ -20,10 +20,10 @@ module.exports = {
   entry: {
     // 'hot-dev-server': 'webpack/hot/dev-server',
     // 'dev-server': 'webpack-dev-server/client?http://localhost:8080',
-    // 'dev-server': 'webpack-dev-server/client?http://localhost:8080/',
-    // 'hot-dev-server': 'webpack/hot/dev-server',
+    'dev-server': 'webpack-dev-server/client?http://localhost:8080/',
+    'hot-dev-server': 'webpack/hot/dev-server',
     // s: './src/js/s.js',
-    index: './src/client/js/index.js',
+    index: './src/js/index.js',
     // common: [
     //   'lodash'
     //   // 'jquery'
@@ -46,7 +46,7 @@ module.exports = {
   plugins: [
     // new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/client/index.html',
+      template: './src/index.html',
     }),
     // new BrowserSyncPlugin(
     //   // BrowserSync options

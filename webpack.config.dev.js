@@ -1,7 +1,7 @@
 'use strict'
 
 const path = require('path')
-// const webpack = require('webpack')
+const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
@@ -18,8 +18,6 @@ const autoprefixer = require('autoprefixer')
 module.exports = {
   devtool: 'source-map',
   entry: {
-    // 'hot-dev-server': 'webpack/hot/dev-server',
-    // 'dev-server': 'webpack-dev-server/client?http://localhost:8080',
     'dev-server': 'webpack-dev-server/client?http://localhost:8080/',
     'hot-dev-server': 'webpack/hot/dev-server',
     // s: './src/js/s.js',
@@ -44,7 +42,7 @@ module.exports = {
     ],
   },
   plugins: [
-    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),

@@ -1,8 +1,10 @@
 const gulp = require('gulp')
 // const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
+// const uglify = require('gulp-uglify')
 const sourcemaps = require('gulp-sourcemaps')
 const gutil = require('gulp-util')
+const shell = require("gulp-shell")
+const clean = require('gulp-clean')
 
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
@@ -20,6 +22,12 @@ const path = {
   DEST: 'dist',
 }
 
+gulp.task('clean', () => gulp.src(path.DEST_BUILD,
+  {
+    read: false,
+  }
+  ).pipe(clean()))
+
 gulp.task('webpack', [], () =>
    // gulp looks for all source files under specified path
     gulp.src(path.ALL)
@@ -29,7 +37,8 @@ gulp.task('webpack', [], () =>
     // blend in the webpack config into the source files
     .pipe(stream(webpackConfig))
     // minifies the code for better compression
-    .pipe(uglify())
+    // .pipe(ignore.exclude([ "**/*.map" ]))
+    // .pipe(uglify())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(path.DEST_BUILD))
 )
@@ -50,8 +59,14 @@ gulp.task('webpack-dev-server', () => {
   })
 })
 
+gulp.task('test', shell.task(['npm run cover'],
+  {
+    ignoreErrors: true,
+  }
+))
+
 gulp.task('watch', () => {
-  gulp.watch(path.ALL, ['webpack'])
+  gulp.watch(path.ALL, ['clean', 'webpack', 'test'])
 })
 
 gulp.task('default', ['webpack-dev-server', 'watch'])

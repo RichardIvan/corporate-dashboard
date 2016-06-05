@@ -3,8 +3,12 @@ const gulp = require('gulp')
 // const uglify = require('gulp-uglify')
 const sourcemaps = require('gulp-sourcemaps')
 const gutil = require('gulp-util')
-const shell = require("gulp-shell")
+const shell = require('gulp-shell')
 const clean = require('gulp-clean')
+const runSequence = require('run-sequence')
+const jscpd = require('gulp-jscpd')
+const plumber = require('gulp-plumber')
+const notify = require("gulp-notify")
 
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
@@ -15,18 +19,28 @@ const webpackDevConfig = require('./webpack.config.dev.js')
 
 const path = {
   HTML: 'src/index.html',
-  ALL: ['src/**/*.jsx', 'src/**/*.js'],
+  ALL: ['src/**/*.js'],
   MINIFIED_OUT: 'build.min.js',
   DEST_SRC: 'dist/src',
   DEST_BUILD: 'dist/build',
   DEST: 'dist',
 }
 
+gulp.task('jscpd', () => gulp.src('src/*')
+    .pipe(jscpd({
+      languages: ['javascript, css'],
+      verbose: true,
+    }))
+)
+
 gulp.task('clean', () => gulp.src(path.DEST_BUILD,
   {
     read: false,
   }
   ).pipe(clean()))
+
+// gulp.src("../test/fixtures/*")
+//       ;
 
 gulp.task('webpack', [], () =>
    // gulp looks for all source files under specified path
@@ -59,14 +73,22 @@ gulp.task('webpack-dev-server', () => {
   })
 })
 
-gulp.task('test', shell.task(['npm run cover'],
-  {
-    ignoreErrors: true,
-  }
-))
+gulp.task('test', () => gulp.src('', { read: false })
+  .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+  .pipe(shell(['npm run cover'])))
+  // .task(,
+  // //   {
+  // //     ignoreErrors: false,
+  // //   }
+  // // )))
+
+
 
 gulp.task('watch', () => {
-  gulp.watch(path.ALL, ['clean', 'webpack', 'test'])
+  gulp.watch(path.ALL, () => {
+    runSequence('clean', ['test', 'webpack', 'jscpd'])
+  })
+  // gulp.watch(path.ALL, ['clean', 'webpack', 'test'])
 })
 
 gulp.task('default', ['webpack-dev-server', 'watch'])

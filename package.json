@@ -4,7 +4,8 @@
   "description": "Udacity Corporate Dashboard Project",
   "main": "index.js",
   "scripts": {
-    "test": "babel-node ./ospec/bin/ospec",
+    "test": "babel-istanbul cover --report lcovonly ospec/bin/ospec && cp ./coverage/lcov.info ./artifacts/lcov.info && rm -rf ./coverage",
+    "local-test": "babel-node ./ospec/bin/ospec",
     "cover": "babel-istanbul cover --print both ospec/bin/ospec",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "build": "webpack --config webpack.config.prod.js",

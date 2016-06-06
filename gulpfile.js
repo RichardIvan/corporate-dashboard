@@ -39,9 +39,6 @@ gulp.task('clean', () => gulp.src(path.DEST_BUILD,
   }
   ).pipe(clean()))
 
-// gulp.src("../test/fixtures/*")
-//       ;
-
 gulp.task('webpack', [], () =>
    // gulp looks for all source files under specified path
     gulp.src(path.ALL)
@@ -75,20 +72,13 @@ gulp.task('webpack-dev-server', () => {
 
 gulp.task('test', () => gulp.src('', { read: false })
   .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+  .pipe(shell(['npm run local-test']))
   .pipe(shell(['npm run cover'])))
-  // .task(,
-  // //   {
-  // //     ignoreErrors: false,
-  // //   }
-  // // )))
-
-
 
 gulp.task('watch', () => {
   gulp.watch(path.ALL, () => {
-    runSequence('clean', ['test', 'webpack', 'jscpd'])
+    runSequence(['clean', 'test', 'jscpd'], ['webpack'])
   })
-  // gulp.watch(path.ALL, ['clean', 'webpack', 'test'])
 })
 
 gulp.task('default', ['webpack-dev-server', 'watch'])

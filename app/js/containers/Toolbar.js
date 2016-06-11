@@ -1,33 +1,27 @@
-//this is a smart component
+/* @flow */
 
-import m from 'mithril';
-import classNames from 'classnames'
+// this is a smart component
+
+import m from 'mithril'
+// import classNames from 'classnames'
 import ToolbarComponent from '../components/Toolbar'
-import {getMessages} from '../selectors'
-import {clearMessage} from '../actions'
-import styles from './style.css'
+// import {getMessages} from '../selectors'
+// import {clearMessage} from '../actions'
+// import styles from './style.scss'
 
-const Messages = {
-  controller(attrs) {
-    const {dispatch} = attrs.store;
+const Toolbar = {
+  view(vnode) {
+    // const state = store.getState();
+    // console.log(vnode)
+    return m(ToolbarComponent)
 
-    return {
-      handleClose(id) {
-        dispatch(clearMessage(id))
-      },
-    }
-  },
-
-  view(ctrl, {store, className}) {
-    const state = store.getState();
-
-    return (
-      <ToolbarComponent className={classNames(styles.messages, className)}
-        messages={getMessages(state)}
-        onClose={ctrl.handleClose}
-      />
-    )
+    // return (
+    //   <ToolbarComponent className={classNames(styles.messages, className)}
+    //     messages={getMessages(state)}
+    //     onClose={ctrl.handleClose}
+    //   />
+    // )
   },
 }
 
-export default Messages
+export default Toolbar

@@ -41,7 +41,7 @@ module.exports = {
     loaders: [{
       test: /\.css$/,
       loaders: ['style', 'css'],
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'app'),
     },
     {
       test: /\.scss$/,
@@ -49,13 +49,13 @@ module.exports = {
         &importLoaders=1
         &localIdentName=[name]__[local]___[hash:base64:5]
         &sourceMap!postcss-loader!sass`),
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'app'),
     },
     {
       test: /\.js$/,
       loaders: ['babel-loader'],
       exclude: /node_modules/,
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'app'),
     },
     {
       test: /\.(png|jpg|ttf)$/, loader: 'url-loader?limit=8192',
@@ -64,7 +64,7 @@ module.exports = {
       return [precss, autoprefixer]
     },
     sassLoader: {
-      includePaths: [path.resolve(__dirname, 'src')],
+      includePaths: [path.resolve(__dirname, 'app')],
     },
   },
 }

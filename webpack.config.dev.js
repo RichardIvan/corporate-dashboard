@@ -16,7 +16,7 @@ const autoprefixer = require('autoprefixer')
 // const data = proxyMiddleware('/data', target)
 
 module.exports = {
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   entry: {
     'dev-server': 'webpack-dev-server/client?http://localhost:8080/',
     'hot-dev-server': 'webpack/hot/dev-server',
@@ -71,20 +71,20 @@ module.exports = {
     loaders: [{
       test: /\.css$/,
       loaders: ['style', 'css'],
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'app'),
     },
     {
       test: /\.scss$/,
       loader: ExtractTextPlugin.extract('style-loader', `css-loader?modules
         &importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]
         &sourceMap!postcss-loader!sass`),
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'app'),
     },
     {
       test: /\.js$/,
       loaders: ['babel-loader'],
       exclude: /node_modules/,
-      include: path.join(__dirname, 'src'),
+      include: path.join(__dirname, 'app'),
     },
     {
       test: /\.(png|jpg|ttf)$/, loader: 'url-loader?limit=8192',

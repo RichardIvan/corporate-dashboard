@@ -9,10 +9,10 @@ const precss = require('precss')
 const autoprefixer = require('autoprefixer')
 
 module.exports = {
-  // devtool: 'source-map',
+  devtool: 'source-map',
   entry: {
     // s: './src/js/s.js',
-    index: './src/js/index.js',
+    index: './app/js/index.js',
   },
   output: {
     path: path.join(__dirname, 'build'),
@@ -33,7 +33,7 @@ module.exports = {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './app/index.html',
     }),
     new ExtractTextPlugin('./css/main.css', { allChunks: true }),
   ],

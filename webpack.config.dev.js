@@ -16,12 +16,12 @@ const autoprefixer = require('autoprefixer')
 // const data = proxyMiddleware('/data', target)
 
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'eval-source-map',
   entry: {
     'dev-server': 'webpack-dev-server/client?http://localhost:8080/',
     'hot-dev-server': 'webpack/hot/dev-server',
     // s: './src/js/s.js',
-    index: './src/js/index.js',
+    index: './app/js/index.js',
     // common: [
     //   'lodash'
     //   // 'jquery'
@@ -44,7 +44,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './app/index.html',
     }),
     // new BrowserSyncPlugin(
     //   // BrowserSync options

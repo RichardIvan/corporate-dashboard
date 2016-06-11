@@ -8,7 +8,7 @@ const clean = require('gulp-clean')
 const runSequence = require('run-sequence')
 const jscpd = require('gulp-jscpd')
 const plumber = require('gulp-plumber')
-const notify = require("gulp-notify")
+const notify = require('gulp-notify')
 
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
@@ -18,15 +18,15 @@ const webpackConfig = require('./webpack.config.prod.js')
 const webpackDevConfig = require('./webpack.config.dev.js')
 
 const path = {
-  HTML: 'src/index.html',
-  ALL: ['src/**/*.js'],
+  HTML: 'app/index.html',
+  ALL: ['app/**/*.js'],
   MINIFIED_OUT: 'build.min.js',
   DEST_SRC: 'dist/src',
   DEST_BUILD: 'dist/build',
   DEST: 'dist',
 }
 
-gulp.task('jscpd', () => gulp.src('src/*')
+gulp.task('jscpd', () => gulp.src('app/*')
     .pipe(jscpd({
       languages: ['javascript, css'],
       verbose: true,

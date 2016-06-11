@@ -1,5 +1,5 @@
 instrumentation:
-    root: app/js
+    root: app
     default-excludes: true
     excludes: ['ospec/ospec.js']
     # embed-source: false

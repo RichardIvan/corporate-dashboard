@@ -1,5 +1,9 @@
 
-import {combineReducers} from 'redux'
+import { combineReducers } from 'redux'
 import entities from './entities'
 
-export default root;
+const root = combineReducers({
+  entities,
+})
+
+export default root

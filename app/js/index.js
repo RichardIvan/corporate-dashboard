@@ -1,8 +1,6 @@
 /* @flow */
 'use strict'
 
-import m from 'mithril'
-
 import { configureStore } from './store'
 import { mountRoot } from './containers'
 

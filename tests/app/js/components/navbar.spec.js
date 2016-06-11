@@ -3,24 +3,27 @@
 import o from '../../../../ospec/ospec.js'
 import mq from 'mithril-query'
 
+import windowMock from '../../js/misc'
+
 import Navbar from '../../../../app/js/containers/Navbar'
 
 o.spec('navbar container', () => {
   o.spec('structure', () => {
     o('has div', () => {
-      o(mq(Navbar).has('div')).equals()
+      console.log(mq(Navbar))
+      o(mq(Navbar).has('div')).equals(true)
     })
 
     o('has ul', () => {
-      o(mq(Navbar).has('ul')).equals()
+      o(mq(Navbar).has('ul')).equals(true)
     })
 
     o('has 4 li', () => {
-      o(mq(Navbar).has.at.least(4, 'li')).equals()
+      o(mq(Navbar).has.at.least(4, 'li')).equals(true)
     })
 
     o('has 4 icons', () => {
-      o(mq(Navbar).has.at.least(4, 'svg')).equals()
+      o(mq(Navbar).has.at.least(4, 'svg')).equals(true)
     })
   })
   o.spec('behaviour', () => {

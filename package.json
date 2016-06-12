@@ -61,6 +61,7 @@
     "mithril": "github:lhorie/mithril.js#rewrite",
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite",
     "node-sass": "^3.7.0",
+    "normalize.css": "^4.1.1",
     "postcss-cssnext": "^2.6.0",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",

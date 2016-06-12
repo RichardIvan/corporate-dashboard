@@ -1,7 +1,7 @@
 // <!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
 import m from 'mithril'
 
-const svg = `<svg width="19px" height="25px" viewBox="0 0 19 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+const icon = m.trust( `<svg width="19px" height="25px" viewBox="0 0 19 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g transform="translate(-18.000000, -79.000000)">
             <g>
@@ -13,8 +13,6 @@ const svg = `<svg width="19px" height="25px" viewBox="0 0 19 25" version="1.1" x
             </g>
         </g>
     </g>
-</svg>`
+</svg>`)
 
-const SVG = m.trust(svg)
-
-export default SVG
+export default icon

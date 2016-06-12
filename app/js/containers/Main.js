@@ -1,9 +1,32 @@
-import m from 'mithril';
-import classNames from 'classnames';
+'use strict'
+
+import m from 'mithril'
+// import classNames from 'classnames'
 // import RepoStatsComponent from '../components/RepoStats';
 // import {getEntityById, isPending} from '../selectors';
 // import {fetchRepo, showMessage} from '../actions';
-import styles from './style.scss';
+// import styles from './style.scss'
+import MainComponent from '../components/Main'
+
+// import GeospacialContainer from './Geospacial.js'
+// import DataContainer from './Data.js'
+// import GraphContainer from './Graph.js'
+
+// const components = {
+//   geospacial: GeospacialContainer,
+//   data: DataContainer,
+//   graph: GraphContainer,
+// }
+
+// const route = 'geospacial'
+
+const Main = {
+  view(vnode) {
+    return m(MainComponent, { container: vnode.attrs.route })
+  },
+}
+
+export default Main
 
 // const FETCH_RATE = 90 * 1000;
 //

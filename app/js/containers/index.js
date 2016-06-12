@@ -16,3 +16,9 @@ export function mountRoot(el, attrs) {
 
   mount(Root)
 }
+
+export function mountRoute(el) {
+  const mount = (Component) => m.route(el, '/dashboard/geo', { '/dashboard/:route': Component })
+
+  mount(Root)
+}

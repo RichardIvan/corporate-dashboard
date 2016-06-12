@@ -21,9 +21,9 @@ o.spec('navbar container', () => {
       o(mq(Navbar).should.have.at.least(4, 'li')).equals()
     })
   })
-  o.spec('behaviour', () => {
-    o('behaves', () => {
-      o(true).equals(true)
-    })
-  })
+  // o.spec('behaviour', () => {
+  //   o('behaves', () => {
+  //     o(true).equals(true)
+  //   })
+  // })
 })

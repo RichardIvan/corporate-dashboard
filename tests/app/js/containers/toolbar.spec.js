@@ -9,7 +9,7 @@ import Toolbar from '../../../../app/js/containers/Toolbar'
 
 o.spec('toolbar container', () => {
   o.spec('structure', () => {
-    o.only('toolbar has h1', () => {
+    o('toolbar has h1', () => {
       o(mq(Toolbar).has('h1')).equals(true)
     })
   })

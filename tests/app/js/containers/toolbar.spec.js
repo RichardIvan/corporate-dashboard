@@ -1,6 +1,6 @@
 'use strict'
 
-// import '../../js/misc'
+import '../../js/misc'
 
 import o from '../../../../ospec/ospec.js'
 import mq from 'mithril-query'

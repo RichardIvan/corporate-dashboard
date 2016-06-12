@@ -1,5 +1,5 @@
 // import expect from 'expect';
-import freeze from 'deep-freeze';
+// import freeze from 'deep-freeze'
 // import {isPending} from '../../../app/selectors/pending';
 
 // describe('pending selectors', function () {

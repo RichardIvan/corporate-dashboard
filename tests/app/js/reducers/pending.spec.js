@@ -1,5 +1,5 @@
 // import expect from 'expect'
-import freeze from 'deep-freeze'
+// import freeze from 'deep-freeze'
 // import reducer from '../../../app/reducers/pending'
 
 // describe('pending reducer', function () {

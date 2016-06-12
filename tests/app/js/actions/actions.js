@@ -1,7 +1,7 @@
-import { createThunkStore } from './helpers'
-import { isFSA } from 'flux-standard-action'
+// import { createThunkStore } from './helpers'
+// import { isFSA } from 'flux-standard-action'
 
-import o from '../../../../ospec/ospec.js'
+// import o from '../../../../ospec/ospec.js'
 
 // o.spec('first test', () => {
 //   o('addition', () => {

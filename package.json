@@ -57,6 +57,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-shell": "^0.5.2",
     "html-webpack-plugin": "^2.19.0",
+    "ignore-styles": "^3.0.0",
     "isparta": "^4.0.0",
     "mithril": "github:lhorie/mithril.js#rewrite",
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite",

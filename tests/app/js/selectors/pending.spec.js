@@ -1,4 +1,4 @@
-import expect from 'expect';
+// import expect from 'expect';
 import freeze from 'deep-freeze';
 // import {isPending} from '../../../app/selectors/pending';
 

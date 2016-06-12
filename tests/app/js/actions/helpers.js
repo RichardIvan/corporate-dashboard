@@ -1,4 +1,4 @@
-import expect from 'expect'
+// import expect from 'expect'
 import { createStore, applyMiddleware } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 

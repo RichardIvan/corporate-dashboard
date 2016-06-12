@@ -13,7 +13,7 @@ const Toolbar = {
   view() {
     // const state = store.getState();
     // console.log(vnode)
-    return m(ToolbarComponent)
+    return m('h1')
 
     // return (
     //   <ToolbarComponent className={classNames(styles.messages, className)}

@@ -1,5 +1,3 @@
-/* @flow */
-
 // this is a smart component
 
 // import m from 'mithril'
@@ -22,7 +20,7 @@ const Toolbar = {
     //     onClose={ctrl.handleClose}
     //   />
     // )
-  },
+  }
 }
 
 export default Toolbar

@@ -1,9 +1,6 @@
 import m from 'mithril'
 import Root from './Root'
 
-import './style.scss'
-import '../../fonts/Roboto-Regular.ttf'
-
 export function mountRoot(el, attrs) {
   const mount = (Component) => m.mount(el, Component, { ...attrs })
 

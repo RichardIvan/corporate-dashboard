@@ -7,9 +7,9 @@ import style from './style.scss'
 const Navbar = {
   view(vnode) {
     return m(`.${style.navbar}`, [
-      m('ul', [
-        m('li', 'D'),
-        vnode.attrs.icons.map((icon) => m('li', icon)),
+      m(`ul.${style.navbar__ul}`, [
+        m(`li.${style.navbar__li}`, m('span', 'D')),
+        vnode.attrs.icons.map((icon) => m(`li.${style.navbar__li}`, icon)),
       ]),
     ])
   },

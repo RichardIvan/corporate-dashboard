@@ -4,7 +4,8 @@ import { configureStore } from '../store'
 const store = configureStore()
 
 // import 'normalize-css'
-// import style from './style.scss'
+import './global-style.scss'
+import '../../fonts/Roboto-Regular.ttf'
 
 import m from 'mithril'
 

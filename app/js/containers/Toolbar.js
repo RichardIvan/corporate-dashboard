@@ -21,7 +21,7 @@ const Toolbar = {
     //     onClose={ctrl.handleClose}
     //   />
     // )
-  }
+  },
 }
 
 export default Toolbar

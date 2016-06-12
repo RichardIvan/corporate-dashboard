@@ -2,7 +2,8 @@
 
 // this is a smart component
 
-import m from 'mithril'
+// import m from 'mithril'
+import m from 'mithril/render/hyperscript'
 // import classNames from 'classnames'
 import ToolbarComponent from '../components/Toolbar'
 // import {getMessages} from '../selectors'

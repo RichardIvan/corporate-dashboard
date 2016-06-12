@@ -10,6 +10,7 @@ import m from 'mithril'
 
 const Toolbar = {
   view() {
+    console.log(global.window)
     // const state = store.getState();
     // console.log(vnode)
     return m('h1')

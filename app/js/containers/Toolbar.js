@@ -10,7 +10,7 @@ import ToolbarComponent from '../components/Toolbar'
 // import styles from './style.scss'
 
 const Toolbar = {
-  view(vnode) {
+  view() {
     // const state = store.getState();
     // console.log(vnode)
     return m(ToolbarComponent)

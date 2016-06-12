@@ -7,6 +7,7 @@ const store = configureStore()
 // import style from './style.scss'
 
 import m from 'mithril'
+
 import Toolbar from './Toolbar'
 import Navbar from './Navbar'
 import Main from './Main'

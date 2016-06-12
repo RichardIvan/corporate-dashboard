@@ -1,7 +1,6 @@
 'use strict'
 
 import m from 'mithril'
-
 import GeospacialComponent from '../components/Geospacial'
 
 const Geospacial = {

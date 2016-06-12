@@ -1,8 +1,7 @@
-
 .navbar {
   height: 100%;
 }
 
-.navbar__ul {
+.navbar :global(ul) {
   background-color: #222D37;
 }

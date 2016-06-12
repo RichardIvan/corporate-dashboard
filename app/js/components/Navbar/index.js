@@ -6,7 +6,6 @@ import style from './style.scss'
 
 const Navbar = {
   view(vnode) {
-    // console.log(vnode)
     return m(`.${style.navbar}`, [
       m('ul', [
         m('li', 'D'),

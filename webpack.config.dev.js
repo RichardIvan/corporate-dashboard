@@ -69,17 +69,22 @@ module.exports = {
   ],
   module: {
     loaders: [{
-      test: /\.css$/,
-      loaders: ['style', 'css'],
+    //   test: /\.css$/,
+    //   loaders: ['style', 'css'],
+    //   include: path.join(__dirname, 'app'),
+    // },
+      test: /\.(css|scss)$/,
+      loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&sourceMap!postcss-loader!sass'),
       include: path.join(__dirname, 'app'),
     },
-    {
-      test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style-loader', `css-loader?modules
-        &importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]
-        &sourceMap!postcss-loader!sass`),
-      include: path.join(__dirname, 'app'),
-    },
+    // {
+    //   test: /\.scss$/,
+    //   loader: ExtractTextPlugin.extract('style-loader', `css-loader?modules
+    //     &importLoaders=1
+    //     &localIdentName=[name]__[local]___[hash:base64:5]`),
+    //     // &sourceMap!postcss-loader!sass`),
+    //   include: path.join(__dirname, 'app'),
+    // },
     {
       test: /\.js$/,
       loaders: ['babel-loader'],
@@ -106,6 +111,9 @@ module.exports = {
   postcss() {
     return [precss, autoprefixer]
   },
+  // sassLoader: {
+  //   includePaths: [path.resolve(__dirname, 'app')],
+  // },
   // devServer: {
   //   contentBase: './dist',
   //   hot: true,

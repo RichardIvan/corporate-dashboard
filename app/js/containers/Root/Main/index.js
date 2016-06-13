@@ -10,8 +10,12 @@ import MainComponent from '../../../components/Main'
 import { retrieveComponent } from '../../../helpers'
 
 const Main = {
-  view(vnode) {
-    return m(MainComponent, { container: retrieveComponent(vnode.attrs.route) })
+  view(vdom) {
+    return m(MainComponent,
+      {
+        ...vdom.attrs,
+        container: retrieveComponent(vdom.attrs.route),
+      })
   },
 }
 

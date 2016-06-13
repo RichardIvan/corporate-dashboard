@@ -2,7 +2,7 @@
   --width: 56px
 }
 
-.appToolbar {
+.root {
   background: #F2F1F9;
 
   position: relative;
@@ -20,4 +20,13 @@
     font-style: italic;
     font-weight: 300;
   }
+}
+
+.geo {
+  background: white;
+}
+
+.graph,
+.data {
+
 }

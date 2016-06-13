@@ -36,4 +36,18 @@ o.spec('main container', () => {
   //     o(true).equals(true)
   //   })
   // })
+  o.spec('toolbar', () => {
+    o('geospacial should display number of issues', () => {
+      o(mq(Main, { component: GeospacialContainer, route: 'test' })
+        .contains('Number of open issues'))
+    })
+    o('data should display issues', () => {
+      o(mq(Main, { component: GeospacialContainer, route: 'data' })
+        .contains('Issues'))
+    })
+    o('graph should display issues', () => {
+      o(mq(Main, { component: GeospacialContainer, route: 'graph' })
+        .contains('Issues'))
+    })
+  })
 })

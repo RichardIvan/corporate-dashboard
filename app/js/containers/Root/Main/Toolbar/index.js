@@ -4,20 +4,21 @@
 
 import m from 'mithril'
 // import classNames from 'classnames'
-import ToolbarComponent from '../../../components/Toolbar'
-import { resolveHeading } from '../../../helpers'
+import ToolbarComponent from '../../../../components/Toolbar'
+import { resolveHeading } from '../../../../helpers'
 // import {getMessages} from '../selectors'
 // import {clearMessage} from '../actions'
 // import styles from './style.scss'
-import styles from '../../../components/Toolbar/styles.scss'
+import styles from '../../../../components/Toolbar/styles.scss'
+
 
 const Toolbar = {
-  view(vnode) {
+  view(vdom) {
     // const state = store.getState();
     return m(ToolbarComponent,
       {
-        heading: resolveHeading('root', vnode.attrs.route),
-        className: `${styles.root}`,
+        heading: resolveHeading('main', vdom.attrs.route),
+        className: `${styles.geo}`,
       })
 
     // return (

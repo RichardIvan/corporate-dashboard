@@ -1,14 +1,14 @@
 'use strict'
 
-import { GEO, GRAPH, DATA } from './constants'
+import { GEO, GRAPH, DATA, ISSUES, OPEN_ISSUES } from './constants'
 
-export function resolveHeading(route) {
+export function resolveHeading(container, route) {
   switch (route) {
   case 'graph':
-    return GRAPH
+    return container === 'root' ? GRAPH : ISSUES
   case 'data':
-    return DATA
+    return container === 'root' ? DATA : ISSUES
   default:
-    return GEO
+    return container === 'root' ? GEO : OPEN_ISSUES
   }
 }

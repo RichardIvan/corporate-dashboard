@@ -5,7 +5,7 @@
 import m from 'mithril'
 // import classNames from 'classnames'
 import ToolbarComponent from '../components/Toolbar'
-import { resolveHeading } from '../utils'
+import { resolveHeading } from '../helpers'
 // import {getMessages} from '../selectors'
 // import {clearMessage} from '../actions'
 // import styles from './style.scss'

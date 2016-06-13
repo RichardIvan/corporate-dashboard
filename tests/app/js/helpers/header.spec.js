@@ -1,7 +1,7 @@
 'use strict'
 
 import o from '../../../../ospec/ospec'
-import { resolveHeading } from '../../../../app/js/utils'
+import { resolveHeading } from '../../../../app/js/helpers'
 // import constants from '../../../../app/js/utils/constants'
 
 o.spec('toolbar utility', () => {

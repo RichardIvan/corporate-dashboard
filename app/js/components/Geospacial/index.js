@@ -4,7 +4,7 @@ import m from 'mithril'
 
 const Geospacial = {
   view() {
-    return m('#geo')
+    return m('#geo', 'Hello Geo')
   },
 }
 

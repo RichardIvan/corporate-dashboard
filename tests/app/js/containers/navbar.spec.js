@@ -5,7 +5,7 @@
 import o from '../../../../ospec/ospec.js'
 import mq from 'mithril-query'
 
-import Navbar from '../../../../app/js/containers/Navbar'
+import Navbar from '../../../../app/js/containers/Root/Navbar'
 
 o.spec('navbar container', () => {
   o.spec('structure', () => {

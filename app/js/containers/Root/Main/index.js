@@ -6,7 +6,8 @@ import m from 'mithril'
 // import {getEntityById, isPending} from '../selectors';
 // import {fetchRepo, showMessage} from '../actions';
 // import styles from './style.scss'
-import MainComponent from '../components/Main'
+import MainComponent from '../../../components/Main'
+import { retrieveComponent } from '../../../helpers'
 
 // import GeospacialContainer from './Geospacial.js'
 // import DataContainer from './Data.js'
@@ -22,7 +23,7 @@ import MainComponent from '../components/Main'
 
 const Main = {
   view(vnode) {
-    return m(MainComponent, { container: vnode.attrs.route })
+    return m(MainComponent, { container: retrieveComponent(vnode.attrs.route) })
   },
 }
 

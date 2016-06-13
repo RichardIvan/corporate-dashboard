@@ -4,7 +4,7 @@ import m from 'mithril'
 
 const Data = {
   view() {
-    return m('#data')
+    return m('#data', 'Hello Data')
   },
 }
 

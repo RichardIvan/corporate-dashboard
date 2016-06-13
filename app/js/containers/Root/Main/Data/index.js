@@ -1,7 +1,7 @@
 'use strict'
 
 import m from 'mithril'
-import DataComponent from '../components/Data'
+import DataComponent from '../../../../components/Data'
 
 const Data = {
   view() {

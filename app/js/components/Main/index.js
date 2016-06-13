@@ -5,7 +5,7 @@ import m from 'mithril'
 
 const Main = {
   view(vdom) {
-    return m('#main-container', m(vdom.attrs.container))
+    return m('#main-container', m(vdom.attrs.container, { ...vdom.attrs }))
   },
 }
 

@@ -3,7 +3,7 @@
 import o from '../../../../ospec/ospec.js'
 import mq from 'mithril-query'
 
-import Main from '../../../../app/js/containers/Main'
+import Main from '../../../../app/js/containers/Root/Main'
 
 // import GeospacialContainer from '../../../../app/js/containers/Geospacial'
 // import DataContainer from '../../../../app/js/containers/Data'

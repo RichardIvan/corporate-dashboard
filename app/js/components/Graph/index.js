@@ -4,7 +4,7 @@ import m from 'mithril'
 
 const Graph = {
   view() {
-    return m('#graph')
+    return m('#graph', 'Hello Graph')
   },
 }
 

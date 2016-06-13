@@ -15,7 +15,7 @@
 import o from '../../../../ospec/ospec.js'
 import mq from 'mithril-query'
 
-import Toolbar from '../../../../app/js/containers/Toolbar'
+import Toolbar from '../../../../app/js/containers/Root/Toolbar'
 
 o.spec('toolbar container', () => {
   o.spec('structure', () => {

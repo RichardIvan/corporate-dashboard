@@ -5,9 +5,9 @@ import mq from 'mithril-query'
 
 import Main from '../../../../app/js/components/Main'
 
-import GeospacialContainer from '../../../../app/js/containers/Geospacial'
-import Data from '../../../../app/js/containers/Data'
-import Graph from '../../../../app/js/containers/Graph'
+import GeospacialContainer from '../../../../app/js/containers/Root/Main/Geospacial'
+import Data from '../../../../app/js/containers/Root/Main/Data'
+import Graph from '../../../../app/js/containers/Root/Main/Graph'
 
 o.spec('main component', () => {
   o.spec('structure', () => {

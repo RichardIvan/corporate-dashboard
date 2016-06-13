@@ -1,0 +1,19 @@
+.root {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+  width: 100%;
+}
+
+.rootSidebar {
+  flex: 0 0 56px;
+}
+
+.rootMain {
+  position: relative;
+
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

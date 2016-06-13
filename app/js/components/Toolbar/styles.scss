@@ -22,11 +22,36 @@
   }
 }
 
+.geo,
+.graph,
+.data {
+  display: flex;
+  // justify-content: center;
+
+  align-items: center;
+  // justify-content: center;
+
+  flex-direction: row;
+  height: 56px;
+
+  :global(h1) {
+    margin-left: 32px;
+
+    font-size: 20px;
+
+    font-weight: 300;
+  }
+}
+
 .geo {
-  background: white;
+  background: red;
 }
 
 .graph,
 .data {
+  background: #A6A6A6;
 
+  :global(h1) {
+    color: #F2F1F9;
+  }
 }

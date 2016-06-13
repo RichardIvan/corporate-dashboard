@@ -18,7 +18,7 @@ const Toolbar = {
     return m(ToolbarComponent,
       {
         heading: resolveHeading('main', vdom.attrs.route),
-        className: `${styles.geo}`,
+        className: `${styles[vdom.attrs.route]}`,
       })
 
     // return (

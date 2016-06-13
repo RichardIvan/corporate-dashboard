@@ -24,7 +24,7 @@ const Root = {
       m(`.${styles.rootMain}`, [
         m(Toolbar, { ...vnode.attrs }),
         m(Main, { ...vnode.attrs, store }),
-      ])
+      ]),
 
       // m(Main, { ...vnode.attrs }),
     ])

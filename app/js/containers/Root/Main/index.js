@@ -9,18 +9,6 @@ import m from 'mithril'
 import MainComponent from '../../../components/Main'
 import { retrieveComponent } from '../../../helpers'
 
-// import GeospacialContainer from './Geospacial.js'
-// import DataContainer from './Data.js'
-// import GraphContainer from './Graph.js'
-
-// const components = {
-//   geospacial: GeospacialContainer,
-//   data: DataContainer,
-//   graph: GraphContainer,
-// }
-
-// const route = 'geospacial'
-
 const Main = {
   view(vnode) {
     return m(MainComponent, { container: retrieveComponent(vnode.attrs.route) })

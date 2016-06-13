@@ -17,7 +17,7 @@ o.spec('toolbar utility', () => {
     o(resolveHeading('graph')).equals('Graph')
   })
 
-  o('anything else translates to Dashboard', () => {
-    o(resolveHeading('borough')).equals('Dashboard')
+  o('anything else translates to Manhattan', () => {
+    o(resolveHeading('borough')).equals('Manhattan')
   })
 })

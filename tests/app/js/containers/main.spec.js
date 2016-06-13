@@ -27,6 +27,9 @@ o.spec('main container', () => {
     o('displays geospacial view', () => {
       o(mq(Main, { component: GeospacialContainer, route: 'geo' }).has('#geo')).equals(true)
     })
+    o('displays geospacial view with random route parameter', () => {
+      o(mq(Main, { component: GeospacialContainer, route: 'test' }).has('#geo')).equals(true)
+    })
   })
   // o.spec('behaviour', () => {
   //   o('behaves', () => {

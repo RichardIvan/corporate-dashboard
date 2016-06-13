@@ -33,6 +33,10 @@ o.spec('toolbar container', () => {
       // o(true).equals(true)
       o(mq(Toolbar, { route: 'graph' }).has('h1')).equals(true)
     })
+
+    o('displays Manhattan on random route parameter', () => {
+      o(mq(Toolbar, { route: 'test' }).contains('Manhattan')).equals(true)
+    })
   })
   // o.spec('behaviour', () => {
   //   o('behaves', () => {

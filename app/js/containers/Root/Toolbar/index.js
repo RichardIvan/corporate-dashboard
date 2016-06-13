@@ -17,7 +17,7 @@ const Toolbar = {
     return m(ToolbarComponent,
       {
         heading: resolveHeading(vnode.attrs.route),
-        className: `${styles.appToolbar}`
+        className: `${styles.appToolbar}`,
       })
 
     // return (

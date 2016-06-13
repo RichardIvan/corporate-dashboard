@@ -1,17 +1,16 @@
 'use strict'
 
-// export function resolveHeading(route) {
-//   return route
-// }
+import { DASHBOARD, GEO, GRAPH, DATA } from './constants'
 
-export function setFormFocus(id = null, focus = null) {
-  if (id === null) throw new Error('Must specify a form to set focus')
-
-  return {
-    // type: SET_FORM_FOCUS,
-    payload: {
-      id,
-      focus,
-    },
+export function resolveHeading(route) {
+  switch (route) {
+  case 'geo':
+    return GEO
+  case 'graph':
+    return GRAPH
+  case 'data':
+    return DATA
+  default:
+    return DASHBOARD
   }
 }

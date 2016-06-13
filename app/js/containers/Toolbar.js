@@ -5,6 +5,7 @@
 import m from 'mithril'
 // import classNames from 'classnames'
 import ToolbarComponent from '../components/Toolbar'
+import { resolveHeading } from '../utils'
 // import {getMessages} from '../selectors'
 // import {clearMessage} from '../actions'
 // import styles from './style.scss'
@@ -12,7 +13,7 @@ import ToolbarComponent from '../components/Toolbar'
 const Toolbar = {
   view(vnode) {
     // const state = store.getState();
-    return m(ToolbarComponent, { heading: vnode.attrs.route })
+    return m(ToolbarComponent, { heading: resolveHeading(vnode.attrs.route) })
 
     // return (
     //   <ToolbarComponent className={classNames(styles.messages, className)}

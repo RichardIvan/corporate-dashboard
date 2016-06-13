@@ -16,7 +16,7 @@ import Main from './Main'
 const Root = {
   view(vnode) {
     return m('#root', [
-      m(Toolbar),
+      m(Toolbar, { ...vnode.attrs }),
       m(Navbar),
       m(Main, { ...vnode.attrs, store }),
       // m(Main, { ...vnode.attrs }),

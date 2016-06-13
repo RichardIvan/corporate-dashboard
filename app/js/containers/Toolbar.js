@@ -12,8 +12,7 @@ import ToolbarComponent from '../components/Toolbar'
 const Toolbar = {
   view(vnode) {
     // const state = store.getState();
-    // console.log(vnode)
-    return m(ToolbarComponent, { ...vnode.attrs })
+    return m(ToolbarComponent, { heading: vnode.attrs.route })
 
     // return (
     //   <ToolbarComponent className={classNames(styles.messages, className)}

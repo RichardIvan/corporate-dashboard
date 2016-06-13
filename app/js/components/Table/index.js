@@ -3,8 +3,11 @@
 import m from 'mithril'
 
 const TableComponent = {
-  view() {
-    return m('')
+  view(vdom) {
+    return m('', [
+      m(vdom.attrs.tableHeaderRow),
+      m(vdom.attrs.dataTable),
+    ])
   },
 }
 

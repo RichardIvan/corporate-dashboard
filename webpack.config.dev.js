@@ -75,7 +75,7 @@ module.exports = {
     // },
       test: /\.(css|scss)$/,
       loader: ExtractTextPlugin.extract('style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&sourceMap!postcss-loader!sass'),
-      include: path.join(__dirname, 'app'),
+      include: path.join(__dirname, './'),
     },
     // {
     //   test: /\.scss$/,
@@ -89,7 +89,7 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel-loader'],
       exclude: /node_modules/,
-      include: path.join(__dirname, 'app'),
+      include: path.join(__dirname, './'),
     },
     {
       test: /\.(png|jpg|ttf)$/, loader: 'url-loader?limit=8192',

@@ -5,7 +5,7 @@ import TableContainer from './../../../../../../../../app/js/containers/Root/Mai
 
 o.spec('table container', () => {
   o.only('should have at least one UL', () => {
-    o(mq(TableContainer).should.have.at.least(1, 'ul')).equals(true)
+    o(mq(TableContainer).should.have.at.least(1, 'ul')).equals()
   })
 
   o('should have 10 ul', () => {

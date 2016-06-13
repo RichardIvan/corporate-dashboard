@@ -1,21 +1,25 @@
 
 import m from 'mithril'
 
-import TableHeaderComponent from '../../../../../../components/TableHeader'
+import DataTableComponent from '../../../../../../components/DataTable/'
 import { mockedIssue } from '../../../../../../../../tests/mocks/data'
 
 const mockedVidibleData = (issue) => {
-  const array = new Array(9).fill('')
-  array.map(() => issue)
+  let array = new Array(9).fill('')
+  array = array.map(() => Object.keys(issue).map((key) => issue[key]))
   return array
 }
 
 // console.log(mockedVidibleData(mockedIssue))
 
-const TableHeader = {
-  view() {
-    return m(TableHeaderComponent, { issues: mockedVidibleData(mockedIssue) })
+const DataTable = {
+  view(vdom) {
+    // return m('.hey')
+    return m(DataTableComponent, {
+      ...vdom.attrs,
+      issues: mockedVidibleData(mockedIssue),
+    })
   },
 }
 
-export default TableHeader
+export default DataTable

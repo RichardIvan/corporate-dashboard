@@ -1,6 +1,6 @@
 import m from 'mithril'
 
-import HeaderComponent from '../../../../../../components/TableHeader'
+import TableHeaderComponent from '../../../../../../components/TableHeader'
 
 // import HeaderRowContainer from './Header'
 // import DataTableContainer from './DataTable'
@@ -8,7 +8,7 @@ import { mockedHeaderColumnNames } from '../../../../../../../../tests/mocks/dat
 
 const Header = {
   view(vdom) {
-    return m(HeaderComponent, {
+    return m(TableHeaderComponent, {
       ...vdom.attrs,
       columns: mockedHeaderColumnNames,
     })

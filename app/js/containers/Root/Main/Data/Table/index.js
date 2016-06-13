@@ -13,8 +13,9 @@ import DataTableContainer from './DataTable'
 const Table = {
   view(vdom) {
     return m(TableComponent, {
-      headerRow: m(HeaderRowContainer, { ...vdom.attrs }),
-      dataTable: m(DataTableContainer, { ...vdom.attrs }),
+      ...vdom.attrs,
+      tableHeaderRow: HeaderRowContainer,
+      dataTable: DataTableContainer,
     })
   },
 }

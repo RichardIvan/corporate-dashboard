@@ -2,13 +2,32 @@
 
 import m from 'mithril'
 
-const TableComponent = {
+import styles from './styles.scss'
+
+const Table = {
   view(vdom) {
-    return m('', [
-      m(vdom.attrs.tableHeaderRow),
-      m(vdom.attrs.dataTable),
-    ])
-  },
+    // console.log(vdom)
+    return m(`ul.${styles.table}`, [
+      // 'Hey',
+      vdom.attrs.columns.map((column, index) => {
+        return m(`li.${styles.column}`,
+          {
+            class: index === 2 ? `${styles.three}` : '',
+          },
+          m(`ul.${styles.contentColumn}`, [
+            m(`li.${styles.header}`, m('p', column)),
+              vdom.attrs.issues.map((issue, i) => {
+                return m(`li.${styles.row}`,
+                  {
+                    class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
+                  },
+                  m('p', issue[index]))
+                // issue.map((field) => m('li', m('p', field)))
+              }),
+            ]))
+        }),
+      ])
+    },
 }
 
-export default TableComponent
+export default Table

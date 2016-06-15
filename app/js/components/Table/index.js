@@ -15,16 +15,18 @@ const Table = {
             class: index === 2 ? `${styles.three}` : '',
           },
           m(`ul.${styles.contentColumn}`, [
+            // return header cell here
             m(`li.${styles.header}`, m('p', column)),
-              vdom.attrs.issues.map((issue, i) => {
-                return m(`li.${styles.row}`,
-                  {
-                    class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
-                  },
-                  m('p', issue[index]))
-                // issue.map((field) => m('li', m('p', field)))
-              }),
-            ]))
+            vdom.attrs.issues.map((issue, i) => {
+              // return cells here
+              return m(`li.${styles.row}`,
+                {
+                  class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
+                },
+                m('p', issue[index]))
+              // issue.map((field) => m('li', m('p', field)))
+            }),
+          ]))
         }),
       ])
     },

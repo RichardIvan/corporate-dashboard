@@ -14,6 +14,4 @@ o.spec('table container', () => {
   o('should have 70 li', () => {
     o(mq(TableContainer).should.have.at.least(70, 'li')).equals()
   })
-
-
 })

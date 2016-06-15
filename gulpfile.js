@@ -24,6 +24,7 @@ const path = {
   DEST_SRC: 'dist/src',
   DEST_BUILD: 'dist/build',
   DEST: 'dist',
+  TESTS: './tests/**/*.js',
 }
 
 gulp.task('jscpd', () => gulp.src('app/*')
@@ -75,10 +76,14 @@ gulp.task('test', () => gulp.src('', { read: false })
   .pipe(shell(['npm run local-test']))
   .pipe(shell(['npm run cover'])))
 
+gulp.task('watch_tests', () => {
+  gulp.watch(path.TESTS, ['test'])
+})
+
 gulp.task('watch', () => {
   gulp.watch(path.ALL, () => {
     runSequence(['clean', 'test', 'jscpd'], ['webpack'])
   })
 })
 
-gulp.task('default', ['webpack-dev-server', 'watch'])
+gulp.task('default', ['webpack-dev-server', 'watch', 'watch_tests'])

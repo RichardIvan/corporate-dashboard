@@ -18,6 +18,4 @@ o.spec('inital load', () => {
   o('action is FSA compliant', () => {
     o(isFSA(initLoad())).equals(true)
   })
-
-  
 })

@@ -1,6 +1,9 @@
 'use strict'
 
 // import o from '../../../../ospec/ospec.js'
+import { describe, it } from 'mocha'
+import expect from 'expect'
+
 import mq from 'mithril-query'
 
 import Main from '../../../../app/js/components/Main'
@@ -8,6 +11,24 @@ import Main from '../../../../app/js/components/Main'
 import GeospacialContainer from '../../../../app/js/containers/Root/Main/Geospacial'
 import Data from '../../../../app/js/containers/Root/Main/Data'
 import Graph from '../../../../app/js/containers/Root/Main/Graph'
+
+describe('main component', () => {
+  it('should display geospacial view', () => {
+    expect(mq(Main, { container: GeospacialContainer }).has('#geo')).toBe(true)
+  })
+
+  it('should display data view', () => {
+    expect(mq(Main, { container: Data }).has('#data')).toBe(true)
+  })
+
+  it('should display graph view', () => {
+    expect(mq(Main, { container: Graph }).has('#graph')).toBe(true)
+  })
+
+  it('should have #main-container', () => {
+    expect(mq(Main).has('#main-container')).toBe(true)
+  })
+})
 
 // o.spec('main component', () => {
 //   o.spec('structure', () => {

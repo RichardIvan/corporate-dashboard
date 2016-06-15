@@ -2,7 +2,7 @@ import GraphContainer from '../containers/Root/Main/Graph'
 import DataContainer from '../containers/Root/Main/Data'
 import GeoContainer from '../containers/Root/Main/Geospacial'
 
-export function retrieveComponent(route) {
+export function retrieveContainer(route) {
   switch (route) {
   case 'graph':
     return GraphContainer

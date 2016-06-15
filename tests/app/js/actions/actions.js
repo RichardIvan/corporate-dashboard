@@ -17,9 +17,13 @@ import expect from 'expect'
 import { isFSA } from 'flux-standard-action'
 import { initLoad } from '../../../../app/js/actions'
 
-describe('first test', () => {
-  it('should be ok', () => {
+describe('Initial load Action Creator', () => {
+  it('should be FSA compliant', () => {
     expect(isFSA(initLoad())).toBe(true)
+  })
+
+  it('should have INITIAL_LOAD action type', () => {
+    expect(initLoad().type).toBe('INITIAL_LOAD')
   })
 })
 

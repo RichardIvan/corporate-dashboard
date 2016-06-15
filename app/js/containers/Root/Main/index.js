@@ -7,14 +7,14 @@ import m from 'mithril'
 // import {fetchRepo, showMessage} from '../actions';
 // import styles from './style.scss'
 import MainComponent from '../../../components/Main'
-import { retrieveComponent } from '../../../helpers'
+import { retrieveContainer } from '../../../helpers'
 
 const Main = {
   view(vdom) {
     return m(MainComponent,
       {
         ...vdom.attrs,
-        container: retrieveComponent(vdom.attrs.route),
+        container: retrieveContainer(vdom.attrs.route),
       })
   },
 }

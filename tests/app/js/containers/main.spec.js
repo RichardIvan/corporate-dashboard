@@ -1,6 +1,9 @@
 'use strict'
 
 // import o from '../../../../ospec/ospec.js'
+import { describe, it } from 'mocha'
+import expect from 'expect'
+
 import mq from 'mithril-query'
 
 import Main from '../../../../app/js/containers/Root/Main'
@@ -8,6 +11,32 @@ import Main from '../../../../app/js/containers/Root/Main'
 import GeospacialContainer from '../../../../app/js/containers/Root/Main/Geospacial'
 import DataContainer from '../../../../app/js/containers/Root/Main/Data'
 import GraphContainer from '../../../../app/js/containers/Root/Main/Graph'
+
+describe('Main container', () => {
+  it('displays #main-container', () => {
+    expect(mq(Main).has('#main-container')).toBe(true)
+  })
+
+  it('has div', () => {
+    expect(mq(Main).has('div')).toBe(true)
+  })
+
+  it('should display data container', () => {
+    expect(mq(Main, { container: DataContainer, route: 'data' }).has('#data')).toBe(true)
+  })
+
+  it('should display graph container', () => {
+    expect(mq(Main, { container: GraphContainer, route: 'graph' }).has('#graph')).toBe(true)
+  })
+
+  it('should display geospacial container', () => {
+    expect(mq(Main, { container: GeospacialContainer, route: 'geo' }).has('#geo')).toBe(true)
+  })
+
+  it('should display geospacial container on random route', () => {
+    expect(mq(Main, { container: GeospacialContainer, route: 'test' }).has('#geo')).toBe(true)
+  })
+})
 
 // o.spec('main container', () => {
 //   o.spec('structure', () => {

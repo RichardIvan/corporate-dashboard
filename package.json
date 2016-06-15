@@ -6,7 +6,7 @@
   "scripts": {
     "_old_test": "babel-istanbul cover --report lcovonly ospec/bin/ospec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "_old_local-test": "babel-node ./ospec/bin/ospec",
-    "local-test": "node_modules/.bin/_mocha --require ./tests/setup --recursive ./tests",
+    "local-test": "node_modules/.bin/babel-node node_modules/.bin/_mocha --require ./tests/setup --recursive ./tests --color",
     "_old_cover": "babel-node _isparta cover --report lcovonly ospec/bin/ospec",
     "cover": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- --require ./tests/setup --recursive ./tests",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",

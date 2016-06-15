@@ -6,15 +6,15 @@
   "scripts": {
     "_old_test": "babel-istanbul cover --report lcovonly ospec/bin/ospec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "_old_local-test": "babel-node ./ospec/bin/ospec",
-    "local-test": "babel-node _mocha --recursive ./tests --compilers js:babel-core/register --require ./tests/setup",
+    "local-test": "node_modules/.bin/_mocha --require ./tests/setup --recursive ./tests",
     "_old_cover": "babel-node _isparta cover --report lcovonly ospec/bin/ospec",
-    "cover": "nyc --reporter=lcov _mocha --recursive --require ./tests/setup --colors --R spec ./tests",
+    "cover": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- --require ./tests/setup --recursive ./tests",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --inline --hot --config webpack.config.dev.js",
     "lint": "eslint src",
     "start": "node ./server.js -p 1337",
-    "test": "nyc --reporter=lcov _mocha --recursive --require ./tests/setup --colors --R dot ./tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage"
+    "test": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- --require ./tests/setup --recursive ./tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage"
   },
   "nyc": {
     "exclude": [
@@ -39,6 +39,7 @@
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
+    "babel-istanbul": "^0.8.0",
     "babel-loader": "^6.2.4",
     "babel-plugin-__coverage__": "^11.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.8.0",

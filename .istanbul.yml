@@ -1,7 +1,7 @@
 instrumentation:
-    root: app
+    root: .
     default-excludes: true
-    excludes: ['ospec/ospec.js']
+    excludes: ['ospec']
     # embed-source: false
     # variable: __coverage__
     # compact: true

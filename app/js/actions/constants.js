@@ -1,3 +1,5 @@
+export const INITIAL_LOAD = 'INITIAL_LOAD'
+
 export const SET_FORM_FOCUS = 'SET_FORM_FOCUS'
 export const SET_FORM_VALUES = 'SET_FORM_VALUES'
 

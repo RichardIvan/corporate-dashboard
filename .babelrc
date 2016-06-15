@@ -1,7 +1,12 @@
 {
   "passPerPreset": true,
 	"presets": [
-		{ "plugins": [ "transform-runtime", "transform-flow-strip-types" ] },
+		{ "plugins": [
+        "transform-runtime",
+        "transform-flow-strip-types",
+        "transform-object-rest-spread"
+      ]
+    },
 		{
 			"passPerPreset": false,
 			"presets": [ "es2015", "stage-2" ]

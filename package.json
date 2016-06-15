@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "_old_test": "babel-istanbul cover --report lcovonly ospec/bin/ospec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "local-test": "babel-node ./ospec/bin/ospec",
-    "cover": "babel-node ./node_modules/.bin/isparta cover --report lcovonly ospec/bin/ospec",
+    "_old_local-test": "babel-node ./ospec/bin/ospec",
+    "local-test": "babel-node _mocha --recursive ./tests --compilers js:babel-core/register --require ./tests/setup",
+    "_old_cover": "babel-node _isparta cover --report lcovonly ospec/bin/ospec",
+    "cover": "nyc --reporter=lcov _mocha --recursive --require ./tests/setup --colors --R spec ./tests",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack-dev-server --inline --hot --config webpack.config.dev.js",
     "lint": "eslint src",
     "start": "node ./server.js -p 1337",
-    "test": "babel-node ./node_modules/.bin/isparta cover --report lcovonly ./ospec/bin/ospec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage"
+    "test": "nyc --reporter=lcov _mocha --recursive --require ./tests/setup --colors --R dot ./tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage"
+  },
+  "nyc": {
+    "exclude": [
+      ""
+    ]
   },
   "repository": {
     "type": "git",
@@ -33,6 +40,7 @@
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
+    "babel-plugin-__coverage__": "^11.0.0",
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
     "babel-plugin-transform-runtime": "^6.9.0",
@@ -47,6 +55,7 @@
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-import": "^1.8.1",
+    "expect": "^1.20.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "flow-bin": "^0.26.0",
@@ -59,11 +68,12 @@
     "gulp-shell": "^0.5.2",
     "html-webpack-plugin": "^2.19.0",
     "ignore-styles": "^3.0.0",
-    "isparta": "^4.0.0",
     "mithril": "github:lhorie/mithril.js#rewrite",
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite",
+    "mocha": "^2.5.3",
     "node-sass": "^3.7.0",
     "normalize.css": "^4.1.1",
+    "nyc": "^6.6.1",
     "postcss-cssnext": "^2.6.0",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",

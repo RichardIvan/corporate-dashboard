@@ -8,9 +8,9 @@ var Promise = require('promise-polyfill')
 global.window = require('mithril/test-utils/domMock.js')()
 global.window = Object.assign(global.window, require('mithril/test-utils/pushStateMock')())
 
-require('ignore-styles')
+// require('ignore-styles')
 
-var o = require("../ospec")
+// var o = require("../ospec")
 
 function traverseDirectory(pathname, callback) {
 	pathname = pathname.replace(/\\/g, "/")

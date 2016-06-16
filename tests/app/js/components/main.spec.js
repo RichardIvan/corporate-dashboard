@@ -6,27 +6,27 @@ import expect from 'expect'
 
 import mq from 'mithril-query'
 
-import Main from '../../../../app/js/components/Main'
+import MainComponent from '../../../../app/js/components/Main'
 
 import GeospacialContainer from '../../../../app/js/containers/Geo'
-import Data from '../../../../app/js/containers/Data'
-import Graph from '../../../../app/js/containers/Graph'
+import DataContainer from '../../../../app/js/containers/Data'
+import GraphContainer from '../../../../app/js/containers/Graph'
 
 describe('main component', () => {
   it('should display geospacial view', () => {
-    expect(mq(Main, { container: GeospacialContainer }).has('#geo')).toBe(true)
+    expect(mq(MainComponent, { container: GeospacialContainer }).has('#geo')).toBe(true)
   })
 
   it('should display data view', () => {
-    expect(mq(Main, { container: Data }).has('#data')).toBe(true)
+    expect(mq(MainComponent, { container: DataContainer }).has('#data')).toBe(true)
   })
 
   it('should display graph view', () => {
-    expect(mq(Main, { container: Graph }).has('#graph')).toBe(true)
+    expect(mq(MainComponent, { container: GraphContainer }).has('#graph')).toBe(true)
   })
 
   it('should have #main-container', () => {
-    expect(mq(Main).has('#main-container')).toBe(true)
+    expect(mq(MainComponent).has('#main-container')).toBe(true)
   })
 })
 

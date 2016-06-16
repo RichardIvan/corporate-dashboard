@@ -1,6 +1,6 @@
 'use strict'
 
-import { configureStore } from '../../store'
+import { configureStore } from '../store'
 // this configure store function takes in initial state
 // we can store this persistent state in indexdb and reload it on next app
 // initialtion
@@ -12,8 +12,8 @@ import { configureStore } from '../../store'
 const store = configureStore()
 
 // import 'normalize-css'
-import '../global-style.scss'
-import '../../../fonts/Roboto-Regular.ttf'
+import './global-style.scss'
+import '../../fonts/Roboto-Regular.ttf'
 
 import m from 'mithril'
 
@@ -21,7 +21,7 @@ import Toolbar from './Toolbar'
 import Navbar from './Navbar'
 import Main from './Main'
 
-import styles from '../../components/styles.scss'
+import styles from '../components/styles.scss'
 
 const Root = {
   view(vnode) {

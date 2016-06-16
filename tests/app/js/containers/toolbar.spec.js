@@ -19,7 +19,7 @@ import expect from 'expect'
 
 import mq from 'mithril-query'
 
-import Toolbar from '../../../../app/js/containers/Root/Toolbar'
+import Toolbar from '../../../../app/js/containers/Toolbar'
 
 describe('Toolbar container', () => {
   it('with geo route should have h1', () => {

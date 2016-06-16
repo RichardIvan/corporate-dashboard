@@ -6,8 +6,8 @@ import m from 'mithril'
 // import {getEntityById, isPending} from '../selectors';
 // import {fetchRepo, showMessage} from '../actions';
 // import styles from './style.scss'
-import MainComponent from '../../../components/Main'
-import { retrieveContainer } from '../../../helpers'
+import MainComponent from '../components/Main'
+import { retrieveContainer } from '../helpers'
 
 const Main = {
   view(vdom) {

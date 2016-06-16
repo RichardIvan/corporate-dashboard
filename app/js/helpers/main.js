@@ -1,6 +1,6 @@
-import GraphContainer from '../containers/Root/Main/Graph'
-import DataContainer from '../containers/Root/Main/Data'
-import GeoContainer from '../containers/Root/Main/Geospacial'
+import GraphContainer from '../containers/Graph'
+import DataContainer from '../containers/Data'
+import GeoContainer from '../containers/Geo'
 
 export function retrieveContainer(route) {
   switch (route) {

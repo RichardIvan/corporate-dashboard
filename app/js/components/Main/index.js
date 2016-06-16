@@ -1,7 +1,9 @@
 'use strict'
 
 import m from 'mithril'
-import ToolbarContainer from '../../containers/Root/Main/Toolbar'
+
+// TODO remove this toolbar from the presentational component and pass it down from  container
+import ToolbarContainer from '../../containers/Toolbar'
 import styles from './style.scss'
 
 const Main = {

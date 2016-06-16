@@ -7,7 +7,7 @@ import expect from 'expect'
 // import o from '../../../../ospec/ospec.js'
 import mq from 'mithril-query'
 
-import Navbar from '../../../../app/js/containers/Root/Navbar'
+import Navbar from '../../../../app/js/containers/Navbar'
 
 describe('mq test', () => {
   it('should be ok', () => {

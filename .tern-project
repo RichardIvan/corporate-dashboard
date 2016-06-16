@@ -3,6 +3,9 @@
   "libs": [
     "browser"
   ],
+  "loadEagerly": [
+    "./app"
+  ],
   "plugins": {
     "complete_strings": {},
     "modules": {},

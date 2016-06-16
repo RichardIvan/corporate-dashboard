@@ -6,11 +6,11 @@ import expect from 'expect'
 
 import mq from 'mithril-query'
 
-import Main from '../../../../app/js/containers/Root/Main'
+import Main from '../../../../app/js/containers/Main'
 
-import GeospacialContainer from '../../../../app/js/containers/Root/Main/Geospacial'
-import DataContainer from '../../../../app/js/containers/Root/Main/Data'
-import GraphContainer from '../../../../app/js/containers/Root/Main/Graph'
+import GeospacialContainer from '../../../../app/js/containers/Geo'
+import DataContainer from '../../../../app/js/containers/Data'
+import GraphContainer from '../../../../app/js/containers/Graph'
 
 describe('Main container', () => {
   it('displays #main-container', () => {

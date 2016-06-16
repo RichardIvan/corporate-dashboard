@@ -4,7 +4,7 @@ import expect from 'expect'
 
 import mq from 'mithril-query'
 
-import TableContainer from './../../../../../../../../app/js/containers/Root/Main/Data/Table'
+import TableContainer from '../../../../app/js/containers/Table'
 
 describe('Table container', () => {
   it('should have at least one UL', () => {

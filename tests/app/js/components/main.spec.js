@@ -8,9 +8,9 @@ import mq from 'mithril-query'
 
 import Main from '../../../../app/js/components/Main'
 
-import GeospacialContainer from '../../../../app/js/containers/Root/Main/Geospacial'
-import Data from '../../../../app/js/containers/Root/Main/Data'
-import Graph from '../../../../app/js/containers/Root/Main/Graph'
+import GeospacialContainer from '../../../../app/js/containers/Geo'
+import Data from '../../../../app/js/containers/Data'
+import Graph from '../../../../app/js/containers/Graph'
 
 describe('main component', () => {
   it('should display geospacial view', () => {

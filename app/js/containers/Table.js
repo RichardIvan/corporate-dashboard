@@ -2,9 +2,9 @@
 
 import m from 'mithril'
 
-import TableComponent from '../../../../../../../app/js/components/Table'
+import TableComponent from '../components/Table'
 
-import { mockedHeaderColumnNames, mockedIssue } from '../../../../../../../tests/mocks/data'
+import { mockedHeaderColumnNames, mockedIssue } from '../../../tests/mocks/data'
 
 // import { mockedIssue } from '../../../../../../../../tests/mocks/data'
 

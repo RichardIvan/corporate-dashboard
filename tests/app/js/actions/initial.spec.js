@@ -1,15 +1,4 @@
-// import { createThunkStore } from './helpers'
-
-//
-// import o from '../../../../ospec/ospec.js'
-//
-// o.spec('first test', () => {
-//   o('addition', () => {
-//     o(1 + 1).equals(2)
-//   })
-// })
-
-// import o from '../../../../ospec/ospec.js'
+/* @flow */
 
 import { describe, it } from 'mocha'
 import expect from 'expect'
@@ -18,8 +7,8 @@ import { createThunkStore } from './helpers'
 
 import { isFSA } from 'flux-standard-action'
 
-import { INITIAL_LOAD } from '../../../../app/js/actions/constants'
-import { initLoad } from '../../../../app/js/actions'
+import { INIT_LOAD, INIT_LOAD_SUCESS } from '../../../../app/js/actions/constants'
+import { initLoad, initSucess } from '../../../../app/js/actions'
 
 describe('initial actions', () => {
 
@@ -40,7 +29,7 @@ describe('initial actions', () => {
 
       it('creates INITIAL_LOAD action', () => {
         expect(store._dispatch).toHaveBeenCalledWith({
-          type: INITIAL_LOAD
+          type: INIT_LOAD
         })
       })
 
@@ -51,7 +40,33 @@ describe('initial actions', () => {
 
   })
 
+  describe('#initSucess', () => {
+    let store = null;
 
+    beforeEach('create store', function () {
+      store = createThunkStore(state => state, {
+        issues: [],
+      });
+    });
+
+    context('when called with empty body', () => {
+
+      beforeEach('dispatch #initSucess() action', function() {
+        return store.dispatch(initSucess())
+      })
+
+      it('creates INIT_LOAD_SUCESS action', () => {
+        expect(store._dispatch).toHaveBeenCalledWith({
+          type: INIT_LOAD_SUCESS
+        })
+      })
+
+      it('should be FSA compliant', () => {
+        expect(isFSA(initLoad())).toBe(true)
+      })
+    })
+
+  })
 
 })
 

@@ -1,9 +1,17 @@
+/* @flow */
+
 'use strict'
 
-import { INITIAL_LOAD } from './constants.js'
+import { INIT_LOAD, INIT_LOAD_SUCESS } from './constants.js'
 
-export function initLoad() {
+export function initLoad(): { type: string } {
   return {
-    type: INITIAL_LOAD,
+    type: INIT_LOAD,
+  }
+}
+
+export function initSucess(): { type: string } {
+  return {
+    type: INIT_LOAD_SUCESS,
   }
 }

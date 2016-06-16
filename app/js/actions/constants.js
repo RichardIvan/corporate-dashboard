@@ -1,10 +1,13 @@
-export const INITIAL_LOAD = 'INITIAL_LOAD'
+/* @flow */
 
-export const SET_FORM_FOCUS = 'SET_FORM_FOCUS'
-export const SET_FORM_VALUES = 'SET_FORM_VALUES'
+export const INIT_LOAD: string = 'INIT_LOAD'
+export const INIT_LOAD_SUCESS: string = 'INIT_LOAD_SUCESS'
 
-export const SHOW_MESSAGE = 'SHOW_MESSAGE'
-export const CLEAR_MESSAGE = 'CLEAR_MESSAGE'
-export const RESET_MESSAGES = 'RESET_MESSAGES'
+export const SET_FORM_FOCUS: string = 'SET_FORM_FOCUS'
+export const SET_FORM_VALUES: string = 'SET_FORM_VALUES'
 
-export const FETCH_REPO = 'FETCH_REPO'
+export const SHOW_MESSAGE: string = 'SHOW_MESSAGE'
+export const CLEAR_MESSAGE: string = 'CLEAR_MESSAGE'
+export const RESET_MESSAGES: string = 'RESET_MESSAGES'
+
+export const FETCH_REPO: string = 'FETCH_REPO'

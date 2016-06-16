@@ -14,17 +14,45 @@
 import { describe, it } from 'mocha'
 import expect from 'expect'
 
+import { createThunkStore } from './helpers'
+
 import { isFSA } from 'flux-standard-action'
+
+import { INITIAL_LOAD } from '../../../../app/js/actions/constants'
 import { initLoad } from '../../../../app/js/actions'
 
-describe('Initial load Action Creator', () => {
-  it('should be FSA compliant', () => {
-    expect(isFSA(initLoad())).toBe(true)
+describe('initial actions', () => {
+
+  describe('#initLoad', () => {
+    let store = null;
+
+    beforeEach('create store', function () {
+      store = createThunkStore(state => state, {
+        issues: [],
+      });
+    });
+
+    context('when called with empty body', () => {
+
+      beforeEach('dispatch #initLoad() action', function() {
+        return store.dispatch(initLoad())
+      })
+
+      it('creates INITIAL_LOAD action', () => {
+        expect(store._dispatch).toHaveBeenCalledWith({
+          type: INITIAL_LOAD
+        })
+      })
+
+      it('should be FSA compliant', () => {
+        expect(isFSA(initLoad())).toBe(true)
+      })
+    })
+
   })
 
-  it('should have INITIAL_LOAD action type', () => {
-    expect(initLoad().type).toBe('INITIAL_LOAD')
-  })
+
+
 })
 
 // o.spec('inital load action creator', () => {

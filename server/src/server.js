@@ -13,8 +13,7 @@ export function startServer () {
     console.log('ANNOUCING: WE HAVE A CONNECTION')
 
     fetchMockaroo().then((data) => {
-      socket.emit('data', {data})
+      socket.emit('data', { data })
     })
-
   })
 }

@@ -10,7 +10,7 @@ import styles from './styles.scss'
 const Data = {
   view(vdom) {
     return m(`#data.${styles['data-container']}`, [
-      // m('', 'hi!')
+      // m('', 'hi!'),
       m(vdom.attrs.table, { ...vdom.attrs }),
     ])
   },

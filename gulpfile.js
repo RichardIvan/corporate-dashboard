@@ -86,4 +86,8 @@ gulp.task('watch', () => {
   })
 })
 
-gulp.task('default', ['webpack-dev-server', 'watch', 'watch_tests'])
+gulp.task('socket', () => gulp.src('', { read: false })
+  .pipe(shell(['npm run server']))
+)
+
+gulp.task('default', ['socket', 'webpack-dev-server', 'watch', 'watch_tests'])

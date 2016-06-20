@@ -19,7 +19,7 @@ module.exports = {
   devtool: 'source-map',
   entry: {
     'dev-server': 'webpack-dev-server/client?http://localhost:8080/',
-    'hot-dev-server': 'webpack/hot/dev-server',
+    'hot-dev-server': 'webpack/hot/only-dev-server',
     // s: './src/js/s.js',
     index: './app/js/index.js',
     // common: [
@@ -96,6 +96,7 @@ module.exports = {
     }],
   },
   devServer: {
+    hot: true,
     // port: 8081,
     // contentBase: 'src/',
     // historyApiFallback: true,

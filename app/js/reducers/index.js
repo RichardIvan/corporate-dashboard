@@ -1,9 +1,8 @@
-
 import { combineReducers } from 'redux'
-import entities from './entities'
+import issues from './issues'
 
 const root = combineReducers({
-  entities,
+  issues,
 })
 
 export default root

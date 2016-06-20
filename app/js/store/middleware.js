@@ -2,11 +2,12 @@ import m from 'mithril'
 
 export function mithrilMiddleware() {
   return (next) => (action) => {
-    m.startComputation()
+    // m.startComputation()
 
     const result = next(action)
+    m.redraw()
 
-    m.endComputation()
+    // m.endComputation()
 
     return result
   }

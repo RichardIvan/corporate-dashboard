@@ -84,10 +84,19 @@ describe('Mockaroo', () => {
 
   it('fills closing timestamp', () => {
     const json = freeze(mockedResponse())
-    const transformed = fillClosingTimestamp(json)
 
-    // maybe add tests that this wont be higher number than the present timestamp
+    let transformed = fillOpeningTimestamp(json)
+    transformed = fillClosingTimestamp(transformed)
+
     expect(typeof transformed[0].closing_timestamp).toBe('number')
-    expect(typeof transformed[1].closing_timestamp).toBe('number')
+    expect(transformed[1].closing_timestamp).toBe(null)
+    expect(transformed[0].opening_timestamp).toNotBe(null)
+
+    let year = new Date(transformed[0].closing_timestamp).getFullYear()
+    expect(year).toBeLessThanOrEqualTo(2016)
+    expect(year).toBeGreaterThanOrEqualTo(2015)
+
+    year = new Date(transformed[1].closing_timestamp).getFullYear()
+    expect(year).toBe(1970)
   })
 })

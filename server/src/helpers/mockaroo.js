@@ -3,8 +3,8 @@
 
 import Mockaroo from 'mockaroo'
 
-var client = new Mockaroo.Client({
-    apiKey: '260d2160' // see http://mockaroo.com/api/docs to get your api key
+const client = new Mockaroo.Client({
+  apiKey: '260d2160',
 })
 
 
@@ -19,13 +19,21 @@ var client = new Mockaroo.Client({
 
 export function fetchMockaroo () {
   return client.generate({
-          count: 50,
-          header: true,
+          count: 100,
           format: 'json',
-          schema: 'Corporate Dashboard'
+          schema: 'Corporate Dashboard',
         })
         .catch(err => err)
         // .then(function(records) {
         //     return records
         // })
+}
+
+export function fetchSingleItem () {
+  return client.generate({
+          count: 1,
+          format: 'json',
+          schema: 'Corporate Dashboard',
+        })
+        .catch(err => err)
 }

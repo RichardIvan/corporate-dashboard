@@ -10,7 +10,10 @@ import {
   fillLocation,
   fillOpeningTimestamp,
   fillClosingTimestamp,
+  transformJSONtoCSV,
 } from './helpers'
+
+import { initialFetch } from './actions'
 
 export function startServer () {
   io.on('connection', (socket) => {
@@ -23,6 +26,7 @@ export function startServer () {
       .then(fillLocation)
       .then(fillOpeningTimestamp)
       .then(fillClosingTimestamp)
-      .then((data) => socket.emit('data', { data }))
+      .then(transformJSONtoCSV)
+      .then((data) => socket.emit('data', { action: initialFetch(data) }))
   })
 }

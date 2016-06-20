@@ -80,6 +80,7 @@
     "normalize.css": "^4.1.1",
     "normalizr": "^2.1.0",
     "nyc": "^6.6.1",
+    "papaparse": "^4.1.2",
     "postcss-cssnext": "^2.6.0",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",

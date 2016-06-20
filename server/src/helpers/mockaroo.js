@@ -19,16 +19,13 @@ var client = new Mockaroo.Client({
 
 export function fetchMockaroo () {
   return client.generate({
-          count: 2,
+          count: 50,
           header: true,
           format: 'json',
           schema: 'Corporate Dashboard'
         })
-        .then(data => console.log(data))
         .catch(err => err)
         // .then(function(records) {
         //     return records
         // })
 }
-
-fetchMockaroo()

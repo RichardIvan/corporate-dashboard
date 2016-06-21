@@ -46,7 +46,8 @@ export function transformCSVtoJSON (data) {
   const body = drop(json)
 
   const zippedObject = reduce(body, (accumulator, issue) => {
-    const item = { ...accumulator, [issue[0]]: zipObject(header, issue) }
+    const indexOfIDKey = header.indexOf('id')
+    const item = { ...accumulator, [issue[indexOfIDKey]]: zipObject(header, issue) }
     return item
   }, {})
 

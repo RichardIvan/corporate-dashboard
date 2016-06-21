@@ -16,8 +16,7 @@ export default function issues(state = Map({}), action) {
       const json = transformCSVtoJSON(csv)
 
       // console.log(state)
-
-      return state.set('issues', fromJS(json))
+      return state.set(fromJS(json))
     }
     return state
     // console.log(state.merge(fromJS(action.payload)))
@@ -25,8 +24,7 @@ export default function issues(state = Map({}), action) {
     // console.log(newState)
   case NEW_ISSUE: {
     const json = transformNewIssue(action.payload.data)
-    const newState = state.mergeDeep({ issues: json })
-    return newState
+    return state.mergeDeep(json)
   }
   default:
     return state

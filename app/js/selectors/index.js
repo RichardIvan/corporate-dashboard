@@ -2,3 +2,4 @@
 
 export * from './location'
 export * from './pending'
+export * from './issues'

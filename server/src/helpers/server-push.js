@@ -7,17 +7,20 @@ import {
   fillLocation,
   fillOpeningTimestamp,
   fillClosingTimestamp,
+  saveToFirebase,
+  fetchSingleItemFromFirebase,
 } from '../helpers'
 
 export function startServerPush (socket) {
   console.log('STARTTED SERVER PUSH')
-  setInterval(() => fetchSingleItem()
-    .then((data) => [data])
-    .then(fillIDs)
-    .then(fillLocation)
-    .then(fillOpeningTimestamp)
-    .then(fillClosingTimestamp)
+  setInterval(() => fetchSingleItemFromFirebase()
+    // .then((data) => [data])
+    // .then(fillIDs)
+    // .then(fillLocation)
+    // .then(fillOpeningTimestamp)
+    // .then(fillClosingTimestamp)
+    // .then(saveToFirebase)
     .then((data) => socket.emit('data', { action: newIssue(data) }))
-  , 10000)
+  , 15000)
   return true
 }

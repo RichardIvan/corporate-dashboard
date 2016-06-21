@@ -17,10 +17,14 @@ const mockedVidibleData = (issue) => {
 
 const Table = {
   view(vdom) {
+    const state = vdom.attrs.store.getState()
+    // console.log(state.getState().issues)
+    console.log(state.issues.keys())
+
     return m(TableComponent, {
       ...vdom.attrs,
       columns: mockedHeaderColumnNames,
-      issues: mockedVidibleData(mockedIssue),
+      issues: ['state', 'issues'],
     })
   },
 }

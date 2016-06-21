@@ -32,6 +32,7 @@ import {
   fillLocation,
   fillOpeningTimestamp,
   fillClosingTimestamp,
+  transformNullValues,
 } from '../../../server/src/helpers'
 
 import { locations } from '../../../server/src/data'
@@ -98,5 +99,17 @@ describe('Mockaroo', () => {
 
     year = new Date(transformed[1].closing_timestamp).getFullYear()
     expect(year).toBe(1970)
+  })
+
+  it('converts null values to empty strings', () => {
+    const json = freeze(mockedResponse())
+
+    const transformed = transformNullValues(json)
+
+    transformed.forEach((item) => {
+      for (const value in item) {
+        expect(item[value]).toNotBe(null)
+      }
+    })
   })
 })

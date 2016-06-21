@@ -12,6 +12,10 @@ import {
   fillClosingTimestamp,
   transformJSONtoCSV,
   startServerPush,
+  saveToFirebase,
+  transformNullValues,
+  fetchFirebase,
+  transformFirebaseEntryToCSV,
 } from './helpers'
 
 import { initialFetch } from './actions'
@@ -22,14 +26,24 @@ export function startServer () {
     // fetch the result and then emit the data
     console.log('ANNOUCING: WE HAVE A CONNECTION')
 
-    fetchMockaroo()
-      .then(fillIDs)
-      .then(fillLocation)
-      .then(fillOpeningTimestamp)
-      .then(fillClosingTimestamp)
-      .then(transformJSONtoCSV)
+    fetchFirebase()
+      // .then((result) => result.val())
+      // .then(transformJSONtoCSV)
+      .then(transformFirebaseEntryToCSV)
       .then((data) => socket.emit('data', { action: initialFetch(data) }))
       .then(startServerPush.bind(null, socket))
-      .catch((err) => console.log(err))
+
+
+    // fetchMockaroo()
+    //   .then(fillIDs)
+    //   .then(fillLocation)
+    //   .then(fillOpeningTimestamp)
+    //   .then(fillClosingTimestamp)
+    //   // .then(transformJSONtoCSV)
+    //   .then(transformNullValues)
+    //   .then(saveToFirebase)
+    //   // .then((data) => socket.emit('data', { action: initialFetch(data) }))
+    //   // .then(startServerPush.bind(null, socket))
+    //   .catch((err) => console.log(err))
   })
 }

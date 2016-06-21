@@ -18,6 +18,7 @@ export function fillLocation(json) {
 export function fillOpeningTimestamp(json) {
   return json.map((issue) => ({ ...issue, opening_timestamp: getRandomDate().getTime() }))
 }
+
 export function fillClosingTimestamp(json) {
   return json.map((issue) => {
     if (issue.open_status) {
@@ -26,4 +27,22 @@ export function fillClosingTimestamp(json) {
 
     return ({ ...issue, closing_timestamp: getRandomDate(issue.opening_timestamp).getTime() })
   })
+}
+
+export function transformNullValues (json) {
+  const transformed = json.map((item) => {
+    const keys = Object.keys(item)
+    const newObject = keys.reduce((accumulator, key) => {
+      if (item[key] === null) {
+        accumulator[key] = ''
+      } else {
+        accumulator[key] = item[key]
+      }
+      return accumulator
+    }, {})
+
+    return newObject
+  }, [])
+
+  return transformed
 }

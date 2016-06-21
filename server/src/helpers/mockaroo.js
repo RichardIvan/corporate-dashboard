@@ -4,7 +4,8 @@
 import Mockaroo from 'mockaroo'
 
 const client = new Mockaroo.Client({
-  apiKey: '260d2160',
+  apiKey: '42a44a40',
+  // apiKey: '260d2160',
 })
 
 
@@ -19,7 +20,7 @@ const client = new Mockaroo.Client({
 
 export function fetchMockaroo () {
   return client.generate({
-          count: 100,
+          count: 2,
           format: 'json',
           schema: 'Corporate Dashboard',
         })

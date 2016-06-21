@@ -11,6 +11,7 @@ import {
   fillOpeningTimestamp,
   fillClosingTimestamp,
   transformJSONtoCSV,
+  startServerPush,
 } from './helpers'
 
 import { initialFetch } from './actions'
@@ -28,5 +29,7 @@ export function startServer () {
       .then(fillClosingTimestamp)
       .then(transformJSONtoCSV)
       .then((data) => socket.emit('data', { action: initialFetch(data) }))
+      .then(startServerPush.bind(null, socket))
+      .catch((err) => console.log(err))
   })
 }

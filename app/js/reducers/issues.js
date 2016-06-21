@@ -4,13 +4,8 @@ import { Map, fromJS } from 'immutable'
 import { transformCSVtoJSON, transformNewIssue } from './helpers.js'
 
 import { INIT_LOAD, NEW_ISSUE } from '../actions'
-// _.drop = drop
-// _.flatten = flatten
-
 
 export default function issues(state = Map(), action) {
-  console.log(state.set('yes', 'no'))
-  console.log(state.size)
   switch (action.type) {
   case INIT_LOAD:
     if (action.payload) {

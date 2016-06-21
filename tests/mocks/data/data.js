@@ -1,33 +1,35 @@
-export const mockedHeaderColumnNames = [
-  {
-    attr: 'name',
-    name: 'Name',
-  },
-  {
-    attr: 'email_address',
-    name: 'Email',
-  },
-  {
-    attr: 'description',
-    name: 'Description',
-  },
-  {
-    attr: 'opening_timestamp',
-    name: 'Opened',
-  },
-  {
-    attr: 'closing_timestamp',
-    name: 'Closed',
-  },
-  {
-    attr: 'employee_name',
-    name: 'Empl.',
-  },
-  {
-    attr: 'open_status',
-    name: 'Status',
-  },
-]
+export function getHeaderColumnNames() {
+  return [
+    {
+      type: 'name',
+      name: 'Name',
+    },
+    {
+      type: 'email_address',
+      name: 'Email',
+    },
+    {
+      type: 'description',
+      name: 'Description',
+    },
+    {
+      type: 'opening_timestamp',
+      name: 'Opened',
+    },
+    {
+      type: 'closing_timestamp',
+      name: 'Closed',
+    },
+    {
+      type: 'employee_name',
+      name: 'Empl.',
+    },
+    {
+      type: 'open_status',
+      name: 'Status',
+    },
+  ]
+}
 
 export const mockedIssue = {
   name: 'Richard Ivan',

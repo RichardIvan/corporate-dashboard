@@ -8,7 +8,9 @@ import { INIT_LOAD, NEW_ISSUE } from '../actions'
 // _.flatten = flatten
 
 
-export default function issues(state = Map({}), action) {
+export default function issues(state = Map(), action) {
+  console.log(state.set('yes', 'no'))
+  console.log(state.size)
   switch (action.type) {
   case INIT_LOAD:
     if (action.payload) {
@@ -16,7 +18,8 @@ export default function issues(state = Map({}), action) {
       const json = transformCSVtoJSON(csv)
 
       // console.log(state)
-      return state.set(fromJS(json))
+
+      return state.merge(fromJS(json))
     }
     return state
     // console.log(state.merge(fromJS(action.payload)))
@@ -24,7 +27,8 @@ export default function issues(state = Map({}), action) {
     // console.log(newState)
   case NEW_ISSUE: {
     const json = transformNewIssue(action.payload.data)
-    return state.mergeDeep(json)
+    const newState = state.mergeDeep(fromJS(json))
+    return newState
   }
   default:
     return state

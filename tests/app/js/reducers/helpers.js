@@ -7,3 +7,11 @@ const _csv = `id,opening_timestamp,closing_timestamp,name,email_address,descript
 export function getMockedCSV () {
   return _csv
 }
+
+const _miniCSV = `id,opening_timestamp
+abcd,1454146495766
+efgh,1454146495766`
+
+export function getMiniCSV() {
+  return _miniCSV
+}

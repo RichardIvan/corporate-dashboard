@@ -8,7 +8,7 @@ import { Map, List } from 'immutable'
 import { getVisibleIssues } from '../../../../app/js/selectors'
 
 describe('Issue Selector', () => {
-  it.only('should get array with 10 items', () => {
+  it('should get array with 10 items', () => {
 
     const state = {
       issues: Map({
@@ -41,14 +41,10 @@ describe('Issue Selector', () => {
         }),
         ten: Map({
           one: 'two',
-        })
+        }),
       }
     ),
   }
-
-    console.log(state)
-
-    console.log(getVisibleIssues(state))
 
     expect(getVisibleIssues(state).length).toBe(10)
   })

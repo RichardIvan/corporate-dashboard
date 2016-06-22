@@ -2,6 +2,8 @@
 
 import m from 'mithril'
 
+import CellContainer from '../../containers/Cell'
+
 import styles from './styles.scss'
 
 const Table = {
@@ -15,20 +17,25 @@ const Table = {
             class: index === 2 ? `${styles.three}` : '',
           },
           m(`ul.${styles.contentColumn}`, [
-            console.log(vdom.attrs.issues),
             m(`li.${styles.header}`, m('p', column.name)),
             vdom.attrs.issues.map((issue, i) => {
               return m(`li.${styles.row}`,
                 {
                   class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
                 },
-                m('p', issue[column.attr]))
+                m(CellContainer, {
+                  cellData: {
+                    value: issue[column.type],
+                    type: column.type,
+                  },
+                })
+              )
               // issue.map((field) => m('li', m('p', field)))
             }),
           ]))
-        }),
-      ])
-    },
+      }),
+    ])
+  },
 }
 
 export default Table

@@ -56,33 +56,54 @@ describe('Issues Reducer', () => {
       const nextState = reducer(state, action)
       // console.log(nextState)
 
-      expect(nextState).toEqual(fromJS({
-        issues: json,
-      }))
+      expect(nextState).toEqual(fromJS(json))
     })
   })
 
   describe('#NEW_ISSUE', () => {
     it('should have add new issue to issues by ID map', () => {
 
-      const state = fromJS({
-        issues: {
-          '5dc28a93-88d8-453e-865e-da5f4194c7b9': {
-            id: '5dc28a93-88d8-453e-865e-da5f4194c7b9',
-            opening_timestamp: 1464446948285,
-            closing_timestamp: null,
-            name: 'Cheryl Thompson',
-            email_address: 'rferguson0@fc2.com',
-            description: 'Integer non velit.',
-            open_status: true,
-            employee_name: 'Randy Ferguson',
-            location: 'Village'
-          }
-        }
+      const state = Map({
+        '5dc28a93-88d8-453e-865e-da5f4194c7b9': Map({
+          id: '5dc28a93-88d8-453e-865e-da5f4194c7b9',
+          opening_timestamp: 1464446948285,
+          closing_timestamp: null,
+          name: 'Cheryl Thompson',
+          email_address: 'rferguson0@fc2.com',
+          description: 'Integer non velit.',
+          open_status: true,
+          employee_name: 'Randy Ferguson',
+          location: 'Village',
+        }),
       })
 
-      const json = [
-        { id: '536737bf-89fc-443a-aabc-67b0ff7d8b7b',
+      const json = [{
+        id: '536737bf-89fc-443a-aabc-67b0ff7d8b7b',
+        opening_timestamp: 1459461111348,
+        closing_timestamp: 1462021152937,
+        name: 'Joan Simpson',
+        email_address: 'acox0@issuu.com',
+        description: 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
+        open_status: false,
+        employee_name: 'Andrew Cox',
+        location: 'Village'
+      }
+      ]
+
+      const finalState = Map({
+        '5dc28a93-88d8-453e-865e-da5f4194c7b9': Map({
+          id: '5dc28a93-88d8-453e-865e-da5f4194c7b9',
+          opening_timestamp: 1464446948285,
+          closing_timestamp: null,
+          name: 'Cheryl Thompson',
+          email_address: 'rferguson0@fc2.com',
+          description: 'Integer non velit.',
+          open_status: true,
+          employee_name: 'Randy Ferguson',
+          location: 'Village',
+        }),
+        '536737bf-89fc-443a-aabc-67b0ff7d8b7b': Map({
+          id: '536737bf-89fc-443a-aabc-67b0ff7d8b7b',
           opening_timestamp: 1459461111348,
           closing_timestamp: 1462021152937,
           name: 'Joan Simpson',
@@ -90,36 +111,9 @@ describe('Issues Reducer', () => {
           description: 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
           open_status: false,
           employee_name: 'Andrew Cox',
-          location: 'Village'
-        }
-      ]
-
-      const finalState = {
-        issues: {
-          '5dc28a93-88d8-453e-865e-da5f4194c7b9': {
-            id: '5dc28a93-88d8-453e-865e-da5f4194c7b9',
-            opening_timestamp: 1464446948285,
-            closing_timestamp: null,
-            name: 'Cheryl Thompson',
-            email_address: 'rferguson0@fc2.com',
-            description: 'Integer non velit.',
-            open_status: true,
-            employee_name: 'Randy Ferguson',
-            location: 'Village',
-          },
-          '536737bf-89fc-443a-aabc-67b0ff7d8b7b': {
-            id: '536737bf-89fc-443a-aabc-67b0ff7d8b7b',
-            opening_timestamp: 1459461111348,
-            closing_timestamp: 1462021152937,
-            name: 'Joan Simpson',
-            email_address: 'acox0@issuu.com',
-            description: 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
-            open_status: false,
-            employee_name: 'Andrew Cox',
-            location: 'Village',
-          },
-        },
-      }
+          location: 'Village',
+        }),
+      })
 
       const action = {
         type: 'NEW_ISSUE',

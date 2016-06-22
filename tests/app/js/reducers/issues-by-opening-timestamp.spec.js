@@ -28,10 +28,10 @@ describe('Issues by opening timestamp reducer', () => {
     const newState = reducer(undefined, action)
 
     const array = new Array(10).fill(List.of())
-    const result = fromJS(array)
+    const expectedResult = fromJS(array)
     // console.dir(JSON.parse(result.toJS()), {depth: null, colors: true})
 
-    expect(newState.count()).toEqual(result.count())
+    expect(newState.count()).toEqual(expectedResult.count())
   })
 
   it('should have 10 items on INIT_LOAD with CSV payload', () => {
@@ -49,15 +49,52 @@ describe('Issues by opening timestamp reducer', () => {
     const newState = reducer(state, action)
 
     const array = new Array(10).fill(List.of())
-    const result = fromJS(array)
+    const expectedResult = fromJS(array)
     // console.dir(JSON.parse(result.toJS()), {depth: null, colors: true})
 
-    expect(newState.count()).toEqual(result.count())
+    expect(newState.count()).toEqual(expectedResult.count())
   })
 
-  it('should be array')
+  it('should be array', () => {
 
-  it('should have items that are arrays of ids and timestamps')
+    const csv = getMiniCSV()
+    const json = transformCSVtoJSON(csv)
+
+    const action = {
+      type: 'INIT_LOAD',
+      payload: {
+        data: csv,
+      },
+    }
+
+    const state = fromJS(new Array(10).fill(List.of()))
+    const newState = reducer(state, action)
+
+    expect(List.isList(newState)).toBe(true)
+
+  })
+
+  it('should have items that are arrays of ids and timestamps', () =>{
+    const csv = getMiniCSV()
+    const json = transformCSVtoJSON(csv)
+
+    const action = {
+      type: 'INIT_LOAD',
+      payload: {
+        data: csv,
+      },
+    }
+
+    const state = fromJS(new Array(10).fill(List.of()))
+    const newState = reducer(state, action)
+
+    expect(List.isList(newState.first())).toBe(true)
+    expect(newState.first().first().includes('abcd')).toBe(true)
+    expect(newState.first().includes('1454146495766')).toBe(true)
+
+    expect(List.isList(newState.last())).toBe(true)
+    expect(newState.last().isEmpty()).toBe(true)
+  })
 
 
 })

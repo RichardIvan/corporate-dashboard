@@ -10,7 +10,16 @@ export function getMockedCSV () {
 
 const _miniCSV = `id,opening_timestamp
 abcd,1454146495766
-efgh,1440864374169`
+aaaa,1440864314169
+bbbb,1440864334169
+cccc,1440864324169
+dddd,1440864364169
+eeee,1440864354169
+ffff,1440864384169
+gggg,1440864474169
+hhhh,1440864174169
+iiii,1440864124169
+jjjj,1440865374169`
 
 export function getMiniCSV() {
   return _miniCSV

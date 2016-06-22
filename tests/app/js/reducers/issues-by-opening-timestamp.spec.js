@@ -1,6 +1,6 @@
 'use strict'
 
-import { describe, it } from 'mocha'
+import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
 import { List, fromJS, toJS } from 'immutable'
@@ -75,7 +75,7 @@ describe('Issues by opening timestamp reducer', () => {
 
     })
 
-    it('should have items that are Lists of ids and timestamps', () =>{
+    it('should have items that are Lists of ids and timestamps', () => {
 
       const action = {
         type: 'INIT_LOAD',
@@ -95,10 +95,9 @@ describe('Issues by opening timestamp reducer', () => {
       expect(newState.last().isEmpty()).toBe(true)
     })
 
-    // #TODO add another test that is checking that the initial load returns on ten items that are sorted
+    // TODO write a test that makes sure that the timestamp is a number
 
-    // #TODO test that the returned list is ordered
-    it.only('should return ordered List of List items by timestamp in anscending order', () => {
+    it('should return ordered List of List items by timestamp in anscending order', () => {
       const state = fromJS(new Array(10).fill(List.of()))
       const action = {
         type: 'INIT_LOAD',
@@ -106,26 +105,80 @@ describe('Issues by opening timestamp reducer', () => {
           data: csv,
         },
       }
+
       const newState = reducer(state, action)
 
-      expect(newState.first().first().includes('efgh')).toBe(true)
-      expect(newState.first().includes('1440864374169')).toBe(true)
+      expect(newState.first().first().includes('iiii')).toBe(true)
+      expect(newState.first().includes(1440864124169)).toBe(true)
 
-      expect(newState.get(1).first().includes('abcd')).toBe(true)
-      expect(newState.get(1).includes('1454146495766')).toBe(true)
+      expect(newState.get(1).first().includes('hhhh')).toBe(true)
+      expect(newState.get(1).includes(1440864174169)).toBe(true)
     })
   })
 
   describe('#NEW_ISSUE', function () {
     // body...
 
-    // it('should return the same array if the timestamp is higher value than the last', () => {
-    //
-    // })
-    //
-    // it('should retrun array without the last List item if the timestamp is lower value than last', => {
-    //
-    // })
+    let json
+    let csv
+    let state
+
+    beforeEach(() => {
+      csv = getMiniCSV()
+      json = transformCSVtoJSON(csv)
+      const action = {
+        type: 'INIT_LOAD',
+        payload: {
+          data: csv,
+        },
+      }
+      state = reducer(undefined, action)
+
+    })
+
+
+    // TODO add a test that will check that the item is being appended there if there is less items than 10
+    it('should return the same array if the timestamp is higher value than the last', () => {
+
+      const newIssue = [
+        {
+          id: 'zzzz',
+          opening_timestamp: 7777777777777
+        }
+      ]
+
+
+      const action = {
+        type: 'NEW_ISSUE',
+        payload: {
+          data: newIssue,
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState).toEqual(state)
+
+    })
+
+    it.only('should retrun array with the new and lowest value at the beginning', () => {
+      const newIssue = [
+        {
+          id: 'zzzz',
+          opening_timestamp: 1
+        }
+      ]
+
+      const action = {
+        type: 'NEW_ISSUE',
+        payload: {
+          data: newIssue,
+        },
+      }
+      const newState = reducer(state, action)
+
+      expect(newState.first().includes(1)).toEqual(true)
+    })
     //
     // it('should return List of items that are sorted in ascending order', () => {
     //

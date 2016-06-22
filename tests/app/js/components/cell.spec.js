@@ -10,7 +10,7 @@ import mq from 'mithril-query'
 import CellComponent from '../../../../app/js/components/Cell'
 
 describe('Cell componennt', () => {
-  it.only('should diplay text within p tag', () => {
+  it('should diplay text within p tag', () => {
 
     const Cell = mq(
       m(CellComponent, {

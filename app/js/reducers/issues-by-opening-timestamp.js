@@ -28,7 +28,9 @@ const issuesByTimeStampReducer = function(state = fromJS(initialState), action) 
       const missingItems = new Array(numberOfItemsToFill).fill(List.of())
       const finalResult = fromJS(results.concat(missingItems))
 
-      return finalResult
+      const sortedFinalResult = finalResult.sortBy(pair => pair.get(1))
+
+      return sortedFinalResult
     }
     return state
     // console.log(state.merge(fromJS(action.payload)))

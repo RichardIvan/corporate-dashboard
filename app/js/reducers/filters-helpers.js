@@ -4,7 +4,6 @@
 import { Map } from 'immutable'
 
 import {
-  SET_FILTER,
   NAME_TYPE,
   EMAIL_TYPE,
   OPENING_TIMESTAMP_TYPE,

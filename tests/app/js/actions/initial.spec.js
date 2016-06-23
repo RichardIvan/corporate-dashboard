@@ -47,7 +47,7 @@ describe('initial actions', () => {
       })
     })
 
-    context('when called with empty body', () => {
+    describe('when called with empty body', () => {
 
       beforeEach('dispatch #initSucess() action',() => store.dispatch(initSucess()))
 

@@ -15,4 +15,6 @@ export const FETCH_REPO: string = 'FETCH_REPO'
 export const NEW_ISSUE = 'NEW_ISSUE'
 
 export const CHANGE_OFFSET: string = 'CHANGE_OFFSET'
+
 export const SET_FILTER: string = 'SET_FILTER'
+export const RESET_FILTER: string = 'RESET_FILTER'

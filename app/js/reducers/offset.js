@@ -6,7 +6,7 @@
 
 import { CHANGE_OFFSET } from '../actions'
 
-export default function offset(state = 0, action): number {
+export default function offset(state: number = 0, action: Object): number {
   switch (action.type) {
   case CHANGE_OFFSET:
     return action.payload

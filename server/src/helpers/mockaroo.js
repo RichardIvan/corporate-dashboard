@@ -19,23 +19,23 @@ const client = new Mockaroo.Client({
 
 // console.log()
 
-export function fetchMockaroo () {
+export function fetchMockaroo(): Promise {
   return client.generate({
-          count: 1000,
-          format: 'json',
-          schema: 'Corporate Dashboard',
-        })
-        .catch(err => err)
-        // .then(function(records) {
-        //     return records
-        // })
+    count: 1000,
+    format: 'json',
+    schema: 'Corporate Dashboard',
+  })
+  .catch((err) => err)
+  // .then(function(records) {
+  //     return records
+  // })
 }
 
-export function fetchSingleItem () {
+export function fetchSingleItem(): Promise {
   return client.generate({
-          count: 1000,
-          format: 'json',
-          schema: 'Corporate Dashboard',
-        })
-        .catch(err => err)
+    count: 1000,
+    format: 'json',
+    schema: 'Corporate Dashboard',
+  })
+  .catch((err) => err)
 }

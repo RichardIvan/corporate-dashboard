@@ -12,7 +12,7 @@ import { resolveHeading } from '../helpers'
 import styles from '../components/Toolbar/styles.scss'
 
 const Toolbar = {
-  view(vnode) {
+  view(vnode: Object): Object {
     // const state = store.getState();
     return m(ToolbarComponent,
       {

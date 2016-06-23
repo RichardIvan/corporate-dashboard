@@ -16,13 +16,13 @@ import { transformCSVtoJSON } from '../../../../app/js/reducers/helpers'
 describe('Issues Reducer', () => {
   describe('#INIT_LOAD', () => {
     it('returns an object on initialization', () => {
-      const state = Map()
+      let state
       const action = {
         type: 'INIT_LAOD',
       }
-      const newState = reducer(undefined, action)
+      const newState = reducer(state, action)
 
-      expect(newState).toEqual(state)
+      expect(newState).toEqual(Map())
     })
 
     it('is immutable', () => {
@@ -30,7 +30,7 @@ describe('Issues Reducer', () => {
       const action = {
         type: 'INIT_LAOD',
         payload: {
-          1: {
+          '1': {
             id: 1,
           },
         },
@@ -86,8 +86,8 @@ describe('Issues Reducer', () => {
         description: 'In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.',
         open_status: false,
         employee_name: 'Andrew Cox',
-        location: 'Village'
-      }
+        location: 'Village',
+      },
       ]
 
       const finalState = Map({

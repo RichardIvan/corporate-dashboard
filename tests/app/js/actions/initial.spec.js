@@ -1,6 +1,6 @@
 /* @flow */
 
-import { describe, it } from 'mocha'
+import { describe, it, beforeEach, context } from 'mocha'
 import expect from 'expect'
 
 import { createThunkStore } from './helpers'
@@ -13,23 +13,21 @@ import { initLoad, initSucess } from '../../../../app/js/actions'
 describe('initial actions', () => {
 
   describe('#initLoad', () => {
-    let store = null;
+    let store = { dispatch: () => {}, _dispatch: () => {}}
 
-    beforeEach('create store', function () {
+    beforeEach('create store', () => {
       store = createThunkStore(state => state, {
         issues: [],
-      });
-    });
-
-    context('when called with empty body', () => {
-
-      beforeEach('dispatch #initLoad() action', function() {
-        return store.dispatch(initLoad())
       })
+    })
+
+    describe('when called with empty body', () => {
+
+      beforeEach('dispatch #initLoad() action', () => store.dispatch(initLoad()))
 
       it('creates INITIAL_LOAD action', () => {
         expect(store._dispatch).toHaveBeenCalledWith({
-          type: INIT_LOAD
+          type: INIT_LOAD,
         })
       })
 
@@ -41,23 +39,21 @@ describe('initial actions', () => {
   })
 
   describe('#initSucess', () => {
-    let store = null;
+    let store = { dispatch: () => {}, _dispatch: () => {} }
 
-    beforeEach('create store', function () {
-      store = createThunkStore(state => state, {
+    beforeEach('create store', () => {
+      store = createThunkStore((state) => state, {
         issues: [],
-      });
-    });
+      })
+    })
 
     context('when called with empty body', () => {
 
-      beforeEach('dispatch #initSucess() action', function() {
-        return store.dispatch(initSucess())
-      })
+      beforeEach('dispatch #initSucess() action',() => store.dispatch(initSucess()))
 
       it('creates INIT_LOAD_SUCESS action', () => {
         expect(store._dispatch).toHaveBeenCalledWith({
-          type: INIT_LOAD_SUCESS
+          type: INIT_LOAD_SUCESS,
         })
       })
 

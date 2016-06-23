@@ -1,4 +1,4 @@
-/* @flow */
+// /* @flow */
 'use strict'
 
 import { describe, it } from 'mocha'
@@ -21,7 +21,7 @@ import reducer from '../../../../app/js/reducers/filters'
 
 describe('Filter Reducer', () => {
   it('should return a Map', () => {
-    const state = undefined
+    let state
     const action = {
       type: 'NONE',
     }
@@ -30,7 +30,7 @@ describe('Filter Reducer', () => {
   })
 
   it.only('should containt all types in map', () => {
-    const state = undefined
+    let state
     const action = {
       type: 'NONE',
     }
@@ -42,6 +42,5 @@ describe('Filter Reducer', () => {
     expect(newState.has(EMPLOYEE_TYPE)).toBe(true)
     expect(newState.has(OPEN_STATUS_TYPE)).toBe(true)
     expect(newState.has(LOCATION_TYPE)).toBe(true)
-
   })
 })

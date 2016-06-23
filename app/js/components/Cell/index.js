@@ -4,7 +4,7 @@
 import m from 'mithril'
 
 const CellComponent = {
-  view(vdom) {
+  view(vdom: Object): Object {
     return m('p', vdom.attrs.cellData.value)
   },
 }

@@ -6,7 +6,7 @@ import { fillStateOnInitialLoad, fillStateOnNewIssue } from './helpers'
 
 const initialState = new Array(10).fill(List.of())
 
-const issuesByTimeStampReducer = function(state = fromJS(initialState), action) {
+const issuesByTimeStampReducer = function(state: List = fromJS(initialState), action: Object): List {
   switch (action.type) {
   case 'INIT_LOAD':
     if (action.payload) {

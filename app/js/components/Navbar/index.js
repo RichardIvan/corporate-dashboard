@@ -5,7 +5,7 @@ import m from 'mithril'
 import style from './style.scss'
 
 const Navbar = {
-  view(vnode) {
+  view(vnode: Object): Object {
     return m(`.${style.navbar}`, [
       m(`ul.${style.navbar__ul}`, [
         m(`li.${style.navbar__li}`, m('span', 'D')),

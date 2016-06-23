@@ -13,7 +13,7 @@ import styles from '../components/Toolbar/styles.scss'
 
 
 const Toolbar = {
-  view(vdom) {
+  view(vdom: Object): Object {
     // const state = store.getState();
     return m(ToolbarComponent,
       {

@@ -15,3 +15,5 @@ export const FETCH_REPO: string = 'FETCH_REPO'
 export const NEW_ISSUE = 'NEW_ISSUE'
 
 export const CHANGE_OFFSET: string = 'CHANGE_OFFSET'
+
+export const OPENING_TIMESTAMP_TYPE = 'opening_timestamp'

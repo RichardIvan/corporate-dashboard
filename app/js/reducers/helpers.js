@@ -1,8 +1,8 @@
 'use strict'
 
 import papa from 'papaparse'
-import { Map } from 'immutable'
-import { drop, take, flatten, zipObject, reduce, map } from 'lodash'
+import { Map, List, fromJS } from 'immutable'
+import { drop, take, flatten, zipObject, reduce, map, sortBy } from 'lodash'
 
 const INVALID_KEYS = ['', 'undefined', 'null']
 
@@ -31,7 +31,6 @@ export function createReducer(initialState, handlers = {}) {
 }
 
 export function transformCSVtoJSON (data) {
-
   if (!data) {
     return Map()
   }
@@ -61,6 +60,71 @@ export function transformNewIssue (issues) {
   }, {})
 
   return stuff
+}
+
+export function fillStateOnInitialLoad(data, type) {
+
+  const json = transformCSVtoJSON(data)
+
+  const results = map(json, (item) => List.of(item.id, parseInt(item[type], 10)))
+  const resultsLen = results.length
+
+  if (resultsLen > 10) {
+    const finalResult = fromJS(sortBy(results, (pair) => pair.get(1), 'asc'))
+    return finalResult
+  }
+
+  const numberOfItemsToFill = 10 - resultsLen
+  const missingItems = new Array(numberOfItemsToFill).fill(List.of())
+
+  const sortedFinalResult = fromJS(
+    sortBy(results, (pair) => pair.get(1), 'asc')
+    .concat(missingItems)
+  )
+
+  return sortedFinalResult
+}
+
+export function fillStateOnNewIssue(state, data, type) {
+  const json = fromJS(transformNewIssue(data))
+
+  const newState = json.reduce((accumulator, item) => {
+    const newItem = fromJS([item.get('id'), item.get(type)])
+    return accumulator.push(newItem)
+  }, state)
+
+  // const sorted = sortBy(newState.toJS(), (item) => item[1], ['asc']).length
+  let sortedNewState = fromJS(
+    sortBy(newState.toArray(), (item) => item.get(1), ['asc'])
+  )
+
+  while (sortedNewState.count() > 10 && sortedNewState.last().isEmpty()) {
+    sortedNewState = sortedNewState.butLast()
+  }
+
+  return sortedNewState
+}
+
+export function createPartialReducer(type) {
+  const initialState = new Array(10).fill(List.of())
+
+  return function(state = fromJS(initialState), action) {
+    switch (action.type) {
+    case 'INIT_LOAD':
+      if (action.payload) {
+        return fillStateOnInitialLoad(action.payload.data, type)
+      }
+      return state
+      // console.log(state.merge(fromJS(action.payload)))
+      // const newState = state.merge({issues: fromJS(action.payload)})
+      // console.log(newState)
+    case 'NEW_ISSUE': {
+      return fillStateOnNewIssue(state, action.payload.data, type)
+    }
+    default:
+      return state
+    }
+  }
 }
 
 createReducer.DEFAULT = '@@DEFAULT'

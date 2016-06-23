@@ -3,3 +3,4 @@
 export * from './location'
 export * from './pending'
 export * from './issues'
+export * from './offset'

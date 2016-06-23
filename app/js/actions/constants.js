@@ -13,3 +13,5 @@ export const RESET_MESSAGES: string = 'RESET_MESSAGES'
 export const FETCH_REPO: string = 'FETCH_REPO'
 
 export const NEW_ISSUE = 'NEW_ISSUE'
+
+export const CHANGE_OFFSET: string = 'CHANGE_OFFSET'

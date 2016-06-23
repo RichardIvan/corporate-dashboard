@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux'
+
 import issues from './issues'
-import byOpeningTime from './issues-by-opening-timestamp'
+import partials from './partials'
+import offset from './offset'
 
 const root = combineReducers({
   issues,
-  byOpeningTime,
+  partials,
+  offset,
 })
 
 export default root

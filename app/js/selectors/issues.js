@@ -1,9 +1,6 @@
 'use strict'
 
-export function getVisibleIssues(state) {
-  console.log(state)
+export function getIssues(state) {
   const issues = state.issues.toJS()
-  const array = Object.keys(issues).map((issue) => issues[issue])
-
-  return array
+  return issues
 }

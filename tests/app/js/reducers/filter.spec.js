@@ -88,7 +88,7 @@ describe('Filter Reducer', () => {
 
   })
 
-  it.only('should rest the filter to initial state', () => {
+  it('should rest the filter to initial state', () => {
     const state = Map({
       [OPENING_TIMESTAMP_TYPE]: Map({
         active: true,

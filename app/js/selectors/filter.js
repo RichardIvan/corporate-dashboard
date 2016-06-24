@@ -1,9 +1,9 @@
 /* @flow */
 'use strict'
 
-export function getFilter(state: Object, type: string): Map {
+export function getFilter(type: string, state: Object): Map {
   if (!type) {
     throw new Error('No type provided')
   }
-  return state.filters[type]
+  return state.filters.get(type).toJS()
 }

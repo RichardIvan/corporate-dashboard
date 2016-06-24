@@ -4,6 +4,8 @@ import papa from 'papaparse'
 import { Map, List, fromJS } from 'immutable'
 import { drop, take, flatten, zipObject, reduce, map, sortBy } from 'lodash'
 
+import { OPENING_TIMESTAMP_TYPE, CLOSING_TIMESTAMP_TYPE } from '../actions'
+
 const INVALID_KEYS = ['', 'undefined', 'null']
 
 export function createReducer(initialState, handlers = {}) {
@@ -30,6 +32,21 @@ export function createReducer(initialState, handlers = {}) {
   }
 }
 
+function transformTimestamp(object) {
+  return reduce(object, (acc, issue, key) => {
+    return {
+      ...acc,
+      [key]: {
+        ...issue,
+        [OPENING_TIMESTAMP_TYPE]: parseInt(issue[OPENING_TIMESTAMP_TYPE], 10),
+        [CLOSING_TIMESTAMP_TYPE]: issue[CLOSING_TIMESTAMP_TYPE]
+                                  ? parseInt(issue[CLOSING_TIMESTAMP_TYPE], 10)
+                                  : issue[CLOSING_TIMESTAMP_TYPE],
+      },
+    }
+  }, {})
+}
+
 export function transformCSVtoJSON (data) {
   if (!data) {
     return Map()
@@ -50,7 +67,9 @@ export function transformCSVtoJSON (data) {
     return item
   }, {})
 
-  return zippedObject
+  const final = transformTimestamp(zippedObject)
+
+  return final
 }
 
 export function transformNewIssue (issues) {

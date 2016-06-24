@@ -76,6 +76,7 @@
     "mocha": "^2.5.3",
     "mocha-as-promised": "^2.0.0",
     "mockaroo": "^0.1.7",
+    "moment": "^2.13.0",
     "node-sass": "^3.7.0",
     "normalize.css": "^4.1.1",
     "normalizr": "^2.1.0",

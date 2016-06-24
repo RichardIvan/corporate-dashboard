@@ -19,7 +19,7 @@ import {
 import { getDataByType } from '../../../../app/js/selectors'
 
 describe('Data By Type Selector', () => {
-  it.only('should return data', () => {
+  it('should return data', () => {
     const state = {
       partials: {
         [OPENING_TIMESTAMP_TYPE]: List.of(List.of(1, 'two'), List.of(1, 'two')),

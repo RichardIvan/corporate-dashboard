@@ -25,7 +25,7 @@ const Table = {
                 },
                 m(CellContainer, {
                   cellData: {
-                    value: issue[column.type],
+                    value: issue[column.type] ? issue[column.type].transformed : '',
                     type: column.type,
                   },
                 })

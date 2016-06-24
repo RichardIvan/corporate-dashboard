@@ -1,13 +1,15 @@
 'use strict'
 
 import { newIssue } from '../actions'
+
+// fetchSingleItem,
+// fillIDs,
+// fillLocation,
+// fillOpeningTimestamp,
+// fillClosingTimestamp,
+// saveToFirebase,
+
 import {
-  fetchSingleItem,
-  fillIDs,
-  fillLocation,
-  fillOpeningTimestamp,
-  fillClosingTimestamp,
-  saveToFirebase,
   fetchSingleItemFromFirebase,
 } from '../helpers'
 

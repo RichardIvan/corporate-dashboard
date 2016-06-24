@@ -23,5 +23,5 @@ export const data = {
     name: "Judy Patterson",
     open_status: true,
     opening_timestamp: 1444857605902,
-  }
+  },
 }

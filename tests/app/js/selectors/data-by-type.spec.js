@@ -6,15 +6,15 @@ import expect from 'expect'
 
 import { List } from 'immutable'
 
-import {
-  NAME_TYPE,
-  EMAIL_TYPE,
-  OPENING_TIMESTAMP_TYPE,
-  CLOSING_TIMESTAMP_TYPE,
-  EMPLOYEE_TYPE,
-  OPEN_STATUS_TYPE,
-  LOCATION_TYPE,
-} from '../../../../app/js/actions'
+// import {
+//   NAME_TYPE,
+//   EMAIL_TYPE,
+//   OPENING_TIMESTAMP_TYPE,
+//   CLOSING_TIMESTAMP_TYPE,
+//   EMPLOYEE_TYPE,
+//   OPEN_STATUS_TYPE,
+//   LOCATION_TYPE,
+// } from '../../../../app/js/actions'
 
 import { getDataByType } from '../../../../app/js/selectors'
 

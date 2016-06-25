@@ -25,14 +25,12 @@ describe('Names Selector', () => {
   })
 
   it('should retrieve an array', () => {
-
     const out = getAllNames(state)
 
     expect(Array.isArray(out)).toBe(true)
   })
 
-  it.only('should include only unique names', () => {
-
+  it('should include only unique names', () => {
     const out = getAllNames(state)
 
     expect(out).toEqual(['me', 'you'])

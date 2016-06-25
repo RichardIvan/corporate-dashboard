@@ -63,7 +63,7 @@ describe('Sort Reducer', () => {
   })
 
   // should return state for unrecognized action type
-  it.only('should return state for unrecognized action type', () => {
+  it('should return state for unrecognized action type', () => {
     const action = setSort('UNRECOGNIZED_TYPE')
 
     const newState = reducer(initialState, action)

@@ -5,6 +5,7 @@ import partials from './partials'
 import offset from './offset'
 import filters from './filters'
 import sortBy from './sort-by'
+import filterComponentState from './filter-component-state'
 
 const root = combineReducers({
   issues,
@@ -12,6 +13,7 @@ const root = combineReducers({
   offset,
   filters,
   sortBy,
+  filterComponentState,
 })
 
 export default root

@@ -24,7 +24,10 @@ const Table = {
                   class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
                 },
                 m(CellContainer, {
+                  ...vdom.attrs,
+                  issue,
                   cellData: {
+                    data: issue[column.type],
                     value: issue[column.type] ? issue[column.type].transformed : '',
                     type: column.type,
                   },

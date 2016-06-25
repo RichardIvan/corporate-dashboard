@@ -91,6 +91,7 @@
     }
 
     text-align: center;
+    overflow: visible !important;
 
     // align-items: center;
     // justify-content: center;
@@ -104,6 +105,8 @@
       font-size: 15px;
       padding: 0.3em 0;
     }
+
+    overflow: visible;
   }
 
   .dimmed {

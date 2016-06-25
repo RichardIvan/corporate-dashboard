@@ -104,6 +104,8 @@ describe('Issues by opening timestamp reducer', () => {
 
       const newState = reducer(state, action)
 
+      console.log(newState)
+
       expect(newState.first().first().includes('iiii')).toBe(true)
       expect(newState.first().includes(1440864124169)).toBe(true)
 

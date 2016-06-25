@@ -12,23 +12,23 @@ import GeospacialContainer from '../../../../app/js/containers/Geo'
 import DataContainer from '../../../../app/js/containers/Data'
 import GraphContainer from '../../../../app/js/containers/Graph'
 
-describe('main component', () => {
-  it('should display geospacial view', () => {
-    expect(mq(MainComponent, { container: GeospacialContainer }).has('#geo')).toBe(true)
-  })
-
-  it('should display data view', () => {
-    expect(mq(MainComponent, { container: DataContainer }).has('#data')).toBe(true)
-  })
-
-  it('should display graph view', () => {
-    expect(mq(MainComponent, { container: GraphContainer }).has('#graph')).toBe(true)
-  })
-
-  it('should have #main-container', () => {
-    expect(mq(MainComponent).has('#main-container')).toBe(true)
-  })
-})
+// describe('main component', () => {
+//   it('should display geospacial view', () => {
+//     expect(mq(MainComponent, { container: GeospacialContainer }).has('#geo')).toBe(true)
+//   })
+//
+//   it('should display data view', () => {
+//     expect(mq(MainComponent, { container: DataContainer }).has('#data')).toBe(true)
+//   })
+//
+//   it('should display graph view', () => {
+//     expect(mq(MainComponent, { container: GraphContainer }).has('#graph')).toBe(true)
+//   })
+//
+//   it('should have #main-container', () => {
+//     expect(mq(MainComponent).has('#main-container')).toBe(true)
+//   })
+// })
 
 // o.spec('main component', () => {
 //   o.spec('structure', () => {

@@ -1,0 +1,36 @@
+.tooltip {
+  position: absolute;
+  bottom: 110%;
+
+  width: auto !important;
+  // min-width: 100%;
+  height: auto;
+
+  z-index: 30;
+
+  color: #dbdaea;
+  background: #222d37;
+
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1em 2em;
+
+  :global(p) {
+    position: relative;
+    height: 100% !important;
+    width: 100% !important;
+    // min-width: 100% !important;
+  }
+
+  overflow: visible;
+}
+
+.cell-container {
+  display: flex;
+  justify-content: center;
+
+  width: 100% !important;
+  height: auto;
+}

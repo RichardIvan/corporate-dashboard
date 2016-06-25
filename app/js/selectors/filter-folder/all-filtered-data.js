@@ -14,6 +14,11 @@ export const getAllFilteredData = createSelector(
   getActiveFilters,
   getState,
   (arrayOfActiveFilters, state) => {
+    const issues = getIssues(state)
+    if (arrayOfActiveFilters.length === 0) {
+      const keys = Object.keys(issues)
+      return map(keys, (issueID) => issues[issueID])
+    }
     const filteredItemsWithDuplicates = reduce(
       arrayOfActiveFilters, (accumulator, filter) => {
         // console.log(getSingleDataByFilter(filter.type)(state))
@@ -24,10 +29,10 @@ export const getAllFilteredData = createSelector(
     // remove duplicates
     const unique = uniqBy(filteredItemsWithDuplicates, (pair) => pair[0])
 
-    const issues = getIssues(state)
+
     const full = map(unique, (item) => {
       return issues[item[0]]
-    }, [])
+    })
     return full
   }
 )

@@ -26,8 +26,8 @@ export const initialState = Map({
   }),
   [OPENING_TIMESTAMP_TYPE]: Map({
     type: OPENING_TIMESTAMP_TYPE,
-    active: true,
-    from: 1450000000000,
+    active: false,
+    from: -1,
     to: -1,
   }),
   [CLOSING_TIMESTAMP_TYPE]: Map({

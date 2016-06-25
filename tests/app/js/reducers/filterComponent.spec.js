@@ -37,7 +37,7 @@ describe('Filter Component Reducer', () => {
   })
 
   describe('#SET_FILTER_COMPONENT_OPEN_STATUS', () => {
-    it.only('should set state to true', () => {
+    it('should set state to true', () => {
       const state = initialState
 
       const action = {
@@ -51,11 +51,22 @@ describe('Filter Component Reducer', () => {
         open: true,
         selectedFilterMenu: 'root',
       }))
-
     })
 
-    it('should set state to false', () => {
+    it.only('should set state to false', () => {
+      const state = initialState
 
+      const action = {
+        type: SET_FILTER_COMPONENT_OPEN_STATUS,
+        payload: false,
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState).toEqual(fromJS({
+        open: false,
+        selectedFilterMenu: 'root',
+      }))
     })
   })
 

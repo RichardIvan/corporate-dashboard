@@ -38,7 +38,7 @@ import { OPENING_TIMESTAMP_TYPE } from '../../../../app/js/actions'
 
 describe('Filter Selectors', function () {
   describe('#getAllFilters()', function () {
-    it.only('should return object of filters', () => {
+    it('should return object of filters', () => {
 
       const state = {
         filters: Map({

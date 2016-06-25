@@ -7,3 +7,7 @@ export function getFilter(type: string, state: Object): Map {
   }
   return state.filters.get(type).toJS()
 }
+
+export function getAllFilters(state) {
+  return state.filters.toJS()
+}

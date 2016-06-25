@@ -15,7 +15,7 @@ describe('Test Sort Action Creator', () => {
   })
 
   // does have type of sort
-  it.only('should contain type of sort', () => {
+  it('should contain type of sort', () => {
     const action = setSort('name')
 
     expect(action.payload.type).toBe('name')

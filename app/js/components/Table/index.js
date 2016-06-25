@@ -11,7 +11,7 @@ import {
   OPENING_TIMESTAMP_TYPE,
   CLOSING_TIMESTAMP_TYPE,
   EMPLOYEE_TYPE,
-  STATUS_TYPE,
+  OPEN_STATUS_TYPE,
 } from '../../actions'
 
 import styles from './styles.scss'
@@ -22,7 +22,7 @@ const sortableItems = [
   OPENING_TIMESTAMP_TYPE,
   CLOSING_TIMESTAMP_TYPE,
   EMPLOYEE_TYPE,
-  STATUS_TYPE,
+  OPEN_STATUS_TYPE,
 ]
 
 function headerClickHandler(type) {

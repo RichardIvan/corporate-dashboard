@@ -20,7 +20,15 @@ describe('Filter Component Reducer', () => {
     })
 
     it.only('should be immutable', () => {
+      const state = initialState
 
+      const action = {
+        type: 'UNKNOWN',
+      }
+
+      reducer(state, action)
+
+      expect(state).toBe(state)
     })
   })
 

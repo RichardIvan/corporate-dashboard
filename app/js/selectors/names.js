@@ -3,6 +3,10 @@
 
 import uniq from 'lodash/uniq'
 
+import { NAME_TYPE } from '../actions/types'
+
+import { getDataByType } from './'
+
 export function getAllNames(state) {
-  return uniq(state.partials.name.toJS())
+  return uniq(getDataByType(NAME_TYPE, state))
 }

@@ -15,7 +15,12 @@ describe('Statuses Selector', () => {
   beforeEach(() => {
     state = {
       partials: {
-        [OPEN_STATUS_TYPE]: List.of(true, false, true, true),
+        [OPEN_STATUS_TYPE]: List.of(
+          List.of(1, true),
+          List.of(1, false),
+          List.of(1, true),
+          List.of(1, true)
+        ),
       },
     }
   })

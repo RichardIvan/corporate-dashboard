@@ -15,7 +15,12 @@ describe('Emails Selector', () => {
   beforeEach(() => {
     state = {
       partials: {
-        [EMAIL_TYPE]: List.of('me@.com', 'you@.com', 'me@.com', 'you@.com'),
+        [EMAIL_TYPE]: List.of(
+          List.of(1, 'me@.com'),
+          List.of(1, 'you@.com'),
+          List.of(1, 'me@.com'),
+          List.of(1, 'you@.com')
+        ),
       },
     }
   })

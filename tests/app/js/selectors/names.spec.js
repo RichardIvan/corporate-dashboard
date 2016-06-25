@@ -14,7 +14,12 @@ describe('Names Selector', () => {
   beforeEach(() => {
     state = {
       partials: {
-        name: List.of('me', 'you', 'me', 'you'),
+        name: List.of(
+          List.of(1, 'me'),
+          List.of(1, 'you'),
+          List.of(1, 'me'),
+          List.of(1, 'you')
+        ),
       },
     }
   })
@@ -26,7 +31,7 @@ describe('Names Selector', () => {
     expect(Array.isArray(out)).toBe(true)
   })
 
-  it('should include only unique names', () => {
+  it.only('should include only unique names', () => {
 
     const out = getAllNames(state)
 

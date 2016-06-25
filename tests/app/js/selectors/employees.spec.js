@@ -15,7 +15,12 @@ describe('Employees Selector', () => {
   beforeEach(() => {
     state = {
       partials: {
-        [EMPLOYEE_TYPE]: List.of('him', 'her', 'him', 'her'),
+        [EMPLOYEE_TYPE]: List.of(
+          List.of(1, 'him'),
+          List.of(1, 'her'),
+          List.of(1, 'him'),
+          List.of(1, 'her')
+        ),
       },
     }
   })

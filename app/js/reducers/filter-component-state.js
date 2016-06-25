@@ -4,7 +4,7 @@
 import { Map } from 'immutable'
 
 import {
-  SET_OPEN_STATUS
+  SET_FILTER_COMPONENT_OPEN_STATUS,
 } from '../actions'
 
 export const initialState = Map({
@@ -14,8 +14,8 @@ export const initialState = Map({
 
 export default function(state = initialState, action) {
   switch (action.type) {
-  case SET_OPEN_STATUS:
-    return state
+  case SET_FILTER_COMPONENT_OPEN_STATUS:
+    return state.set('open', action.payload)
   default:
     return state
   }

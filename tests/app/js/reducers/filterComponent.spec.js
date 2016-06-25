@@ -4,7 +4,11 @@
 import { describe, it } from 'mocha'
 import expect from 'expect'
 
+import { fromJS } from 'immutable'
+
 import reducer, { initialState } from '../../../../app/js/reducers/filter-component-state'
+
+import { SET_FILTER_COMPONENT_OPEN_STATUS } from '../../../../app/js/actions'
 
 describe('Filter Component Reducer', () => {
   describe('common', () => {
@@ -19,7 +23,7 @@ describe('Filter Component Reducer', () => {
       expect(newState).toEqual(initialState)
     })
 
-    it.only('should be immutable', () => {
+    it('should be immutable', () => {
       const state = initialState
 
       const action = {
@@ -32,8 +36,21 @@ describe('Filter Component Reducer', () => {
     })
   })
 
-  describe('#SET_FILTER_COMPONENT_OPEN_STATUS', function () {
-    it('should set state to true', () => {
+  describe('#SET_FILTER_COMPONENT_OPEN_STATUS', () => {
+    it.only('should set state to true', () => {
+      const state = initialState
+
+      const action = {
+        type: SET_FILTER_COMPONENT_OPEN_STATUS,
+        payload: true,
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState).toEqual(fromJS({
+        open: true,
+        selectedFilterMenu: 'root',
+      }))
 
     })
 

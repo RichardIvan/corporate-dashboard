@@ -20,3 +20,5 @@ export const SET_FILTER: string = 'SET_FILTER'
 export const RESET_FILTER: string = 'RESET_FILTER'
 
 export const SET_SORT: string = 'SET_SORT'
+
+export const SET_FILTER_COMPONENT_OPEN_STATUS: string = 'SET_FILTER_COMPONENT_OPEN_STATUS'

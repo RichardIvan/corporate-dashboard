@@ -6,6 +6,7 @@ import { Map } from 'immutable'
 import {
   SET_FILTER_COMPONENT_OPEN_STATUS,
   SET_FILTER_COMPONENT_STATE,
+  RESET_FILTER_COMPONENT_STATE,
 } from '../actions'
 
 export const initialState = Map({
@@ -19,6 +20,8 @@ export default function(state = initialState, action) {
     return state.set('open', action.payload)
   case SET_FILTER_COMPONENT_STATE:
     return state.set('selectedFilterMenu', action.payload)
+  case RESET_FILTER_COMPONENT_STATE:
+    return state.set('selectedFilterMenu', 'root')
   default:
     return state
   }

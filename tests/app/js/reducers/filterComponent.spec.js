@@ -11,6 +11,8 @@ import reducer, { initialState } from '../../../../app/js/reducers/filter-compon
 import {
   SET_FILTER_COMPONENT_OPEN_STATUS,
   SET_FILTER_COMPONENT_STATE,
+  RESET_FILTER_COMPONENT_STATE,
+  OVERLAY_CLOSED,
 } from '../../../../app/js/actions'
 
 describe('Filter Component Reducer', () => {
@@ -74,7 +76,7 @@ describe('Filter Component Reducer', () => {
   })
 
   describe('#SET_FILTER_COMPONENT_STATE', () => {
-    it.only('should set the correct filter component state', () => {
+    it('should set the correct filter component state', () => {
       const state = initialState
 
       const action = {
@@ -91,9 +93,31 @@ describe('Filter Component Reducer', () => {
     })
   })
 
-  describe('#RESET_FILTER_COMPONENT_STATE', function () {
-    it('should reset component to initial state', () => {
+  describe('#RESET_FILTER_COMPONENT_STATE', () => {
+    it.only('should reset component to initial state', () => {
 
+      let state = initialState
+      state = state.set('open', true)
+
+      const action = {
+        type: RESET_FILTER_COMPONENT_STATE,
+      }
+
+      let newState = reducer(state, action)
+
+      expect(newState).toEqual(fromJS({
+        open: true,
+        selectedFilterMenu: 'root',
+      }))
+
+      state = state = state.set('open', false)
+
+      newState = reducer(state, action)
+
+      expect(newState).toEqual(fromJS({
+        open: false,
+        selectedFilterMenu: 'root',
+      }))
     })
   })
 

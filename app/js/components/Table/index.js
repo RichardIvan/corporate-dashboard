@@ -4,7 +4,32 @@ import m from 'mithril'
 
 import CellContainer from '../../containers/Cell'
 
+import {
+  setSort,
+  NAME_TYPE,
+  EMAIL_TYPE,
+  OPENING_TIMESTAMP_TYPE,
+  CLOSING_TIMESTAMP_TYPE,
+  EMPLOYEE_TYPE,
+  STATUS_TYPE,
+} from '../../actions'
+
 import styles from './styles.scss'
+
+const sortableItems = [
+  NAME_TYPE,
+  EMAIL_TYPE,
+  OPENING_TIMESTAMP_TYPE,
+  CLOSING_TIMESTAMP_TYPE,
+  EMPLOYEE_TYPE,
+  STATUS_TYPE,
+]
+
+function headerClickHandler(type) {
+  if (sortableItems.indexOf(type) !== -1) {
+    this.attrs.store.dispatch(setSort(type))
+  }
+}
 
 const Table = {
   view(vdom) {
@@ -17,7 +42,12 @@ const Table = {
             class: index === 2 ? `${styles.three}` : '',
           },
           m(`ul.${styles.contentColumn}`, [
-            m(`li.${styles.header}`, m('p', column.name)),
+            // Header Cell
+            m(`li.${styles.header}`,
+              {
+                onclick: headerClickHandler.bind(vdom, column.type),
+              }, m('p', column.name)),
+            // rows
             vdom.attrs.issues.map((issue, i) => {
               return m(`li.${styles.row}`,
                 {

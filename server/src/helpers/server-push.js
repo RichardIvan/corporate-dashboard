@@ -23,6 +23,6 @@ export function startServerPush (socket) {
     // .then(fillClosingTimestamp)
     // .then(saveToFirebase)
     .then((data) => socket.emit('data', { action: newIssue(data) }))
-  , 1500)
+  , 15000)
   return true
 }

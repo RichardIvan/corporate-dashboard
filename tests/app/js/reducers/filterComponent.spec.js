@@ -8,7 +8,10 @@ import { fromJS } from 'immutable'
 
 import reducer, { initialState } from '../../../../app/js/reducers/filter-component-state'
 
-import { SET_FILTER_COMPONENT_OPEN_STATUS } from '../../../../app/js/actions'
+import {
+  SET_FILTER_COMPONENT_OPEN_STATUS,
+  SET_FILTER_COMPONENT_STATE,
+} from '../../../../app/js/actions'
 
 describe('Filter Component Reducer', () => {
   describe('common', () => {
@@ -53,7 +56,7 @@ describe('Filter Component Reducer', () => {
       }))
     })
 
-    it.only('should set state to false', () => {
+    it('should set state to false', () => {
       const state = initialState
 
       const action = {
@@ -70,9 +73,21 @@ describe('Filter Component Reducer', () => {
     })
   })
 
-  describe('#SET_FILTER_COMPONENT_STATE', function () {
-    it('should set the correct filter component state', () => {
+  describe('#SET_FILTER_COMPONENT_STATE', () => {
+    it.only('should set the correct filter component state', () => {
+      const state = initialState
 
+      const action = {
+        type: SET_FILTER_COMPONENT_STATE,
+        payload: 'name',
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState).toEqual(fromJS({
+        open: false,
+        selectedFilterMenu: 'name',
+      }))
     })
   })
 

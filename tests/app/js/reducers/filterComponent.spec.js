@@ -94,8 +94,7 @@ describe('Filter Component Reducer', () => {
   })
 
   describe('#RESET_FILTER_COMPONENT_STATE', () => {
-    it.only('should reset component to initial state', () => {
-
+    it('should reset component to initial state', () => {
       let state = initialState
       state = state.set('open', true)
 
@@ -121,10 +120,17 @@ describe('Filter Component Reducer', () => {
     })
   })
 
-  describe('#CLOSE_OVERLAY', function () {
+  describe('#OVERLAY_CLOSED', () => {
     it('should reset component to initial state', () => {
+      const state = initialState
 
+      const action = {
+        type: OVERLAY_CLOSED,
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState).toEqual(initialState)
     })
   })
-
 })

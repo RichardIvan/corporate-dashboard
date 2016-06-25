@@ -7,6 +7,7 @@ import {
   SET_FILTER_COMPONENT_OPEN_STATUS,
   SET_FILTER_COMPONENT_STATE,
   RESET_FILTER_COMPONENT_STATE,
+  OVERLAY_CLOSED,
 } from '../actions'
 
 export const initialState = Map({
@@ -22,6 +23,8 @@ export default function(state = initialState, action) {
     return state.set('selectedFilterMenu', action.payload)
   case RESET_FILTER_COMPONENT_STATE:
     return state.set('selectedFilterMenu', 'root')
+  case OVERLAY_CLOSED:
+    return initialState
   default:
     return state
   }

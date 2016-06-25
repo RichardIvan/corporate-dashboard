@@ -71,7 +71,6 @@
     "html-webpack-plugin": "^2.19.0",
     "ignore-styles": "^3.0.0",
     "immutable": "^3.8.1",
-    "material-design-icons-iconfont": "^2.0.5",
     "mithril": "github:lhorie/mithril.js#rewrite",
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite",
     "mocha": "^2.5.3",

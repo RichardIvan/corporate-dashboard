@@ -3,6 +3,9 @@
 import m from 'mithril'
 
 import CellContainer from '../../containers/Cell'
+import Icon from '../../containers/Icon'
+
+import { getSortBy } from '../../selectors/filter-folder'
 
 import {
   setSort,
@@ -25,14 +28,28 @@ const sortableItems = [
   OPEN_STATUS_TYPE,
 ]
 
+function isSortable(type) {
+  return (sortableItems.indexOf(type) !== -1)
+}
+
+function isSortActive(type, state) {
+  // TODO write getSort selector
+  return getSortBy(state).type === type
+}
+
+function isAsc(state) {
+  return getSortBy(state).asc
+}
+
 function headerClickHandler(type) {
-  if (sortableItems.indexOf(type) !== -1) {
+  if (isSortable(type)) {
     this.attrs.store.dispatch(setSort(type))
   }
 }
 
 const Table = {
   view(vdom) {
+    const state = vdom.attrs.store.getState()
     // console.log(vdom)
     return m(`ul.${styles.table}`, [
       // 'Hey',
@@ -46,7 +63,18 @@ const Table = {
             m(`li.${styles.header}`,
               {
                 onclick: headerClickHandler.bind(vdom, column.type),
-              }, m('p', column.name)),
+              },
+              [
+                // console.log(isSortActive(column.type, state)),
+                // console.log(isAsc(state)),
+                m('p', column.name),
+                (isSortable(column.type) && isSortActive(column.type, state)) ? m(Icon,
+                  {
+                    type: 'arrow',
+                    className: isAsc(state) ? 'asc' : 'desc',
+                  }
+                ) : null,
+              ]),
             // rows
             vdom.attrs.issues.map((issue, i) => {
               return m(`li.${styles.row}`,

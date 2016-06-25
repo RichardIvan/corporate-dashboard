@@ -1,0 +1,14 @@
+.asc, .desc {
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+
+  :global(svg) {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+.desc {
+  transform: rotate(180deg) translateY(4px);
+}

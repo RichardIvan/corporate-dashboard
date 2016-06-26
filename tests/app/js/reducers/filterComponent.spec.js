@@ -12,7 +12,7 @@ import {
   SET_FILTER_COMPONENT_OPEN_STATUS,
   SET_FILTER_COMPONENT_STATE,
   RESET_FILTER_COMPONENT_STATE,
-  OVERLAY_CLOSED,
+  CLOSE_OVERLAY,
   CLOSE_FILTER_COMPONENT
 } from '../../../../app/js/actions'
 
@@ -135,12 +135,12 @@ describe('Filter Component Reducer', () => {
     })
   })
 
-  describe('#OVERLAY_CLOSED', () => {
+  describe('#CLOSE_OVERLAY', () => {
     it('should reset component to initial state', () => {
       const state = initialState
 
       const action = {
-        type: OVERLAY_CLOSED,
+        type: CLOSE_OVERLAY,
       }
 
       const newState = reducer(state, action)

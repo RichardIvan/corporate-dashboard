@@ -13,6 +13,7 @@ import {
   SET_FILTER_COMPONENT_STATE,
   RESET_FILTER_COMPONENT_STATE,
   OVERLAY_CLOSED,
+  CLOSE_FILTER_COMPONENT
 } from '../../../../app/js/actions'
 
 describe('Filter Component Reducer', () => {
@@ -117,6 +118,20 @@ describe('Filter Component Reducer', () => {
         open: false,
         selectedFilterMenu: 'root',
       }))
+    })
+  })
+
+  describe('#CLOSE_FILTER_COMPONENT', () => {
+    it('should reset component to initial state', () => {
+      const state = initialState
+
+      const action = {
+        type: CLOSE_FILTER_COMPONENT,
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState).toEqual(initialState)
     })
   })
 

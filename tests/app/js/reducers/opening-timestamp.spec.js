@@ -104,13 +104,11 @@ describe('Issues by opening timestamp reducer', () => {
 
       const newState = reducer(state, action)
 
-      console.log(newState)
+      expect(newState.first().first().includes('aaaa')).toBe(true)
+      expect(newState.first().includes(1440864314169)).toBe(true)
 
-      expect(newState.first().first().includes('iiii')).toBe(true)
-      expect(newState.first().includes(1440864124169)).toBe(true)
-
-      expect(newState.get(1).first().includes('hhhh')).toBe(true)
-      expect(newState.get(1).includes(1440864174169)).toBe(true)
+      expect(newState.get(1).first().includes('cccc')).toBe(true)
+      expect(newState.get(1).includes(1440864324169)).toBe(true)
     })
   })
 

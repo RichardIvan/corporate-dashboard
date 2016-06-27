@@ -8,6 +8,6 @@ export function getFilter(type: string, state: Object): Map {
   return state.filters.get(type).toJS()
 }
 
-export function getAllFilters(state) {
+export function getAllFilters(state: Object): Array<Object> {
   return state.filters.toJS()
 }

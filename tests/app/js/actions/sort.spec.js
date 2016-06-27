@@ -14,6 +14,11 @@ describe('Test Sort Action Creator', () => {
     expect(isFSA(action)).toBe(true)
   })
 
+  // it should throw if youdont provide type
+  it('should throw when no type provided', () => {
+    expect(setSort).toThrow('Missing sort type')
+  })
+
   // does have type of sort
   it('should contain type of sort', () => {
     const action = setSort('name')

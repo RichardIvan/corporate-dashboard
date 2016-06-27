@@ -1,19 +1,19 @@
 /* @flow */
 'use strict'
 
-import { describe, it } from 'mocha'
+import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
-import { fromJS } from 'immutable'
+import { fromJS, List } from 'immutable'
 
 import reducer, { initialState } from '../../../../app/js/reducers/filter-component-state'
 
 import {
   SET_FILTER_COMPONENT_OPEN_STATUS,
-  SET_FILTER_COMPONENT_STATE,
+  SET_FILTER_COMPONENT_MENU_STATE,
   RESET_FILTER_COMPONENT_STATE,
   CLOSE_OVERLAY,
-  CLOSE_FILTER_COMPONENT
+  CLOSE_FILTER_COMPONENT,
 } from '../../../../app/js/actions'
 
 describe('Filter Component Reducer', () => {
@@ -53,10 +53,7 @@ describe('Filter Component Reducer', () => {
 
       const newState = reducer(state, action)
 
-      expect(newState).toEqual(fromJS({
-        open: true,
-        selectedFilterMenu: 'root',
-      }))
+      expect(newState).toEqual(initialState.set('open', true))
     })
 
     it('should set state to false', () => {
@@ -69,10 +66,7 @@ describe('Filter Component Reducer', () => {
 
       const newState = reducer(state, action)
 
-      expect(newState).toEqual(fromJS({
-        open: false,
-        selectedFilterMenu: 'root',
-      }))
+      expect(newState).toEqual(initialState.set('open', false))
     })
   })
 
@@ -81,16 +75,13 @@ describe('Filter Component Reducer', () => {
       const state = initialState
 
       const action = {
-        type: SET_FILTER_COMPONENT_STATE,
+        type: SET_FILTER_COMPONENT_MENU_STATE,
         payload: 'name',
       }
 
       const newState = reducer(state, action)
 
-      expect(newState).toEqual(fromJS({
-        open: false,
-        selectedFilterMenu: 'name',
-      }))
+      expect(newState).toEqual(initialState.set('selectedFilterMenu', 'name'))
     })
   })
 
@@ -105,19 +96,13 @@ describe('Filter Component Reducer', () => {
 
       let newState = reducer(state, action)
 
-      expect(newState).toEqual(fromJS({
-        open: true,
-        selectedFilterMenu: 'root',
-      }))
+      expect(newState).toEqual(initialState)
 
       state = state = state.set('open', false)
 
       newState = reducer(state, action)
 
-      expect(newState).toEqual(fromJS({
-        open: false,
-        selectedFilterMenu: 'root',
-      }))
+      expect(newState).toEqual(initialState)
     })
   })
 
@@ -147,5 +132,146 @@ describe('Filter Component Reducer', () => {
 
       expect(newState).toEqual(initialState)
     })
+  })
+
+  describe('#SET_FILTER', () => {
+    // SETS THE OPENING TIMESTAMP
+    let state
+
+    beforeEach(() => {
+      state = initialState
+    })
+
+    it('should set opening timestamp', () => {
+      const action = {
+        type: 'SET_FILTER',
+        payload: {
+          type: 'opening_timestamp',
+          timestampType: 'from',
+          value: 1,
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('timestamp')).toEqual(fromJS({
+        from: 1,
+        to: 0,
+      }))
+    })
+
+    // SETS THE CLOSING SIMESTAMP
+    it('should set closing timestamp', () => {
+      const action = {
+        type: 'SET_FILTER',
+        payload: {
+          type: 'opening_timestamp',
+          timestampType: 'to',
+          value: 1,
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('timestamp')).toEqual(fromJS({
+        from: 0,
+        to: 1,
+      }))
+    })
+  })
+
+  describe('#FILTER_SEARCH_RESULT', () => {
+
+    let state
+
+    beforeEach(() => {
+      state = initialState
+    })
+
+    // SETS THE LOCATION QUERY and result
+    it('should set the location query and result', () => {
+      const action = {
+        type: 'FILTER_SEARCH_RESULT',
+        payload: {
+          type: 'location',
+          term: 'up',
+          results: ['upper west', 'upper east'],
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('filterSearchQuery')).toBe('up')
+      expect(newState.get('filterSearchQueryResults')).toEqual(List.of('upper west', 'upper east'))
+    })
+
+    // SETS THE NAME QUERY
+    it('should set the name query and result', () => {
+      const action = {
+        type: 'FILTER_SEARCH_RESULT',
+        payload: {
+          type: 'name',
+          term: 'your name',
+          results: ['myname', 'your name'],
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('filterSearchQuery')).toBe('your name')
+      expect(newState.get('filterSearchQueryResults')).toEqual(List.of('myname', 'your name'))
+    })
+
+    // SETS THE EMAIL QUERY
+    it('should should set email query and resuts', () => {
+      const action = {
+        type: 'FILTER_SEARCH_RESULT',
+        payload: {
+          type: 'email_address',
+          term: 'your@name',
+          results: ['your@name'],
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('filterSearchQuery')).toBe('your@name')
+      expect(newState.get('filterSearchQueryResults')).toEqual(List.of('your@name'))
+    })
+
+    // SETS THE EMLOYEE QUERY
+    it('should should set employee_name query and resuts', () => {
+      const action = {
+        type: 'FILTER_SEARCH_RESULT',
+        payload: {
+          type: 'employee_name',
+          term: 'm',
+          results: ['maxdacosta'],
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('filterSearchQuery')).toBe('m')
+      expect(newState.get('filterSearchQueryResults')).toEqual(List.of('maxdacosta'))
+    })
+
+    // RETURNS STATE FOR ANY OTHER QUERY
+    it('should should return state if there is unknows type passed', () => {
+      const action = {
+        type: 'FILTER_SEARCH_RESULT',
+        payload: {
+          type: 'yes',
+          term: 'm',
+          results: ['maxdacosta'],
+        },
+      }
+
+      const newState = reducer(state, action)
+
+      expect(newState.get('filterSearchQuery')).toBe('')
+      expect(newState.get('filterSearchQueryResults')).toEqual(List.of())
+    })
+
   })
 })

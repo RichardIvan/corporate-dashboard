@@ -15,6 +15,9 @@ import { List } from 'immutable'
 //   OPEN_STATUS_TYPE,
 //   LOCATION_TYPE,
 // } from '../../../../app/js/actions'
+import {
+  OPENING_TIMESTAMP_TYPE,
+} from '../../../../app/js/actions'
 
 import { getDataByType } from '../../../../app/js/selectors'
 
@@ -26,7 +29,7 @@ describe('Data By Type Selector', () => {
       },
     }
 
-    expect(getDataByType(state, OPENING_TIMESTAMP_TYPE)).toEqual([[1, 'two'], [1, 'two']])
+    expect(getDataByType(OPENING_TIMESTAMP_TYPE, state)).toEqual([[1, 'two'], [1, 'two']])
   })
 
   it('should trow if no type or state is provided', () => {

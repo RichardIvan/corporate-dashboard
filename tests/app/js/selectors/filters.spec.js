@@ -52,9 +52,6 @@ describe('Filter Selectors', function () {
 
       const output = getAllFilters(state)
 
-      console.log(output)
-      console.log(typeof output)
-
       expect(typeof output).toBe('object')
     })
   })

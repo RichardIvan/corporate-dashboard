@@ -21,8 +21,14 @@ import { getAllFilteredData, allWithOffset } from '../selectors/filter-folder'
 // import { mockedHeaderColumnNames } from '../../../../../../../tests/mocks/data'
 
 const Table = {
-  view(vdom) {
-    const state = vdom.attrs.store.getState()
+  oninit(vnode) {
+    this.appState = vnode.attrs.store.getState()
+  },
+  onbeforeupdate(vnode) {
+    this.appState = vnode.attrs.store.getState()
+  },
+  view(vnode) {
+    // const state = vnode.attrs.store.getState()
     // getSingleDataByFilter('opening_timestamp')(state)
     // console.log(getAllFilteredData(state))
     // console.log(getAllFilteredData(state))
@@ -30,9 +36,9 @@ const Table = {
     // console.log(state.getState().issues)
 
     return m(TableComponent, {
-      ...vdom.attrs,
+      ...vnode.attrs,
       columns: getHeaderColumnNames(),
-      issues: allWithOffset(state),
+      issues: allWithOffset(vnode.state.appState),
     })
   },
 }

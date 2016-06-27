@@ -1,6 +1,6 @@
 /* @flow */
 
-import { describe, it, beforeEach, context } from 'mocha'
+import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
 import { createThunkStore } from './helpers'
@@ -62,6 +62,22 @@ describe('initial actions', () => {
       })
     })
 
+  })
+
+  describe('##initLoad', () => {
+    it('should create correct action', () => {
+      expect(initLoad()).toEqual({
+        type: 'INIT_LOAD',
+      })
+    })
+  })
+
+  describe('##initSuccess()', () => {
+    it('should create correct action', () => {
+      expect(initSucess()).toEqual({
+        type: 'INIT_LOAD_SUCESS'
+      })
+    })
   })
 
 })

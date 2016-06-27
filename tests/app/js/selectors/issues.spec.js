@@ -5,7 +5,7 @@ import expect from 'expect'
 
 import { Map, List } from 'immutable'
 
-import { getVisibleIssues } from '../../../../app/js/selectors'
+import { getIssues } from '../../../../app/js/selectors'
 
 describe('Issue Selector', () => {
   it('should get array with 10 items', () => {
@@ -46,8 +46,6 @@ describe('Issue Selector', () => {
     ),
   }
 
-    expect(getVisibleIssues(state).length).toBe(10)
+    expect(Object.keys(getIssues(state)).length).toBe(10)
   })
-
-  it('should ')
 })

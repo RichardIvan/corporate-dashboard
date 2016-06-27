@@ -4,9 +4,8 @@
 import { SET_SORT } from './constants'
 
 export function setSort(type: string) {
-  console.log('setsort Action')
   if (!type) {
-    throw new Error('missing sort type')
+    throw new Error('Missing sort type')
   }
 
   return {

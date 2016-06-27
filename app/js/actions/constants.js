@@ -17,7 +17,7 @@ export const NEW_ISSUE = 'NEW_ISSUE'
 export const CHANGE_OFFSET: string = 'CHANGE_OFFSET'
 
 export const SET_FILTER: string = 'SET_FILTER'
-export const RESET_FILTER: string = 'RESET_FILTER'
+export const RESET_FILTERS: string = 'RESET_FILTERS'
 
 export const SET_SORT: string = 'SET_SORT'
 
@@ -27,3 +27,6 @@ export const RESET_FILTER_COMPONENT_STATE: string = 'RESET_FILTER_COMPONENT_STAT
 
 export const CLOSE_OVERLAY: string = 'CLOSE_OVERLAY'
 export const CLOSE_FILTER_COMPONENT: string = 'CLOSE_FILTER_COMPONENT'
+
+export const FILTER_SEARCH_RESULT: string = 'FILTER_SEARCH_RESULT'
+export const CLEAR_TIMESTAMP: string = 'CLEAR_TIMESTAMP'

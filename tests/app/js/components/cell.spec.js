@@ -14,10 +14,7 @@ describe('Cell componennt', () => {
 
     const Cell = mq(
       m(CellComponent, {
-        cellData: {
-          value: 'Richard',
-          type: 'name',
-        },
+        shortText: 'Richard',
       })
     )
 

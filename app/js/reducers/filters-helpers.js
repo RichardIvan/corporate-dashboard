@@ -1,7 +1,7 @@
 /* @flow */
 'use strict'
 
-import { Map } from 'immutable'
+import { Map, List } from 'immutable'
 
 import {
   NAME_TYPE,
@@ -17,29 +17,27 @@ export const initialState = Map({
   [NAME_TYPE]:  Map({
     type: NAME_TYPE,
     active: false,
-    by: '',
+    by: List.of(),
   }),
   [EMAIL_TYPE]: Map({
     type: EMAIL_TYPE,
     active: false,
-    by: '',
+    by: List.of(),
   }),
   [OPENING_TIMESTAMP_TYPE]: Map({
     type: OPENING_TIMESTAMP_TYPE,
     active: false,
-    from: -1,
-    to: -1,
+    timestamp: 0,
   }),
   [CLOSING_TIMESTAMP_TYPE]: Map({
     type: CLOSING_TIMESTAMP_TYPE,
     active: false,
-    from: -1,
-    to: -1,
+    timestamp: 0,
   }),
   [EMPLOYEE_TYPE]: Map({
     type: EMPLOYEE_TYPE,
     active: false,
-    by: '',
+    by: List.of(),
   }),
   [OPEN_STATUS_TYPE]: Map({
     type: OPEN_STATUS_TYPE,
@@ -49,6 +47,6 @@ export const initialState = Map({
   [LOCATION_TYPE]: Map({
     type: LOCATION_TYPE,
     active: false,
-    by: '',
+    by: List.of(),
   }),
 })

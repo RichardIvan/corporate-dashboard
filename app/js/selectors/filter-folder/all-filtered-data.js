@@ -13,14 +13,14 @@ import { getState } from '../state'
 export const getAllFilteredData = createSelector(
   getActiveFilters,
   getState,
-  (arrayOfActiveFilters, state) => {
+  (mapOfActiveFilters, state) => {
     const issues = getIssues(state)
-    if (arrayOfActiveFilters.length === 0) {
+    if (mapOfActiveFilters.length === 0) {
       const keys = Object.keys(issues)
       return map(keys, (issueID) => issues[issueID])
     }
     const filteredItemsWithDuplicates = reduce(
-      arrayOfActiveFilters, (accumulator, filter) => {
+      mapOfActiveFilters, (accumulator, filter) => {
         // console.log(getSingleDataByFilter(filter.type)(state))
         return accumulator.concat(getSingleDataByFilter(filter.type)(state))
         // return [...accumulator, getSingleDataByFilter(filter.type)(state)]

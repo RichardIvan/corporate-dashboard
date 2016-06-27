@@ -32,7 +32,7 @@ export function createReducer(initialState, handlers = {}) {
   }
 }
 
-function transformTimestamp(object) {
+export function transformTimestamp(object) {
   return reduce(object, (acc, issue, key) => {
     return {
       ...acc,

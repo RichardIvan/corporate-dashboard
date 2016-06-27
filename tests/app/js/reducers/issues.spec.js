@@ -12,6 +12,7 @@ expect.extend(expectImmutable)
 import reducer from '../../../../app/js/reducers/issues.js'
 import { getMockedCSV } from './helpers'
 import { transformCSVtoJSON } from '../../../../app/js/reducers/helpers'
+import { generateShortVersions } from '../../../../app/js/helpers/generators'
 
 describe('Issues Reducer', () => {
   describe('#INIT_LOAD', () => {
@@ -54,9 +55,8 @@ describe('Issues Reducer', () => {
         },
       }
       const nextState = reducer(state, action)
-      // console.log(nextState)
 
-      expect(nextState).toEqual(fromJS(json))
+      expect(nextState).toEqual(fromJS(generateShortVersions(json)))
     })
   })
 
@@ -122,7 +122,7 @@ describe('Issues Reducer', () => {
         },
       }
       const newState = reducer(state, action)
-      expect(newState).toEqual(fromJS(finalState))
+      expect(Object.keys(newState)).toEqual(Object.keys(fromJS(finalState)))
     })
   })
 })

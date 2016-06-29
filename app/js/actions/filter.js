@@ -8,12 +8,15 @@ import {
   CLEAR_TIMESTAMP,
 } from './constants'
 
+import {
+  getFilter,
+} from '../selectors'
 // import {
 //   OPENING_TIMESTAMP_TYPE,
 //   CLOSING_TIMESTAMP_TYPE,
 // } from './types.js'
 
-export function setFilter(type, value) {
+export function setFilter(type: string, value) {
   return {
     type: SET_FILTER,
     payload: {
@@ -23,28 +26,13 @@ export function setFilter(type, value) {
   }
 }
 
-export function clearTimestamp(type) {
+export function clearTimestamp(type: string) {
 
   return {
     type: SET_FILTER,
     payload: {
       'type': type,
       value: 0,
-    },
-  }
-}
-
-export function setSearchFilterValues(type, value) {
-
-  // perform fuse search here
-  const result = []
-
-  return {
-    type: FILTER_SEARCH_RESULT,
-    payload: {
-      'type': type,
-      'value': value,
-      result,
     },
   }
 }

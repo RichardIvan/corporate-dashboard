@@ -1,15 +1,85 @@
 .container {
   background: white;
+  position: absolute;
+  right: 32px;
+  top: 22px;
+  z-index: 1;
+  border: 0.5px solid rgba(151, 151, 151, 0.2);
+  // box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37)
 }
 
+
 .header {
-  background: white;
+  display: flex;
+  border-bottom: 0.5px solid rgba(151, 151, 151, 0.2);
+  h3 {
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 300;
+  }
 }
 
 .body {
+  $columnHeight: 48px;
+
   background: white;
+  width: 300px;
+
+  ul {
+    list-style: none;
+    padding: 8px 0 0 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      padding-left: 16px;
+      height: $columnHeight;
+      display: flex;
+
+      border-bottom: 0.5px solid rgba(151, 151, 151, 0.2);
+    }
+
+    li:hover {
+      background: #f4f5fa;
+    }
+
+    p {
+      margin: 0;
+      align-self: center;
+      justify-content: center;
+    }
+  }
+}
+
+.header, .footer {
+  background: #f2f1f9;
+  height: 32px;
+
+  padding: 8px;
+
 }
 
 .footer {
-  background: white;
+  background: #f2f1f9;
+  border-top: 0.5px solid rgba(151, 151, 151, 0.2);
+  position: relative;
+  display: flex;
+
+  div {
+    display: flex;
+    position: relative;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    button {
+      flex: 1;
+    }
+  }
 }

@@ -17,10 +17,14 @@ export function getFilterSearchQuery(state) {
   return state.filterComponentState.get('filterSearchQuery')
 }
 
-export function getFilterSearchResults(state) {
-  return state.filterComponentState.get('filterSearchQueryResults')
+export function getFilterMenuResults(state) {
+  return state.filterComponentState.get('filterSearchQueryResults').toJS()
 }
 
 export function getFilterTimestamp(state, type) {
   return state.filterComponentState.getIn(['timestamp', type])
+}
+
+export function isFiltermenuOpen(state) {
+  return state.filterComponentState.get('open')
 }

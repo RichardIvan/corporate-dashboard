@@ -9,6 +9,7 @@ const runSequence = require('run-sequence')
 const jscpd = require('gulp-jscpd')
 const plumber = require('gulp-plumber')
 const notify = require('gulp-notify')
+const watch = require('gulp-watch')
 
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
@@ -77,11 +78,11 @@ gulp.task('test', () => gulp.src('', { read: false })
   .pipe(shell(['npm run cover'])))
 
 gulp.task('watch_tests', () => {
-  gulp.watch(path.TESTS, ['test'])
+  watch(path.TESTS, ['test'])
 })
 
 gulp.task('watch', () => {
-  gulp.watch(path.ALL, () => {
+  watch(path.ALL, () => {
     runSequence(['clean', 'test', 'jscpd'], ['webpack'])
   })
 })

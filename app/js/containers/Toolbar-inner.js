@@ -1,32 +1,22 @@
 /* @flow */
-
-// this is a smart component
+'use strict'
 
 import m from 'mithril'
-// import classNames from 'classnames'
 import ToolbarComponent from '../components/Toolbar'
-import { resolveHeading } from '../helpers'
-// import {getMessages} from '../selectors'
-// import {clearMessage} from '../actions'
-// import styles from './style.scss'
+
+import { resolveHeading, renderChildren } from '../helpers'
 import styles from '../components/Toolbar/styles.scss'
 
-
 const Toolbar = {
-  view(vdom: Object): Object {
-    // const state = store.getState();
+  view(vnode: Object): Object {
     return m(ToolbarComponent,
       {
-        heading: resolveHeading('main', vdom.attrs.route),
-        className: `${styles[vdom.attrs.route]}`,
-      })
-
-    // return (
-    //   <ToolbarComponent className={classNames(styles.messages, className)}
-    //     messages={getMessages(state)}
-    //     onClose={ctrl.handleClose}
-    //   />
-    // )
+        heading: resolveHeading('main', vnode.attrs.route),
+        className: `${styles[vnode.attrs.route]}`,
+      },
+      [
+        renderChildren(vnode.attrs),
+      ])
   },
 }
 

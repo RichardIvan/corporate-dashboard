@@ -14,10 +14,10 @@ import {
 } from '../helpers'
 
 import {
-  cancelButton,
-  backButton,
-  resetButton,
-  okButton,
+  generateCancelButton,
+  generateBackButton,
+  generateResetButton,
+  generateOKButton,
 } from '../elements'
 
 import FilterBodyContainer from './FilterBody'
@@ -52,17 +52,17 @@ const FilterContainer = {
   view(vnode) {
     return m(filterComponent, {
       // getheadertext by selectedfiltermenu item type
-      header: m('', getHeaderText(vnode.state.selectedFilterMenu)),
+      header: m('h3', getHeaderText(vnode.state.selectedFilterMenu)),
       body: m(FilterBodyContainer, {
         ...vnode.attrs,
       }),
       footer: m('', [
         isRoot(vnode.state.selectedFilterMenu)
-        ? cancelButton
-        : backButton,
+        ? generateCancelButton(vnode.attrs.store)
+        : generateBackButton(vnode.attrs.store),
         isRoot(vnode.state.selectedFilterMenu)
-        ? resetButton
-        : okButton,
+        ? generateResetButton(vnode.attrs.store)
+        : generateOKButton(vnode.attrs.store),
       ]),
     })
   },

@@ -1,3 +1,59 @@
 .container {
+  $columnHeight: 48px;
+  height: ($columnHeight * 6);
   background: white;
+
+  overflow-y: scroll;
+
+  div:nth-child(1) {
+    padding-right: 1px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    padding: 8px;
+  }
+
+  input {
+    height: 40px;
+    width: 70%;
+    border: 0;
+
+    align-self: center;
+
+    border-bottom: 0.5px solid rgba(151, 151, 151, 0.2);
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+
+    p {
+      flex-grow: 1;
+    }
+
+    span {
+      margin-right: 16px;
+      align-self: center;
+    }
+  }
+
+  .radio {
+
+    li {
+      height: 48px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .radio-input {
+      width: auto !important;
+      margin: 0 1em;
+    }
+
+    span {
+      align-self: center;
+    }
+  }
 }

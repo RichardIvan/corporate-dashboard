@@ -3,7 +3,7 @@
 import m from 'mithril'
 
 // TODO remove this toolbar from the presentational component and pass it down from  container
-import ToolbarContainer from '../../containers/Toolbar'
+import ToolbarContainer from '../../containers/Toolbar-inner'
 import styles from './style.scss'
 
 const Main = {

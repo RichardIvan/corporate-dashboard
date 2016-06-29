@@ -1,0 +1,16 @@
+.icon {
+  display: flex;
+  position: absolute;
+  margin-right: 32px;
+  right: 0;
+  font-size: 20px;
+  font-weight: 300;
+  justify-content: center;
+  align-content: center;
+
+  :global(svg) {
+    fill: #F2F1F9;
+    align-content: center;
+    justify-content: center;
+  }
+}

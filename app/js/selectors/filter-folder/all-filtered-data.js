@@ -15,20 +15,16 @@ export const getAllFilteredData = createSelector(
   getState,
   (mapOfActiveFilters, state) => {
     const issues = getIssues(state)
-    if (mapOfActiveFilters.length === 0) {
-      const keys = Object.keys(issues)
-      return map(keys, (issueID) => issues[issueID])
+    if (!Object.keys(mapOfActiveFilters).length) {
+      return map(issues, (value, key) => issues[key])
     }
     const filteredItemsWithDuplicates = reduce(
       mapOfActiveFilters, (accumulator, filter) => {
-        // console.log(getSingleDataByFilter(filter.type)(state))
         return accumulator.concat(getSingleDataByFilter(filter.type)(state))
-        // return [...accumulator, getSingleDataByFilter(filter.type)(state)]
       }, [])
 
     // remove duplicates
     const unique = uniqBy(filteredItemsWithDuplicates, (pair) => pair[0])
-
 
     const full = map(unique, (item) => {
       return issues[item[0]]

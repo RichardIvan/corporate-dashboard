@@ -68,6 +68,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-shell": "^0.5.2",
+    "gulp-watch": "^4.3.8",
     "html-webpack-plugin": "^2.19.0",
     "ignore-styles": "^3.0.0",
     "immutable": "^3.8.1",

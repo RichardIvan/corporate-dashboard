@@ -8,7 +8,7 @@ const Toolbar = {
     return m('', { class: vnode.attrs.className },
       [
         m('h1', vnode.attrs.heading),
-        vnode.attrs.children,
+        vnode.children,
       ]
     )
   },

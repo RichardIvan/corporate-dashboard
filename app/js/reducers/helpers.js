@@ -81,25 +81,34 @@ export function transformNewIssue (issues) {
   return stuff
 }
 
+// TODO test
 export function fillStateOnInitialLoad(data, type) {
 
   const json = transformCSVtoJSON(data)
 
-  const results = map(json, (item) => List.of(item.id, parseInt(item[type], 10)))
-  const resultsLen = results.length
-
-  if (resultsLen > 10) {
-    const finalResult = fromJS(sortBy(results, (pair) => pair.get(1), 'asc'))
-    return finalResult
-  }
-
-  const numberOfItemsToFill = 10 - resultsLen
-  const missingItems = new Array(numberOfItemsToFill).fill(List.of())
+  const results = map(json,
+    (item) => List.of(
+      item.id,
+      isNaN(parseInt(item[type], 10))
+        ? item[type]
+        : parseInt(item[type], 10)
+    )
+  )
+  // const resultsLen = results.length
+  //
+  // if (resultsLen > 10) {
+  //   const finalResult = fromJS(sortBy(results, (pair) => pair.get(1), 'asc'))
+  //   return finalResult
+  // }
+  //
+  // const numberOfItemsToFill = 10 - resultsLen
+  // const missingItems = new Array(numberOfItemsToFill).fill(List.of())
 
   const sortedFinalResult = fromJS(
     sortBy(results, (pair) => pair.get(1), 'asc')
-    .concat(missingItems)
   )
+
+  console.log(sortedFinalResult.toJS())
 
   return sortedFinalResult
 }
@@ -117,9 +126,9 @@ export function fillStateOnNewIssue(state, data, type) {
     sortBy(newState.toArray(), (item) => item.get(1), ['asc'])
   )
 
-  while (sortedNewState.count() > 10 && sortedNewState.last().isEmpty()) {
-    sortedNewState = sortedNewState.butLast()
-  }
+  // while (sortedNewState.count() > 10 && sortedNewState.last().isEmpty()) {
+  //   sortedNewState = sortedNewState.butLast()
+  // }
 
   return sortedNewState
 }

@@ -13,6 +13,10 @@ import {
 } from '../helpers'
 
 import {
+  selectFilterMenu,
+} from '../actions'
+
+import {
   getAllFilters,
   getSelectedFilterMenu,
 } from '../selectors'
@@ -34,13 +38,15 @@ const FilterBody = {
         isRoot(vnode.state.selectedFilterMenu)
         ? m('ul', [
           map(getAllFilters(vnode.state.appState), (filter) =>
-            m('li', [
+            m('li', {
+              onclick: () => vnode.attrs.store.dispatch(selectFilterMenu(filter.type)),
+            } ,[
               m('p', getNameByType(filter.type)),
-              filter.active ? m('', CrossIcon) : null,
+              filter.active ? m('span', '✓') : null,
             ])
           ),
         ])
-        : getBodyByType(vnode.state.appState, vnode.state.selectedFilterMenu),
+        : getBodyByType(vnode.attrs.store, vnode.state.selectedFilterMenu),
     })
   },
 }

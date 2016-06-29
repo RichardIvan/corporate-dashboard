@@ -11,6 +11,7 @@ import {
   OVERLAY_CLOSED,
   SET_FILTER,
   FILTER_SEARCH_RESULT,
+  RESET_FILTERS,
 } from '../actions'
 
 import {
@@ -41,10 +42,12 @@ export default function(state: Map = initialState, action) {
     return state.set('open', action.payload)
   case SET_FILTER_COMPONENT_MENU_STATE:
     return state.set('selectedFilterMenu', action.payload)
-  case RESET_FILTER_COMPONENT_STATE:
+  case RESET_FILTERS:
   case CLOSE_FILTER_COMPONENT:
   case OVERLAY_CLOSED:
     return initialState
+  case RESET_FILTER_COMPONENT_STATE:
+    return initialState.set('open', true)
   case SET_FILTER:
     switch (action.payload.type) {
     case OPENING_TIMESTAMP_TYPE:
@@ -59,8 +62,8 @@ export default function(state: Map = initialState, action) {
     case EMAIL_TYPE:
     case EMPLOYEE_TYPE:
     case LOCATION_TYPE:
-      return state.set('filterSearchQuery', action.payload.term)
-              .set('filterSearchQueryResults', fromJS(action.payload.results))
+      return state.set('filterSearchQuery', action.payload.value)
+              .set('filterSearchQueryResults', fromJS(action.payload.result))
     default:
       return state
     }

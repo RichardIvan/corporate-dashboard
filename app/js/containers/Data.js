@@ -7,12 +7,11 @@ import TableContainer from './Table'
 // import PaginationContainer from './Pagination'
 
 const Data = {
-  view(vdom) {
+  view(vnode) {
     // return m('.hey')
     return m(DataComponent, {
-      ...vdom.attrs,
+      ...vnode.attrs,
       table: TableContainer,
-      // m(PaginationContainer)
     })
   },
 }

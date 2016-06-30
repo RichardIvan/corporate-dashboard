@@ -1,3 +1,4 @@
+
 'use strict'
 
 import papa from 'papaparse'
@@ -108,29 +109,19 @@ export function fillStateOnInitialLoad(data, type) {
     sortBy(results, (pair) => pair.get(1), 'asc')
   )
 
-  console.log(sortedFinalResult.toJS())
-
   return sortedFinalResult
 }
 
 export function fillStateOnNewIssue(state, data, type) {
   const json = fromJS(transformNewIssue(data))
 
-  const newState = json.reduce((accumulator, item) => {
-    const newItem = fromJS([item.get('id'), item.get(type)])
-    return accumulator.push(newItem)
-  }, state)
+  const newState = json.reduce((accumulator, item) =>
+                    accumulator.push(List.of(item.get('id', item.get(type)))), state)
 
-  // const sorted = sortBy(newState.toJS(), (item) => item[1], ['asc']).length
-  let sortedNewState = fromJS(
-    sortBy(newState.toArray(), (item) => item.get(1), ['asc'])
-  )
-
-  // while (sortedNewState.count() > 10 && sortedNewState.last().isEmpty()) {
-  //   sortedNewState = sortedNewState.butLast()
-  // }
-
-  return sortedNewState
+  return newState
+  
+  // const sorted = newState.sortBy((item) => item.get(1))
+  // return sortBy.asc ? sorted : sorted.reverse()
 }
 
 export function createPartialReducer(type) {

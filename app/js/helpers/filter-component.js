@@ -64,7 +64,6 @@ function generateSearchBasedBody(store, type) {
               return m('li', {
                 key: result[0],
                 onclick: () => {
-                  console.log('clicded')
                   store.dispatch(setFilter(type, result[1]))
                 },
               },
@@ -90,7 +89,6 @@ function generateTimeBasedBody(store, type) {
         max: getFilterTimestamp(state, 'to') || moment().format('YYYY-MM-DD'),
         value: moment(getFilter(type, state).timestamp).format('YYYY-MM-DD'),
         onchange: (e) => {
-          console.log(e.target.valueAsNumber)
           store.dispatch(setFilter(type, e.target.valueAsNumber))
         },
       }, 'Time '),

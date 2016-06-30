@@ -4,10 +4,16 @@ export function connectToSocket (store) {
   const socket = io('http://localhost:3333')
 
   socket.on('data', (response) => {
-
     console.log('ANNOUNTING, WE HAVE DATA')
-    store.dispatch(response.action)
+    const action = {
+      ...response.action,
+    }
+    action.payload = {
+      ...response.action.payload,
+      state: store.getState(),
+    }
 
-    console.log(response)
+    store.dispatch(action)
+
   })
 }

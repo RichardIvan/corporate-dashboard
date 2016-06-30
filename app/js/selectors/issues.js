@@ -1,5 +1,6 @@
+/* @flow */
 'use strict'
 
-export function getIssues(state) {
-  return state.issues.toJS()
+export function getIssues(state): Map {
+  return state.issues
 }

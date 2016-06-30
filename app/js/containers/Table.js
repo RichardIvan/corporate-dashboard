@@ -5,7 +5,7 @@ import m from 'mithril'
 import TableComponent from '../components/Table'
 
 import { getHeaderColumnNames } from '../../../tests/mocks/data'
-import { allWithOffset } from '../selectors/filter-folder'
+import { getVisibleIssues } from '../selectors'
 
 const Table = {
   oninit(vnode) {
@@ -18,7 +18,7 @@ const Table = {
     return m(TableComponent, {
       ...vnode.attrs,
       columns: getHeaderColumnNames(),
-      issues: allWithOffset(vnode.state.appState),
+      issues: getVisibleIssues(vnode.state.appState),
     })
   },
 }

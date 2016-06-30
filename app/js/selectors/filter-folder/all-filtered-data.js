@@ -6,6 +6,8 @@ import reduce from 'lodash/reduce'
 import map from 'lodash/map'
 import uniqBy from 'lodash/uniqBy'
 
+import { List } from 'immutable'
+
 import { getSingleDataByFilter, getActiveFilters } from './'
 import { getIssues } from '../issues.js'
 import { getState } from '../state'
@@ -15,9 +17,18 @@ export const getAllFilteredData = createSelector(
   getState,
   (mapOfActiveFilters, state) => {
     const issues = getIssues(state)
-    if (!Object.keys(mapOfActiveFilters).length) {
-      return map(issues, (value, key) => issues[key])
+    if (mapOfActiveFilters.isEmpty()) {
+      if (issues.isEmpty()) {
+        return List.of()
+      }
+      console.log(issues.reduce((reduction, value) => reduction.push(value), List.of()))
+      const reduced = issues.reduce((reduction, value) => reduction.push(value), List.of())
+      console.log(reduced)
+      return reduced
     }
+
+    console.log(mapOfActiveFilters)
+    
     const filteredItemsWithDuplicates = reduce(
       mapOfActiveFilters, (accumulator, filter) => {
         return accumulator.concat(getSingleDataByFilter(filter.type)(state))

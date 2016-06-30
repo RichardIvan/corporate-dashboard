@@ -38,7 +38,7 @@ export function saveToFirebase (data) {
 const data = db.ref('corporate-dashboard/data/issues').once('value').then(snap => snap.val())
 
 export function fetchFirebase() {
-  return data.then((issues) => sampleSize(issues, 2))
+  return data.then((issues) => sampleSize(issues, 500))
 }
 
 export function fetchSingleItemFromFirebase() {

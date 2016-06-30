@@ -1,0 +1,36 @@
+$pinkColor: pink;
+$buttonSize: 25px;
+
+.container {
+  margin: 20px 0;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+}
+
+.button {
+  background: $pinkColor;
+  heigth: $buttonSize;
+  width: $buttonSize;
+  border-radius: 50%;
+}
+
+.input-container {
+  align-self: center;
+  display: flex;
+
+  input {
+    margin: 0 0 0 12px;
+    text-align: right;
+    padding: 0;
+    background: #f2f1f9;
+    box-shadow: none;
+    border-color: #f2f1f9;
+    border-style: solid;
+  }
+
+  :global(.pages) {
+    margin: 0 20px 0 13px;
+    align-self: center;
+  }
+}

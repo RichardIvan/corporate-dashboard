@@ -37,12 +37,12 @@ const FilterBody = {
       body:
         isRoot(vnode.state.selectedFilterMenu)
         ? m('ul', [
-          map(getAllFilters(vnode.state.appState), (filter) =>
+          getAllFilters(vnode.state.appState).map((filter) =>
             m('li', {
-              onclick: () => vnode.attrs.store.dispatch(selectFilterMenu(filter.type)),
+              onclick: () => vnode.attrs.store.dispatch(selectFilterMenu(filter.get('type'))),
             } ,[
-              m('p', getNameByType(filter.type)),
-              filter.active ? m('span', '✓') : null,
+              m('p', getNameByType(filter.get('type'))),
+              filter.get('active') ? m('span', '✓') : null,
             ])
           ),
         ])

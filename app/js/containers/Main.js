@@ -7,15 +7,19 @@ import m from 'mithril'
 // import {fetchRepo, showMessage} from '../actions';
 // import styles from './style.scss'
 import MainComponent from '../components/Main'
+import Pagination from '../containers/Pagination'
 import { retrieveContainer } from '../helpers'
 
 const Main = {
-  view(vdom) {
+  view(vnode) {
     return m(MainComponent,
       {
-        ...vdom.attrs,
-        container: retrieveContainer(vdom.attrs.route),
-      })
+        ...vnode.attrs,
+        container: retrieveContainer(vnode.attrs.route),
+      },
+      [
+        vnode.attrs.route === 'data' ? m(Pagination, { ...vnode.attrs }) : null,
+      ])
   },
 }
 

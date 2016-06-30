@@ -7,10 +7,11 @@ import ToolbarContainer from '../../containers/Toolbar-inner'
 import styles from './style.scss'
 
 const Main = {
-  view(vdom) {
+  view(vnode) {
     return m(`#main-container.${styles.main}`, [
-      m(ToolbarContainer, { ...vdom.attrs }),
-      m(vdom.attrs.container, { ...vdom.attrs }),
+      m(ToolbarContainer, { ...vnode.attrs }),
+      m(vnode.attrs.container, { ...vnode.attrs }),
+      vnode.children,
     ])
   },
 }

@@ -18,7 +18,7 @@ export function getFilterSearchQuery(state) {
 }
 
 export function getFilterMenuResults(state) {
-  return state.filterComponentState.get('filterSearchQueryResults').toJS()
+  return state.filterComponentState.get('filterSearchQueryResults')
 }
 
 export function getFilterTimestamp(state, type) {

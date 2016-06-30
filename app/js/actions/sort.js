@@ -3,7 +3,7 @@
 
 import { SET_SORT } from './constants'
 
-export function setSort(type: string) {
+export function setSort(type: string, state) {
   if (!type) {
     throw new Error('Missing sort type')
   }
@@ -12,6 +12,7 @@ export function setSort(type: string) {
     type: SET_SORT,
     payload: {
       type,
+      state,
     },
   }
 }

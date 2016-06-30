@@ -3,6 +3,8 @@
 
 import slice from 'lodash/slice'
 
+import { List } from 'immutable'
+
 import { createSelector } from 'reselect'
 // import { getSorted } from './get-sorted.js'
 import { getOffset } from '../offset.js'
@@ -19,9 +21,11 @@ export const allWithOffset = createSelector(
       start = offset * 10
     }
 
-    let partial = slice(sortedData, start, start + 10)
-    while (partial.length < 10 ) {
-      partial.push(new Array())
+    let partial = sortedData.slice(start, start + 10)
+
+    // let partial = slice(sortedData, start, start + 10)
+    while (partial.count() < 10 ) {
+      partial = partial.push(List.of())
     }
     return partial
   }

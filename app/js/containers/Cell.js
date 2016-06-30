@@ -53,12 +53,12 @@ const Cell = {
   view(vdom) {
     return m(CellComponent, {
       ...vdom.attrs,
-      key: `${vdom.attrs.issue.id}-${vdom.attrs.cellData.type}-component`,
+      key: `${vdom.attrs.issue.getIn(['id', 'original'])}-${vdom.attrs.cellData.type}-component`,
       shortText: vdom.attrs.cellData.data
-            ? vdom.attrs.cellData.data.transformed
+            ? vdom.attrs.cellData.data.get('transformed')
             : '',
       fullText: vdom.attrs.cellData.data && shouldHaveTooltip(vdom.attrs.cellData.type)
-                ? vdom.attrs.cellData.data.original
+                ? vdom.attrs.cellData.data.get('original')
                 : '',
       fullTextVisible: vdom.state.fullTextVisible,
       onmouseover: (vdom.attrs.cellData.data && shouldHaveTooltip(vdom.attrs.cellData.type)

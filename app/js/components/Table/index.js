@@ -43,7 +43,8 @@ function isAsc(state) {
 
 function headerClickHandler(type) {
   if (isSortable(type)) {
-    this.attrs.store.dispatch(setSort(type))
+    const store = this.attrs.store
+    this.attrs.store.dispatch(setSort(type, store.getState()))
   }
 }
 
@@ -74,25 +75,46 @@ const Table = {
                     className: isAsc(state) ? 'asc' : 'desc',
                   }
                 ) : null,
-              ]),
+              ]
+            ),
             // rows
-            vdom.attrs.issues.map((issue, i) => {
-              return m(`li.${styles.row}`,
-                {
-                  class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
-                },
-                m(CellContainer, {
-                  ...vdom.attrs,
-                  issue,
-                  cellData: {
-                    data: issue[column.type],
-                    value: issue[column.type] ? issue[column.type].transformed : '',
-                    type: column.type,
+            vdom.attrs.issues.toArray().map((issue, i) => {
+              if (issue && issue.count()) {
+                return m(`li.${styles.row}`,
+                  {
+                    class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
                   },
-                })
-              )
-              // issue.map((field) => m('li', m('p', field)))
+                  m(CellContainer, {
+                    ...vdom.attrs,
+                    issue,
+                    cellData: {
+                      data: issue.get(column.type),
+                      value: issue.getIn([column.type, 'transformed']),
+                      type: column.type,
+                    },
+                  })
+                )
+              } else {
+                return m('li')
+              }
             }),
+            // vdom.attrs.issues.map((issue, i) => {
+            //   return m(`li.${styles.row}`,
+            //     {
+            //       class: (i % 2 !== 0) ? `${styles.dimmed}` : '',
+            //     },
+            //     m(CellContainer, {
+            //       ...vdom.attrs,
+            //       issue,
+            //       cellData: {
+            //         data: issue[column.type],
+            //         value: issue[column.type] ? issue[column.type].transformed : '',
+            //         type: column.type,
+            //       },
+            //     })
+            //   )
+            //   // issue.map((field) => m('li', m('p', field)))
+            // }),
           ]))
       }),
     ])

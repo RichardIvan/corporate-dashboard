@@ -3,7 +3,7 @@
 
 import { createSelector } from 'reselect'
 // import reduce from 'lodash/reduce'
-import orderBy from 'lodash/orderBy'
+// import orderBy from 'lodash/orderBy'
 
 import { List } from 'immutable'
 
@@ -15,7 +15,7 @@ export const getSorted = createSelector(
   getAllFilteredData,
   (sortBy, filteredData) => {
     // filtered data gets full items
-    console.log(filteredData.count())
+    // console.log(filteredData.count())
 
     if (filteredData.isEmpty()) {
       return List.of()
@@ -32,7 +32,7 @@ export const getSorted = createSelector(
     //   return item[sortBy.type].original
     // }, [sortBy.asc ? 'asc' : 'desc'])
 
-    console.log(sortBy.asc ? sorted : sorted.reverse())
+    // console.log(sortBy.asc ? sorted : sorted.reverse())
 
     return sortBy.asc ? sorted : sorted.reverse()
   }

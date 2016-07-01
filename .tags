@@ -5236,6 +5236,7 @@ redux	package.json	/^    "redux": "^3.5.2",$/;"	f
 redux-logger	package.json	/^    "redux-logger": "^2.6.1",$/;"	f
 redux-thunk	package.json	/^    "redux-thunk": "^2.1.0",$/;"	f
 repository	package.json	/^  "repository": {$/;"	f
+rereduce	package.json	/^    "rereduce": "^0.1.0",$/;"	f
 reselect	package.json	/^    "reselect": "^2.5.1",$/;"	f
 run-sequence	package.json	/^    "run-sequence": "^1.2.1",$/;"	f
 sass-loader	package.json	/^    "sass-loader": "^3.2.0",$/;"	f

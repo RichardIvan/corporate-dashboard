@@ -1,7 +1,7 @@
 /* @flow */
 'use strict'
 
-import slice from 'lodash/slice'
+// import slice from 'lodash/slice'
 
 import { List } from 'immutable'
 

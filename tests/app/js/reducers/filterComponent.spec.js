@@ -96,13 +96,13 @@ describe('Filter Component Reducer', () => {
 
       let newState = reducer(state, action)
 
-      expect(newState).toEqual(initialState)
+      expect(newState).toEqual(initialState.set('open', true))
 
-      state = state = state.set('open', false)
+      const secondState = initialState.set('selectedFilterMenu', 'bro')
 
-      newState = reducer(state, action)
+      newState = reducer(secondState, action)
 
-      expect(newState).toEqual(initialState)
+      expect(newState).toEqual(initialState.set('open', true))
     })
   })
 

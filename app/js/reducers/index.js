@@ -3,13 +3,14 @@ import { combineReducers } from 'redux'
 // import issues from './issues'
 import issues from './rereduce-issues'
 
-// import partials from './partials'
+import partials from './partials'
 import offset from './rereduce-offset'
 // import offset from './offset'
 // import filters from './filters'
 import filters from './rereduce-filter'
 
 import filteredIssues from './rereduce-filtered'
+import filteredSorted from './rereduce-filtered-sorted'
 
 import sortBy from './rereduce-sort-by'
 // import sortBy from './sort-by'
@@ -22,7 +23,8 @@ const root = combineReducers({
   issues,
   filters,
   filteredIssues,
-  // partials,
+  filteredSorted,
+  partials,
   offset,
   sortBy,
   filterComponentState,

@@ -9,6 +9,8 @@ import capitalize from 'lodash/upperFirst'
 import includes from 'lodash/includes'
 import uniqBy from 'lodash/uniqBy'
 
+import { List, Map } from 'immutable'
+
 import {
   setFilter,
   setSearchFilterValues,
@@ -47,35 +49,73 @@ const names = {
 
 import styles from '../components/FilterBody/styles.scss'
 
+function generateRow(store, state, filterBy, value, type) {
+  return m('li', {
+    key: value.get(0),
+    onclick: () => {
+      store.dispatch(setFilter(type, value.get(1)))
+    },
+  },
+  [
+    m('p', value.get(1)),
+    filterBy.includes(value.get(1))
+      ? m('span', '✓')
+      : '',
+  ])
+}
+
+function generateFilterMenuRowsByType(store, type) {
+  const state = store.getState()
+  const filterBy = getFilter(type, state).get('by')
+  if(getFilterSearchQuery(state) === '') {
+    // NOTE we are generating unique array of items for the filter rows
+    // return
+    return  getDataByType(type, state).reduce((acc, value) => {
+      return acc.set(value.get(1), value)
+    }, Map())
+      .reduce((acc, val) => acc.push(generateRow(store, state, filterBy, val, type)), List.of())
+      .toArray()
+
+  } else {
+    return getFilterMenuResults(state)
+      .map(
+        (value) => generateRow(store, state, filterBy, value, type)
+      )
+      .toArray()
+  }
+}
+
 function generateSearchBasedBody(store, type) {
   const state = store.getState()
-  const filteredBy = getFilter(type, state).by
+  // const filteredBy = getFilter(type, state).by
   return m('', [
     m('label', `Search ${names[type]}:`),
     m('input[autofocus=true][placeholder=Search]', {
       oninput: (e) => store.dispatch(setSearchFilterValues(type, e.target.value, state)),
     }),
     m('ul', [
-      uniqBy(
-        map((getFilterSearchQuery(state).length === 0)
-          ? getDataByType(type, state)
-          : getFilterMenuResults(state),
-            (result) => {
-              return m('li', {
-                key: result[0],
-                onclick: () => {
-                  store.dispatch(setFilter(type, result[1]))
-                },
-              },
-              [
-                m('p', result[1]),
-                includes(filteredBy, result[1])
-                  ? m('span', '✓')
-                  : '',
-              ])
-            }
-          )
-        , (result) => result.children[0].text),
+      generateFilterMenuRowsByType(store, type),
+      // uniqBy(
+      //   map((getFilterSearchQuery(state).length === 0)
+      //     ? getDataByType(type, state)
+      //     : getFilterMenuResults(state),
+      //       (result) => {
+      //         console.log(result)
+      //         return m('li', {
+      //           key: result.get(0),
+      //           onclick: () => {
+      //             store.dispatch(setFilter(type, result.get(1)))
+      //           },
+      //         },
+      //         [
+      //           m('p', result.get(1)),
+      //           includes(filteredBy, result.get(1))
+      //             ? m('span', '✓')
+      //             : '',
+      //         ])
+      //       }
+      //     )
+      //   , (result) => result.children[0].text),
       ]),
   ])
 }

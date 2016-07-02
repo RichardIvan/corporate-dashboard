@@ -7,9 +7,9 @@ import expect from 'expect'
 import { isFSA } from 'flux-standard-action'
 
 import {
-  closeFilterComponent,
+  closeFilterMenu,
   selectFilterMenu,
-  openFilterComponent,
+  openFilterMenu,
   filterComponentBack,
   CLOSE_FILTER_COMPONENT,
   SET_FILTER_COMPONENT_MENU_STATE,
@@ -23,22 +23,22 @@ import {
 } from '../../../../app/js/actions'
 
 describe('Filter Component Action Creator', () => {
-  describe('#openFilterComponent()', () => {
+  describe('#openFilterMenu()', () => {
     it('should be FSA', () => {
-      expect(isFSA(openFilterComponent())).toBe(true)
+      expect(isFSA(openFilterMenu())).toBe(true)
     })
 
     it('should create appropriate action', () => {
-      expect(openFilterComponent()).toEqual({
+      expect(openFilterMenu()).toEqual({
         type: SET_FILTER_COMPONENT_OPEN_STATUS,
         payload: true,
       })
     })
   })
 
-  describe('#closeFilterComponent()', () => {
+  describe('#closeFilterMenu()', () => {
     it('should be FSA', () => {
-      expect(isFSA(closeFilterComponent())).toBe(true)
+      expect(isFSA(closeFilterMenu())).toBe(true)
     })
 
     it('should create appropriate action', () => {
@@ -46,7 +46,7 @@ describe('Filter Component Action Creator', () => {
         type: CLOSE_FILTER_COMPONENT,
       }
 
-      expect(closeFilterComponent()).toEqual(expected)
+      expect(closeFilterMenu()).toEqual(expected)
     })
   })
 

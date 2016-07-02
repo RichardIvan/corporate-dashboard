@@ -20,9 +20,17 @@ export function setSearchFilterValues(type: string, value: string, state) {
   // so we can figure out if we need to remove the old one
   // or add the old one from the filter
 
-  const result = uniq(filter(getDataByType(type, state), (item) =>
-    item[1].toLocaleLowerCase().startsWith(value.toLocaleLowerCase()))
-  )
+  const result = getDataByType(type, state).filter((item) => {
+    // console.log(item)
+    // console.log(item.get(1))
+    return item.get(1).toLowerCase().indexOf(value.toLowerCase()) !== -1
+  })
+
+  // const result = uniq(filter(getDataByType(type, state), (item) =>{
+  //   console.log(item)
+  //   item[1].toLowerCase().startsWith(value.toLowerCase())
+  //   })
+  // )
 
   // perform fuse search here
 

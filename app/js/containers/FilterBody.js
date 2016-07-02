@@ -37,7 +37,7 @@ const FilterBody = {
       body:
         isRoot(vnode.state.selectedFilterMenu)
         ? m('ul', [
-          getAllFilters(vnode.state.appState).map((filter) =>
+          getAllFilters(vnode.state.appState).toArray().map((filter) =>
             m('li', {
               onclick: () => vnode.attrs.store.dispatch(selectFilterMenu(filter.get('type'))),
             } ,[

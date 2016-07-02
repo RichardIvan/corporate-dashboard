@@ -1,17 +1,38 @@
 import io from 'socket.io-client'
 
+import { INIT_LOAD, NEW_ISSUE } from '../actions'
+
+import { transformCSVtoJSON, transformNewIssue } from '../reducers/helpers'
+import { generateShortVersions } from '../helpers/generators'
+
 export function connectToSocket (store) {
   const socket = io('http://localhost:3333')
 
   socket.on('data', (response) => {
     console.log('ANNOUNTING, WE HAVE DATA')
-    const action = {
-      ...response.action,
+
+    const action = response.action
+    const type = action.type
+
+    switch (type) {
+    case INIT_LOAD: {
+      const csv = action.payload.data
+      const json = transformCSVtoJSON(csv)
+
+      action.payload.data = generateShortVersions(json)
+      break
     }
-    action.payload = {
-      ...response.action.payload,
-      state: store.getState(),
+    case NEW_ISSUE: {
+      const json = transformNewIssue(action.payload.data)
+
+      action.payload.data = generateShortVersions(json)
+      break
     }
+    default:
+     break
+    }
+
+    console.log(action)
 
     store.dispatch(action)
 

@@ -12,6 +12,10 @@ import { getSingleDataByFilter, getActiveFilters } from './'
 import { getIssues } from '../issues.js'
 import { getState } from '../state'
 
+export function getFiltered(state) {
+  return state.filteredIssues.value
+}
+
 export const getAllFilteredData = createSelector(
   getActiveFilters,
   getState,
@@ -28,7 +32,7 @@ export const getAllFilteredData = createSelector(
     }
 
     console.log(mapOfActiveFilters)
-    
+
     const filteredItemsWithDuplicates = reduce(
       mapOfActiveFilters, (accumulator, filter) => {
         return accumulator.concat(getSingleDataByFilter(filter.type)(state))

@@ -4,6 +4,7 @@
 import papa from 'papaparse'
 import { Map, List, fromJS } from 'immutable'
 import { drop, take, flatten, zipObject, reduce, map, sortBy } from 'lodash'
+import { INIT_LOAD, NEW_ISSUE } from '../actions'
 
 import { OPENING_TIMESTAMP_TYPE, CLOSING_TIMESTAMP_TYPE } from '../actions'
 
@@ -82,8 +83,48 @@ export function transformNewIssue (issues) {
   return stuff
 }
 
+function fillNewData(state, data, type) {
+  return reduce(data, (acc, item) => {
+    // const key = Object.keys(itemObj)
+    // const item = itemObj[key]
+
+    const value = parseInt(item[type].original, 10)
+    return acc.push(
+      List.of(
+        item.id.original,
+        isNaN(value)
+          ? item[type].original
+          : value
+      ))
+  }, state)
+
+  return data.reduce((acc, itemObj) => {
+    const key = Object.keys(itemObj)
+    const item = itemObj.get(key)
+    const value = parseInt(item.get(type), 10)
+    acc.push(
+      List.of(
+        item.get('id'),
+        isNaN(value)
+          ? item.get(type)
+          : value
+      ))
+  }, List.of())
+
+
+  map(json,
+    (item) => List.of(
+      item.id,
+      isNaN(parseInt(item[type], 10))
+        ? item[type]
+        : parseInt(item[type], 10)
+    )
+  )
+}
+
 // TODO test
 export function fillStateOnInitialLoad(data, type) {
+
 
   const json = transformCSVtoJSON(data)
 
@@ -95,6 +136,9 @@ export function fillStateOnInitialLoad(data, type) {
         : parseInt(item[type], 10)
     )
   )
+
+  const newState = json.reduce((accumulator, item) =>
+                    accumulator.push(List.of(item.get('id', item.get(type)))), state)
   // const resultsLen = results.length
   //
   // if (resultsLen > 10) {
@@ -119,27 +163,21 @@ export function fillStateOnNewIssue(state, data, type) {
                     accumulator.push(List.of(item.get('id', item.get(type)))), state)
 
   return newState
-  
+
   // const sorted = newState.sortBy((item) => item.get(1))
   // return sortBy.asc ? sorted : sorted.reverse()
 }
 
 export function createPartialReducer(type) {
-  const initialState = new Array(10).fill(List.of())
-
-  return function(state = fromJS(initialState), action) {
+  return function(state = List.of(), action) {
     switch (action.type) {
-    case 'INIT_LOAD':
+    case INIT_LOAD:
+    case NEW_ISSUE:
       if (action.payload) {
-        return fillStateOnInitialLoad(action.payload.data, type)
+        // console.log(action.payload.data)
+        return fillNewData(state, action.payload.data, type)
       }
       return state
-      // console.log(state.merge(fromJS(action.payload)))
-      // const newState = state.merge({issues: fromJS(action.payload)})
-      // console.log(newState)
-    case 'NEW_ISSUE': {
-      return fillStateOnNewIssue(state, action.payload.data, type)
-    }
     default:
       return state
     }

@@ -2,5 +2,5 @@
 'use strict'
 
 export function getSortBy(state) {
-  return state.sortBy.toJS()
+  return state.sortBy
 }

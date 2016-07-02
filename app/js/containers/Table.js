@@ -5,6 +5,7 @@ import m from 'mithril'
 import TableComponent from '../components/Table'
 
 import { getHeaderColumnNames } from '../../../tests/mocks/data'
+// import { getVisible } from '../selectors'
 import { getVisibleIssues } from '../selectors'
 
 const Table = {

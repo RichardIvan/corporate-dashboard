@@ -19,7 +19,7 @@ const paginationDisplay = (store) => {
   const state = store.getState()
   return m(`.${styles['input-container']}`, [
     m('input[type=number][min="1"]', {
-      value: getOffset(state) + 1,
+      value: getOffset(state).get('value') + 1,
       max: getTotalNumberOfVisibleItems(state),
       oninput: (e) => store.dispatch(setOffset(e.target.value, state)),
     }),

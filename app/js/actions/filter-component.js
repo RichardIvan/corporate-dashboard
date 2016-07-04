@@ -20,7 +20,7 @@ export function setSearchFilterValues(type: string, value: string, state) {
   // so we can figure out if we need to remove the old one
   // or add the old one from the filter
 
-  const result = getDataByType(type, state).filter((item) => {
+  const results = getDataByType(type, state).filter((item) => {
     // console.log(item)
     // console.log(item.get(1))
     return item.get(1).toLowerCase().indexOf(value.toLowerCase()) !== -1
@@ -39,7 +39,7 @@ export function setSearchFilterValues(type: string, value: string, state) {
     payload: {
       'type': type,
       'value': value,
-      result,
+      results,
     },
   }
 }

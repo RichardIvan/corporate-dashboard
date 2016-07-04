@@ -51,7 +51,7 @@ describe('Issues Reducer', () => {
       const action = {
         type: 'INIT_LOAD',
         payload: {
-          data: csv,
+          data: generateShortVersions(json),
         },
       }
       const nextState = reducer(state, action)

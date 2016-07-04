@@ -3,25 +3,26 @@
 
 // import { Map, fromJS } from 'immutable'
 // import { transformCSVtoJSON, transformNewIssue } from './helpers.js'
-import { getTotalNumberOfVisibleItems } from '../selectors'
+// import { getTotalNumberOfVisibleItems } from '../selectors'
+
+import { Map } from 'immutable'
 
 import { SET_OFFSET } from '../actions'
 
-export default function offset(state: number = 0, action: Object): number {
+export default function offset(state: Map = Map({ value: 0 }), action: Object): Map {
   switch (action.type) {
   case SET_OFFSET:
     switch (action.payload.value) {
     case 'previous': {
-      const newState = state
-      return newState < 1 ? 0 : newState - 1
+      const val = state.get('value')
+      return val < 1 ? state.set('value', 0) : state.set('value', val - 1)
     }
     case 'next': {
-      const newState = state
-      return newState + 1
+      return state.set('value', state.get('value') + 1)
     }
     default: {
       const newState = action.payload.value
-      return newState < 0 ? 0 : newState
+      return newState < 0 ? state.set('value', 0) : state.set('value', newState)
     }
     }
   default:

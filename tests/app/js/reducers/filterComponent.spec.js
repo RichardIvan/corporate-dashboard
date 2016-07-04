@@ -86,7 +86,7 @@ describe('Filter Component Reducer', () => {
   })
 
   describe('#RESET_FILTER_COMPONENT_STATE', () => {
-    it('should reset component to initial state', () => {
+    it('should reset component to initial state with visibility open', () => {
       let state = initialState
       state = state.set('open', true)
 

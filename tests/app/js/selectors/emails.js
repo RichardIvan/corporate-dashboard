@@ -4,7 +4,7 @@
 import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
-import { List } from 'immutable'
+import { List, fromJS } from 'immutable'
 
 import { EMAIL_TYPE } from '../../../../app/js/actions/types'
 import { getAllEmails } from '../../../../app/js/selectors'
@@ -25,17 +25,17 @@ describe('Emails Selector', () => {
     }
   })
 
-  it('should retrieve an array', () => {
+  it('should retrieve an List', () => {
 
     const out = getAllEmails(state)
 
-    expect(Array.isArray(out)).toBe(true)
+    expect(List.isList(out)).toBe(true)
   })
 
   it('should include only unique emails', () => {
 
     const out = getAllEmails(state)
 
-    expect(out).toEqual(['me@.com', 'you@.com'])
+    expect(out).toEqual(fromJS(['me@.com', 'you@.com']))
   })
 })

@@ -46,6 +46,6 @@ describe('Issue Selector', () => {
     ),
   }
 
-    expect(Object.keys(getIssues(state)).length).toBe(10)
+    expect(getIssues(state).count()).toBe(10)
   })
 })

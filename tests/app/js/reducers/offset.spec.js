@@ -85,7 +85,7 @@ describe('Offset Reducer', () => {
     }))
   })
 
-  it.only('should not decrease the value if the "previou" is passed in and current value is 0', () => {
+  it('should not decrease the value if the "previou" is passed in and current value is 0', () => {
     const state = Map({ value: 0 })
     const action = {
       type: SET_OFFSET,
@@ -102,7 +102,7 @@ describe('Offset Reducer', () => {
   })
 
   it('should have immutable state', () => {
-    const state = 0
+    const state = Map({ value: 0 })
 
     const action = {
       type: SET_OFFSET,
@@ -113,6 +113,8 @@ describe('Offset Reducer', () => {
 
     reducer(state, action)
 
-    expect(state).toBe(0)
+    expect(state).toEqual(fromJS({
+      value: 0
+    }))
   })
 })

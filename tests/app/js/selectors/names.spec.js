@@ -4,7 +4,7 @@
 import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
-import { List } from 'immutable'
+import { List, fromJS } from 'immutable'
 
 import { getAllNames } from '../../../../app/js/selectors'
 
@@ -27,12 +27,12 @@ describe('Names Selector', () => {
   it('should retrieve an array', () => {
     const out = getAllNames(state)
 
-    expect(Array.isArray(out)).toBe(true)
+    expect(List.isList(out)).toBe(true)
   })
 
   it('should include only unique names', () => {
     const out = getAllNames(state)
 
-    expect(out).toEqual(['me', 'you'])
+    expect(out).toEqual(fromJS(['me', 'you']))
   })
 })

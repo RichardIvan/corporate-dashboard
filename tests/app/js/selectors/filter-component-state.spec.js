@@ -4,11 +4,11 @@
 import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
-import { Map } from 'immutable'
+import { Map, fromJS, List } from 'immutable'
 
 import {
   getFilterSearchQuery,
-  getFilterSearchResults,
+  getFilterMenuResults,
   getFilterTimestamp,
 } from '../../../../app/js/selectors'
 
@@ -21,7 +21,7 @@ describe('Filter Component selector', () => {
         open: true,
         selectedFilterMenu: 'name',
         filterSearchQuery: 'query',
-        filterSearchQueryResults: ['one', 'two'],
+        filterSearchQueryResults: List.of('one', 'two'),
         timestamp: Map({
           from: 123,
           to: 111,
@@ -39,11 +39,11 @@ describe('Filter Component selector', () => {
     })
   })
 
-  describe('#getFilterSearchResults()', () => {
+  describe('#getFilterMenuResults()', () => {
     it('should retrive array of results', () => {
-      const newState = getFilterSearchResults(state)
+      const newState = getFilterMenuResults(state)
 
-      expect(newState).toEqual(['one', 'two'])
+      expect(newState).toEqual(fromJS(['one', 'two']))
     })
   })
 

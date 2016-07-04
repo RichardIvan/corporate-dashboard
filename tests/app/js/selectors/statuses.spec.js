@@ -4,7 +4,7 @@
 import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
-import { List } from 'immutable'
+import { List, fromJS } from 'immutable'
 
 import { OPEN_STATUS_TYPE } from '../../../../app/js/actions/types'
 import { getAllStatuses } from '../../../../app/js/selectors'
@@ -29,13 +29,13 @@ describe('Statuses Selector', () => {
 
     const out = getAllStatuses(state)
 
-    expect(Array.isArray(out)).toBe(true)
+    expect(List.isList(out)).toBe(true)
   })
 
   it('should include only unique statuses', () => {
 
     const out = getAllStatuses(state)
 
-    expect(out).toEqual([true, false])
+    expect(out).toEqual(fromJS([true, false]))
   })
 })

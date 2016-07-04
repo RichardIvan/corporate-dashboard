@@ -4,7 +4,7 @@
 import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
-import { List } from 'immutable'
+import { List, fromJS } from 'immutable'
 
 import { EMPLOYEE_TYPE } from '../../../../app/js/actions/types'
 import { getAllEmployees } from '../../../../app/js/selectors'
@@ -29,13 +29,13 @@ describe('Employees Selector', () => {
 
     const out = getAllEmployees(state)
 
-    expect(Array.isArray(out)).toBe(true)
+    expect(List.isList(out)).toBe(true)
   })
 
   it('should include only unique names', () => {
 
     const out = getAllEmployees(state)
 
-    expect(out).toEqual(['him', 'her'])
+    expect(out).toEqual(fromJS(['him', 'her']))
   })
 })

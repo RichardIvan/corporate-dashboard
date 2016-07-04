@@ -6,7 +6,7 @@ import expect from 'expect'
 
 import mq from 'mithril-query'
 
-import { Map } from 'immutable'
+import { Map, List } from 'immutable'
 
 import FilterContainer from '../../../../app/js/containers/Filter'
 import { getAllFilters } from '../../../../app/js/selectors'
@@ -90,8 +90,14 @@ describe('Filter Container', () => {
                 type: 'other',
                 active: false,
               }),
+              opening_timestamp: Map({
+                timestamp: 10,
+              })
             }),
             filterComponentState: initialState.set('selectedFilterMenu', 'opening_timestamp'),
+            partials: {
+              name: List.of(),
+            },
           }
         },
       }
@@ -115,9 +121,13 @@ describe('Filter Container', () => {
                   name: Map({
                     type: 'name',
                     active: true,
+                    by: List.of(),
                   }),
                 }),
                 filterComponentState: initialState.set('selectedFilterMenu', 'name'),
+                partials: {
+                  name: List.of(),
+                },
               }
             },
           }
@@ -133,12 +143,16 @@ describe('Filter Container', () => {
           getState() {
             return {
               filters: Map({
-                name: Map({
-                  type: 'name',
+                email_address: Map({
+                  type: 'email_address',
                   active: true,
+                  by: List.of(),
                 }),
               }),
               filterComponentState: initialState.set('selectedFilterMenu', 'email_address'),
+              partials: {
+                email_address: List.of(),
+              },
             }
           },
         }
@@ -153,12 +167,15 @@ describe('Filter Container', () => {
           getState() {
             return {
               filters: Map({
-                name: Map({
-                  type: 'name',
+                employee_name: Map({
+                  type: 'employee_name',
                   active: true,
                 }),
               }),
               filterComponentState: initialState.set('selectedFilterMenu', 'employee_name'),
+              partials: {
+                employee_name: List.of(),
+              },
             }
           },
         }
@@ -173,12 +190,16 @@ describe('Filter Container', () => {
           getState() {
             return {
               filters: Map({
-                name: Map({
-                  type: 'name',
+                open_status: Map({
+                  type: 'open_status',
                   active: true,
+                  by: true,
                 }),
               }),
               filterComponentState: initialState.set('selectedFilterMenu', 'open_status'),
+              partials: {
+                open_status: List.of(),
+              },
             }
           },
         }
@@ -193,12 +214,16 @@ describe('Filter Container', () => {
           getState() {
             return {
               filters: Map({
-                name: Map({
-                  type: 'name',
+                location: Map({
+                  type: 'location',
                   active: true,
+                  by: List.of()
                 }),
               }),
               filterComponentState: initialState.set('selectedFilterMenu', 'location'),
+              partials: {
+                location: List.of(),
+              },
             }
           },
         }
@@ -208,24 +233,27 @@ describe('Filter Container', () => {
         expect(out.should.have('input')).toEqual()
       })
 
-      it('opening timestamp should contain two inputs', () => {
+      it('opening timestamp should contain one inputs', () => {
         store = {
           getState() {
             return {
               filters: Map({
-                name: Map({
-                  type: 'name',
+                opening_timestamp: Map({
+                  type: 'opening_timestamp',
                   active: true,
                 }),
               }),
               filterComponentState: initialState.set('selectedFilterMenu', 'opening_timestamp'),
+              partials: {
+                opening_timestamp: List.of(),
+              },
             }
           },
         }
 
         const out = mq(FilterContainer, { store })
 
-        expect(out.should.have.at.least(2, 'input')).toEqual()
+        expect(out.should.have.at.least(1, 'input')).toEqual()
       })
 
       it('closing timestamp should contain two inputs', () => {
@@ -233,19 +261,22 @@ describe('Filter Container', () => {
           getState() {
             return {
               filters: Map({
-                name: Map({
-                  type: 'name',
+                closing_timestamp: Map({
+                  type: 'closing_timestamp',
                   active: true,
                 }),
               }),
-              filterComponentState: initialState.set('selectedFilterMenu', 'opening_timestamp'),
+              filterComponentState: initialState.set('selectedFilterMenu', 'closing_timestamp'),
+              partials: {
+                closing_timestamp: List.of(),
+              },
             }
           },
         }
 
         const out = mq(FilterContainer, { store })
 
-        expect(out.should.have.at.least(2, 'input')).toEqual()
+        expect(out.should.have.at.least(1, 'input')).toEqual()
       })
     })
 

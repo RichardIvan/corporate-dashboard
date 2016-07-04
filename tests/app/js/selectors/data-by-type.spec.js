@@ -4,7 +4,7 @@
 import { describe, it } from 'mocha'
 import expect from 'expect'
 
-import { List } from 'immutable'
+import { List, fromJS } from 'immutable'
 
 // import {
 //   NAME_TYPE,
@@ -29,7 +29,9 @@ describe('Data By Type Selector', () => {
       },
     }
 
-    expect(getDataByType(OPENING_TIMESTAMP_TYPE, state)).toEqual([[1, 'two'], [1, 'two']])
+    expect(getDataByType(OPENING_TIMESTAMP_TYPE, state)).toEqual(fromJS(
+      [[1, 'two'], [1, 'two']]
+    ))
   })
 
   it('should trow if no type or state is provided', () => {

@@ -5,6 +5,7 @@ export function getFilter(type: string, state: Object): Map {
   if (!type) {
     throw new Error('No type provided')
   }
+  console.log(state.filters)
   return state.filters.get(type)
 }
 

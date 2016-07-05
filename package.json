@@ -33,6 +33,7 @@
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite"
   },
   "devDependencies": {
+    "amcharts3": "github:amcharts/amcharts3",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",

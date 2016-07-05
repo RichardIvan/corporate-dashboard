@@ -1,6 +1,6 @@
 /* @flow */
 'use strict'
 
-export function getOffset(state: Object): number {
-  return state.offset
+export function getOffset(state: Object): Map {
+  return state.offset.value
 }

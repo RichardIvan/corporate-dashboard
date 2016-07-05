@@ -1,6 +1,7 @@
 /* @flow */
 'use strict'
 
+// TODO write tests
 import reduce from 'lodash/reduce'
 
 import { transformItem } from './transformators'

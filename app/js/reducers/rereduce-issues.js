@@ -21,6 +21,7 @@ const issues = createReducer((state = Map(), action) => {
     }
     return state
   case NEW_ISSUE: {
+//     console.log(action.payload.data)
     return state.mergeDeep(fromJS(action.payload.data))
   }
   default:

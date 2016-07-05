@@ -7,7 +7,7 @@
 
 import { Map } from 'immutable'
 
-import { SET_OFFSET } from '../actions'
+import { SET_OFFSET, SET_FILTER } from '../actions'
 
 export default function offset(state: Map = Map({ value: 0 }), action: Object): Map {
   switch (action.type) {
@@ -24,7 +24,9 @@ export default function offset(state: Map = Map({ value: 0 }), action: Object): 
       const newState = action.payload.value
       return newState < 0 ? state.set('value', 0) : state.set('value', newState)
     }
-    }
+  }
+  case SET_FILTER:
+    return state.set('value', 0)
   default:
     return state
   }

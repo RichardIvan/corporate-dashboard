@@ -8,8 +8,8 @@ import { Map, List, fromJS } from 'immutable'
 import issuesReducer from './rereduce-issues'
 import filtersReducer from './rereduce-filter'
 
-import { transformNewIssue } from './helpers.js'
-import { generateShortVersions } from '../helpers/generators'
+// import { transformNewIssue } from './helpers.js'
+// import { generateShortVersions } from '../helpers/generators'
 
 import {
   NAME_TYPE,
@@ -25,6 +25,7 @@ import {
   NEW_ISSUE,
   INIT_LOAD,
   SET_FILTER,
+  RESET_FILTERS,
 } from '../actions'
 
 const filtered = createReducer({ issuesReducer, filtersReducer },
@@ -38,8 +39,12 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
     //     by: List.of('a'),
     //   }),
     // })
+
+//     console.log(issuesReducer.toJS())
+
     const activeFilters = filtersReducer.filter((filter) => {
       // console.log(filter.get('active'))
+//       console.log(filter.get('active'))
       return filter.get('active')
     })
 
@@ -52,16 +57,17 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
     switch(action.type) {
     case NEW_ISSUE: {
 
-      console.log('NEW_ISSUE')
+      // console.log('NEW_ISSUE')
 
       // const json = transformNewIssue(action.payload.data)
       // // const key = json.id.original
       // const issue = generateShortVersions(json)
       let issue = action.payload.data
       const key = Object.keys(issue)[0]
-      issue = issue[key]
+      issue = fromJS(issue[key])
 
       const listOfFilterResults = activeFilters.reduce((status, filter) => {
+        console.log(filter.toJS())
         const type = filter.get('type')
 
         switch (type) {
@@ -69,7 +75,7 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
         case EMAIL_TYPE:
         case LOCATION_TYPE:
         case EMPLOYEE_TYPE: {
-          const issueProp = issue[type].original.toLowerCase()
+          const issueProp = issue.getIn([type, 'original']).toLowerCase()
           const filterBy = filter.get('by')
 
           let newStatus = filterBy.map((value) => {
@@ -89,17 +95,16 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
         }
         case OPEN_STATUS_TYPE:
           // console.log(`type is ${type}`)
-          return status.push(issue[type].original === filter.get('by'))
+          return status.push(issue.getIn([type, 'original']) === filter.get('by'))
         default: {
           // console.log(`type is ${type}`)
           if (type === OPENING_TIMESTAMP_TYPE) {
             const toTimestamp = activeFilters.getIn([CLOSING_TIMESTAMP_TYPE, 'timestamp'])
             // TODO it is defined bellow as well => put definition on top
-            console.log('TYPE')
-            console.log(type)
-            console.log(issue)
-            console.log(issue[type])
-            const issueProp = issue[type].original
+            const issueProp = issue.getIn([type, 'original'])
+            if(!issueProp || issueProp === '') {
+              return status.push(false)
+            }
             return status.push(
               toTimestamp ?
                       issueProp >= filter.get('timestamp') && issueProp <= toTimestamp :
@@ -107,9 +112,12 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
             )
           } else {
             const fromTimestamp = activeFilters.getIn([OPENING_TIMESTAMP_TYPE, 'timestamp'])
-            const issueProp = issue[type].original
+            const issueProp = issue.getIn([type, 'original'])
+            if(!issueProp && issueProp === '') {
+              return status.push(false)
+            }
             return status.push(
-              fromTimestamp ?
+              fromTimestamp && fromTimestamp !== '' ?
                       issueProp <= filter.get('timestamp') && issueProp >= fromTimestamp :
                       issueProp <= filter.get('timestamp')
             )
@@ -125,12 +133,16 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
       return !listOfFilterResults.includes(false) ? state.push(fromJS(issue[key])) : state
     }
     case SET_FILTER:
+    case RESET_FILTERS:
     case INIT_LOAD: {
       // console.log('DEFAULT')
       // console.log('not empty')
-      var t0 = performance.now();
+      // var t0 = performance.now();
+      console.log(issuesReducer.count())
 
-      const filteredItems = issuesReducer.reduce((acc, issue) => {
+      const filteredItems = issuesReducer.reduce((acc, issue: Map) => {
+//         console.log('ISSUE!!!')
+//         console.log(issue.toJS())
         const listOfFilterResults = activeFilters.reduce((status, filter) => {
           const type = filter.get('type')
 
@@ -143,13 +155,16 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
             const issueProp = issue.getIn([type, 'original']).toLowerCase()
             const filterBy = filter.get('by')
 
+//             console.log(issueProp)
+//             console.log(filterBy)
+
             let newStatus = filterBy.map((value) => {
               return issueProp.indexOf(value.toLowerCase()) !== -1
             })
 
             // console.log('does it have true?')
             // newStatus.forEach(item => console.log(item))
-            // console.log(newStatus.has(true))
+//             console.log(newStatus.includes(true))
 
             newStatus = newStatus.includes(true)
             // console.log(issue.getIn([filter.get('type'), 'original']))
@@ -169,16 +184,26 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
             if (type === OPENING_TIMESTAMP_TYPE) {
               const toTimestamp = activeFilters.getIn([CLOSING_TIMESTAMP_TYPE, 'timestamp'])
               const issueProp = issue.getIn([type, 'original'])
+              if(!issueProp || issueProp === '') {
+                return status.push(false)
+              }
               return status.push(
-                toTimestamp ?
+                toTimestamp && toTimestamp !== '' ?
                         issueProp >= filter.get('timestamp') && issueProp <= toTimestamp :
                         issueProp >= filter.get('timestamp')
               )
             } else {
               const fromTimestamp = activeFilters.getIn([OPENING_TIMESTAMP_TYPE, 'timestamp'])
               const issueProp = issue.getIn([type, 'original'])
+//               console.log(issueProp <= filter.get('timestamp'))
+              if(!issueProp || issueProp === '') {
+                return status.push(false)
+              }
+//               console.log(issueProp <= filter.get('timestamp'))
+//               console.log(fromTimestamp)
+              console.log(fromTimestamp && fromTimestamp !== '')
               return status.push(
-                fromTimestamp ?
+                fromTimestamp && fromTimestamp !== '' ?
                         issueProp <= filter.get('timestamp') && issueProp >= fromTimestamp :
                         issueProp <= filter.get('timestamp')
               )
@@ -187,6 +212,8 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
 
           }
           // let newStatus = false
+//           console.log(issue.toJS())
+//           console.log(listOfFilterResults.toJS())
         }, List.of())
 
         // console.log(!listOfFilterResults.includes(false))
@@ -194,15 +221,20 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
 
         // console.log('list of filtered results')
         // console.log(listOfFilterResults.includes(false))
+//         console.log(listOfFilterResults.toJS())
+//         console.log(issue)
         return !listOfFilterResults.includes(false) ? acc.push(issue) : acc
+//         return listOfFilterResults
       }, List.of())
 
       // console.log(filteredItems.includes(false))
       // if the item has false it doesn't pass all the filters
       // so it should not be included
       // console.log(filteredItems.toJS())
-      var t1 = performance.now();
-      console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+      // var t1 = performance.now();
+      // console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+//       console.log(filteredItems.toJS())
+//       console.log(filteredItems.count())
       return filteredItems
     }
     default:

@@ -8,6 +8,7 @@ _comment	package.json	/^  "_comment": {$/;"	f
 _old_cover	package.json	/^    "_old_cover": "babel-node _isparta cover --report lcovonly ospec\/bin\/ospec",$/;"	f
 _old_local-test	package.json	/^    "_old_local-test": "babel-node .\/ospec\/bin\/ospec",$/;"	f
 _old_test	package.json	/^    "_old_test": "babel-istanbul cover --report lcovonly ospec\/bin\/ospec && cat .\/coverage\/lcov.info | .\/node_modules\/coveralls\/bin\/coveralls.js && rm -rf .\/coverage",$/;"	f
+amcharts3	package.json	/^    "amcharts3": "github:amcharts\/amcharts3",$/;"	f
 author	package.json	/^  "author": "Richard Ivan",$/;"	f
 babel-cli	package.json	/^    "babel-cli": "^6.9.0",$/;"	f
 babel-core	package.json	/^    "babel-core": "^6.9.1",$/;"	f

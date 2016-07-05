@@ -1,6 +1,8 @@
 /* @flow */
 'use strict'
 
+// TODO write tests
+
 import moment from 'moment'
 
 import first from 'lodash/first'
@@ -50,7 +52,7 @@ function transformEmployeeName(name: string) {
 }
 
 function transformOpenStatus(value) {
-  return value ? 'open' : 'closed'
+  return (value === 'true' || value === true) ? 'open' : 'closed'
 }
 
 function transformLocation(value: string) {

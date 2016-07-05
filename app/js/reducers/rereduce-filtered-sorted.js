@@ -16,6 +16,7 @@ import {
   NEW_ISSUE,
   SET_FILTER,
   SET_SORT,
+  RESET_FILTERS,
 } from '../actions'
 
 export const initialState = fromJS(new Array(10).fill(List.of()))
@@ -26,21 +27,22 @@ const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
     // case INIT_LOAD:
     // case NEW_ISSUE:
     // case SET_FILTER:
-
+//   if (filteredIssuesReducer.isEmpty()) {
+//     return state
+//   }
 
   switch (action.type) {
   case INIT_LOAD:
   case NEW_ISSUE:
   case SET_FILTER:
+  case RESET_FILTERS:
   case SET_SORT: {
-    console.log(action.type)
-    let sorted = filteredIssuesReducer.sortBy((item) => {
-      // console.log(sortByReducer)
-      // console.log(item)
+    const sorted = filteredIssuesReducer.sortBy((item) => {
+      console.log(item)
       return item.getIn([sortByReducer.get('type'), 'original'])
     })
     return sortByReducer.get('asc') ? sorted : sorted.reverse()
-    console.log('run sorted!!!')
+    // console.log('run sorted!!!')
   }
   default: {
     return state
@@ -108,3 +110,4 @@ export default filteredSorted
 //   }
 //   return partial
 // }
+ // }

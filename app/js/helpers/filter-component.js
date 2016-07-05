@@ -70,7 +70,7 @@ function generateFilterMenuRowsByType(store, type) {
   if(getFilterSearchQuery(state) === '') {
     // NOTE we are generating unique array of items for the filter rows
     // return
-    console.log(getDataByType(type, state))
+//     console.log(getDataByType(type, state))
     return getDataByType(type, state).reduce((acc, value) => {
       return acc.set(value.get(1), value)
     }, Map())
@@ -127,9 +127,9 @@ function generateTimeBasedBody(store, type) {
     m('label', 'Time'),
     m('input[type=date]',
       {
-        max: getFilterTimestamp(state, 'to') || moment().format('YYYY-MM-DD'),
-        value: moment(getFilter(type, state).get('timestamp')).format('YYYY-MM-DD'),
-        onchange: (e) => {
+//         max: getFilterTimestamp(state, 'to') || moment().format('YYYY-MM-DD'),
+//         value: moment(getFilter(type, state).get('timestamp')).format('YYYY-MM-DD'),
+        onblur: (e) => {
           store.dispatch(setFilter(type, e.target.valueAsNumber))
         },
       }, 'Time '),

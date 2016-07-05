@@ -18,7 +18,7 @@ export function connectToSocket (store) {
     case INIT_LOAD: {
       const csv = action.payload.data
       const json = transformCSVtoJSON(csv)
-
+//       console.log(generateShortVersions(json))
       action.payload.data = generateShortVersions(json)
       break
     }

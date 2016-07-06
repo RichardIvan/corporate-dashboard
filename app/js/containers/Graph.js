@@ -3,9 +3,17 @@
 import m from 'mithril'
 import GraphComponent from '../components/Graph'
 
+import RangeSelectionWidget from './GraphRangeSelectionWidget'
+import OpenIssuesContainer from './Open-Issues-Display'
+
 const Graph = {
-  view() {
-    return m(GraphComponent)
+  view(vnode) {
+    return m(GraphComponent, {
+      // ChartsContainer,
+    }, [
+      m(RangeSelectionWidget, { ...vnode.attrs }),
+      m(OpenIssuesContainer, { ...vnode.attrs }),
+    ])
 
     // DATE WIDGET
 

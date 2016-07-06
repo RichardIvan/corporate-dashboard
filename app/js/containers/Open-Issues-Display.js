@@ -3,7 +3,7 @@
 
 import m from 'mithril'
 
-import OpenIssuesComponent from '../components/'
+import OpenIssuesComponent from '../components/OpenIssues'
 import { getOpenIssuesTotal } from '../selectors'
 
 const OpenIssuesContainer = {

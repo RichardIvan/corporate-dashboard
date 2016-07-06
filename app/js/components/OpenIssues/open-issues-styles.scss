@@ -1,3 +1,12 @@
 .total {
   background: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  flex-basis: 30%;
+}
+
+.number {
+  font-size: 3.5em;
 }

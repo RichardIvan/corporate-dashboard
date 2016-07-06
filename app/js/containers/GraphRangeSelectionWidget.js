@@ -7,17 +7,26 @@ import f from 'flyd'
 import GraphRangeWidgetComponent from '../components/RangeSelectionWidget'
 
 import { setRange } from '../actions'
+import { getRange } from '../selectors'
 
 const GraphRangeWidgetContainer = {
   oninit(vnode) {
-    const state = vnode.store.getState()
+    vnode.state.appState = vnode.attrs.store.getState()
     vnode.state.inputsDisabled = f.stream(true)
-    vnode.state.from = getRange(state).get('from')
-    vnode.state.to = getRange(state).get('to')
+    vnode.state.from = getRange(vnode.state.appState).get('from')
+    vnode.state.to = getRange(vnode.state.appState).get('to')
+  },
+  onbeforeupdate(vnode) {
+    vnode.state.appState = vnode.attrs.store.getState()
+    vnode.state.from = getRange(vnode.state.appState).get('from')
+    vnode.state.to = getRange(vnode.state.appState).get('to')
   },
   view(vnode) {
-    return m('', m(GraphRangeWidgetComponent),
+    return m(GraphRangeWidgetComponent,
       {
+        dateAttrs: {
+          class: vnode.state.inputsDisabled() ? 'inactive' : '',
+        },
         previousButtonAttrs: {
           onclick: () => {
             setRange({
@@ -64,18 +73,21 @@ const GraphRangeWidgetContainer = {
               from: vnode.state.from,
               to: vnode.state.to,
             })
+            console.log(vnode.state.inputsDisabled())
             vnode.state.inputsDisabled(false)
+            console.log(vnode.state.inputsDisabled())
           },
         },
         allButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'active' : 'inactive',
           onclick: () => {
             setRange({ range: 'all' })
+            console.log(vnode.state.inputsDisabled())
             vnode.state.inputsDisabled(true)
+            console.log(vnode.state.inputsDisabled())
           },
         },
-      }
-    )
+      })
   },
   // view(vnode) {
   //   return m('', m(GraphRangeWidgetComponent,

@@ -38,7 +38,7 @@ describe('Range Selection Widget Component', () => {
   // ti should have a button containinng all
   // this buttoon should have a onclick event
   // set event is setRange({ range: 'all' })
-  it.only('should have a button containinng all this buttoon should have a onclick event', () => {
+  it('should have a button containinng all this buttoon should have a onclick event', () => {
     const out = mq(RangeSelectionComponent, {
       allButtonAttrs: {
         onclick: () => console.log('OK'),

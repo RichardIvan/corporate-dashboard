@@ -24,7 +24,7 @@ const openIssues = createReducer({ issuesReducer, rangeReducer },
     case SET_RANGE: {
       if (range === 'all') {
         const total = issuesReducer.filter((issue) => {
-          const status = issue.get('open_status')
+          const status = issue.getIn(['open_status', 'original'])
 
           return status === true || status === 'true'
         })

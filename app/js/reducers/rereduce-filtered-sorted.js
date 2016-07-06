@@ -38,7 +38,6 @@ const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
   case RESET_FILTERS:
   case SET_SORT: {
     const sorted = filteredIssuesReducer.sortBy((item) => {
-      console.log(item)
       return item.getIn([sortByReducer.get('type'), 'original'])
     })
     return sortByReducer.get('asc') ? sorted : sorted.reverse()

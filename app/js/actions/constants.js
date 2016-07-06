@@ -30,3 +30,5 @@ export const CLOSE_FILTER_COMPONENT: string = 'CLOSE_FILTER_COMPONENT'
 
 export const FILTER_SEARCH_RESULT: string = 'FILTER_SEARCH_RESULT'
 export const CLEAR_TIMESTAMP: string = 'CLEAR_TIMESTAMP'
+
+export const SET_RANGE: string = 'SET_RANGE'

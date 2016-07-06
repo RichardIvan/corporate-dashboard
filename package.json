@@ -63,6 +63,7 @@
     "firebase": "^3.0.5",
     "flow-bin": "^0.26.0",
     "flux-standard-action": "^0.6.1",
+    "flyd": "^0.2.2",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-jscpd": "0.0.7",

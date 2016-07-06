@@ -50,6 +50,7 @@ firebase	package.json	/^    "firebase": "^3.0.5",$/;"	f
 flow	package.json	/^    "flow": "flow; test $? -eq 0 -o $? -eq 2",$/;"	f
 flow-bin	package.json	/^    "flow-bin": "^0.26.0",$/;"	f
 flux-standard-action	package.json	/^    "flux-standard-action": "^0.6.1",$/;"	f
+flyd	package.json	/^    "flyd": "^0.2.2",$/;"	f
 from	app/js/selectors/filter-folder/single.js	/^} from '..\/..\/actions\/types'$/;"	f
 from.serviceAccount	server/src/helpers/firebase.js	/^const config = {$/;"	p
 from.shouldHaveTooltip	app/js/containers/Cell.js	/^function shouldHaveTooltip(type) {$/;"	f

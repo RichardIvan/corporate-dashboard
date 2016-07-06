@@ -8,13 +8,17 @@ import { getOffset } from '../../../../app/js/selectors'
 describe('Offset Selector', () => {
   it('should return offset from the sotre', () => {
     let state = {
-      offset: 0,
+      offset: {
+        value: 0,
+      },
     }
 
     expect(getOffset(state)).toBe(0)
 
     state = {
-      offset: 21,
+      offset: {
+        value: 21,
+      },
     }
 
     expect(getOffset(state)).toBe(21)

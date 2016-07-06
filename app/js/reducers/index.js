@@ -19,6 +19,9 @@ import filterComponentState from './filter-component-state'
 import visibleIssues from './rereduce-visible-issues'
 // import visibleIssues from './visible-items'
 
+import numberOfOpenIssues from './rereduce-open-issues'
+import graphRange from './range-reducer.js'
+
 const root = combineReducers({
   issues,
   filters,
@@ -29,6 +32,8 @@ const root = combineReducers({
   sortBy,
   filterComponentState,
   visibleIssues,
+  numberOfOpenIssues,
+  graphRange,
 })
 
 export default root

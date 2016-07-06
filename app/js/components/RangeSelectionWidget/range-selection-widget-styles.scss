@@ -1,0 +1,29 @@
+.container {
+  color: white;
+}
+
+.previous {
+  color: white;
+}
+
+.next {
+  color: white;
+}
+
+.mainInputs {
+  color: white;
+}
+
+.dates {
+  color: white;
+}
+
+.rangeButtons {
+  :global(.range-button) {
+    color: white;
+  }
+
+  :global(.all-button) {
+    color: white;
+  }
+}

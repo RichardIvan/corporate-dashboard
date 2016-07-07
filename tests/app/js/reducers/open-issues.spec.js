@@ -24,27 +24,39 @@ describe('Open issues reducer', () => {
       issuesReducer = Map({
         '1': Map({
           id: '1',
-          open_status: true,
+          open_status: Map({
+            original: true,
+          }),
         }),
         '2': Map({
           id: '2',
-          open_status: true,
+          open_status: Map({
+            original: true,
+          }),
         }),
         '3': Map({
           id: '3',
-          open_status: true,
+          open_status: Map({
+            original: true,
+          }),
         }),
         '4': Map({
           id: '4',
-          open_status: false,
+          open_status: Map({
+            original: false,
+          }),
         }),
         '5': Map({
           id: '5',
-          open_status: 'false',
+          open_status: Map({
+            original: 'false',
+          }),
         }),
         '6': Map({
           id: '6',
-          open_status: 'true',
+          open_status: Map({
+            original: 'true',
+          }),
         }),
       })
 
@@ -182,49 +194,85 @@ describe('Open issues reducer', () => {
       beforeEach(() => {
         state = Map({ total: 0 })
 
-        issuesReducer = Map({
-          '1': Map({
+        issuesReducer = fromJS({
+          '1': {
             id: '1',
-            open_status: true,
-            opening_timestamp: moment('01/12/2005', 'DD/MM/YYYY').format('x'),
-            closing_timestamp: ''
-          }),
-          '2': Map({
+            open_status: {
+              original: true,
+            },
+            opening_timestamp: {
+              original: +moment('01/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+            closing_timestamp: {
+              original: '',
+            },
+          },
+          '2': {
             id: '2',
-            open_status: true,
-            opening_timestamp: moment('02/12/2005', 'DD/MM/YYYY').format('x'),
-            closing_timestamp: ''
-          }),
-          '3': Map({
+            open_status: {
+              original: true,
+            },
+            opening_timestamp: {
+              original: +moment('02/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+            closing_timestamp: {
+              original: ''
+            },
+          },
+          '3': {
             id: '3',
-            open_status: true,
-            opening_timestamp: moment('22/12/2005', 'DD/MM/YYYY').format('x'),
-            closing_timestamp: '',
-          }),
-          '4': Map({
+            open_status: {
+              original: true,
+            },
+            opening_timestamp: {
+              original: +moment('22/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+            closing_timestamp: {
+              original: '',
+            },
+          },
+          '4': {
             id: '4',
-            open_status: false,
-            opening_timestamp: moment('01/12/2005', 'DD/MM/YYYY').format('x'),
-            closing_timestamp: moment('12/12/2005', 'DD/MM/YYYY').format('x'),
-          }),
-          '5': Map({
+            open_status: {
+              original: false,
+            },
+            opening_timestamp: {
+              original: +moment('01/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+            closing_timestamp: {
+              original: +moment('12/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+          },
+          '5': {
             id: '5',
-            open_status: 'false',
-            opening_timestamp: moment('01/12/2005', 'DD/MM/YYYY').format('x'),
-            closing_timestamp: moment('12/12/2005', 'DD/MM/YYYY').format('x'),
-          }),
-          '6': Map({
+            open_status: {
+              original: 'false',
+            },
+            opening_timestamp: {
+              original: +moment('01/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+            closing_timestamp: {
+              original: +moment('12/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+          },
+          '6': {
             id: '6',
-            open_status: 'true',
-            opening_timestamp: moment('12/12/2005', 'DD/MM/YYYY').format('x'),
-            closing_timestamp: '',
-          }),
+            open_status: {
+              original: 'true',
+            },
+            opening_timestamp: {
+              original: +moment('12/12/2005', 'DD/MM/YYYY').format('x'),
+            },
+            closing_timestamp: {
+              original: '',
+            },
+          },
         })
 
         rangeReducer = Map({
           range: 'set',
-          from: moment('03/12/2005', 'DD/MM/YYYY').format('x'),
-          to: moment('09/12/2005', 'DD/MM/YYYY').format('x'),
+          from: +moment('03/12/2005', 'DD/MM/YYYY').format('x'),
+          to: +moment('09/12/2005', 'DD/MM/YYYY').format('x'),
         })
       })
 

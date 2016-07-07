@@ -50,36 +50,31 @@ export default function openIssues(state = Map({ total: 0 }), action) {
 
   const range = rangeReducer.get('range')
 
-  // console.log(SET_RANGE)
-  // console.log(action.type)
-
   switch (action.type) {
   case INIT_LOAD:
   case NEW_ISSUE:
   case SET_RANGE: {
     if (range === 'all') {
       const total = issuesReducer.filter((issue) => {
-        const status = issue.get('open_status')
+        const status = issue.getIn(['open_status', 'original'])
 
         return status === true || status === 'true'
       })
 
       return state.set('total', total.count())
     } else if (range === 'set') {
-      // const fromRange = rangeReducer.get('from')
       const toRange = rangeReducer.get('to')
 
-      // we are filtering items by
-        // if status is open
-        // when range is set, by opening timestamp is lower or equal to
-        // end of range
+      // const from = moment(rangeReducer.get('from')).format('DD/MM/YYYY')
+      // const to = moment(rangeReducer.get('to')).format('DD/MM/YYYY')
+
       const total = issuesReducer.filter((issue) => {
-        const status = issue.get('open_status')
+        const status = issue.getIn(['open_status', 'original'])
         if (status === false || status === 'false') {
           return false
         }
 
-        const openingTime = issue.get('opening_timestamp')
+        const openingTime = issue.getIn(['opening_timestamp', 'original'])
 
         if (openingTime <= toRange) {
           return true
@@ -87,9 +82,6 @@ export default function openIssues(state = Map({ total: 0 }), action) {
 
         return false
       })
-
-      // console.log(from)
-      // console.log(to)
 
       return state.set('total', total.count())
     }

@@ -34,6 +34,7 @@ const GraphRangeWidgetContainer = {
         },
         previousButtonAttrs: {
           onclick: () => {
+            vnode.state.inputsDisabled(false)
             vnode.attrs.store.dispatch(
               setRange({
                 type: 'previous',
@@ -42,11 +43,12 @@ const GraphRangeWidgetContainer = {
                 to: vnode.state.to,
               })
             )
-            vnode.state.inputsDisabled(false)
+
           },
         },
         nextButtonAttrs: {
           onclick: () => {
+            vnode.state.inputsDisabled(false)
             vnode.attrs.store.dispatch(
               setRange({
                 type: 'next',
@@ -55,7 +57,6 @@ const GraphRangeWidgetContainer = {
                 to: vnode.state.to,
               })
             )
-            vnode.state.inputsDisabled(false)
           },
         },
         fromInputAttrs: {
@@ -85,6 +86,7 @@ const GraphRangeWidgetContainer = {
         rangeButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'inactive' : 'active',
           onclick: () => {
+            vnode.state.inputsDisabled(false)
             vnode.attrs.store.dispatch(
               setRange({
                 range: 'set',
@@ -92,16 +94,15 @@ const GraphRangeWidgetContainer = {
                 to: vnode.state.to,
               })
             )
-            vnode.state.inputsDisabled(false)
           },
         },
         allButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'active' : 'inactive',
           onclick: () => {
+            vnode.state.inputsDisabled(true)
             vnode.attrs.store.dispatch(
               setRange({ range: 'all' })
             )
-            vnode.state.inputsDisabled(true)
           },
         },
       })

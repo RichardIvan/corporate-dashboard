@@ -6,6 +6,8 @@ import moment from 'moment'
 import { describe, it } from 'mocha'
 import expect from 'expect'
 
+import { isFSA } from 'flux-standard-action';
+
 import { setRange } from '../../../../app/js/actions'
 
 describe('setRange actio creaator', () => {
@@ -209,5 +211,121 @@ describe('setRange actio creaator', () => {
     })
   })
 
+  // it should create correct action when next type is being passed in payload
+  it('should create correct action when next type is bying passed in payload', () => {
+    const from = +moment().startOf('day').subtract(14, 'days').format('x')
+    const to = +moment().startOf('day').subtract(7, 'days').format('x')
+
+    let payload = {
+      type: 'next',
+      range: 'set',
+      from: from,
+      to: to,
+    }
+
+    expect(setRange(payload)).toEqual({
+      type: 'SET_RANGE',
+      payload: {
+        range: 'set',
+        from: +moment().startOf('day').subtract(7, 'days').format('x'),
+        to: +moment().startOf('day').format('x'),
+      },
+    })
+  })
+  // it should have range to now, if next is setting the range later than today
+  it('should have range to now, if next is setting the range later than today', () => {
+    const from = +moment().startOf('day').subtract(8, 'days').format('x')
+    const to = +moment().startOf('day').subtract(1, 'days').format('x')
+
+    let payload = {
+      type: 'next',
+      range: 'set',
+      from: from,
+      to: to,
+    }
+
+    expect(setRange(payload)).toEqual({
+      type: 'SET_RANGE',
+      payload: {
+        range: 'set',
+        from: +moment().startOf('day').subtract(7, 'days').format('x'),
+        to: +moment().startOf('day').format('x'),
+      },
+    })
+  })
+  // it should work if only one from or to is passed in
+  it('should work if only one from or to is passed in', () => {
+    const from = +moment().startOf('day').subtract(8, 'days').format('x')
+    const to = +moment().startOf('day').subtract(1, 'days').format('x')
+
+    let payload = {
+      type: 'next',
+      range: 'set',
+      from: from,
+      to: '',
+    }
+
+    expect(setRange(payload)).toEqual({
+      type: 'SET_RANGE',
+      payload: {
+        range: 'set',
+        from: +moment().startOf('day').subtract(7, 'days').format('x'),
+        to: +moment().startOf('day').format('x'),
+      },
+    })
+
+    payload = {
+      type: 'next',
+      range: 'set',
+      from: '',
+      to: to,
+    }
+
+    expect(setRange(payload)).toEqual({
+      type: 'SET_RANGE',
+      payload: {
+        range: 'set',
+        from: +moment().startOf('day').subtract(7, 'days').format('x'),
+        to: +moment().startOf('day').format('x'),
+      },
+    })
+  })
+
+  //it should create correct action when previous type is being apssed in payload
+  it('create correct action when previous type is being passed in payload', () => {
+    const from = +moment().startOf('day').subtract(14, 'days').format('x')
+    const to = +moment().startOf('day').subtract(7, 'days').format('x')
+
+    let payload = {
+      type: 'previous',
+      range: 'set',
+      from: from,
+      to: to,
+    }
+
+    expect(setRange(payload)).toEqual({
+      type: 'SET_RANGE',
+      payload: {
+        range: 'set',
+        from: +moment().startOf('day').subtract(21, 'days').format('x'),
+        to: +moment().startOf('day').subtract(14, 'days').format('x'),
+      },
+    })
+  })
+
   // it should create FSA action type
+  it('should create FSA action', () => {
+    const from = +moment().startOf('day').subtract(14, 'days').format('x')
+    const to = +moment().startOf('day').subtract(7, 'days').format('x')
+
+    const payload = {
+      type: 'previous',
+      range: 'set',
+      from: from,
+      to: to,
+    }
+
+    expect(isFSA(setRange(payload))).toBe(true)
+  })
+
 })

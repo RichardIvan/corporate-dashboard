@@ -3,6 +3,7 @@
 
 import m from 'mithril'
 import f from 'flyd'
+import moment from 'moment'
 
 import GraphRangeWidgetComponent from '../components/RangeSelectionWidget'
 
@@ -11,15 +12,19 @@ import { getRange } from '../selectors'
 
 const GraphRangeWidgetContainer = {
   oninit(vnode) {
-    vnode.state.appState = vnode.attrs.store.getState()
-    vnode.state.inputsDisabled = f.stream(true)
-    vnode.state.from = getRange(vnode.state.appState).get('from')
-    vnode.state.to = getRange(vnode.state.appState).get('to')
+    const state = vnode.attrs.store.getState()
+    const range = getRange(state)
+    vnode.state.appState = state
+    vnode.state.inputsDisabled = range.get('range') === 'all' ? f.stream(true) : f.stream(false)
+    vnode.state.from = range.get('from')
+    vnode.state.to = range.get('to')
   },
   onbeforeupdate(vnode) {
-    vnode.state.appState = vnode.attrs.store.getState()
-    vnode.state.from = getRange(vnode.state.appState).get('from')
-    vnode.state.to = getRange(vnode.state.appState).get('to')
+    const state = vnode.attrs.store.getState()
+    const range = getRange(state)
+    vnode.state.appState = state
+    vnode.state.from = range.get('from')
+    vnode.state.to = range.get('to')
   },
   view(vnode) {
     return m(GraphRangeWidgetComponent,
@@ -29,62 +34,74 @@ const GraphRangeWidgetContainer = {
         },
         previousButtonAttrs: {
           onclick: () => {
-            setRange({
-              type: 'previous',
-              range: 'set',
-              // from: vnode.state.from,
-            })
+            vnode.attrs.store.dispatch(
+              setRange({
+                type: 'previous',
+                range: 'set',
+                from: vnode.state.from,
+                to: vnode.state.to,
+              })
+            )
             vnode.state.inputsDisabled(false)
           },
         },
         nextButtonAttrs: {
           onclick: () => {
-            setRange({
-              type: 'next',
-              range: 'set',
-              // to: vnode.state.to,
-            })
+            vnode.attrs.store.dispatch(
+              setRange({
+                type: 'next',
+                range: 'set',
+                from: vnode.state.from,
+                to: vnode.state.to,
+              })
+            )
             vnode.state.inputsDisabled(false)
           },
         },
         fromInputAttrs: {
           onchange: (e) => {
-            setRange({
-              range: 'set',
-              from: e.target.valueAsNumber,
-            })
+            vnode.attrs.store.dispatch(
+              setRange({
+                range: 'set',
+                from: e.target.valueAsNumber,
+              })
+            )
           },
+          value: moment(vnode.state.from).format('YYYY-MM-DD'),
           disabled: vnode.state.inputsDisabled(),
         },
         toInputAttrs: {
           onchange: (e) => {
-            setRange({
-              range: 'set',
-              to: e.target.valueAsNumber,
-            })
+            vnode.attrs.store.dispatch(
+              setRange({
+                range: 'set',
+                to: e.target.valueAsNumber,
+              })
+            )
           },
+          value: moment(vnode.state.to).format('YYYY-MM-DD'),
           disabled: vnode.state.inputsDisabled(),
         },
         rangeButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'inactive' : 'active',
           onclick: () => {
-            setRange({
-              range: 'set',
-              from: vnode.state.from,
-              to: vnode.state.to,
-            })
-            console.log(vnode.state.inputsDisabled())
+            vnode.attrs.store.dispatch(
+              setRange({
+                range: 'set',
+                from: vnode.state.from,
+                to: vnode.state.to,
+              })
+            )
             vnode.state.inputsDisabled(false)
-            console.log(vnode.state.inputsDisabled())
           },
         },
         allButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'active' : 'inactive',
           onclick: () => {
-            setRange({ range: 'all' })
-            console.log(vnode.state.inputsDisabled())
+            vnode.attrs.store.dispatch(
+              setRange({ range: 'all' })
+            )
             vnode.state.inputsDisabled(true)
-            console.log(vnode.state.inputsDisabled())
           },
         },
       })

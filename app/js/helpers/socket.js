@@ -32,7 +32,7 @@ export function connectToSocket (store) {
      break
     }
 
-    console.log(action)
+//     console.log(action)
 
     store.dispatch(action)
 

@@ -14,6 +14,8 @@ import {
 import issuesReducer from './rereduce-issues'
 import rangeReducer from './range-reducer'
 
+import moment from 'moment'
+
 const openIssues = createReducer({ issuesReducer, rangeReducer },
   (state = Map({ total: 0 }), action, { issuesReducer, rangeReducer }): Map => {
     const range = rangeReducer.get('range')
@@ -33,13 +35,16 @@ const openIssues = createReducer({ issuesReducer, rangeReducer },
       } else if (range === 'set') {
         const toRange = rangeReducer.get('to')
 
+        const from = moment(rangeReducer.get('from')).format('DD/MM/YYYY')
+        const to = moment(rangeReducer.get('to')).format('DD/MM/YYYY')
+
         const total = issuesReducer.filter((issue) => {
-          const status = issue.get('open_status')
+          const status = issue.getIn(['open_status', 'original'])
           if (status === false || status === 'false') {
             return false
           }
 
-          const openingTime = issue.get('opening_timestamp')
+          const openingTime = issue.getIn(['opening_timestamp', 'original'])
 
           if (openingTime <= toRange) {
             return true
@@ -47,6 +52,8 @@ const openIssues = createReducer({ issuesReducer, rangeReducer },
 
           return false
         })
+
+        console.log(total.count())
 
         return state.set('total', total.count())
       }

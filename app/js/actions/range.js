@@ -6,6 +6,39 @@ import moment from 'moment'
 import cloneDeep from 'lodash/cloneDeep'
 import { SET_RANGE } from '../actions/constants'
 
+function getActionAccordingToButtonPressed(buttonType, payload) {
+  const action = {
+    type: SET_RANGE,
+    payload: {
+      range: 'set',
+    },
+  }
+  if (typeof payload.from === 'number') {
+    if (buttonType === 'previous') {
+      action.payload.from = +moment(payload.from).startOf('day').subtract(7, 'days').format('x')
+      action.payload.to = payload.from
+    } else {
+      action.payload.from = +moment(payload.from).startOf('day').add(7, 'days').format('x')
+      action.payload.to = +moment(payload.from).startOf('day').add(14, 'days').format('x')
+    }
+  } else {
+    if (buttonType === 'previous') {
+      action.payload.from = +moment(payload.to).startOf('day').subtract(14, 'days').format('x')
+      action.payload.to = +moment(payload.to).startOf('day').subtract(7, 'days').format('x')
+    } else {
+      action.payload.from = payload.to
+      action.payload.to = +moment(payload.to).startOf('day').add(7, 'days').format('x')
+    }
+  }
+  // const now = moment()
+  const to = action.payload.to
+  if (to > +moment().startOf('day').format('x')) {
+    action.payload.from = +moment().startOf('day').subtract(7, 'days').format('x')
+    action.payload.to = +moment().startOf('day').format('x')
+  }
+  return action
+}
+
 export function setRange(pl) {
   const type = SET_RANGE
 
@@ -27,19 +60,38 @@ export function setRange(pl) {
       throw new Error('From or to is not a number')
     }
     const now = moment().startOf('day')
+    const buttonType = payload.type
     if (typeof payload.from !== 'number') {
       if ( +now.format('x') <= payload.to ) {
-        payload.to = +now.format('x')
-        payload.from = +now.subtract(7, 'days')
+        if ( buttonType === 'next' || buttonType === 'previous') {
+          return getActionAccordingToButtonPressed(buttonType, payload)
+        } else {
+          payload.to = +now.format('x')
+          payload.from = +now.subtract(7, 'days')
+        }
+
+
       }
-      payload.from = +moment(payload.to).subtract(7, 'days').format('x')
+      if ( buttonType === 'next' || buttonType === 'previous') {
+        return getActionAccordingToButtonPressed(buttonType, payload)
+      } else {
+        payload.from = +moment(payload.to).subtract(7, 'days').format('x')
+      }
     } else {
       const from = +now.subtract(7, 'days').format('x')
       if ( from < payload.from ) {
-        payload.from = from
-        payload.to = +now.format('x')
+        if ( buttonType === 'next' || buttonType === 'previous') {
+          return getActionAccordingToButtonPressed(buttonType, payload)
+        } else {
+          payload.from = from
+          payload.to = +now.format('x')
+        }
       }
-      payload.to = +moment(payload.from).add(7, 'days').format('x')
+      if ( buttonType === 'next' || buttonType === 'previous') {
+        return getActionAccordingToButtonPressed(buttonType, payload)
+      } else {
+        payload.to = +moment(payload.from).add(7, 'days').format('x')
+      }
     }
     return {
       type,

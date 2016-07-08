@@ -8,7 +8,7 @@ import {
   addOrSubtract,
   generateRandomNumberBetweenZeroAndThree,
   produceNewNumber,
-} from '../../../server/src/helpers'
+} from '../../../server/src/helpers/paying-customers-helpers'
 
 describe('Paying Customers Helpers', () => {
 

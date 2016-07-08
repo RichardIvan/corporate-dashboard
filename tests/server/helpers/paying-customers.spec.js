@@ -8,7 +8,7 @@ import { Map } from 'immutable'
 import moment from 'moment'
 
 import {
-  generatePayingCustomerData
+  generatePayingCustomerData,
 } from '../../../server/src/helpers/paying-customers'
 
 describe('Paying Customers Generator', () => {

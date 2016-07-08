@@ -5,11 +5,20 @@ import Server from 'socket.io'
 const io = new Server(3333)
 
 import {
-  startServerPush,
-  fetchFirebase,
-  transformFirebaseEntryToCSV,
   generatePayingCustomerData,
-} from './helpers'
+} from './helpers/paying-customers'
+
+import {
+  transformFirebaseEntryToCSV,
+} from './helpers/transformer'
+
+import {
+  startServerPush,
+} from './helpers/server-push'
+
+import {
+  fetchFirebase,
+} from './helpers/firebase'
 
 import { initialFetch } from './actions'
 

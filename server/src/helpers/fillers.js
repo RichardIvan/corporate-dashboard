@@ -6,7 +6,7 @@ import sample from 'lodash/sample'
 
 import { OPENING_TIMESTAMP_TYPE } from '../actions'
 import { locations } from '../data'
-import { getRandomDate } from '../helpers'
+import { getRandomDate } from './date'
 
 export function fillIDs (json: Array<Object>): Array<Object> {
   return json.map((issue) => ({ ...issue, id: uuid() }))

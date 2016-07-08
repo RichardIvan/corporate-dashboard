@@ -19,7 +19,7 @@ import {
 
 import {
   generatePayingCustomerData,
-} from '../../../../server/src/helpers'
+} from '../../../../server/src/helpers/paying-customers'
 
 const data = generatePayingCustomerData()
 

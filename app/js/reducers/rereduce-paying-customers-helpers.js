@@ -3,7 +3,6 @@
 
 import moment from 'moment'
 import { Map, List } from 'immutable'
-import sum from 'lodash/sum'
 
 import {
   getPayingCustomersInRange,

@@ -5,7 +5,7 @@ import { describe, it, beforeEach } from 'mocha'
 import expect, { spyOn } from 'expect'
 import moment from 'moment'
 
-import { Map, List, fromJS } from 'immutable'
+import { Map, List } from 'immutable'
 
 import sum from 'lodash/sum'
 import random from 'lodash/random'

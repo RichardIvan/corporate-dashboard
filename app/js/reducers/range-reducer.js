@@ -11,7 +11,7 @@ import { createReducer } from 'rereduce'
 
 export const initialState = Map({
   range: 'all',
-  from: +moment().startOf('day').subtract(7, 'days').format('x'),
+  from: +moment().startOf('day').subtract(6, 'days').format('x'),
   to: +moment().startOf('day').format('x'),
 })
 

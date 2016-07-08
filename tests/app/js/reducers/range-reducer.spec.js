@@ -14,7 +14,7 @@ describe('Range Reducer', () => {
   let state
 
   beforeEach(() => {
-    const from = +moment().startOf('day').subtract(7, 'days').format('x')
+    const from = +moment().startOf('day').subtract(6, 'days').format('x')
     const to = +moment().startOf('day').format('x')
     state = Map({
       range: 'all',
@@ -29,7 +29,7 @@ describe('Range Reducer', () => {
     const action = {
       type: 'SET_RANGE',
     }
-    const from = +moment().startOf('day').subtract(7, 'days').format('x')
+    const from = +moment().startOf('day').subtract(6, 'days').format('x')
     const to = +moment().startOf('day').format('x')
     const newState = reducer(undefinedState, action)
 
@@ -51,7 +51,7 @@ describe('Range Reducer', () => {
       }
     }
     const newState = reducer(state, action)
-    const from = +moment().startOf('day').subtract(7, 'days').format('x')
+    const from = +moment().startOf('day').subtract(6, 'days').format('x')
     const to = +moment().startOf('day').format('x')
 
     expect(state).toEqual(fromJS({
@@ -85,7 +85,7 @@ describe('Range Reducer', () => {
     }
     const alteredState = state.set('range', 'set')
     const newState = reducer(alteredState, action)
-    const from = +moment().startOf('day').subtract(7, 'days').format('x')
+    const from = +moment().startOf('day').subtract(6, 'days').format('x')
     const to = +moment().startOf('day').format('x')
 
     expect(newState).toEqual(fromJS({

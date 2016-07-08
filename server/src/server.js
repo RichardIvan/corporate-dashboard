@@ -5,17 +5,10 @@ import Server from 'socket.io'
 const io = new Server(3333)
 
 import {
-  fetchMockaroo,
-  fillIDs,
-  fillLocation,
-  fillOpeningTimestamp,
-  fillClosingTimestamp,
-  transformJSONtoCSV,
   startServerPush,
-  saveToFirebase,
-  transformNullValues,
   fetchFirebase,
   transformFirebaseEntryToCSV,
+  generatePayingCustomerData,
 } from './helpers'
 
 import { initialFetch } from './actions'
@@ -30,7 +23,12 @@ export function startServer () {
       // .then((result) => result.val())
       // .then(transformJSONtoCSV)
       .then(transformFirebaseEntryToCSV)
-      .then((data) => socket.emit('data', { action: initialFetch(data) }))
+      .then((data) => socket.emit('data', {
+          action: initialFetch({
+            data,
+            payingCustomersData: generatePayingCustomerData(),
+          }),
+        }))
       .then(startServerPush.bind(null, socket))
 
 

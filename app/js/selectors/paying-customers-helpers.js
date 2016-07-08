@@ -4,7 +4,7 @@
 import moment from 'moment'
 import { List, Map } from 'immutable'
 
-export function getDatesInRange(f, t): List {
+export function getDatesInRange(f: number, t: number): List {
   const from = moment(f, 'x')
   const to = moment(t, 'x')
 

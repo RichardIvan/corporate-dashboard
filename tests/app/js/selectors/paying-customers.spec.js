@@ -9,7 +9,7 @@ import { Map, List } from 'immutable'
 
 import {
   getPayingCustomersInRange,
-} from '../../../../app/js/selectors/'
+} from '../../../../app/js/selectors/paying-customers'
 
 import {
   getDatesInRange,

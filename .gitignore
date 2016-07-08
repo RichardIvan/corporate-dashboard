@@ -1,5 +1,7 @@
 node_modules
 server/private
+tests/server
 coverage
 .imdone
 misc
+npm-debug.log.*

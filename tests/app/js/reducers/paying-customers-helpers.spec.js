@@ -89,8 +89,8 @@ describe('Paying Customers Helpers', () => {
     })
 
     // it should return Map
-    it('should return a Map', () => {
-      expect(getPayingCustomersDataByMonth(data, range)).toBeA(Map)
+    it('should return a List', () => {
+      expect(getPayingCustomersDataByMonth(data, range)).toBeA(List)
     })
 
     it('should throw when no data is provided', () => {
@@ -117,10 +117,13 @@ describe('Paying Customers Helpers', () => {
     // with corresponding List of dates
     // these items should ve dates in format 'DD/MM/YY'
     it('should contain entry "dates"', () => {
-      expect(getPayingCustomersDataByMonth(data, range).has('dates')).toBe(true)
+      const a = moment(range.get('from', 'x'))
+      const b = moment(range.get('to'), 'x')
+      const numberOfDays = Math.abs(a.diff(b, 'months')) + 1
+      // expect(getPayingCustomersDataByMonth(data, range).has('dates')).toBe(true)
       expect(
-        getPayingCustomersDataByMonth(data, range).get('dates').last()
-      ).toBe(moment().startOf('month').format('DD/MM/YY'))
+        getPayingCustomersDataByMonth(data, range).count()
+      ).toBe(numberOfDays)
     })
 
     // Map should contain entry 'totals'
@@ -128,11 +131,20 @@ describe('Paying Customers Helpers', () => {
     // looked up by corresponding date from array at the
     // same position
     it('should contain "totals"', () => {
-      expect(getPayingCustomersDataByMonth(data, range).has('totals')).toBe(true)
+      // expect(getPayingCustomersDataByMonth(data, range).has('totals')).toBe(true)
       expect(
-        getPayingCustomersDataByMonth(data, range).get('totals').count()
+        getPayingCustomersDataByMonth(data, range)
+          .get(1)
+          .has('date')
       ).toBe(
-        getPayingCustomersDataByMonth(data, range).get('dates').count()
+        true
+      )
+      expect(
+        getPayingCustomersDataByMonth(data, range)
+          .get(1)
+          .has('total')
+      ).toBe(
+        true
       )
     })
   })

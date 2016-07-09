@@ -77,8 +77,8 @@ describe('Paying Customers Selector', () => {
     })
 
     // it should return Map
-    it('should return a Map', () => {
-      expect(getPayingCustomersInRange(data, range)).toBeA(Map)
+    it('should return a List', () => {
+      expect(getPayingCustomersInRange(data, range)).toBeA(List)
     })
 
     it('should throw when no data is provided', () => {
@@ -105,9 +105,9 @@ describe('Paying Customers Selector', () => {
     // with corresponding List of dates
     // these items should ve dates in format 'DD/MM/YY'
     it('should contain entry "dates"', () => {
-      expect(getPayingCustomersInRange(data, range).has('dates')).toBe(true)
+      // expect(getPayingCustomersInRange(data, range).has('dates')).toBe(true)
       expect(
-        getPayingCustomersInRange(data, range).get('dates').last()
+        getPayingCustomersInRange(data, range).last().get('date')
       ).toBe(moment().startOf('day').format('DD/MM/YY'))
     })
 
@@ -116,11 +116,11 @@ describe('Paying Customers Selector', () => {
     // looked up by corresponding date from array at the
     // same position
     it('should contain "totals"', () => {
-      expect(getPayingCustomersInRange(data, range).has('totals')).toBe(true)
+      // expect(getPayingCustomersInRange(data, range).has('totals')).toBe(true)
       expect(
-        getPayingCustomersInRange(data, range).get('totals').count()
-      ).toBe(
-        getPayingCustomersInRange(data, range).get('dates').count()
+        getPayingCustomersInRange(data, range).last().get('total')
+      ).toBeA(
+        'number'
       )
     })
   })

@@ -1,7 +1,7 @@
 /* @flow */
 'use strict'
 
-import { Map } from 'immutable'
+import { Map, List } from 'immutable'
 
 import {
   getDatesInRange,
@@ -9,7 +9,7 @@ import {
   reverseDateStrings,
 } from './paying-customers-helpers'
 
-export function getPayingCustomersInRange(data: Map, range:Map): Map {
+export function getPayingCustomersInRange(data: Map, range:Map): List {
   if (!data || !range) {
     throw new Error('Missing arguments')
   }
@@ -20,13 +20,15 @@ export function getPayingCustomersInRange(data: Map, range:Map): Map {
   const from = range.get('from')
   const to = range.get('to')
 
-  const dates = getDatesInRange(from, to)
-  const totals = getTotalsByDatesInRange(data, dates)
 
-  const result = Map({
-    dates: reverseDateStrings(dates),
-    totals,
-  })
+  let dates = getDatesInRange(from, to)
+  const totals = getTotalsByDatesInRange(data, dates)
+  dates = reverseDateStrings(dates)
+
+  const result = dates.map((date, index) => Map({
+    date,
+    total: totals.get(index),
+  }))
 
   return result
 }

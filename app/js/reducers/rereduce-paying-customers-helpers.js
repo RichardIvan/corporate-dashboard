@@ -8,7 +8,12 @@ import {
   getPayingCustomersInRange,
 } from '../selectors'
 
+import {
+  reverseDateStrings,
+} from '../selectors/paying-customers-helpers'
 
+export const sumTotalForRange = (data: Map, range: Map): number => getPayingCustomersInRange(data, range)
+                .reduce((acc, value: Map) => acc + value.get('total'), 0)
 
 
 
@@ -49,8 +54,8 @@ export function singleMonthSum(data: Map, f: number, t: number): number {
     to: +to.clone().format('x'),
   })
 
-  const total = getPayingCustomersInRange(data, range).get('totals')
-                  .reduce((acc, value) => acc + value, 0)
+  const total = sumTotalForRange(data, range)
+
   return total
 }
 
@@ -70,8 +75,8 @@ export function firstMonthSum(data, f: number) {
     to: +from.clone().endOf('month').format('x'),
   })
 
-  const total = getPayingCustomersInRange(data, range).get('totals')
-                  .reduce((acc, value) => acc + value, 0)
+  const total = sumTotalForRange(data, range)
+
   return total
 }
 
@@ -94,8 +99,8 @@ export function lastMonthSum(data, t: number) {
   // console.log(sum(getPayingCustomersInRange(data, range).get('totals').toJS()))
 
   // sum all values in the List
-  const total = getPayingCustomersInRange(data, range).get('totals')
-                  .reduce((acc, value) => acc + value, 0)
+  const total = sumTotalForRange(data, range)
+
   return total
 }
 
@@ -169,25 +174,17 @@ export function getPayingCustomersDataByMonth(data, range) {
     // sum(getPayingCustomersInRange(from, to).get('totals'))
   }
 
-  const dates = revertStrings(months)
+  const dates = reverseDateStrings(months)
+  // const dates = revertStrings(months)
   // console.log(dates.toJS())
   // console.log(totals.toJS())
 
-  return Map({
-    dates,
-    totals,
-  })
-  // console.log(fullMonths.count())
+  const listWithData = dates.map((date, index) => Map({
+    date,
+    total: totals.get(index),
+  }))
 
-  // it should call only get first and get last
-  // if the above list is of length 2
+  // console.log(listWithData)
 
-  // it should get taotal by range
-  // if the above list of of length 1
-
-  // getTotalsByMonth
-  // getTotalForFirstMonth
-  // getTotalForLastMonth
-
-  return Map()
+  return listWithData
 }

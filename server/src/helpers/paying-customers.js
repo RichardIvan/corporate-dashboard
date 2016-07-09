@@ -4,7 +4,24 @@
 import moment from 'moment'
 import { Map } from 'immutable'
 
+import random from 'lodash/random'
+
 import { produceNewNumber } from './paying-customers-helpers'
+
+export function generateSingleCustomerData() {
+  const result = Map()
+  const add = random(1)
+  const number = random(1)
+  let total = 0
+  if (add) {
+    total = total + number
+  } else {
+    total = total - number
+  }
+  const currentPath = moment().format('YY/MM/DD').split('/')
+
+  return result.setIn(currentPath, total)
+}
 
 export function generatePayingCustomerData() {
   let result = Map()

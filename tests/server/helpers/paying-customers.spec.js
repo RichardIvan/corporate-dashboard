@@ -1,7 +1,7 @@
 /* @flow */
 'use strict'
 
-import { describe, it } from 'mocha'
+import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
 import { Map } from 'immutable'
@@ -9,6 +9,7 @@ import moment from 'moment'
 
 import {
   generatePayingCustomerData,
+  generateSingleCustomerData,
 } from '../../../server/src/helpers/paying-customers'
 
 describe('Paying Customers Generator', () => {
@@ -29,7 +30,7 @@ describe('Paying Customers Generator', () => {
     const lowersDay = result.getIn([lowestYear, lowestMonth]).keySeq().sortBy(key => parseInt(key, 10)).first()
 
     const lowestDate = `${[lowestYear, lowestMonth, lowersDay].reverse().join('/')}`
-// 
+//
     expect(
       lowestDate
     ).toBe('01/01/14')
@@ -51,5 +52,30 @@ describe('Paying Customers Generator', () => {
     // console.log(moment(sortedDesc.first(), 'x').format('DD/MM/YY'))
   })
 
-  // should generate a map of timestamps and values
+  describe.only('generateSingleCustomerData()', () => {
+    let path
+
+    beforeEach(() => {
+      path = moment().format('YY/MM/DD').split('/')
+    })
+
+    it('should return a Map', () => {
+      expect(generateSingleCustomerData()).toBeA(Map)
+    })
+
+    it('should return a number within the map', () => {
+      expect(generateSingleCustomerData().getIn(path)).toBeA('number')
+    })
+
+    it('should number should be reachabel by todays path', () => {
+      expect(generateSingleCustomerData().getIn(path)).toBeA('number')
+    })
+
+    it('should be between -3 and 3', () => {
+      const number = generateSingleCustomerData().getIn(path)
+
+      expect(number).toBeGreaterThan(-4)
+      expect(number).toBeLessThan(4)
+    })
+  })
 })

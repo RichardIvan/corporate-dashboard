@@ -23,7 +23,7 @@ export function generateChart(state, chartData) {
               "valueField": "total"
           }
         ],
-        "zoomOutButtonRollOverAlpha": 5.15,
+        "zoomOutButtonRollOverAlpha": 0.15,
         "chartCursor":
           {
             "categoryBalloonDateFormat": "DD MM YY",

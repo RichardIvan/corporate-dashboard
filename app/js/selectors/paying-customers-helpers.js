@@ -26,7 +26,10 @@ export function getTotalsByDatesInRange(data: Map, array: List): List {
   let result = List.of()
 
   // TODO test that it should not return undefined, but rather zero if so
-  result = array.map((dateString: string) => data.getIn(dateString.split('/')) || 0)
+  result = array.map((dateString: string) => {
+    const d = data.getIn(dateString.split('/'))
+    return d || 0
+  })
 
   return result
 }

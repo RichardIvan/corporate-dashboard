@@ -33,6 +33,7 @@
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite"
   },
   "devDependencies": {
+    "amcharts": "^3.14.5",
     "amcharts3": "github:amcharts/amcharts3",
     "babel-cli": "^6.9.0",
     "babel-core": "^6.9.1",
@@ -51,6 +52,7 @@
     "coveralls": "^2.11.9",
     "css-loader": "^0.23.1",
     "deep-freeze-node": "^1.1.2",
+    "env-test": "^1.0.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-babel": "^3.2.0",

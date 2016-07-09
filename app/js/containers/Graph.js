@@ -5,11 +5,13 @@ import GraphComponent from '../components/Graph'
 
 import RangeSelectionWidget from './GraphRangeSelectionWidget'
 import OpenIssuesContainer from './Open-Issues-Display'
+import ChartContainer from './Charts'
 
 const Graph = {
   view(vnode) {
     return m(GraphComponent, {
       // ChartsContainer,
+      Chart: m(ChartContainer, { ...vnode.attrs }),
     }, [
       m(RangeSelectionWidget, { ...vnode.attrs }),
       m(OpenIssuesContainer, { ...vnode.attrs }),

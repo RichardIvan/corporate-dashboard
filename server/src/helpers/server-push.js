@@ -11,7 +11,7 @@ import { newIssue } from '../actions'
 
 import {
   fetchSingleItemFromFirebase,
-} from '../helpers'
+} from '../helpers/firebase'
 
 export function startServerPush (socket) {
   console.log('STARTTED SERVER PUSH')

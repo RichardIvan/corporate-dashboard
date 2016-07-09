@@ -9,6 +9,11 @@ import {
   reverseDateStrings,
 } from './paying-customers-helpers'
 
+// TODO test
+export function getPayingCustomersData(state): Map {
+  return state.payingCustomers.get('data')
+}
+
 export function getPayingCustomersInRange(data: Map, range:Map): List {
   if (!data || !range) {
     throw new Error('Missing arguments')

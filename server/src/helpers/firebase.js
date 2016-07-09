@@ -10,13 +10,13 @@ import { reduce, sampleSize } from 'lodash'
 let db
 let data
 
-if (isEmpty(process.env)) {
+if (process.env.NODE_ENV !== 'test') {
   const p = require('../../private/key')
   const config = {
     serviceAccount: {
       projectID: p.projectID,
       clientEmail: p.clientEmail,
-      privateKey:p.privateKey,
+      privateKey: p.privateKey,
     },
     databaseURL: 'https://udacity-67253.firebaseio.com/',
   }
@@ -42,7 +42,7 @@ export function saveToFirebase (data) {
 }
 
 export function fetchFirebase() {
-  return data.then((issues) => sampleSize(issues, 111))
+  return data.then((issues) => sampleSize(issues, 2))
 }
 
 export function fetchSingleItemFromFirebase() {

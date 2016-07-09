@@ -6,7 +6,7 @@ import rootReducer from '../reducers'
 
 const middleware = [
   thunkMiddleware,
-  // createLogger(),
+  createLogger(),
   mithrilMiddleware,
 ]
 

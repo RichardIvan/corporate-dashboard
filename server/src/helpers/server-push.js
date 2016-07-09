@@ -2,12 +2,7 @@
 
 import { newIssue } from '../actions'
 
-// fetchSingleItem,
-// fillIDs,
-// fillLocation,
-// fillOpeningTimestamp,
-// fillClosingTimestamp,
-// saveToFirebase,
+import { generateSingleCustomerData } from './paying-customers'
 
 import {
   fetchSingleItemFromFirebase,
@@ -16,13 +11,12 @@ import {
 export function startServerPush (socket) {
   console.log('STARTTED SERVER PUSH')
   setInterval(() => fetchSingleItemFromFirebase()
-    // .then((data) => [data])
-    // .then(fillIDs)
-    // .then(fillLocation)
-    // .then(fillOpeningTimestamp)
-    // .then(fillClosingTimestamp)
-    // .then(saveToFirebase)
-    .then((data) => socket.emit('data', { action: newIssue(data) }))
+    .then((data) => socket.emit('data', {
+      action: {
+        data: newIssue(data),
+        payingCustomersData: generateSingleCustomerData(),
+      },
+    }))
   , 5000)
   return true
 }

@@ -18,7 +18,7 @@ import {
   lastMonthSum,
   singleMonthSum,
   fullMonthsTotals,
-} from '../../../../app/js/reducers/rereduce-paying-customers-helpers'
+} from '../../../../app/js/selectors/paying-customers'
 
 // import {
 //   getPayingCustomersInRange,

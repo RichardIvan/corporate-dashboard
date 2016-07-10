@@ -152,7 +152,7 @@ describe('Open issues reducer', () => {
         total: 0,
       }))
 
-      action.type = "NEW_ISSUE"
+      action.type = "PUSH_DATA"
 
       newState = reducer(state, action)
 

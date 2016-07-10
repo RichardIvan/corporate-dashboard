@@ -14,7 +14,7 @@ import first from 'lodash/first'
 
 // TODO test
 export function getPayingCustomersData(state): Map {
-  return state.payingCustomers.get('data')
+  return state.graphData.get('data')
 }
 
 export function getLowestDates(data) {

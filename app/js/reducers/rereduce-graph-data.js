@@ -1,4 +1,4 @@
-/* @flow */
+ /* @flow */
 'use strict'
 
 import moment from 'moment'
@@ -11,7 +11,7 @@ import {
   PUSH_DATA,
 } from '../actions'
 
-const payingCustomersReducer = createReducer((state = Map(), action) => {
+const graphData = createReducer((state = Map(), action) => {
   switch (action.type) {
   case INIT_LOAD:
     return state.set('data', fromJS(action.payload.payingCustomersData))
@@ -28,4 +28,4 @@ const payingCustomersReducer = createReducer((state = Map(), action) => {
   }
 })
 
-export default payingCustomersReducer
+export default graphData

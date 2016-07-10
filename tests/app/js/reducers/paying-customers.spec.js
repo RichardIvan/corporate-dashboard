@@ -6,7 +6,7 @@ import expect from 'expect'
 
 import { Map, fromJS } from 'immutable'
 
-import reducer from '../../../../app/js/reducers/rereduce-paying-customers'
+import reducer from '../../../../app/js/reducers/rereduce-graph-data'
 
 describe('Paying Customers Reducer', () => {
 

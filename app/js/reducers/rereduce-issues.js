@@ -10,7 +10,7 @@ import { generateShortVersions } from '../helpers/generators'
 
 import {
   INIT_LOAD,
-  NEW_ISSUE,
+  PUSH_DATA,
 } from '../actions'
 
 const issues = createReducer((state = Map(), action) => {
@@ -20,7 +20,7 @@ const issues = createReducer((state = Map(), action) => {
       return state.merge(fromJS(action.payload.data))
     }
     return state
-  case NEW_ISSUE: {
+  case PUSH_DATA: {
 //     console.log(action.payload.data)
     return state.mergeDeep(fromJS(action.payload.data))
   }

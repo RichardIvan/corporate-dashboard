@@ -83,12 +83,16 @@ gulp.task('watch_tests', () => {
 
 gulp.task('watch', () => {
   watch(path.ALL, () => {
-    runSequence(['clean', 'test', 'jscpd'], ['webpack'])
+    runSequence(['test', 'jscpd'])
   })
+})
+
+gulp.task('build', () => {
+  runSequence(['clean', 'test', 'jscpd'], 'webpack')
 })
 
 gulp.task('socket', () => gulp.src('', { read: false })
   .pipe(shell(['npm run server']))
 )
 
-gulp.task('default', ['socket', 'webpack-dev-server', 'watch', 'watch_tests'])
+gulp.task('default', ['socket', 'webpack-dev-server', 'watch'])

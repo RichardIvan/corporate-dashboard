@@ -22,7 +22,7 @@ import {
 } from '../actions/types'
 
 import {
-  NEW_ISSUE,
+  PUSH_DATA,
   INIT_LOAD,
   SET_FILTER,
   RESET_FILTERS,
@@ -55,9 +55,9 @@ const filtered = createReducer({ issuesReducer, filtersReducer },
 
 
     switch(action.type) {
-    case NEW_ISSUE: {
+    case PUSH_DATA: {
 
-      // console.log('NEW_ISSUE')
+      // console.log('PUSH_DATA')
 
       // const json = transformNewIssue(action.payload.data)
       // // const key = json.id.original

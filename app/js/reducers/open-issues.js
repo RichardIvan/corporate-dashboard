@@ -12,7 +12,7 @@ import { Map } from 'immutable'
 
 import {
   SET_RANGE,
-  NEW_ISSUE,
+  PUSH_DATA,
   INIT_LOAD,
 } from '../actions'
 
@@ -52,7 +52,7 @@ export default function openIssues(state = Map({ total: 0 }), action) {
 
   switch (action.type) {
   case INIT_LOAD:
-  case NEW_ISSUE:
+  case PUSH_DATA:
   case SET_RANGE: {
     if (range === 'all') {
       const total = issuesReducer.filter((issue) => {

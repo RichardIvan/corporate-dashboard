@@ -1,6 +1,6 @@
 import io from 'socket.io-client'
 
-import { INIT_LOAD, NEW_ISSUE } from '../actions'
+import { INIT_LOAD, PUSH_DATA } from '../actions'
 
 import { transformCSVtoJSON, transformNewIssue } from '../reducers/helpers'
 import { generateShortVersions } from '../helpers/generators'
@@ -22,7 +22,7 @@ export function connectToSocket (store) {
       action.payload.data = generateShortVersions(json)
       break
     }
-    case NEW_ISSUE: {
+    case PUSH_DATA: {
       const json = transformNewIssue(action.payload.data)
 
       action.payload.data = generateShortVersions(json)

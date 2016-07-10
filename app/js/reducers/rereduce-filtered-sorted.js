@@ -13,7 +13,7 @@ import sortByReducer from './rereduce-sort-by'
 
 import {
   INIT_LOAD,
-  NEW_ISSUE,
+  PUSH_DATA,
   SET_FILTER,
   SET_SORT,
   RESET_FILTERS,
@@ -25,7 +25,7 @@ const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
   (state = initialState, action, { filteredIssuesReducer, sortByReducer }) => {
 
     // case INIT_LOAD:
-    // case NEW_ISSUE:
+    // case PUSH_DATA:
     // case SET_FILTER:
 //   if (filteredIssuesReducer.isEmpty()) {
 //     return state
@@ -33,7 +33,7 @@ const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
 
   switch (action.type) {
   case INIT_LOAD:
-  case NEW_ISSUE:
+  case PUSH_DATA:
   case SET_FILTER:
   case RESET_FILTERS:
   case SET_SORT: {

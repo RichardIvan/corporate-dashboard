@@ -4,7 +4,7 @@ import { Map, fromJS } from 'immutable'
 // import { transformCSVtoJSON, transformNewIssue } from './helpers.js'
 // import { generateShortVersions } from '../helpers/generators'
 
-import { INIT_LOAD, NEW_ISSUE } from '../actions'
+import { INIT_LOAD, PUSH_DATA } from '../actions'
 
 export default function issues(state = Map(), action) {
   switch (action.type) {
@@ -16,7 +16,7 @@ export default function issues(state = Map(), action) {
     // console.log(state.merge(fromJS(action.payload)))
     // const newState = state.merge({issues: fromJS(action.payload)})
     // console.log(newState)
-  case NEW_ISSUE: {
+  case PUSH_DATA: {
     return state.mergeDeep(fromJS(action.payload.data))
   }
   default:

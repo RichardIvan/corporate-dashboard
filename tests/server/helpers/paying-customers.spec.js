@@ -52,7 +52,7 @@ describe('Paying Customers Generator', () => {
     // console.log(moment(sortedDesc.first(), 'x').format('DD/MM/YY'))
   })
 
-  describe.only('generateSingleCustomerData()', () => {
+  describe('generateSingleCustomerData()', () => {
     let path
 
     beforeEach(() => {

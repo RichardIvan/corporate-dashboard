@@ -41,9 +41,25 @@ const ChartContainer = {
     if (vnode.state.chart) {
       if (newData) {
         if (!isEqual(newData, vnode.state.chartData)) {
+          const length = newData.length
+          // const len = vnode.state.chartData.length
+          // vnode.state.chartData.concat(newData)
+          // vnode.state.chartData.splice(len, -1)
           newData.forEach((item, index) => {
             vnode.state.chartData[index] = item
           })
+          vnode.state.chartData.splice(length)
+          // vnode.state.chartData.reduce((items, item, index) => {
+          //   const newItem = newData[index]
+          //   if(newItem) {
+          //     items.push(newItem)
+          //   }
+          //   return items
+          // }, [])
+          // console.log(vnode.state.chartData)
+          // console.log(newData)
+          //
+          // vnode.state.chartData = newData
           vnode.state.chart.validateData()
         }
       }

@@ -1,4 +1,4 @@
-import { INIT_LOAD, NEW_ISSUE } from './constants'
+import { INIT_LOAD, PUSH_DATA } from './constants'
 
 export function initialFetch(data) {
   return {
@@ -10,11 +10,11 @@ export function initialFetch(data) {
   }
 }
 
-export function newIssue(data) {
+export function pushData(data) {
   return {
-    type: NEW_ISSUE,
+    type: PUSH_DATA,
     payload: {
-      data,
+      ...data,
     },
   }
 }

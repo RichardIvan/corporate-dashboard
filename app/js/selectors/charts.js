@@ -13,6 +13,8 @@ export function getChartData(state: Object): List {
   const data = getPayingCustomersData(state)
   const range = getRange(state)
 
+  console.log(range.toJS())
+
   if (data) {
     return getPayingCustomersInRange(data, range)
   } else {

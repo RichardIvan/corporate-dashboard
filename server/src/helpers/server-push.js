@@ -1,6 +1,6 @@
 'use strict'
 
-import { newIssue } from '../actions'
+import { pushData } from '../actions'
 
 import { generateSingleCustomerData } from './paying-customers'
 
@@ -12,10 +12,10 @@ export function startServerPush (socket) {
   console.log('STARTTED SERVER PUSH')
   setInterval(() => fetchSingleItemFromFirebase()
     .then((data) => socket.emit('data', {
-      action: {
-        data: newIssue(data),
+      action: pushData({
+        data,
         payingCustomersData: generateSingleCustomerData(),
-      },
+      }),
     }))
   , 5000)
   return true

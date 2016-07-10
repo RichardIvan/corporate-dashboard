@@ -4,7 +4,7 @@
 import papa from 'papaparse'
 import { Map, List, fromJS } from 'immutable'
 import { drop, take, flatten, zipObject, reduce, map, sortBy } from 'lodash'
-import { INIT_LOAD, NEW_ISSUE } from '../actions'
+import { INIT_LOAD, PUSH_DATA } from '../actions'
 
 import { OPENING_TIMESTAMP_TYPE, CLOSING_TIMESTAMP_TYPE } from '../actions'
 
@@ -172,7 +172,7 @@ export function createPartialReducer(type) {
   return function(state = List.of(), action) {
     switch (action.type) {
     case INIT_LOAD:
-    case NEW_ISSUE:
+    case PUSH_DATA:
       if (action.payload) {
         // console.log(action.payload.data)
         return fillNewData(state, action.payload.data, type)

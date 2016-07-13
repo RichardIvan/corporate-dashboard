@@ -12,7 +12,10 @@ import { getSingleDataByFilter, getActiveFilters } from './'
 import { getIssues } from '../issues.js'
 import { getState } from '../state'
 
-export function getFiltered(state) {
+export function getFiltered(state: Object): List {
+  if (!state) {
+    throw new Error('missing state argument')
+  }
   return state.filteredIssues.value
 }
 
@@ -25,13 +28,13 @@ export const getAllFilteredData = createSelector(
       if (issues.isEmpty()) {
         return List.of()
       }
-      console.log(issues.reduce((reduction, value) => reduction.push(value), List.of()))
+      // console.log(issues.reduce((reduction, value) => reduction.push(value), List.of()))
       const reduced = issues.reduce((reduction, value) => reduction.push(value), List.of())
-      console.log(reduced)
+      // console.log(reduced)
       return reduced
     }
 
-    console.log(mapOfActiveFilters)
+    // console.log(mapOfActiveFilters)
 
     const filteredItemsWithDuplicates = reduce(
       mapOfActiveFilters, (accumulator, filter) => {

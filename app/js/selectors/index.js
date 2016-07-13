@@ -1,7 +1,6 @@
 // selectores is a way to get specific data from the store
 
 export * from './location'
-export * from './pending'
 export * from './issues'
 export * from './filter-folder'
 export * from './filter'
@@ -19,3 +18,4 @@ export * from './open-issues-selector'
 export * from './range'
 export * from './paying-customers'
 export * from './charts'
+export * from './graph-data'

@@ -15,7 +15,7 @@ import issuesReducer from './rereduce-issues'
 import rangeReducer from './range-reducer'
 
 const openIssues = createReducer({ issuesReducer, rangeReducer },
-  (state = Map({ total: 0 }), action, { issuesReducer, rangeReducer }): Map => {
+  (state = new Map({ total: 0 }), action, { issuesReducer, rangeReducer }): Map => {
     const range = rangeReducer.get('range')
 
     switch (action.type) {
@@ -58,6 +58,7 @@ const openIssues = createReducer({ issuesReducer, rangeReducer },
     default:
       return state
     }
-})
+  }
+)
 
 export default openIssues

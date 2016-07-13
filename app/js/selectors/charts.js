@@ -1,23 +1,36 @@
 /* @flow */
 'use strict'
 
-import { List } from 'immutable'
+import {
+  List,
+} from 'immutable'
 
 import {
-  getPayingCustomersData,
+  createSelector,
+} from 'reselect'
+
+import {
   getRange,
-  getPayingCustomersInRange,
-} from '../selectors'
+} from './'
 
-export function getChartData(state: Object): List {
-  const data = getPayingCustomersData(state)
-  const range = getRange(state)
+import {
+  getGraphDataByRange,
+  getGraphData,
+} from './graph-data'
 
-  console.log(range.toJS())
-
-  if (data) {
-    return getPayingCustomersInRange(data, range)
-  } else {
-    return List.of()
-  }
+export function getVisibleCharts(state: Object): List {
+  const visibleTypes: Map = state.visibleChartTypes
+  const listOfTypes: List<string> = visibleTypes
+                                      .reduce((acc, type, key) => {
+                                        if (type) {
+                                          return acc.push(key)
+                                        }
+                                        return acc
+                                      }, List.of())
+  return listOfTypes
 }
+
+export const getChartData = createSelector(
+  [getGraphData, getRange, getVisibleCharts],
+  (data, range, typesOfVisibleCharts) => getGraphDataByRange(data, range, typesOfVisibleCharts)
+)

@@ -5,12 +5,10 @@ import { createSelector } from 'reselect'
 
 import ceil from 'lodash/ceil'
 
-import { getAllFilteredIssues } from './'
-// import { NAME_TYPE } from '../actions/types'
-
+import { getFiltered } from './filter-folder'
 
 export const getTotalNumberOfVisibleItems = createSelector(
-  getAllFilteredIssues,
+  getFiltered,
   (array) => {
     const length = array.count()
     const numberOfPages = ceil(length / 10)

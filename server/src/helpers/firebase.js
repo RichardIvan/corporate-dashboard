@@ -1,7 +1,5 @@
 'use strict'
 
-import isEmpty from 'lodash/isEmpty'
-
 import firebase from 'firebase'
 // import { projectID, clientEmail, privateKey } from '../../private/key'
 import { reduce, sampleSize } from 'lodash'
@@ -10,7 +8,9 @@ import { reduce, sampleSize } from 'lodash'
 let db
 let data
 
-if (process.env.NODE_ENV !== 'test') {
+const env = process.env.NODE_ENV
+
+if (env !== 'test') {
   const p = require('../../private/key')
   const config = {
     serviceAccount: {
@@ -23,18 +23,18 @@ if (process.env.NODE_ENV !== 'test') {
 
   firebase.initializeApp(config)
   db = firebase.database()
-  data = db.ref('corporate-dashboard/data/issues').once('value').then(snap => snap.val())
+  data = db.ref('corporate-dashboard/data/issues').once('value').then((snap) => snap.val())
 }
 
-export function saveToFirebase (data) {
-  const issues = reduce(data, (accumulator, issue) => {
+export function saveToFirebase (d) {
+  const issues = reduce(d, (accumulator, issue) => {
     const item = { ...accumulator, [issue.id]: { ...issue } }
     return item
   }, {})
 
-  Object.keys(issues).map(key => {
-    db.ref('corporate-dashboard/data/issues/' + key).set(issues[key])
-  })
+  Object.keys(issues)
+        .map((key) => db.ref(`corporate-dashboard/data/issues/${key}`)
+                        .set(issues[key]))
   // data.forEach((item) => {
   //   const key = item.id
   //   db.ref('corporate-dashboard/data/issues').child(key).set(item)
@@ -42,7 +42,7 @@ export function saveToFirebase (data) {
 }
 
 export function fetchFirebase() {
-  return data.then((issues) => sampleSize(issues, 2))
+  return data.then((issues) => sampleSize(issues, 1000))
 }
 
 export function fetchSingleItemFromFirebase() {

@@ -1,6 +1,6 @@
 'use strict'
 
-import { fromJS, List } from 'immutable'
+import { fromJS } from 'immutable'
 // import { transformCSVtoJSON, transformNewIssue } from './helpers.js'
 // import { generateShortVersions } from '../helpers/generators'
 

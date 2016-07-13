@@ -32,3 +32,5 @@ export const FILTER_SEARCH_RESULT: string = 'FILTER_SEARCH_RESULT'
 export const CLEAR_TIMESTAMP: string = 'CLEAR_TIMESTAMP'
 
 export const SET_RANGE: string = 'SET_RANGE'
+
+export const CHANGE_VISIBLE_CHART: string = 'CHANGE_VISIBLE_CHART'

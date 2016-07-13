@@ -74,18 +74,24 @@ gulp.task('webpack-dev-server', () => {
 
 gulp.task('test', () => gulp.src('', { read: false })
   .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
-  .pipe(shell(['npm run local-test']))
+  .pipe(shell(['npm run local-test'])))
+
+gulp.task('test_watch', () => gulp.src('', { read: false })
+  .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+  .pipe(shell(['npm run local-test:watch']))
   .pipe(shell(['npm run cover'])))
 
 gulp.task('watch_tests', () => {
-  watch(path.TESTS, ['test'])
+  return watch(path.TESTS, ['test'])
 })
 
 gulp.task('watch', () => {
-  watch(path.ALL, () => {
-    runSequence(['test', 'jscpd'])
-  })
+  watch(path.ALL.concat(path.TESTS), () => runSequence(['test']))
 })
+
+gulp.task('cover', () => gulp.src('', { read: false })
+  .pipe(plumber({ errorHandler: notify.onError('Error: <%= error.message %>') }))
+  .pipe(shell(['npm run cover'])))
 
 gulp.task('build', () => {
   runSequence(['clean', 'test', 'jscpd'], 'webpack')
@@ -95,4 +101,4 @@ gulp.task('socket', () => gulp.src('', { read: false })
   .pipe(shell(['npm run server']))
 )
 
-gulp.task('default', ['socket', 'webpack-dev-server', 'watch'])
+gulp.task('default', ['socket', 'webpack-dev-server'])

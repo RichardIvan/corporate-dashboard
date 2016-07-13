@@ -8,8 +8,8 @@ import random from 'lodash/random'
 
 import { produceNewNumber } from './paying-customers-helpers'
 
-export function generateSingleCustomerData() {
-  const result = Map()
+export function generateSingleCustomerData(): Map {
+  const result = new Map()
   const add = random(1)
   const number = random(1)
   let total = 0
@@ -23,8 +23,8 @@ export function generateSingleCustomerData() {
   return result.setIn(currentPath, total)
 }
 
-export function generatePayingCustomerData() {
-  let result = Map()
+export function generatePayingCustomerData(): Map {
+  let result = new Map()
 
   const startDate = moment('01/01/14', 'DD/MM/YY')
   const now = moment()
@@ -35,6 +35,8 @@ export function generatePayingCustomerData() {
     // const currentTimestamp = current.format('x')
 
     const currentPath = current.format('YY/MM/DD').split('/')
+    currentPath.push('payingCustomersData')
+
     const newValue = produceNewNumber(currentValue)
 
     // const newItem = Map().setIn(currentPath, newValue)

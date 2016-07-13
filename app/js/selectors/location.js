@@ -1,5 +1,13 @@
-// accepts a state
+/* @flow */
+'use strict'
 
-export function getLocations(state = []) {
+import {
+  List,
+} from 'immutable'
+
+export function getLocations(state: Object): List {
+  if (!state) {
+    throw new Error('missing state argument')
+  }
   return state.locations
 }

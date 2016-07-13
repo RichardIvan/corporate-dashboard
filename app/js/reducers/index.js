@@ -23,6 +23,7 @@ import numberOfOpenIssues from './rereduce-open-issues'
 import graphRange from './range-reducer.js'
 
 import graphData from './rereduce-graph-data'
+import visibleChartTypes from './rereduce-visible-charts'
 
 const root = combineReducers({
   issues,
@@ -37,6 +38,7 @@ const root = combineReducers({
   numberOfOpenIssues,
   graphRange,
   graphData,
+  visibleChartTypes,
 })
 
 export default root

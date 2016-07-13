@@ -23,32 +23,20 @@ export const initialState = fromJS(new Array(10).fill(List.of()))
 
 const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
   (state = initialState, action, { filteredIssuesReducer, sortByReducer }) => {
-
-    // case INIT_LOAD:
-    // case PUSH_DATA:
-    // case SET_FILTER:
-//   if (filteredIssuesReducer.isEmpty()) {
-//     return state
-//   }
-
-  switch (action.type) {
-  case INIT_LOAD:
-  case PUSH_DATA:
-  case SET_FILTER:
-  case RESET_FILTERS:
-  case SET_SORT: {
-    const sorted = filteredIssuesReducer.sortBy((item) => {
-      return item.getIn([sortByReducer.get('type'), 'original'])
-    })
-    return sortByReducer.get('asc') ? sorted : sorted.reverse()
-    // console.log('run sorted!!!')
-  }
-  default: {
-    return state
-  }
-
-    // return state
-  }
+    switch (action.type) {
+    case INIT_LOAD:
+    case PUSH_DATA:
+    case SET_FILTER:
+    case RESET_FILTERS:
+    case SET_SORT: {
+      const sorted = filteredIssuesReducer.sortBy((item) =>
+                        item.getIn([sortByReducer.get('type'), 'original']))
+      return sortByReducer.get('asc') ? sorted : sorted.reverse()
+      // console.log('run sorted!!!')
+    }
+    default:
+      return state
+    }
 
 
   // partial.forEach(item => console.log(item))
@@ -59,7 +47,8 @@ const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
   // }
   // console.log(partial)
   // return partial
-})
+  }
+)
 
 export default filteredSorted
 

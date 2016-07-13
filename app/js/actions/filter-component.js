@@ -1,9 +1,6 @@
 /* @flow */
 'use strict'
 
-import filter from 'lodash/filter'
-import uniq from 'lodash/uniq'
-
 import { getDataByType } from '../selectors'
 
 import {
@@ -15,25 +12,11 @@ import {
 } from './constants'
 
 export function setSearchFilterValues(type: string, value: string, state) {
-  // we need to store here the previous value we enetered
-  // and compare the new and old one
-  // so we can figure out if we need to remove the old one
-  // or add the old one from the filter
-
-  const results = getDataByType(type, state).filter((item) => {
-    // console.log(item)
-    // console.log(item.get(1))
-    return item.get(1).toLowerCase().indexOf(value.toLowerCase()) !== -1
-  })
-
-  // const result = uniq(filter(getDataByType(type, state), (item) =>{
-  //   console.log(item)
-  //   item[1].toLowerCase().startsWith(value.toLowerCase())
-  //   })
-  // )
-
-  // perform fuse search here
-
+  const results = getDataByType(type, state).filter((item) =>
+                    item.get(1)
+                        .toLowerCase()
+                        .indexOf(value.toLowerCase()) !== -1
+                    )
   return {
     type: FILTER_SEARCH_RESULT,
     payload: {
@@ -44,27 +27,27 @@ export function setSearchFilterValues(type: string, value: string, state) {
   }
 }
 
-export function closeFilterMenu() {
+export function closeFilterMenu(): Object {
   return {
     type: CLOSE_FILTER_COMPONENT,
   }
 }
 
-export function selectFilterMenu(type: string) {
+export function selectFilterMenu(type: string): Object {
   return {
     type: SET_FILTER_COMPONENT_MENU_STATE,
     payload: type,
   }
 }
 
-export function openFilterMenu() {
+export function openFilterMenu(): Object {
   return {
     type: SET_FILTER_COMPONENT_OPEN_STATUS,
     payload: true,
   }
 }
 
-export function filterComponentBack() {
+export function filterComponentBack(): Object {
   return {
     type: RESET_FILTER_COMPONENT_STATE,
   }

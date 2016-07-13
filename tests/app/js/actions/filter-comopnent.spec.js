@@ -15,11 +15,6 @@ import {
   SET_FILTER_COMPONENT_MENU_STATE,
   SET_FILTER_COMPONENT_OPEN_STATUS,
   RESET_FILTER_COMPONENT_STATE,
-  setSearchFilterValues,
-  NAME_TYPE,
-  EMAIL_TYPE,
-  EMPLOYEE_TYPE,
-  LOCATION_TYPE,
 } from '../../../../app/js/actions'
 
 describe('Filter Component Action Creator', () => {
@@ -74,59 +69,4 @@ describe('Filter Component Action Creator', () => {
       })
     })
   })
-
-  // TODO test the results
-  // describe('#setSearchFilterValues()', () => {
-  //   it.only('should return correct action for name', () => {
-  //     // expect(setSearchFilterValues(NAME_TYPE, 'Bro')).toEqual({
-  //     //   type: 'FILTER_SEARCH_RESULT',
-  //     //   payload: {
-  //     //     type: NAME_TYPE,
-  //     //     value: 'Bro',
-  //     //     result: [],
-  //     //   },
-  //     // })
-  //
-  //     expect(setSearchFilterValues(NAME_TYPE, 'Bro').type)
-  //       .toEqual(NAME_TYPE)
-  //     expect(setSearchFilterValues(NAME_TYPE, 'Bro').value)
-  //       .toEqual('Bro')
-  //   })
-  //
-  //   // should return correct action for email
-  //   it('should return correct action for email', () => {
-  //     expect(setSearchFilterValues(EMAIL_TYPE, 'Bro@com')).toEqual({
-  //       type: 'FILTER_SEARCH_RESULT',
-  //       payload: {
-  //         type: EMAIL_TYPE,
-  //         value: 'Bro@com',
-  //         result: [],
-  //       },
-  //     })
-  //   })
-  //
-  //   // should return correct action for employee_name
-  //   it('should return correct action for Employee Name', () => {
-  //     expect(setSearchFilterValues(EMPLOYEE_TYPE, 'Other Bro')).toEqual({
-  //       type: 'FILTER_SEARCH_RESULT',
-  //       payload: {
-  //         type: EMPLOYEE_TYPE,
-  //         value: 'Other Bro',
-  //         result: [],
-  //       },
-  //     })
-  //   })
-  //
-  //   // should return correct action for location
-  //   it('should return correct action for Location', () => {
-  //     expect(setSearchFilterValues(LOCATION_TYPE, 'Mars')).toEqual({
-  //       type: 'FILTER_SEARCH_RESULT',
-  //       payload: {
-  //         type: LOCATION_TYPE,
-  //         value: 'Mars',
-  //         result: [],
-  //       },
-  //     })
-  //   })
-  // })
 })

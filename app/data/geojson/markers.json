@@ -1,0 +1,394 @@
+{
+    "Financial District": {
+        "name": "Financial District",
+        "center": {
+            "lat": 40.707252499999996,
+            "lng": -74.008537
+        }
+    },
+    "Battery Park City": {
+        "name": "Battery Park City",
+        "center": {
+            "lat": 40.711311499999994,
+            "lng": -74.01602199999999
+        }
+    },
+    "Two Bridges": {
+        "name": "Two Bridges",
+        "center": {
+            "lat": 40.711158499999996,
+            "lng": -73.9929275
+        }
+    },
+    "TriBeCa": {
+        "name": "TriBeCa",
+        "center": {
+            "lat": 40.7193145,
+            "lng": -74.00756849999999
+        }
+    },
+    "Civic Center": {
+        "name": "Civic Center",
+        "center": {
+            "lat": 40.71313450000001,
+            "lng": -74.003082
+        }
+    },
+    "Chinatown": {
+        "name": "Chinatown",
+        "center": {
+            "lat": 40.71607,
+            "lng": -73.99634549999999
+        }
+    },
+    "Little Italy": {
+        "name": "Little Italy",
+        "center": {
+            "lat": 40.719164000000006,
+            "lng": -73.997021
+        }
+    },
+    "Lower East Side": {
+        "name": "Lower East Side",
+        "center": {
+            "lat": 40.71612,
+            "lng": -73.9830855
+        }
+    },
+    "Bowery": {
+        "name": "Bowery",
+        "center": {
+            "lat": 40.7216205,
+            "lng": -73.991356
+        }
+    },
+    "East Village": {
+        "name": "East Village",
+        "center": {
+            "lat": 40.7267955,
+            "lng": -73.9840625
+        }
+    },
+    "Alphabet City": {
+        "name": "Alphabet City",
+        "center": {
+            "lat": 40.725525000000005,
+            "lng": -73.9802515
+        }
+    },
+    "NoLita": {
+        "name": "NoLita",
+        "center": {
+            "lat": 40.7227745,
+            "lng": -73.995392
+        }
+    },
+    "SoHo": {
+        "name": "SoHo",
+        "center": {
+            "lat": 40.7234785,
+            "lng": -74.0005415
+        }
+    },
+    "Hudson Square": {
+        "name": "Hudson Square",
+        "center": {
+            "lat": 40.725527,
+            "lng": -74.0070535
+        }
+    },
+    "Greenwich Village": {
+        "name": "Greenwich Village",
+        "center": {
+            "lat": 40.7332895,
+            "lng": -74.000809
+        }
+    },
+    "Meatpacking District": {
+        "name": "Meatpacking District",
+        "center": {
+            "lat": 40.7409405,
+            "lng": -74.00774800000002
+        }
+    },
+    "Stuyvesant Town": {
+        "name": "Stuyvesant Town",
+        "center": {
+            "lat": 40.731828500000006,
+            "lng": -73.978062
+        }
+    },
+    "Peter Cooper Village": {
+        "name": "Peter Cooper Village",
+        "center": {
+            "lat": 40.734894,
+            "lng": -73.9770015
+        }
+    },
+    "Gramercy Park": {
+        "name": "Gramercy Park",
+        "center": {
+            "lat": 40.7357865,
+            "lng": -73.98373050000001
+        }
+    },
+    "Chelsea": {
+        "name": "Chelsea",
+        "center": {
+            "lat": 40.747305,
+            "lng": -73.9983215
+        }
+    },
+    "Flatiron District": {
+        "name": "Flatiron District",
+        "center": {
+            "lat": 40.741614999999996,
+            "lng": -73.9887315
+        }
+    },
+    "NoHo": {
+        "name": "NoHo",
+        "center": {
+            "lat": 40.727208999999995,
+            "lng": -73.9937175
+        }
+    },
+    "Union Square": {
+        "name": "Union Square",
+        "center": {
+            "lat": 40.736252,
+            "lng": -73.9903295
+        }
+    },
+    "Kips Bay": {
+        "name": "Kips Bay",
+        "center": {
+            "lat": 40.740663500000004,
+            "lng": -73.978279
+        }
+    },
+    "Midtown South Central": {
+        "name": "Midtown South Central",
+        "center": {
+            "lat": 40.747614,
+            "lng": -73.9853665
+        }
+    },
+    "Murray Hill": {
+        "name": "Murray Hill",
+        "center": {
+            "lat": 40.74804499999999,
+            "lng": -73.975811
+        }
+    },
+    "Garment District": {
+        "name": "Garment District",
+        "center": {
+            "lat": 40.754238,
+            "lng": -73.9907915
+        }
+    },
+    "Koreatown": {
+        "name": "Koreatown",
+        "center": {
+            "lat": 40.748979500000004,
+            "lng": -73.98642
+        }
+    },
+    "Hell's Kitchen": {
+        "name": "Hell's Kitchen",
+        "center": {
+            "lat": 40.757847,
+            "lng": -73.9988675
+        }
+    },
+    "Theater District": {
+        "name": "Theater District",
+        "center": {
+            "lat": 40.759018,
+            "lng": -73.9849815
+        }
+    },
+    "Clinton": {
+        "name": "Clinton",
+        "center": {
+            "lat": 40.765657499999996,
+            "lng": -73.99012350000001
+        }
+    },
+    "Midtown Center": {
+        "name": "Midtown Center",
+        "center": {
+            "lat": 40.758260500000006,
+            "lng": -73.9754025
+        }
+    },
+    "Midtown East": {
+        "name": "Midtown East",
+        "center": {
+            "lat": 40.754830999999996,
+            "lng": -73.9681665
+        }
+    },
+    "Sutton Place": {
+        "name": "Sutton Place",
+        "center": {
+            "lat": 40.7573265,
+            "lng": -73.9617115
+        }
+    },
+    "Upper East Side": {
+        "name": "Upper East Side",
+        "center": {
+            "lat": 40.773285,
+            "lng": -73.9575615
+        }
+    },
+    "Upper West Side": {
+        "name": "Upper West Side",
+        "center": {
+            "lat": 40.787241,
+            "lng": -73.97728000000001
+        }
+    },
+    "East Harlem": {
+        "name": "East Harlem",
+        "center": {
+            "lat": 40.80071600000001,
+            "lng": -73.9423525
+        }
+    },
+    "Morningside Heights": {
+        "name": "Morningside Heights",
+        "center": {
+            "lat": 40.809679,
+            "lng": -73.9610175
+        }
+    },
+    "Harlem": {
+        "name": "Harlem",
+        "center": {
+            "lat": 40.815781,
+            "lng": -73.9473495
+        }
+    },
+    "Manhatanville": {
+        "name": "Manhatanville",
+        "center": {
+            "lat": 40.814912500000005,
+            "lng": -73.95533
+        }
+    },
+    "Hamilton Heights": {
+        "name": "Hamilton Heights",
+        "center": {
+            "lat": 40.8259065,
+            "lng": -73.9500425
+        }
+    },
+    "Washington Heights": {
+        "name": "Washington Heights",
+        "center": {
+            "lat": 40.840454,
+            "lng": -73.93930449999999
+        }
+    },
+    "Fort George": {
+        "name": "Fort George",
+        "center": {
+            "lat": 40.858404,
+            "lng": -73.931633
+        }
+    },
+    "Inwood": {
+        "name": "Inwood",
+        "center": {
+            "lat": 40.867964,
+            "lng": -73.9213445
+        }
+    },
+    "Turtle Bay": {
+        "name": "Turtle Bay",
+        "center": {
+            "lat": 40.7531985,
+            "lng": -73.96904
+        }
+    },
+    "Manhattan Valley": {
+        "name": "Manhattan Valley",
+        "center": {
+            "lat": 40.797931500000004,
+            "lng": -73.9651375
+        }
+    },
+    "Lincoln Square": {
+        "name": "Lincoln Square",
+        "center": {
+            "lat": 40.774919499999996,
+            "lng": -73.98603800000001
+        }
+    },
+    "Lenox Hill": {
+        "name": "Lenox Hill",
+        "center": {
+            "lat": 40.7659,
+            "lng": -73.961964
+        }
+    },
+    "Yorkville": {
+        "name": "Yorkville",
+        "center": {
+            "lat": 40.777746,
+            "lng": -73.949604
+        }
+    },
+    "Randall's Island": {
+        "name": "Randall's Island",
+        "center": {
+            "lat": 40.791588000000004,
+            "lng": -73.9249725
+        }
+    },
+    "West Village": {
+        "name": "West Village",
+        "center": {
+            "lat": 40.7346745,
+            "lng": -74.0038035
+        }
+    },
+    "NoMad": {
+        "name": "NoMad",
+        "center": {
+            "lat": 40.7444245,
+            "lng": -73.98761350000001
+        }
+    },
+    "Tudor City": {
+        "name": "Tudor City",
+        "center": {
+            "lat": 40.7490405,
+            "lng": -73.97125249999999
+        }
+    },
+    "Diamond District": {
+        "name": "Diamond District",
+        "center": {
+            "lat": 40.757383000000004,
+            "lng": -73.98022850000001
+        }
+    },
+    "Roosevelt Island": {
+        "name": "Roosevelt Island",
+        "center": {
+            "lat": 40.76122650000001,
+            "lng": -73.9508365
+        }
+    },
+    "Marble Hill": {
+        "name": "Marble Hill",
+        "center": {
+            "lat": 40.875864,
+            "lng": -73.91133099999999
+        }
+    }
+}

@@ -9,35 +9,26 @@ import {
   EMAIL_TYPE,
   DESCRIPTION_TYPE,
   EMPLOYEE_TYPE,
-  LOCATION_TYPE,
+  LOCATION_TYPE
 } from '../actions'
 
-
-const mouseOverHandler = function (visibleStatus, e) {
-
-  // console.log(!this.fullTextVisible)
-  // this.fullTextVisible = !this.fullTextVisible
-  visibleStatus = !visibleStatus
-  console.log(visibleStatus)
-}
-
-function shouldHaveTooltip(type) {
+function shouldHaveTooltip (type) {
   const withTooltips = [
     NAME_TYPE,
     EMAIL_TYPE,
     DESCRIPTION_TYPE,
     EMPLOYEE_TYPE,
-    LOCATION_TYPE,
+    LOCATION_TYPE
   ]
   // console.log((withTooltips.indexOf(type) !== -1) ? true : false)
 
-  return (withTooltips.indexOf(type) !== -1) ? true : false
+  return (withTooltips.indexOf(type) !== -1)
 }
 
 const Cell = {
-  oninit(vdom) {
+  oninit (vdom) {
     // console.log(vdom)
-    if(shouldHaveTooltip(vdom.attrs.cellData.type)) {
+    if (shouldHaveTooltip(vdom.attrs.cellData.type)) {
       vdom.state.fullTextVisible = false
     }
     // vdom.attrs.cellData.data
@@ -61,12 +52,23 @@ const Cell = {
                 ? vdom.attrs.cellData.data.get('original')
                 : '',
       fullTextVisible: vdom.state.fullTextVisible,
-      onmouseover: (vdom.attrs.cellData.data && shouldHaveTooltip(vdom.attrs.cellData.type)
-                    ? () => vdom.state.fullTextVisible = true
-                    : null),
-      onmouseleave: (() => vdom.state.fullTextVisible = false),
+      cellEventHandlers: {
+        onmouseover: (vdom.attrs.cellData.data && shouldHaveTooltip(vdom.attrs.cellData.type)
+                      ? () => {
+                        vdom.state.fullTextVisible = true
+                      }
+                      : null),
+        onclick: (vdom.attrs.cellData.data && shouldHaveTooltip(vdom.attrs.cellData.type)
+                      ? () => {
+                        vdom.state.fullTextVisible = true
+                      }
+                      : null),
+        onmouseleave: () => {
+          vdom.state.fullTextVisible = false
+        }
+      }
     })
-  },
+  }
 }
 
 export default Cell

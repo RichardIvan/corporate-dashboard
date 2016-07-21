@@ -2,7 +2,6 @@
 'use strict'
 
 import m from 'mithril'
-import f from 'flyd'
 import moment from 'moment'
 
 import {
@@ -23,29 +22,39 @@ import styles from '../components/Charts/chart-styles.scss'
 import ChartComponent from '../components/Charts'
 
 // import armcharts
+import { setChartDataPendingState } from '../actions'
 import { generateChart } from '../services'
-import { getChartData } from '../selectors/'
+import {
+  getChartData,
+  getChartDataPendingState
+} from '../selectors/'
 
 const ChartContainer = {
-  oninit(vnode) {
+  oninit (vnode) {
     // const state = vnode.attrs.store.getState()
     vnode.state.chartData = [
       {
         date: moment().format('DD/MM/YY'),
         payingCustomersData: 5,
-        openIssuesData: 10,
+        openIssuesData: 10
       }
     ]
   },
-  onupdate(vnode) {
+  onbeforeupdate (vnode) {
     if (!vnode.state.chart) return false
 
     const state = vnode.attrs.store.getState()
-    // const types = List.of('payingCustomersData')
+    // console.log(getChartDataPendingState(state))
+    if (getChartDataPendingState(state)) return
+
+    const dispatch = vnode.attrs.store.dispatch
+    // dispatch(setChartDataPendingState(true))
+
     const newData = getChartData(state).toJS()
+    // dispatch(setChartDataPendingState(false))
 
     if (vnode.state.chart) {
-      if (newData) {
+      if (newData.length) {
         if (!isEqual(vnode.state.chartData, newData)) {
           const length = newData.length
           // const len = vnode.state.chartData.length

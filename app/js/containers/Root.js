@@ -13,32 +13,46 @@ import { connectToSocket } from '../helpers'
 const store = configureStore()
 connectToSocket(store)
 
+import { setWindowSizeListener } from '../services/mobile-state'
+
+const startWindowSizeListener = setWindowSizeListener(store)
+startWindowSizeListener()
+
 // import 'normalize-css'
 import './global-style.scss'
 import '../../fonts/Roboto-Regular.ttf'
 
 import m from 'mithril'
 
-import Toolbar from './Toolbar'
+import {
+  isMobile
+} from '../selectors'
+
 import Navbar from './Navbar'
+import MobileNavbar from './Mobile-Navbar'
+
+import Toolbar from './Toolbar'
 import Main from './Main'
 
 import styles from '../components/styles.scss'
 
 const Root = {
-  view(vnode) {
+  view (vnode) {
     return m(`#root.${styles.root}`, [
-      m(`.${styles.rootSidebar}`,
-        m(Navbar)
-      ),
+      isMobile(store.getState())
+        ? m(`.${styles.rootMobileSidebar}`,
+          m(MobileNavbar, { ...vnode.attrs, store })
+        )
+        : m(`.${styles.rootSidebar}`,
+          m(Navbar)
+        ),
       m(`.${styles.rootMain}`, [
-        m(Toolbar, { ...vnode.attrs }),
-        m(Main, { ...vnode.attrs, store }),
-      ]),
-
+        m(Toolbar, { ...vnode.attrs, store }),
+        m(Main, { ...vnode.attrs, store })
+      ])
       // m(Main, { ...vnode.attrs }),
     ])
-  },
+  }
 }
 
 export default Root

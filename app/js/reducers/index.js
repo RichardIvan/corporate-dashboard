@@ -25,6 +25,11 @@ import graphRange from './range-reducer.js'
 import graphData from './rereduce-graph-data'
 import visibleChartTypes from './rereduce-visible-charts'
 
+import locationList from './location-list/reducer'
+
+import mobileState from './mobile-state'
+import mobileNavbarState from './mobile-navbar-state'
+
 const root = combineReducers({
   issues,
   filters,
@@ -39,6 +44,9 @@ const root = combineReducers({
   graphRange,
   graphData,
   visibleChartTypes,
+  locationList,
+  mobileState,
+  mobileNavbarState
 })
 
 export default root

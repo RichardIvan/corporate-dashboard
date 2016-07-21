@@ -4,7 +4,7 @@
 import { Map } from 'immutable'
 import { SET_SORT, OPENING_TIMESTAMP_TYPE } from '../actions'
 
-export const initialState = Map({
+export const initialState = new Map({
   type: OPENING_TIMESTAMP_TYPE,
   asc: true,
 })

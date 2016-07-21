@@ -8,12 +8,12 @@ import moment from 'moment'
 
 import {
   Map,
-  List,
+  List
 } from 'immutable'
 
 import {
   getGraphData,
-  getGraphDataByRange,
+  getGraphDataByRange
 } from '../../../../../app/js/selectors/graph-data'
 
 describe('Graph Data Selector', () => {
@@ -22,8 +22,8 @@ describe('Graph Data Selector', () => {
   beforeEach(() => {
     state = {
       graphData: new Map({
-        data: new Map(),
-      }),
+        data: new Map()
+      })
     }
 
     const path = moment()
@@ -66,7 +66,7 @@ describe('Graph Data Selector', () => {
       range = new Map({
         range: 'set',
         from: +moment().subtract(2, 'days').format('x'),
-        to: +moment().format('x'),
+        to: +moment().format('x')
       })
     })
     // should return a map
@@ -90,9 +90,13 @@ describe('Graph Data Selector', () => {
     // should not throw when passed "all" range
     it('should not throw when passed "all" range', () => {
       const newRange = range.set('range', 'all')
-      expect(getGraphDataByRange.bind(null, data, newRange, types)).toNotThrow()
-    })
+      const info = Map({
+        lowestDate: moment().subtract(1, 'months').format('YY/MM/DD'),
+        highestDate: moment().format('YY/MM/DD')
+      })
 
+      expect(getGraphDataByRange.bind(null, data, newRange, types, info)).toNotThrow()
+    })
 
     // should throw if passed incorrect argument types
     it('should throw if passed incorrect argument types', () => {

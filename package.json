@@ -18,6 +18,13 @@
     "test": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- --require ./tests/setup --recursive ./tests && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose && rm -rf ./coverage",
     "server": "babel-node ./server/index.js"
   },
+  "standard": {
+    "ignore": [
+      "build",
+      "app/icons",
+      "test"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RichardIvan/corporate-dashboard.git"
@@ -56,8 +63,11 @@
     "env-test": "^1.0.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-standard": "^5.3.5",
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-standard": "^2.0.0",
     "expect": "^1.20.1",
     "expect-immutable": "0.0.3",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -67,6 +77,8 @@
     "flow-bin": "^0.26.0",
     "flux-standard-action": "^0.6.1",
     "flyd": "^0.2.2",
+    "google-maps": "^3.2.1",
+    "google-maps-api": "^2.0.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean": "^0.3.2",
@@ -80,8 +92,11 @@
     "ignore-styles": "^3.0.0",
     "immutable": "^3.8.1",
     "is_js": "^0.8.0",
+    "json-loader": "^0.5.4",
+    "jsonfile": "^2.3.1",
     "mithril": "github:lhorie/mithril.js#rewrite",
     "mithril-query": "github:StephanHoyer/mithril-query.git#rewrite",
+    "mithril-node-render": "github:StephanHoyer/mithril-node-render.git#rewrite",
     "mocha": "^2.5.3",
     "mocha-as-promised": "^2.0.0",
     "mocha-clean": "^1.0.0",
@@ -105,6 +120,7 @@
     "sass-loader": "^3.2.0",
     "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6",
+    "standard": "^7.1.2",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "uuid-v4": "^0.1.0",

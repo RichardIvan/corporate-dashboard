@@ -23,20 +23,20 @@ export function generateChart(state: Object, chartData: Array<Object>): Object {
         title: '#Of Paying Customers',
         type: 'line',
         valueField: 'payingCustomersData',
-        behindColumns: true,
-      },
+        behindColumns: true
+      }
     ],
     zoomOutButtonRollOverAlpha: 0.15,
     chartCursor: {
       categoryBalloonDateFormat: 'DD MM YY',
       cursorPosition: 'mouse',
-      showNextAvailable: true,
+      showNextAvailable: true
     },
     columnWidth: 1,
     categoryField: 'date',
     categoryAxis: {
       minPeriod: 'dd',
-        parseDates: false,
+      parseDates: false
     },
     //     "exportConfig": {
     //     "menuTop": "20px",

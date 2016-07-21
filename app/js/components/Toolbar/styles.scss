@@ -3,8 +3,15 @@
 }
 
 .root {
+  @media only screen
+    and (max-width: 425px) {
+      :global(h1) {
+        margin-left: 0;
+      }
+    }
   background: #F2F1F9;
 
+  display: flex;
   position: relative;
   // left: var(--width);
 
@@ -22,6 +29,14 @@
   }
 }
 
+.navBarbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 100%;
+}
+
 .geo,
 .graph,
 .data {
@@ -32,7 +47,7 @@
   // justify-content: center;
 
   flex-direction: row;
-  height: 56px;
+  min-height: 56px;
 
   :global(h1) {
     margin-left: 32px;
@@ -44,7 +59,8 @@
 }
 
 .geo {
-  background: red;
+  background: #3F286B;
+  color: #ABA1BD;
 }
 
 .graph,

@@ -102,7 +102,7 @@ describe('Offset Reducer', () => {
   })
 
   it('should have immutable state', () => {
-    const state = Map({ value: 0 })
+    const state = new Map({ value: 0 })
 
     const action = {
       type: SET_OFFSET,
@@ -115,6 +115,20 @@ describe('Offset Reducer', () => {
 
     expect(state).toEqual(fromJS({
       value: 0
+    }))
+  })
+
+  it('should set the offset to zero when set filter action type is received', () => {
+    const state = new Map({ value: 1 })
+
+    const action = {
+      type: 'SET_FILTER',
+    }
+
+    const newState = reducer(state, action)
+
+    expect(newState).toEqual(fromJS({
+      value: 0,
     }))
   })
 })

@@ -14,7 +14,7 @@ import {
   OPENING_TIMESTAMP_TYPE,
   CLOSING_TIMESTAMP_TYPE,
   EMPLOYEE_TYPE,
-  OPEN_STATUS_TYPE,
+  OPEN_STATUS_TYPE
 } from '../../actions'
 
 import styles from './styles.scss'
@@ -25,23 +25,23 @@ const sortableItems = [
   OPENING_TIMESTAMP_TYPE,
   CLOSING_TIMESTAMP_TYPE,
   EMPLOYEE_TYPE,
-  OPEN_STATUS_TYPE,
+  OPEN_STATUS_TYPE
 ]
 
-function isSortable(type) {
-  return (sortableItems.indexOf(type) !== -1)
+function isSortable (type) {
+  return sortableItems.indexOf(type) !== -1
 }
 
-function isSortActive(type, state) {
+function isSortActive (type, state) {
   // TODO write getSort selector
-  return getSortBy(state).type === type
+  return getSortBy(state).get('type') === type
 }
 
-function isAsc(state) {
-  return getSortBy(state).asc
+function isAsc (state) {
+  return getSortBy(state).get('asc')
 }
 
-function headerClickHandler(type) {
+function headerClickHandler (type) {
   if (isSortable(type)) {
     const store = this.attrs.store
     this.attrs.store.dispatch(setSort(type, store.getState()))
@@ -49,7 +49,7 @@ function headerClickHandler(type) {
 }
 
 const Table = {
-  view(vdom) {
+  view (vdom) {
     const state = vdom.attrs.store.getState()
     // console.log(vdom)
     return m(`ul.${styles.table}`, [
@@ -57,13 +57,13 @@ const Table = {
       vdom.attrs.columns.map((column, index) => {
         return m(`li.${styles.column}`,
           {
-            class: index === 2 ? `${styles.three}` : '',
+            class: index === 2 ? `${styles.three}` : ''
           },
           m(`ul.${styles.contentColumn}`, [
             // Header Cell
             m(`li.${styles.header}`,
               {
-                onclick: headerClickHandler.bind(vdom, column.type),
+                onclick: headerClickHandler.bind(vdom, column.type)
               },
               [
                 // console.log(isSortActive(column.type, state)),
@@ -72,9 +72,9 @@ const Table = {
                 (isSortable(column.type) && isSortActive(column.type, state)) ? m(Icon,
                   {
                     type: 'arrow',
-                    className: isAsc(state) ? 'asc' : 'desc',
+                    className: isAsc(state) ? 'asc' : 'desc'
                   }
-                ) : null,
+                ) : null
               ]
             ),
             // rows
@@ -90,8 +90,8 @@ const Table = {
                     cellData: {
                       data: issue.get(column.type),
                       value: issue.getIn([column.type, 'transformed']),
-                      type: column.type,
-                    },
+                      type: column.type
+                    }
                   })
                 )
               } else {

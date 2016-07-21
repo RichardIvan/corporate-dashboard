@@ -25,35 +25,35 @@ const path = {
   DEST_SRC: 'dist/src',
   DEST_BUILD: 'dist/build',
   DEST: 'dist',
-  TESTS: './tests/**/*.js',
+  TESTS: './tests/**/*.js'
 }
 
 gulp.task('jscpd', () => gulp.src('app/*')
-    .pipe(jscpd({
-      languages: ['javascript, css'],
-      verbose: true,
-    }))
+  .pipe(jscpd({
+    languages: ['javascript, css'],
+    verbose: true
+  }))
 )
 
 gulp.task('clean', () => gulp.src(path.DEST_BUILD,
   {
-    read: false,
+    read: false
   }
-  ).pipe(clean()))
+).pipe(clean()))
 
 gulp.task('webpack', [], () =>
-   // gulp looks for all source files under specified path
-    gulp.src(path.ALL)
-    // creates a source map which would be very helpful for debugging
-    // by maintaining the actual source code structure
-    .pipe(sourcemaps.init())
-    // blend in the webpack config into the source files
-    .pipe(stream(webpackConfig))
-    // minifies the code for better compression
-    // .pipe(ignore.exclude([ "**/*.map" ]))
-    // .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest(path.DEST_BUILD))
+// gulp looks for all source files under specified path
+gulp.src(path.ALL)
+  // creates a source map which would be very helpful for debugging
+  // by maintaining the actual source code structure
+  .pipe(sourcemaps.init())
+  // blend in the webpack config into the source files
+  .pipe(stream(webpackConfig))
+  // minifies the code for better compression
+  // .pipe(ignore.exclude([ "**/*.map" ]))
+  // .pipe(uglify())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(path.DEST_BUILD))
 )
 
 // function can use callback
@@ -64,8 +64,8 @@ gulp.task('webpack-dev-server', () => {
     // publicPath: `/ + ${webpackDevConfig.output.publicPath}`,
     inline: true,
     stats: {
-      colors: true,
-    },
+      colors: true
+    }
   }).listen(8080, 'localhost', (err) => {
     if (err) throw new gutil.PluginError('webpack-dev-server', err)
     gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html')

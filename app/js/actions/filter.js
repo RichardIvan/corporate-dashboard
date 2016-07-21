@@ -3,41 +3,30 @@
 
 import {
   SET_FILTER,
-  FILTER_SEARCH_RESULT,
   RESET_FILTERS,
-  CLEAR_TIMESTAMP,
 } from './constants'
 
-import {
-  getFilter,
-} from '../selectors'
-// import {
-//   OPENING_TIMESTAMP_TYPE,
-//   CLOSING_TIMESTAMP_TYPE,
-// } from './types.js'
-
-export function setFilter(type: string, value) {
+export function setFilter(t: string, v): Object {
   return {
     type: SET_FILTER,
     payload: {
-      'type': type,
-      'value': value,
+      type: t,
+      value: v,
     },
   }
 }
 
-export function clearTimestamp(type: string) {
-
+export function clearTimestamp(t: string): Object {
   return {
     type: SET_FILTER,
     payload: {
-      'type': type,
+      type: t,
       value: 0,
     },
   }
 }
 
-export function resetFilters() {
+export function resetFilters(): Object {
   return {
     type: RESET_FILTERS,
   }

@@ -6,13 +6,13 @@ import rootReducer from '../reducers'
 
 const middleware = [
   thunkMiddleware,
-  createLogger(),
-  mithrilMiddleware,
+  // createLogger(),
+  mithrilMiddleware
 ]
 
 const enhancer = applyMiddleware(...middleware)
 
-export function configureStore(initialState) {
+export function configureStore (initialState) {
   const store = createStore(rootReducer, initialState, enhancer)
 
   // if (module.hot) {

@@ -1,4 +1,15 @@
 .main {
+  @media only screen
+    and (min-width: 767px)
+    and (max-width: 1023px) {
+    margin: 0px;
+  }
+
+  @media only screen
+    and (max-width: 425px) {
+      margin: 0px;
+    }
+
   position: relative;
 
   background: #F2F1F9;

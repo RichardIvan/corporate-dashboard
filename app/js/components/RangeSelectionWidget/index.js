@@ -8,15 +8,29 @@ import rightArrow from '../../../icons/google/msvg/hardware/keyboard-arrow-right
 
 import styles from './range-selection-widget-styles.scss'
 
+import {
+  isMobile
+} from '../../selectors'
+
 const RangeSelectionWidgetComponent = {
-  view(vnode) {
+  oninit (vnode) {
+    this.appState = vnode.attrs.store.getState()
+    this.isMobile = isMobile(this.appState)
+  },
+  onbeforeupdate (vnode) {
+    this.appState = vnode.attrs.store.getState()
+    this.isMobile = isMobile(this.appState)
+  },
+  view (vnode) {
     return m(`.${styles.container}`,
       m(`.${styles['inner-container']}`,
         [
-          m(`button.${styles.previous}`,
+          !this.isMobile
+          ? m(`button.${styles.previous}`,
             vnode.attrs.previousButtonAttrs,
             m('span', leftArrow)
-          ),
+          )
+          : null,
           m(`.${styles.mainInputs}`,
             [
               m(`.${styles.dates}`,
@@ -27,7 +41,7 @@ const RangeSelectionWidgetComponent = {
                       m('label[for=rangeFrom]', 'from'),
                       m('input[type=date][id=rangeFrom]',
                         vnode.attrs.fromInputAttrs,
-                      ),
+                      )
                     ]
                   ),
                   m(`.${styles.toContainer}`,
@@ -35,9 +49,9 @@ const RangeSelectionWidgetComponent = {
                       m('label[for=rangeTo]', 'to'),
                       m('input[type=date][id=rangeTo]',
                         vnode.attrs.toInputAttrs,
-                      ),
+                      )
                     ]
-                  ),
+                  )
                 ]
               ),
               m(`.${styles.rangeButtons}`,
@@ -47,19 +61,21 @@ const RangeSelectionWidgetComponent = {
                     'Set Range'),
                   m('button.all-button',
                     vnode.attrs.allButtonAttrs,
-                    'All'),
+                    'All')
                 ]
-              ),
+              )
             ]
           ),
-          m(`button.${styles.next}`,
+          !this.isMobile
+          ? m(`button.${styles.next}`,
             vnode.attrs.nextButtonAttrs,
             m('span', rightArrow)
-          ),
+          )
+          : null
         ]
       )
     )
-  },
+  }
 }
 
 export default RangeSelectionWidgetComponent

@@ -1,0 +1,58 @@
+:root {
+  --width: 56px
+}
+
+.root {
+  background: #F2F1F9;
+
+  position: relative;
+  // left: var(--width);
+
+  height: 64px;
+  width: 100%;
+  flex: 0 0 64px;
+  // width: calc( 100% - var(--width));
+
+  :global(h1) {
+    margin-left: 32px;
+
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+.geo,
+.graph,
+.data {
+  display: flex;
+  // justify-content: center;
+
+  align-items: center;
+  // justify-content: center;
+
+  flex-direction: row;
+  min-height: 56px;
+
+  :global(h1) {
+    margin-left: 32px;
+
+    font-size: 20px;
+
+    font-weight: 300;
+  }
+}
+
+.geo {
+  background: #3F286B;
+  color: #ABA1BD;
+}
+
+.graph,
+.data {
+  background: #A6A6A6;
+
+  :global(h1) {
+    color: #F2F1F9;
+  }
+}

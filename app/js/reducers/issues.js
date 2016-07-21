@@ -6,7 +6,7 @@ import { Map, fromJS } from 'immutable'
 
 import { INIT_LOAD, PUSH_DATA } from '../actions'
 
-export default function issues(state = Map(), action) {
+export default function issues(state = new Map(), action) {
   switch (action.type) {
   case INIT_LOAD:
     if (action.payload) {

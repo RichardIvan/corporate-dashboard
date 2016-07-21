@@ -94,7 +94,7 @@ describe('Filter Reducer', () => {
 
   it('should rest the filter to initial state', () => {
     const state = Map({
-      [OPENING_TIMESTAMP_TYPE]: Map({
+      [OPENING_TIMESTAMP_TYPE]: new Map({
         active: true,
       }),
     })
@@ -127,8 +127,8 @@ describe('Filter Reducer', () => {
 
       // should set the state active if setting filter with new name
       it('should set the state active if setting filter with new name and empty list', () => {
-        const state = Map({
-          [NAME_TYPE]: Map({
+        const state = new Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: false,
             by: List.of(),
@@ -140,7 +140,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -150,8 +150,8 @@ describe('Filter Reducer', () => {
 
       it(`should set the state active to false
         if setting filter with name already in the list and no other name is present`, () => {
-        const state = Map({
-          [NAME_TYPE]: Map({
+        const state = new Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -163,7 +163,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: false,
             by: List.of(),
@@ -173,8 +173,8 @@ describe('Filter Reducer', () => {
 
       it(`should be active
         if setting same value when different value is also in the list`, () => {
-        const state = Map({
-          [NAME_TYPE]: Map({
+        const state = new Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -186,7 +186,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -196,8 +196,8 @@ describe('Filter Reducer', () => {
 
       // sould reset the individual filter if setting with name already in it
       it('should reset individual filter if setting value already present in list', () => {
-        const state = Map({
-          [NAME_TYPE]: Map({
+        const state = new Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -209,7 +209,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -220,7 +220,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: false,
             by: List.of(),
@@ -230,8 +230,8 @@ describe('Filter Reducer', () => {
 
       // should add a name to list of filters if the name is new
       it('should add a name to list of filters if the name is new', () => {
-        const state = Map({
-          [NAME_TYPE]: Map({
+        const state = new Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: false,
             by: List.of(),
@@ -243,7 +243,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -254,7 +254,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -264,8 +264,8 @@ describe('Filter Reducer', () => {
 
       // should remove a name from list of filters if name is not new
       it('should remove a name from list of filters if name is not new', () => {
-        const state = Map({
-          [NAME_TYPE]: Map({
+        const state = new Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -277,7 +277,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -288,7 +288,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [NAME_TYPE]: Map({
+          [NAME_TYPE]: new Map({
             type: NAME_TYPE,
             active: false,
             by: List.of(),
@@ -306,8 +306,8 @@ describe('Filter Reducer', () => {
 
       // should set the state active if setting filter with new name
       it('should set the state active if setting filter with new email and empty list', () => {
-        const state = Map({
-          [EMAIL_TYPE]: Map({
+        const state = new Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: false,
             by: List.of(),
@@ -319,7 +319,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -329,8 +329,8 @@ describe('Filter Reducer', () => {
 
       it(`should set the state active to false
         if setting filter with email already in the list and no other email is present`, () => {
-        const state = Map({
-          [EMAIL_TYPE]: Map({
+        const state = new Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -342,7 +342,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: false,
             by: List.of(),
@@ -352,8 +352,8 @@ describe('Filter Reducer', () => {
 
       it(`should be active
         if setting same value when different value is also in the list`, () => {
-        const state = Map({
-          [EMAIL_TYPE]: Map({
+        const state = new Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -365,7 +365,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -375,8 +375,8 @@ describe('Filter Reducer', () => {
 
       // sould reset the individual filter if setting with name already in it
       it('should reset individual filter if setting value already present in list', () => {
-        const state = Map({
-          [EMAIL_TYPE]: Map({
+        const state = new Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -388,7 +388,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -399,7 +399,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: false,
             by: List.of(),
@@ -409,8 +409,8 @@ describe('Filter Reducer', () => {
 
       // should add a name to list of filters if the name is new
       it('should add a email to list of filters if the email is new', () => {
-        const state = Map({
-          [EMAIL_TYPE]: Map({
+        const state = new Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: false,
             by: List.of(),
@@ -422,7 +422,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -433,7 +433,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -443,8 +443,8 @@ describe('Filter Reducer', () => {
 
       // should remove a name from list of filters if name is not new
       it('should remove a email from list of filters if email is not new', () => {
-        const state = Map({
-          [EMAIL_TYPE]: Map({
+        const state = new Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -467,7 +467,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [EMAIL_TYPE]: Map({
+          [EMAIL_TYPE]: new Map({
             type: EMAIL_TYPE,
             active: false,
             by: List.of(),
@@ -485,17 +485,17 @@ describe('Filter Reducer', () => {
     describe('OPENING_TIMESTAMP_TYPE', () => {
       // should set new timestamp
       it('should set new tiemstamp', () => {
-        const state = Map({
+        const state = new Map({
           [OPENING_TIMESTAMP_TYPE]: Map({
             type: OPENING_TIMESTAMP_TYPE,
             active: false,
             timestamp: 0,
-          })
+          }),
         })
 
         const newState = reducer(state, setFilter('opening_timestamp', 123))
 
-        expect(newState).toEqual(Map({
+        expect(newState).toEqual(new Map({
           [OPENING_TIMESTAMP_TYPE]: Map({
             type: OPENING_TIMESTAMP_TYPE,
             active: true,
@@ -506,18 +506,18 @@ describe('Filter Reducer', () => {
 
       // should clear timestamp
       it('should clear timestamp', () => {
-        const state = Map({
+        const state = new Map({
           [OPENING_TIMESTAMP_TYPE]: Map({
             type: OPENING_TIMESTAMP_TYPE,
             active: true,
             timestamp: 123,
-          })
+          }),
         })
 
         const newState = reducer(state, clearTimestamp('opening_timestamp'))
 
-        expect(newState).toEqual(Map({
-          [OPENING_TIMESTAMP_TYPE]: Map({
+        expect(newState).toEqual(new Map({
+          [OPENING_TIMESTAMP_TYPE]: new Map({
             type: OPENING_TIMESTAMP_TYPE,
             active: false,
             timestamp: 0,
@@ -530,18 +530,18 @@ describe('Filter Reducer', () => {
 
       // should set new timestamp
       it('should set new tiemstamp', () => {
-        const state = Map({
-          [CLOSING_TIMESTAMP_TYPE]: Map({
+        const state = new Map({
+          [CLOSING_TIMESTAMP_TYPE]: new Map({
             type: CLOSING_TIMESTAMP_TYPE,
             active: false,
             timestamp: 0,
-          })
+          }),
         })
 
         const newState = reducer(state, setFilter('closing_timestamp', 123))
 
-        expect(newState).toEqual(Map({
-          [CLOSING_TIMESTAMP_TYPE]: Map({
+        expect(newState).toEqual(new Map({
+          [CLOSING_TIMESTAMP_TYPE]: new Map({
             type: CLOSING_TIMESTAMP_TYPE,
             active: true,
             timestamp: 123,
@@ -551,39 +551,31 @@ describe('Filter Reducer', () => {
 
       // should clear timestamp
       it('should clear timestamp', () => {
-        const state = Map({
-          [CLOSING_TIMESTAMP_TYPE]: Map({
+        const state = new Map({
+          [CLOSING_TIMESTAMP_TYPE]: new Map({
             type: CLOSING_TIMESTAMP_TYPE,
             active: true,
             timestamp: 123,
-          })
+          }),
         })
 
         const newState = reducer(state, clearTimestamp('closing_timestamp'))
 
-        expect(newState).toEqual(Map({
-          [CLOSING_TIMESTAMP_TYPE]: Map({
+        expect(newState).toEqual(new Map({
+          [CLOSING_TIMESTAMP_TYPE]: new Map({
             type: CLOSING_TIMESTAMP_TYPE,
             active: false,
             timestamp: 0,
           }),
         }))
       })
-
     })
 
 
-
-
-
-
-
-
     describe('EMPLOYEE_TYPE', () => {
-
       it('should set the state active if setting filter with new employee and empty list', () => {
-        const state = Map({
-          [EMPLOYEE_TYPE]: Map({
+        const state = new Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: false,
             by: List.of(),
@@ -595,7 +587,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -605,8 +597,8 @@ describe('Filter Reducer', () => {
 
       it(`should set the state active to false
         if setting filter with employee already in the list and no other employee is present`, () => {
-        const state = Map({
-          [EMPLOYEE_TYPE]: Map({
+        const state = new Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -618,7 +610,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: false,
             by: List.of(),
@@ -628,8 +620,8 @@ describe('Filter Reducer', () => {
 
       it(`should be active
         if setting same value when different value is also in the list`, () => {
-        const state = Map({
-          [EMPLOYEE_TYPE]: Map({
+        const state = new Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -641,7 +633,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -651,8 +643,8 @@ describe('Filter Reducer', () => {
 
       // sould reset the individual filter if setting with name already in it
       it('should reset individual filter if setting value already present in list', () => {
-        const state = Map({
-          [EMPLOYEE_TYPE]: Map({
+        const state = new Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -664,7 +656,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -675,7 +667,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: false,
             by: List.of(),
@@ -685,8 +677,8 @@ describe('Filter Reducer', () => {
 
       // should add a name to list of filters if the name is new
       it('should add a employee to list of filters if the employee is new', () => {
-        const state = Map({
-          [EMPLOYEE_TYPE]: Map({
+        const state = new Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: false,
             by: List.of(),
@@ -698,7 +690,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -709,7 +701,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -719,8 +711,8 @@ describe('Filter Reducer', () => {
 
       // should remove a name from list of filters if name is not new
       it('should remove a employee from list of filters if employee is not new', () => {
-        const state = Map({
-          [EMPLOYEE_TYPE]: Map({
+        const state = new Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -732,7 +724,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -743,39 +735,56 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [EMPLOYEE_TYPE]: Map({
+          [EMPLOYEE_TYPE]: new Map({
             type: EMPLOYEE_TYPE,
             active: false,
             by: List.of(),
           }),
         }))
       })
-
     })
-
-
-
-
-
-
 
     describe('OPEN_STATUS_TYPE', () => {
+      it('should set open status filter correctly', () => {
+        const state = new Map({
+          [OPEN_STATUS_TYPE]: new Map({
+            type: OPEN_STATUS_TYPE,
+            active: false,
+            by: false,
+          }),
+        })
 
+        let action = setFilter('open_status', 'open')
+
+        let newState = reducer(state, action)
+
+        expect(newState).toEqual(fromJS({
+          [OPEN_STATUS_TYPE]: new Map({
+            type: OPEN_STATUS_TYPE,
+            active: true,
+            by: true,
+          }),
+        }))
+
+        action = setFilter('open_status', 'closed')
+        newState = reducer(newState, action)
+
+        expect(newState).toEqual(fromJS({
+          [OPEN_STATUS_TYPE]: new Map({
+            type: OPEN_STATUS_TYPE,
+            active: false,
+            by: false,
+          }),
+        }))
+      })
     })
-
-
-
-
-
-
 
 
     describe('LOCATION_TYPE', () => {
-
       // should set the state active if setting filter with new name
       it('should set the state active if setting filter with new email and empty list', () => {
-        const state = Map({
-          [LOCATION_TYPE]: Map({
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: false,
             by: List.of(),
@@ -787,7 +796,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -797,8 +806,8 @@ describe('Filter Reducer', () => {
 
       it(`should set the state active to false
         if setting filter with email already in the list and no other email is present`, () => {
-        const state = Map({
-          [LOCATION_TYPE]: Map({
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -810,7 +819,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: false,
             by: List.of(),
@@ -820,8 +829,8 @@ describe('Filter Reducer', () => {
 
       it(`should be active
         if setting same value when different value is also in the list`, () => {
-        const state = Map({
-          [LOCATION_TYPE]: Map({
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -833,7 +842,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -843,8 +852,8 @@ describe('Filter Reducer', () => {
 
       // sould reset the individual filter if setting with name already in it
       it('should reset individual filter if setting value already present in list', () => {
-        const state = Map({
-          [LOCATION_TYPE]: Map({
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Yo', 'Bro'),
@@ -856,7 +865,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -867,7 +876,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: false,
             by: List.of(),
@@ -877,8 +886,8 @@ describe('Filter Reducer', () => {
 
       // should add a name to list of filters if the name is new
       it('should add a email to list of filters if the email is new', () => {
-        const state = Map({
-          [LOCATION_TYPE]: Map({
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: false,
             by: List.of(),
@@ -890,7 +899,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Bro'),
@@ -901,7 +910,7 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -911,8 +920,8 @@ describe('Filter Reducer', () => {
 
       // should remove a name from list of filters if name is not new
       it('should remove a email from list of filters if email is not new', () => {
-        const state = Map({
-          [LOCATION_TYPE]: Map({
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Bro', 'Yo'),
@@ -924,7 +933,7 @@ describe('Filter Reducer', () => {
         const newState = reducer(state, action)
 
         expect(newState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: true,
             by: List.of('Yo'),
@@ -935,12 +944,30 @@ describe('Filter Reducer', () => {
         const secondState = reducer(newState, action)
 
         expect(secondState).toEqual(fromJS({
-          [LOCATION_TYPE]: Map({
+          [LOCATION_TYPE]: new Map({
             type: LOCATION_TYPE,
             active: false,
             by: List.of(),
           }),
         }))
+      })
+    })
+
+    describe('#UNKNOWN FILTER TYPE', () => {
+      it('should return state', () => {
+        const state = new Map({
+          [LOCATION_TYPE]: new Map({
+            type: LOCATION_TYPE,
+            active: true,
+            by: List.of('Bro', 'Yo'),
+          }),
+        })
+
+        const action = setFilter('idk', 'Bro')
+
+        const newState = reducer(state, action)
+
+        expect(newState).toEqual(state)
       })
     })
   })

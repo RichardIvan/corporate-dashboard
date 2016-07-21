@@ -1,4 +1,9 @@
 .total {
+  @media only screen
+    and (min-width: 767px)
+    and (max-width: 1023px) {
+    padding-right: 1em;
+  }
   background: white;
   height: 100%;
   display: flex;

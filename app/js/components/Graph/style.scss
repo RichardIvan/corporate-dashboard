@@ -14,6 +14,11 @@
 }
 
 .textData {
+  @media only screen
+    and (max-width: 425px) {
+    flex-direction: column;
+    height: auto;
+  }
   display: flex;
   flex-direction: row;
   align-items: center;

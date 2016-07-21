@@ -3,7 +3,11 @@
 
 import { Map, List ,fromJS } from 'immutable'
 
-import { SET_FILTER, RESET_FILTERS } from '../actions'
+import {
+  SET_FILTER,
+  RESET_FILTERS,
+} from '../actions'
+
 import { initialState } from './filters-helpers'
 
 import {
@@ -15,10 +19,6 @@ import {
   CLOSING_TIMESTAMP_TYPE,
   OPEN_STATUS_TYPE,
 } from '../actions/types'
-
-import { FILTER_SEARCH_RESULT } from '../actions'
-
-let previousTerm = ''
 
 export default function filters(state: Map = initialState, action: Object): Map {
   switch (action.type) {
@@ -57,13 +57,11 @@ export default function filters(state: Map = initialState, action: Object): Map 
         if (arr.pop(value).count() === 0) {
           return state.setIn([filterType, 'active'], false)
                   .setIn([filterType, 'by'], arr.delete(arr.indexOf(value)))
-        } else {
-          return state.setIn([filterType, 'by'], arr.delete(arr.indexOf(value)))
         }
-      } else {
-        return state.setIn([filterType, 'active'], true)
-                .setIn([filterType, 'by'], arr.push(value))
+        return state.setIn([filterType, 'by'], arr.delete(arr.indexOf(value)))
       }
+      return state.setIn([filterType, 'active'], true)
+              .setIn([filterType, 'by'], arr.push(value))
     }
     case OPENING_TIMESTAMP_TYPE:
     case CLOSING_TIMESTAMP_TYPE: {
@@ -72,21 +70,19 @@ export default function filters(state: Map = initialState, action: Object): Map 
       if (!timestamp) {
         return state.setIn([type, 'timestamp'], timestamp)
                 .setIn([type, 'active'], false)
-      } else {
-        return state.setIn([type, 'timestamp'], timestamp)
-                .setIn([type, 'active'], true)
       }
+      return state.setIn([type, 'timestamp'], timestamp)
+              .setIn([type, 'active'], true)
     }
     case OPEN_STATUS_TYPE: {
       const payladType = action.payload.type
-      const status = action.payload.value === 'open' ? true : false
+      const status = action.payload.value === 'open'
       return state.setIn([payladType, 'by'], status)
-              .setIn([payladType, 'active'], true)
+              .setIn([payladType, 'active'], status)
     }
     default:
-      return state.setIn([action.payload.type], fromJS(action.payload.data))
+      return state
     }
-
   }
   case RESET_FILTERS:
     return initialState

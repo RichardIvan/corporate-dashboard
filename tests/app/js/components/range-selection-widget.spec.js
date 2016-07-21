@@ -5,14 +5,25 @@ import { describe, it } from 'mocha'
 import expect from 'expect'
 
 import mq from 'mithril-query'
+import { Map } from 'immutable'
 
 import RangeSelectionComponent from '../../../../app/js/components/RangeSelectionWidget'
 import RangeSelectionContainer from '../../../../app/js/containers/GraphRangeSelectionWidget'
 
-describe('Range Selection Widget Component', () => {
+const store = {
+  getState: () => {
+    return {
+      mobileState: Map({
+        state: false
+      })
+    }
+  }
+}
+
+describe.only('Range Selection Widget Component', () => {
   // it should have two inputs
   it('should have two datetype inputs', () => {
-    const out = mq(RangeSelectionComponent)
+    const out = mq(RangeSelectionComponent, { store })
 
     expect(out.should.have.at.least(2, 'input[type=date]')).toBe()
     expect(out.should.have('#rangeFrom')).toBe()
@@ -21,7 +32,7 @@ describe('Range Selection Widget Component', () => {
 
   // it should have two labels for the date inputs
   it('should have two labels for the date inputs', () => {
-    const out = mq(RangeSelectionComponent)
+    const out = mq(RangeSelectionComponent, { store })
 
     expect(out.should.have.at.least(2, 'label')).toBe()
     expect(out.should.contain('from')).toBe()
@@ -30,7 +41,7 @@ describe('Range Selection Widget Component', () => {
 
   // it should have two buttons
   it('should have two buttons', () => {
-    const out = mq(RangeSelectionComponent)
+    const out = mq(RangeSelectionComponent, { store })
 
     expect(out.should.have.at.least(2, 'button')).toBe()
   })
@@ -41,8 +52,9 @@ describe('Range Selection Widget Component', () => {
   it('should have a button containinng all this buttoon should have a onclick event', () => {
     const out = mq(RangeSelectionComponent, {
       allButtonAttrs: {
-        onclick: () => console.log('OK'),
+        onclick: () => console.log('OK')
       },
+      store
     })
 
     expect(out.should.contain('All')).toBe()
@@ -57,8 +69,9 @@ describe('Range Selection Widget Component', () => {
   it('should have a button containing set range', () => {
     const out = mq(RangeSelectionComponent, {
       rangeButtonAttrs: {
-        onclick: () => console.log('OK'),
+        onclick: () => console.log('OK')
       },
+      store
     })
 
     expect(out.should.contain('Set Range')).toBe()

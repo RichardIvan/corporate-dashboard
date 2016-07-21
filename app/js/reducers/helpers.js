@@ -4,9 +4,13 @@
 import papa from 'papaparse'
 import { Map, List, fromJS } from 'immutable'
 import { drop, take, flatten, zipObject, reduce, map, sortBy } from 'lodash'
-import { INIT_LOAD, PUSH_DATA } from '../actions'
+import {
+  INIT_LOAD,
+  PUSH_DATA,
+  OPENING_TIMESTAMP_TYPE,
+  CLOSING_TIMESTAMP_TYPE,
+} from '../actions'
 
-import { OPENING_TIMESTAMP_TYPE, CLOSING_TIMESTAMP_TYPE } from '../actions'
 
 const INVALID_KEYS = ['', 'undefined', 'null']
 

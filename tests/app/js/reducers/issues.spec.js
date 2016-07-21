@@ -5,8 +5,8 @@ import { describe, it } from 'mocha'
 import expect from 'expect'
 import { Map, fromJS } from 'immutable'
 
-import expectImmutable from 'expect-immutable'
-expect.extend(expectImmutable)
+// import expectImmutable from 'expect-immutable'
+// expect.extend(expectImmutable)
 
 
 import reducer from '../../../../app/js/reducers/issues.js'
@@ -23,11 +23,11 @@ describe('Issues Reducer', () => {
       }
       const newState = reducer(state, action)
 
-      expect(newState).toEqual(Map())
+      expect(newState).toEqual(new Map())
     })
 
     it('is immutable', () => {
-      const state = Map({})
+      const state = new Map({})
       const action = {
         type: 'INIT_LAOD',
         payload: {
@@ -47,7 +47,7 @@ describe('Issues Reducer', () => {
       const json = transformCSVtoJSON(csv)
       // console.log(json)
 
-      const state = Map()
+      const state = new Map()
       const action = {
         type: 'INIT_LOAD',
         payload: {
@@ -58,13 +58,32 @@ describe('Issues Reducer', () => {
 
       expect(nextState).toEqual(fromJS(generateShortVersions(json)))
     })
+
+    it('should return state if init load does not have payload', () => {
+      const state = new Map()
+      let action = {
+        type: 'INIT_LOAD',
+        payload: {},
+      }
+      let nextState = reducer(state, action)
+
+      expect(nextState).toEqual(state)
+
+      action = {
+        type: 'INIT_LOAD',
+      }
+
+      nextState = reducer(state, action)
+
+      expect(nextState).toEqual(state)
+    })
   })
 
-  describe('#NEW_ISSUE', () => {
+  describe('#PUSH_DATA', () => {
     it('should have add new issue to issues by ID map', () => {
 
-      const state = Map({
-        '5dc28a93-88d8-453e-865e-da5f4194c7b9': Map({
+      const state = new Map({
+        '5dc28a93-88d8-453e-865e-da5f4194c7b9': new Map({
           id: '5dc28a93-88d8-453e-865e-da5f4194c7b9',
           opening_timestamp: 1464446948285,
           closing_timestamp: null,
@@ -116,7 +135,7 @@ describe('Issues Reducer', () => {
       })
 
       const action = {
-        type: 'NEW_ISSUE',
+        type: 'PUSH_DATA',
         payload: {
           data: json,
         },

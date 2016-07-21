@@ -6,14 +6,20 @@ import m from 'mithril'
 import ToolbarContainer from '../../containers/Toolbar-inner'
 import styles from './style.scss'
 
+import {
+  isMobile
+} from '../../selectors'
+
 const Main = {
-  view(vnode) {
+  view (vnode) {
     return m(`#main-container.${styles.main}`, [
-      m(ToolbarContainer, { ...vnode.attrs }),
+      !isMobile(vnode.attrs.store.getState())
+        ? m(ToolbarContainer, { ...vnode.attrs })
+        : null,
       m(vnode.attrs.container, { ...vnode.attrs }),
-      vnode.children,
+      vnode.children
     ])
-  },
+  }
 }
 
 export default Main

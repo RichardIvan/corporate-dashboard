@@ -29,7 +29,7 @@ export function getDatesInRange(range: Map<string, number>): List<string> {
 }
 
 
-export function getMonthlyDates(range: Map): List {
+export function getMonthlyDates (range: Map): List {
   const from = moment(range.get('from'), 'x')
   const to = moment(range.get('to'), 'x')
 

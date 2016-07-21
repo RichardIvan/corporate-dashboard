@@ -8,13 +8,20 @@ import OpenIssuesContainer from './Open-Issues-Display'
 import ChartContainer from './Charts'
 
 const Graph = {
-  view(vnode) {
+  oncreate (vnode) {
+    const map = document.getElementById('map')
+    if (map) {
+      map.parentNode.removeChild(map)
+    }
+  },
+  view (vnode) {
     return m(GraphComponent, {
       // ChartsContainer,
-      Chart: m(ChartContainer, { ...vnode.attrs }),
+      key: 'graph',
+      Chart: m(ChartContainer, { ...vnode.attrs })
     }, [
       m(RangeSelectionWidget, { ...vnode.attrs }),
-      m(OpenIssuesContainer, { ...vnode.attrs }),
+      m(OpenIssuesContainer, { ...vnode.attrs })
     ])
 
     // DATE WIDGET

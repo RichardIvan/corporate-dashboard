@@ -1,17 +1,18 @@
-// this is just a presentational component
+/* @flow */
+'use strict'
 
 import m from 'mithril'
-// import style from './style.scss'
 
 const Toolbar = {
-  view(vnode) {
+  view (vnode) {
     return m('', { class: vnode.attrs.className },
       [
-        m('h1', vnode.attrs.heading),
-        vnode.children,
+        vnode.attrs.isMobile ? vnode.attrs.navbarButton : null,
+        m('h1', { key: 'h1' }, vnode.attrs.heading),
+        vnode.children
       ]
     )
-  },
+  }
 }
 
 export default Toolbar

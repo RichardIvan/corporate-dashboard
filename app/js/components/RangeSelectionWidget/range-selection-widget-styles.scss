@@ -9,6 +9,12 @@
 }
 
 .inner-container {
+  @media only screen
+    and (min-width: 767px)
+    and (max-width: 1023px) {
+    // padding: 1em;
+    margin-left: 25px;
+  }
   background: white;
   display: flex;
   flex-direction: row;

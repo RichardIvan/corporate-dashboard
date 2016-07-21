@@ -11,7 +11,7 @@ import { setRange } from '../actions'
 import { getRange } from '../selectors'
 
 const GraphRangeWidgetContainer = {
-  oninit(vnode) {
+  oninit (vnode) {
     const state = vnode.attrs.store.getState()
     const range = getRange(state)
     vnode.state.appState = state
@@ -19,18 +19,19 @@ const GraphRangeWidgetContainer = {
     vnode.state.from = range.get('from')
     vnode.state.to = range.get('to')
   },
-  onbeforeupdate(vnode) {
+  onbeforeupdate (vnode) {
     const state = vnode.attrs.store.getState()
     const range = getRange(state)
     vnode.state.appState = state
     vnode.state.from = range.get('from')
     vnode.state.to = range.get('to')
   },
-  view(vnode) {
+  view (vnode) {
     return m(GraphRangeWidgetComponent,
       {
+        ...vnode.attrs,
         dateAttrs: {
-          class: vnode.state.inputsDisabled() ? 'inactive' : '',
+          class: vnode.state.inputsDisabled() ? 'inactive' : ''
         },
         previousButtonAttrs: {
           onclick: () => {
@@ -40,11 +41,10 @@ const GraphRangeWidgetContainer = {
                 type: 'previous',
                 range: 'set',
                 from: vnode.state.from,
-                to: vnode.state.to,
+                to: vnode.state.to
               })
             )
-
-          },
+          }
         },
         nextButtonAttrs: {
           onclick: () => {
@@ -54,34 +54,34 @@ const GraphRangeWidgetContainer = {
                 type: 'next',
                 range: 'set',
                 from: vnode.state.from,
-                to: vnode.state.to,
+                to: vnode.state.to
               })
             )
-          },
+          }
         },
         fromInputAttrs: {
           onchange: (e) => {
             vnode.attrs.store.dispatch(
               setRange({
                 range: 'set',
-                from: e.target.valueAsNumber,
+                from: e.target.valueAsNumber
               })
             )
           },
           value: moment(vnode.state.from).format('YYYY-MM-DD'),
-          disabled: vnode.state.inputsDisabled(),
+          disabled: vnode.state.inputsDisabled()
         },
         toInputAttrs: {
           onchange: (e) => {
             vnode.attrs.store.dispatch(
               setRange({
                 range: 'set',
-                to: e.target.valueAsNumber,
+                to: e.target.valueAsNumber
               })
             )
           },
           value: moment(vnode.state.to).format('YYYY-MM-DD'),
-          disabled: vnode.state.inputsDisabled(),
+          disabled: vnode.state.inputsDisabled()
         },
         rangeButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'inactive' : 'active',
@@ -91,10 +91,10 @@ const GraphRangeWidgetContainer = {
               setRange({
                 range: 'set',
                 from: vnode.state.from,
-                to: vnode.state.to,
+                to: vnode.state.to
               })
             )
-          },
+          }
         },
         allButtonAttrs: {
           class: vnode.state.inputsDisabled() ? 'active' : 'inactive',
@@ -103,10 +103,10 @@ const GraphRangeWidgetContainer = {
             vnode.attrs.store.dispatch(
               setRange({ range: 'all' })
             )
-          },
-        },
+          }
+        }
       })
-  },
+  }
   // view(vnode) {
   //   return m('', m(GraphRangeWidgetComponent,
   //     {

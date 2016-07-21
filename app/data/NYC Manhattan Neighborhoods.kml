@@ -1,0 +1,1691 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>NYC Manhattan Neighborhoods</name>
+		<description><![CDATA[A fairly comprehensive map of the neighborhoods that make up the Manhattan borough of New York City. The exact boundaries of some areas are subject to debate.<br><br>Turn MapsGL off to see colour shading for each neighborhood.<br><br>Click on a neighborhood to get a brief history lesson.<br><br>Try it on your mobile device, using GPS to see what neighborhood you're in as you stroll through the city.<br><br><br>Sources: Google Maps, Wikipedia, nyc.gov<br>@musikanimal]]></description>
+		<Folder>
+			<name>Untitled layer</name>
+			<Placemark>
+				<name>Financial District</name>
+				<description><![CDATA[Comprised of offices and headquarters of many of the city's major financial institutions, including the New York Stock Exchange (http://en.wikipedia.org/wiki/New_York_Stock_Exchange), Federal Reserve Bank of New York (http://en.wikipedia.org/wiki/Federal_Reserve_Bank_of_New_York), the new World Trade Center (http://en.wikipedia.org/wiki/World_Trade_Center) complex and the National September 11 Memorial and Museum. The Financial District is rich in history, overlapping the boundaries of the New Amsterdam (http://en.wikipedia.org/wiki/New_Amsterdam) settlement in the late 17th century. During the day, the population of this area swells to about 300,000. Federal Hall National Memorial (http://en.wikipedia.org/wiki/Federal_Hall), on the site of the first US Capitol (http://en.wikipedia.org/wiki/United_States_Capitol) and the inauguration (http://en.wikipedia.org/wiki/Inauguration) of George Washington (http://en.wikipedia.org/wiki/George_Washington) as the first President of the United States (http://en.wikipedia.org/wiki/President_of_the_United_States), is located at the corner of Wall Street and Nassau Street (http://en.wikipedia.org/wiki/Nassau_Street_%28Manhattan%29). Other tourist attractions include the adjacent South Street Seaport (http://en.wikipedia.org/wiki/South_Street_Seaport) Historic District, New York City Police Museum (http://en.wikipedia.org/wiki/New_York_City_Police_Museum), and Museum of American Finance (http://en.wikipedia.org/wiki/Museum_of_American_Finance). Although the term is sometimes used as a synonym for "Wall Street (http://en.wikipedia.org/wiki/Wall_Street)", the latter term is often applied metonymously (http://en.wikipedia.org/wiki/Metonym) to the financial markets as a whole, whereas "the Financial District" implies an actual geographical location. According to City of New York official data, the neighborhood is named Wall Street.]]></description>
+				<styleUrl>#poly-FF6666-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.017303,40.702919,0.0 -74.015411,40.701069,0.0 -74.013046,40.700226,0.0 -74.011078,40.701069,0.0 -74.006828,40.703442,0.0 -73.999397,40.707840000000004,0.0 -74.005241,40.712029,0.0 -74.007988,40.71137999999999,0.0 -74.00843,40.711899,0.0 -74.01339,40.714279,0.0 -74.01545,40.707561,0.0 -74.016571,40.705009,0.0 -74.01699100000002,40.70504,0.0 -74.017677,40.703979,0.0 -74.017303,40.702919,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Battery Park City</name>
+				<description><![CDATA[A planned community (http://en.wikipedia.org/wiki/Planned_community) created by land reclamation on the Hudson River, using 1.2 million cubic yards (917,000 m3) of soil and rocks excavated during the construction of the World Trade Center (http://en.wikipedia.org/wiki/World_Trade_Center). The 9/11 terrorist attacks had a major impact on Battery Park City. The residents of lower Manhattan and particularly of Battery Park City were displaced for ten days. Upon return, the air in the area was still filled with toxic smoke from the World Trade Center fires that persisted until January 2002. The neighborhood, which is the site of the World Financial Center (http://en.wikipedia.org/wiki/World_Financial_Center) along with numerous housing, commercial and retail buildings, is named for adjacent Battery Park (http://en.wikipedia.org/wiki/Battery_Park_%28New_York%29)]]></description>
+				<styleUrl>#poly-66FF99-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.017517,40.704327,0.0 -74.017128,40.705109,0.0 -74.016609,40.705109,0.0 -74.014679,40.710281,0.0 -74.012665,40.718231,0.0 -74.016785,40.71865499999999,0.0 -74.01786,40.712315,0.0 -74.019379,40.706001,0.0 -74.018349,40.703968,0.0 -74.017517,40.704327,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Two Bridges</name>
+				<description><![CDATA[Two Bridges, with its tenements (http://en.wikipedia.org/wiki/Tenement) and a high concentration of public housing (http://en.wikipedia.org/wiki/Public_housing) projects, including the LaGuardia Houses (http://en.wikipedia.org/wiki/LaGuardia_Houses), has traditionally been an immigrant neighborhood, previously populated by immigrants from Europe, more recently from Latin America, and now from China. The Two Bridges Historic District was listed in the National Register of Historic Places (http://en.wikipedia.org/wiki/National_Register_of_Historic_Places) in September 2003.]]></description>
+				<styleUrl>#poly-33CCFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.00177,40.709663000000006,0.0 -73.999496,40.707874,0.0 -73.997002,40.708752,0.0 -73.994255,40.70914100000001,0.0 -73.988724,40.709888,0.0 -73.988289,40.709045,0.0 -73.984085,40.70943499999999,0.0 -73.984215,40.710346,0.0 -73.984856,40.710346,0.0 -73.98519900000001,40.714443,0.0 -73.998077,40.713436,0.0 -74.00177,40.709663000000006,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>TriBeCa</name>
+				<description><![CDATA[The name is an acronym (http://en.wikipedia.org/wiki/Acronym) based on the words "Triangle below Canal Street". The neighborhood is home to the Tribeca Film Festival (http://en.wikipedia.org/wiki/Tribeca_Film_Festival). The area was among the first residential neighborhoods developed in New York beyond the boundaries of the city during colonial times, with residential development beginning in the late 18th century. By the mid-19th century the area transformed into a commercial center, with large numbers of store and loft buildings constructed along Broadway in the 1850s and 1860s. Tribeca suffered financially after the September 11, 2001 terrorist attacks (http://en.wikipedia.org/wiki/September_11,_2001_terrorist_attacks), but government grants and incentives helped the area rebound fairly quickly. The Tribeca Film Festival (http://en.wikipedia.org/wiki/Tribeca_Film_Festival) was established to help contribute to the long-term recovery of lower Manhattan after 9/11, but also celebrates New York City as a major filmmaking center. Today, Tribeca is one of America's most fashionable and desirable neighborhoods and is known for its celebrity residents. In 2006 Forbes (http://en.wikipedia.org/wiki/Forbes) magazine ranked its 10013 zip code as New York City's most expensive.]]></description>
+				<styleUrl>#poly-FF9900-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.012985,40.71496599999999,0.0 -74.011444,40.714832,0.0 -74.007408,40.71299700000001,0.0 -74.002045,40.719322,0.0 -74.007919,40.723288999999994,0.0 -74.010925,40.725632,0.0 -74.013092,40.715385,0.0 -74.012985,40.71496599999999,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Civic Center</name>
+				<description><![CDATA[The Civic Center is the swath of downtown Manhattan that encompasses City Hall, police headquarters and the courts.]]></description>
+				<styleUrl>#poly-FFFF33-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.008308,40.711941,0.0 -74.007965,40.71153300000001,0.0 -74.005196,40.712135,0.0 -74.001846,40.709808,0.0 -73.998329,40.713322000000005,0.0 -73.997856,40.713955,0.0 -73.998566,40.713905,0.0 -74.004402,40.71646100000001,0.0 -74.008308,40.711941,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Chinatown</name>
+				<description><![CDATA[Home to the largest enclave of Chinese people (http://en.wikipedia.org/wiki/Chinese_people) in the Western hemisphere, and is also one of the oldest such enclasves  (http://en.wikipedia.org/wiki/Western_hemisphere)outside of Asia (http://en.wikipedia.org/wiki/Asia). Chinese immigrants originally came here to find work as "cigar men", after Ah Ken, the first Chinese person to permanently live here, who had a successful cigar store on Park Row (http://en.wikipedia.org/wiki/Park_Row_(Manhattan)). The early days of Chinatown were dominated by Chinese "tongs (http://en.wikipedia.org/wiki/Tong_(gang))", which were a mixture of clan associations, political alliances and crime syndicates. The associations, aligned with their own street gang, started to give protection from harassment due to anti-Chinese sentiment. In the years after the United States enacted the Immigration and Nationality Act of 1965 (http://en.wikipedia.org/wiki/Immigration_and_Nationality_Act_of_1965), allowing many more immigrants from Asia into the country, the population of Chinatown exploded. Unlike most other urban Chinatowns, Manhattan's Chinatown is both a residential area as well as commercial area. Many population estimates are in the range of 90,000 to 100,000 residents. In 2010, Little Italy and Chinatown were listed in a single historic district (http://en.wikipedia.org/wiki/Historic_district_(United_States)) on the National Register of Historic Places (http://en.wikipedia.org/wiki/National_Register_of_Historic_Places).]]></description>
+				<styleUrl>#poly-33CC00-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.003998,40.716785,0.0 -74.000862,40.715305,0.0 -74.000519,40.714638,0.0 -73.998718,40.71367999999999,0.0 -73.997429,40.713905,0.0 -73.997215,40.712753,0.0 -73.990067,40.713352,0.0 -73.990242,40.714588,0.0 -73.988693,40.717648,0.0 -73.991013,40.71843,0.0 -73.991547,40.71745299999999,0.0 -73.99217200000001,40.71633099999999,0.0 -73.995453,40.717304,0.0 -73.994873,40.718494,0.0 -73.996506,40.719063000000006,0.0 -73.997772,40.71685,0.0 -73.999039,40.717274,0.0 -74.001846,40.719387,0.0 -74.003998,40.716785,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Little Italy</name>
+				<description><![CDATA[Once known for its large population of Italians. It has since been engulfed by Chinatown, and has essentially shrunk into a single street which serves as a restaurant area but which has few Italian residents. (http://en.wikipedia.org/wiki/Italians)]]></description>
+				<styleUrl>#poly-CC66CC-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.99781,40.716957,0.0 -73.996567,40.719111999999996,0.0 -73.99485,40.718552,0.0 -73.994179,40.720329,0.0 -73.99736,40.721371000000005,0.0 -73.997612,40.72075300000001,0.0 -73.999863,40.718079,0.0 -73.999008,40.717304000000006,0.0 -73.99781,40.716957,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Lower East Side</name>
+				<description><![CDATA[This area was originally home to the pre-Revolutionary farm of James Delancey (http://en.wikipedia.org/wiki/James_DeLancey_(politician)), and in response to the pressure of a growing city, the farm was confiscated shortly after the Revolution. Traditionally an immigrant, working class (http://en.wikipedia.org/wiki/Working_class) neighborhood, the Lower East Side has undergone rapid gentrification (http://en.wikipedia.org/wiki/Gentrification) since 2005. This prompted The National Trust for Historic Preservation (http://en.wikipedia.org/wiki/The_National_Trust_for_Historic_Preservation) to place the neighborhood on their list of America's Most Endangered Places (http://en.wikipedia.org/wiki/America%27s_Most_Endangered_Places). American Jews relate to the neighborhood in a particularly strong manner. In the late twentieth century, the strong pull of the Lower East Side on the imagination of American Jews led to the preservation of a number of buildings associated with the Jewish immigrant community. The Lower East Side Tenement Museum (http://en.wikipedia.org/wiki/Lower_East_Side_Tenement_Museum) is a popular tourist destination, exploring the history of the neighborhood. Today, the Lower East Side has become a home to upscale boutiques and trendy dining establishments along Clinton Street's restaurant row.]]></description>
+				<styleUrl>#poly-FF6666-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.974083,40.717575,0.0 -73.9739,40.718014,0.0 -73.97374,40.718365,0.0 -73.97361,40.718616000000004,0.0 -73.977135,40.71943699999999,0.0 -73.978592,40.71999,0.0 -73.980072,40.720428,0.0 -73.988739,40.723079999999996,0.0 -73.99099,40.718525,0.0 -73.988571,40.717648,0.0 -73.990158,40.714558,0.0 -73.98996,40.71337100000001,0.0 -73.99256100000001,40.713142,0.0 -73.991829,40.709743,0.0 -73.989723,40.71005199999999,0.0 -73.989578,40.709694,0.0 -73.988182,40.70916,0.0 -73.981163,40.709858,0.0 -73.978073,40.710719999999995,0.0 -73.976913,40.711906000000006,0.0 -73.974083,40.717575,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Bowery</name>
+				<description><![CDATA[As a street, the Bowery was known as Bowery Lane prior to 1807. From Houston to Delancey Streets serves as New York's principal market for restaurant equipment, and from Delancey to Grand for lamps. As of July 2005, gentrification (http://en.wikipedia.org/wiki/Gentrification) is contributing to ongoing change along the Bowery.]]></description>
+				<styleUrl>#poly-FFFF33-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.992226,40.716396,0.0 -73.991074,40.71846,0.0 -73.988853,40.72299999999999,0.0 -73.988655,40.723145,0.0 -73.987335,40.724934,0.0 -73.991806,40.726845,0.0 -73.992439,40.725056,0.0 -73.993462,40.722218,0.0 -73.994186,40.720192000000004,0.0 -73.995377,40.717346,0.0 -73.992226,40.716396,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>East Village</name>
+				<description><![CDATA[Once generally considered to be part of the Lower East Side (http://en.wikipedia.org/wiki/Lower_East_Side), the East Village began to develop its own identity and culture in the late 1960s, when many artists, musicians, students and hippies (http://en.wikipedia.org/wiki/Hippie) began to move into the area, attracted by cheap rents and the base of Beatniks (http://en.wikipedia.org/wiki/Beatniks) who had lived there since the 1950s. The neighborhood has become a center of the counterculture (http://en.wikipedia.org/wiki/Counterculture) in New York, and is known as the birthplace and historical home of many artistic movements, including punk rock (http://en.wikipedia.org/wiki/Punk_rock), and the Nuyorican (http://en.wikipedia.org/wiki/Nuyorican) literary movement. It is still known for its diverse community, with vibrant nightlife and artistic sensibility, but in recent decades gentrification (http://en.wikipedia.org/wiki/Gentrification) has somewhat changed the character of the neighborhood.]]></description>
+				<styleUrl>#poly-33CC00-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.973701,40.718899,0.0 -73.973053,40.720493,0.0 -73.971657,40.726887,0.0 -73.981743,40.73082000000001,0.0 -73.990669,40.734692,0.0 -73.991333,40.731712,0.0 -73.992775,40.729958,0.0 -73.996468,40.725567000000005,0.0 -73.993744,40.724754,0.0 -73.988464,40.723095,0.0 -73.973701,40.718899,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Alphabet City</name>
+				<description><![CDATA[Also known as Loisaida, until the early 19th century, much of what is now Alphabet City was an extensive salt marsh (http://en.wikipedia.org/wiki/Salt_marsh). Alphabet City became home to a succession (http://en.wikipedia.org/wiki/Ethnic_succession_theory) of immigrant (http://en.wikipedia.org/wiki/Immigrant) groups over the years. By the 1840s and 1850s, much of present-day Alphabet City had become known as "Little Germany (http://en.wikipedia.org/wiki/Little_Germany,_New_York)". By the middle of the 20th century, Alphabet City was again in transition, as thousands of Puerto Ricans (http://en.wikipedia.org/wiki/Puerto_Rican_American) began to settle in the neighborhood, making it an important site for the development and strengthening of Puerto Rican cultural identity in New York. Avenues A through D became distinctly less bohemian (http://en.wikipedia.org/wiki/Bohemianism) in the 21st century than they had been in earlier decades, and formerly abandoned buildings are now bustling with new restaurants, nightclubs and retail establishments.]]></description>
+				<styleUrl>#poly-FF9966-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.973053,40.7276,0.0 -73.9814,40.730965000000005,0.0 -73.98745,40.722771,0.0 -73.97831000000001,40.720085,0.0 -73.973053,40.7276,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>NoLita</name>
+				<description><![CDATA[Long regarded as part of Little Italy, but has lost much of its recognizable Italian character in recent decades because of the migration of Italian-Americans (http://en.wikipedia.org/wiki/Italian-American) out of Manhattan. In the 1990s, the neighborhood saw an influx of yuppies (http://en.wikipedia.org/wiki/Yuppie) and an explosion of expensive retail boutiques and trendy restaurants and bars.]]></description>
+				<styleUrl>#poly-3366FF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.992882,40.724266,0.0 -73.99543,40.725056,0.0 -73.99680300000001,40.723469,0.0 -73.997452,40.72213699999999,0.0 -73.997902,40.721565,0.0 -73.997475,40.72146999999999,0.0 -73.994255,40.720493,0.0 -73.992882,40.724266,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>SoHo</name>
+				<description><![CDATA[Notable for being the location of many artists' lofts (http://en.wikipedia.org/wiki/Loft) and art galleries, and also, more recently, for the wide variety of stores and shops ranging from trendy boutiques to outlets of upscale national and international chain stores. The area's history is an archetypal example of inner-city regeneration and gentrification (http://en.wikipedia.org/wiki/Gentrification), encompassing socio-economic (http://en.wikipedia.org/wiki/Socio-economic), cultural, political and architectural developments.]]></description>
+				<styleUrl>#poly-33FFFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.99680300000001,40.725502,0.0 -74.002968,40.728333,0.0 -74.005478,40.721924,0.0 -74.000542,40.718624000000005,0.0 -73.998032,40.721599999999995,0.0 -73.997475,40.722446,0.0 -73.99680300000001,40.72364799999999,0.0 -73.995605,40.724983,0.0 -73.99680300000001,40.725502,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Hudson Square</name>
+				<styleUrl>#poly-FF99FF-3-115-nodesc</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.01071200000001,40.72913,0.0 -74.011009,40.72581099999999,0.0 -74.005585,40.721924,0.0 -74.003098,40.728297999999995,0.0 -74.01071200000001,40.72913,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Greenwich Village</name>
+				<description><![CDATA[Often referred to as simply "the Village", and is a largely residential neighborhood. It was known in the late 19th to mid 20th centuries as an artists' haven, the bohemian (http://en.wikipedia.org/wiki/Bohemianism) capital, and the East Coast birthplace of the Beat movement (http://en.wikipedia.org/wiki/Beat_Generation). What provided the initial attractive character of the community eventually contributed to its gentrification (http://en.wikipedia.org/wiki/Gentrification) and commercialization. Greenwich Village has long been a popular neighborhood for numerous artists and other notable people.]]></description>
+				<styleUrl>#poly-FFFF66-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.990845,40.73465699999999,0.0 -73.990906,40.734886,0.0 -74.005386,40.740997,0.0 -74.006546,40.739452,0.0 -74.009872,40.739258,0.0 -74.010773,40.729225,0.0 -74.002861,40.728367000000006,0.0 -73.996635,40.725582,0.0 -73.991486,40.731682,0.0 -73.990845,40.73465699999999,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Meatpacking District</name>
+				<description><![CDATA[Until the 1990s, this area was primarily made up of buildings used for meat, poultry and dairy transactions. High-end boutiques (http://en.wikipedia.org/wiki/Boutiques) catering to young professionals and hipsters (http://en.wikipedia.org/wiki/Hipster_%28contemporary_subculture%29) began to open, and by 2003, only 35 of the 250 slaughterhouses and packing plants present a century earlier remained in the area. In 2004, New York magazine (http://en.wikipedia.org/wiki/New_York_%28magazine%29) called the Meatpacking District "New York’s most fashionable neighborhood".]]></description>
+				<styleUrl>#poly-66FF99-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.00546300000002,40.740982,0.0 -74.00820200000001,40.742088,0.0 -74.008835,40.742493,0.0 -74.009232,40.740711,0.0 -74.010033,40.739388,0.0 -74.006561,40.739536,0.0 -74.00546300000002,40.740982,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Stuyvesant Town</name>
+				<description><![CDATA[Stuy Town is a large private residential development, home to 8,757 apartments (http://en.wikipedia.org/wiki/Apartment) in 35 residential buildings. Prior to construction, the neighborhood contained eighteen city blocks, with public schools, churches, factories, private homes, apartments, small businesses, and even relatively new modern-style apartment buildings. As part of one of the city's many urban renewal (http://en.wikipedia.org/wiki/Urban_renewal) projects, some 11,000 persons were forced to move from the neighborhood, championed by Parks Commissioner Robert Moses. To much controversy, Moses sought "to induce insurance companies and savings banks to enter the field of large-scale  (http://en.wikipedia.org/wiki/Robert_Moses)slum clearance (http://en.wikipedia.org/wiki/Slum_clearance)." Stuyvesant Town's planning (http://en.wikipedia.org/wiki/Urban_planning) and design were met with haste as to how the project was approved and the lack of public participation in the process; the project's population density; the absence of any public facilities such as schools, community centers, or shops in the development. On October 17, 2006, MetLife agreed to sell Stuyvesant Town—Peter Cooper Village to Tishman Speyer Properties (http://en.wikipedia.org/wiki/Tishman_Speyer_Properties) for $5.4 billion. In January 2010, Tishman Speyer Properties defaulted on the mortgage. It was the largest commercial mortgage default in U.S. history. On January 24, 2010, Tishman Speyer Properties gave up control of the properties by handing the complex to creditors.]]></description>
+				<styleUrl>#poly-66FFFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.982407,40.73145300000001,0.0 -73.97554,40.72870600000001,0.0 -73.973717,40.731129,0.0 -73.974258,40.732723,0.0 -73.979813,40.734951,0.0 -73.982407,40.73145300000001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Peter Cooper Village</name>
+				<description><![CDATA[Paired with it's sister Stuyvesant town, Peter Cooper Village is one of the most iconic and successful post-World War II  (http://en.wikipedia.org/wiki/World_War_II)private housing communities. It is a large private residential development, with a sprawling collection of red brick (http://en.wikipedia.org/wiki/Brick) apartment buildings. The site was constructed as part of a controversial urban renewal project  championed by Parks Commissioner  (http://en.wikipedia.org/wiki/Apartment_building)Robert Moses (http://en.wikipedia.org/wiki/Robert_Moses).]]></description>
+				<styleUrl>#poly-FFFF66-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.97972900000002,40.735096000000006,0.0 -73.974274,40.732903,0.0 -73.974785,40.73529099999999,0.0 -73.978546,40.736885,0.0 -73.97972900000002,40.735096000000006,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Gramercy Park</name>
+				<description><![CDATA[Home to a small, fenced-in private park of the same name, where only surrounding residents are allowed in. It was once in the middle of a swamp (http://en.wikipedia.org/wiki/Swamp). Today it is considered a quiet and safe neighborhood. East 19th Street between Third Avenue and Irving is labeled "Block Beautiful" for its wide array of architecture and pristine aesthetic.]]></description>
+				<styleUrl>#poly-9999FF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.986977,40.736446,0.0 -73.988762,40.734039,0.0 -73.982574,40.731388,0.0 -73.979942,40.735031000000006,0.0 -73.978699,40.736934999999995,0.0 -73.986382,40.740185,0.0 -73.988609,40.73716,0.0 -73.986977,40.736446,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Chelsea</name>
+				<description><![CDATA[This neighborhood is primarily residential, with a mix of tenements (http://en.wikipedia.org/wiki/Tenements), apartment blocks, city housing projects (http://en.wikipedia.org/wiki/New_York_City_Housing_Authority), townhouses (http://en.wikipedia.org/wiki/Townhouses) and renovated rowhouses (http://en.wikipedia.org/wiki/Rowhouse), and its many retail businesses reflect the ethnic and social diversity of the population. The western part of Chelsea has become a center of the New York art world, with many art galleries located in both new buildings and rehabilitated warehouses. Chelsea is also home to the Joyce Theater (http://en.wikipedia.org/wiki/Joyce_Theater) - one of the city's premier modern dance emporiums. Chelsea has a large gay population (http://en.wikipedia.org/wiki/Gayborhood), stereotyped as gym-toned "Chelsea boys." The Chelsea Historic District was added to the National Register of Historic Places (http://en.wikipedia.org/wiki/List_of_Registered_Historic_Places_in_New_York_County,_New_York) in 1977.]]></description>
+				<styleUrl>#poly-FF6666-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.987839,40.749859,0.0 -74.004936,40.757076,0.0 -74.007126,40.753986000000005,0.0 -74.008545,40.750153,0.0 -74.007706,40.748474,0.0 -74.008804,40.742622,0.0 -74.008034,40.742153,0.0 -73.996849,40.73753399999999,0.0 -73.987839,40.749859,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Flatiron District</name>
+				<description><![CDATA[Named after the famous Flatiron Building (http://en.wikipedia.org/wiki/Flatiron_Building) at 23rd Street (http://en.wikipedia.org/wiki/23rd_Street_%28Manhattan%29), Broadway (http://en.wikipedia.org/wiki/Broadway_%28New_York_City%29) and Fifth Avenue (http://en.wikipedia.org/wiki/Fifth_Avenue), this neighborhood was once primarily commercial, with numerous small clothing and toy manufacturers, and was sometimes called the Toy District. The Toy Center (http://en.wikipedia.org/wiki/Toy_Center) buildings at 23rd Street and Broadway date from this period, and the annual American International Toy Fair (http://en.wikipedia.org/wiki/American_International_Toy_Fair) took place there beginning in 1903, except for 1945. When much of this business moved outside the U.S., the area began to be referred to as the Photo District. Giving this area a bit of color are the Museum of Sex (http://en.wikipedia.org/wiki/Museum_of_Sex) and the Gershwin Hotel, both located on 27th Street. The Gershwin is a tribute to the late pop artist Andy Warhol (http://en.wikipedia.org/wiki/Andy_Warhol), and features some of his art and memorabilia throughout the hotel.]]></description>
+				<styleUrl>#poly-99FFFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.994087,40.741047,0.0 -73.987991,40.738445,0.0 -73.987083,40.739552,0.0 -73.985245,40.738834,0.0 -73.983376,40.741436,0.0 -73.991463,40.744785,0.0 -73.994087,40.741047,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>NoHo</name>
+				<description><![CDATA[North of Houston Street is primarily made up of loft (http://en.wikipedia.org/wiki/Loft) apartments, which in turn makes it one of the most expensive and desirable neighborhoods in Manhattan. The NoHo Historic District, which comprises approximately 125 buildings, represents the period of New York City's commercial history from the early 1850s to the 1910s, when this section prospered as one of its major retail and wholesale dry goods centers.]]></description>
+				<styleUrl>#poly-FFCCCC-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.992729,40.73008699999999,0.0 -73.996613,40.725567000000005,0.0 -73.992599,40.724331,0.0 -73.990822,40.729747999999994,0.0 -73.992729,40.73008699999999,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Union Square</name>
+				<description><![CDATA[An important and historic intersection, with rich history of social and political activism. It is a frequent gathering point for radicals of all stripes to make speeches or demonstrate. Union Square was named a National Historic Landmark (http://en.wikipedia.org/wiki/National_Historic_Landmark) in 1997. The neighborhood is also known for it's impressive sculpture of George Washington, and as the site for often social activity of famed pop artist  (http://en.wikipedia.org/wiki/George_Washington)Andy Warhol (http://en.wikipedia.org/wiki/The_Andy_Warhol_Museum).<br> (http://en.wikipedia.org/wiki/George_Washington)]]></description>
+				<styleUrl>#poly-FFCCCC-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.989319,40.733406,0.0 -73.986572,40.737144,0.0 -73.99134100000002,40.739098,0.0 -73.994087,40.735355,0.0 -73.989319,40.733406,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Kips Bay</name>
+				<description><![CDATA[Kips Bay was an inlet of the East River running from what is now 32nd Street to 37th Street. Kips Bay was the site of the Landing at Kip's Bay (http://en.wikipedia.org/wiki/Landing_at_Kip%27s_Bay) (September 15, 1776), an episode of the American Revolutionary War (http://en.wikipedia.org/wiki/American_Revolutionary_War) and part of the New York and New Jersey campaign (http://en.wikipedia.org/wiki/New_York_and_New_Jersey_campaign). About 4,000 British Army (http://en.wikipedia.org/wiki/British_Army) troops under General (http://en.wikipedia.org/wiki/General_%28United_Kingdom%29) William Howe (http://en.wikipedia.org/wiki/William_Howe,_5th_Viscount_Howe) landed at Kips Bay on September 15, 1776, near what is now the foot of East 33rd Street. The neighborhood has been rebuilt in patches, so one can see both new high-rise structures often set back from the street, and a multitude of exposed party walls that were never meant to be seen in public. A nearly forgotten feature is the private alley, Broadway Alley, between 26th and 27th Streets, halfway between Lexington and Third Avenues, reputedly the last unpaved street in Manhattan. Since the late 1990s, the area has had a commercial strip mall, referred to as "Kips Bay Plaza".]]></description>
+				<styleUrl>#poly-33FF33-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.984665,40.739567,0.0 -73.973572,40.734917,0.0 -73.97249600000002,40.735859000000005,0.0 -73.972778,40.739079,0.0 -73.971893,40.74308,0.0 -73.97979,40.746410000000004,0.0 -73.984665,40.739567,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Midtown South Central</name>
+				<description><![CDATA[Home to two of New York's best attractions, including the world famous Empire State Building ( (http://en.wikipedia.org/wiki/Empire_State_Building)Fifth Ave (http://en.wikipedia.org/wiki/Fifth_Avenue_%28Manhattan%29) and West 34th St (http://en.wikipedia.org/wiki/34th_Street_%28Manhattan%29)) and Grand Central Terminal (http://en.wikipedia.org/wiki/Grand_Central_Terminal) (42nd St (http://en.wikipedia.org/wiki/42nd_Street_%28Manhattan%29) and Park Ave (http://en.wikipedia.org/wiki/Park_Avenue_%28Manhattan%29)). Koreatown and NoMad also reside in this area.]]></description>
+				<styleUrl>#poly-FFFF99-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.986488,40.740265,0.0 -73.977859,40.752247,0.0 -73.984161,40.754963,0.0 -73.98687,40.75120499999999,0.0 -73.983711,40.74988900000001,0.0 -73.986038,40.746689,0.0 -73.98912,40.74797099999999,0.0 -73.99147000000002,40.74482700000001,0.0 -73.992874,40.742928,0.0 -73.986488,40.740265,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Murray Hill</name>
+				<description><![CDATA[For much of the 20th century, this neighborhood was a quiet and rather formal place, with many wealthy older residents. Since the late 1990s, many upper-class young professionals in their twenties and thirties have begun to move into the area. On weekends, there is often a raucous restaurant-and-bar scene along Third Avenue. South of Murray Hill, blocks on Lexington Avenue (http://en.wikipedia.org/wiki/Lexington_Avenue_%28Manhattan%29) around 28th Street are sometimes informally called “Curry Hill,” due to the current high concentration of Indian restaurants (http://en.wikipedia.org/wiki/Indian_cuisine) and specialized grocery stores.]]></description>
+				<styleUrl>#poly-FF9966-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.977753,40.752182,0.0 -73.981445,40.74714300000001,0.0 -73.973694,40.74390799999999,0.0 -73.970177,40.748898,0.0 -73.977753,40.752182,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Garment District</name>
+				<description><![CDATA[Also known as the Fashion District with its dense concentration of fashion-related uses. The Garment District has been known since the early 20th century as the center for fashion (http://en.wikipedia.org/wiki/Fashion) manufacturing and fashion design (http://en.wikipedia.org/wiki/Fashion_design) in the United States, and even the world. Less than one square mile in area, the neighborhood is home to the majority of New York’s showrooms and to numerous major fashion labels, and caters to all aspects of the fashion process–from design and production to wholesale (http://en.wikipedia.org/wiki/Wholesale) selling. No other city has a comparable concentration of fashion businesses and talent in a single district.]]></description>
+				<styleUrl>#poly-99FFFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.985245,40.753693,0.0 -73.990822,40.75612999999999,0.0 -73.98996,40.75732000000001,0.0 -73.992775,40.758472,0.0 -73.996338,40.75354800000001,0.0 -73.987862,40.750004,0.0 -73.985245,40.753693,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Koreatown</name>
+				<description><![CDATA[Or K-town as it is colloquially known, is primarily a Korean business district, as few people actually live in the area. However, in recent years, the district has seen an increase in Korean and European traffic. The heart of Koreatown is the segment of 32nd Street (http://en.wikipedia.org/wiki/32nd_Street_%28Manhattan%29) between Fifth Avenue and Broadway (http://en.wikipedia.org/wiki/Broadway_%28New_York_City%29), is also officially nicknamed "Korea Way." The street features numerous Korean restaurants, grocery stores, supermarkets, bookstores, video rental shops, tchotchke (http://en.wikipedia.org/wiki/Tchotchke) and stationery shops, hair and nail salons, noraebang (http://en.wikipedia.org/wiki/Karaoke) bars, nightclubs, doctors offices, banks, and hotels. The New York City Korean Chamber of Commerce estimates there are more than 100 small businesses on this one city block.]]></description>
+				<styleUrl>#poly-9999FF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.983803,40.74988900000001,0.0 -73.98687,40.751175,0.0 -73.989037,40.7481,0.0 -73.986038,40.746784000000005,0.0 -73.983803,40.74988900000001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Hell's Kitchen</name>
+				<description><![CDATA[Once a bastion of poor and working-class Irish Americans (http://en.wikipedia.org/wiki/Irish_American), Hell's Kitchen has changed over the last three decades of the 20th century and into the new millennium because it is near Midtown (http://en.wikipedia.org/wiki/Midtown_Manhattan). It now provides transportation, hospital and warehouse infrastructure support to the Midtown business district. Its gritty reputation kept real estate prices below those of most other areas of Manhattan until the early 1990s. Since then, rent prices have increased enormously, and many famous entertainers have resided here, including Burt Reynolds (http://en.wikipedia.org/wiki/Burt_Reynolds), Bob Hope (http://en.wikipedia.org/wiki/Bob_Hope), James Dean (http://en.wikipedia.org/wiki/James_Dean), and Jerry Seinfeld (http://en.wikipedia.org/wiki/Jerry_Seinfeld). During the 1950s, immigrants, notably Puerto Ricans (http://en.wikipedia.org/wiki/Puerto_Rican_people), moved into the neighborhood. The conflict between the Irish, Italians, and the Puerto Ricans is highlighted in West Side Story (http://en.wikipedia.org/wiki/West_Side_Story_%28musical%29). The movie (http://en.wikipedia.org/wiki/West_Side_Story_%28film%29) was filmed from 65th Street and 69th Street between Amsterdam and West End Avenue, north of Hell's Kitchen.]]></description>
+				<styleUrl>#poly-66FF99-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.00122100000002,40.761967,0.0 -74.004807,40.757141,0.0 -73.996445,40.753727,0.0 -73.992928,40.758537,0.0 -74.00122100000002,40.761967,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Theater District</name>
+				<description><![CDATA[This district is where most Broadway theatres (http://en.wikipedia.org/wiki/Broadway_theatre) are located, as well as many other theatres, movie theatres, restaurants, hotels and other places of entertainment. Theatre Row is the popular name for a section of 42nd Street (http://en.wikipedia.org/wiki/42nd_Street_%28Manhattan%29) in New York City (http://en.wikipedia.org/wiki/New_York_City) which is the location for a number of small theatres (http://en.wikipedia.org/wiki/Theatre); it is also the name of a large theatre complex built in 2000 to house six theatres. At the southern end is the brightly illuminated hub, Times Square (http://en.wikipedia.org/wiki/Times_Square). It is a world-famous, major commercial intersection, iconified as "The Crossroads of the World". Times Square is said to be the world's most visited tourist attraction, bringing in over 39 million visitors annually.]]></description>
+				<styleUrl>#poly-FF99FF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.990753,40.75619900000001,0.0 -73.985153,40.753777,0.0 -73.97921,40.761887,0.0 -73.984749,40.764258999999996,0.0 -73.990753,40.75619900000001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Clinton</name>
+				<description><![CDATA[Once a bastion of poor and working-class Irish Americans (http://en.wikipedia.org/wiki/Irish_American), Hell's Kitchen has changed over the last three decades of the 20th century and into the new millennium because it is near Midtown (http://en.wikipedia.org/wiki/Midtown_Manhattan). It now provides transportation, hospital and warehouse infrastructure support to the Midtown business district. Its gritty reputation kept real estate prices below those of most other areas of Manhattan until the early 1990s. Since then, rent prices have increased enormously, and many famous entertainers have resided here, including Burt Reynolds (http://en.wikipedia.org/wiki/Burt_Reynolds), Bob Hope (http://en.wikipedia.org/wiki/Bob_Hope), James Dean (http://en.wikipedia.org/wiki/James_Dean), and Jerry Seinfeld (http://en.wikipedia.org/wiki/Jerry_Seinfeld). During the 1950s, immigrants, notably Puerto Ricans (http://en.wikipedia.org/wiki/Puerto_Rican_people), moved into the neighborhood. The conflict between the Irish, Italians, and the Puerto Ricans is highlighted in West Side Story (http://en.wikipedia.org/wiki/West_Side_Story_%28musical%29). The movie (http://en.wikipedia.org/wiki/West_Side_Story_%28film%29) was filmed from 65th Street and 69th Street between Amsterdam and West End Avenue, north of Hell's Kitchen.]]></description>
+				<styleUrl>#poly-FF9966-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.989944,40.757434999999994,0.0 -73.98481,40.764355,0.0 -73.979149,40.761967,0.0 -73.976463,40.76567500000001,0.0 -73.981483,40.767738,0.0 -73.981316,40.768063,0.0 -73.981422,40.768417,0.0 -73.981789,40.76859699999999,0.0 -73.982323,40.768597,0.0 -73.982368,40.76911900000001,0.0 -73.984406,40.769997,0.0 -73.984985,40.76923399999999,0.0 -73.996208,40.77388,0.0 -73.996315,40.77380000000001,0.0 -73.993996,40.772823,0.0 -73.994232,40.772465,0.0 -73.996078,40.773262,0.0 -73.996208,40.773132000000004,0.0 -73.994362,40.77235000000001,0.0 -73.994728,40.771912,0.0 -73.996826,40.772743,0.0 -73.997002,40.772628999999995,0.0 -73.994965,40.771666999999994,0.0 -73.995262,40.771248,0.0 -73.995903,40.771408,0.0 -73.995972,40.77127800000001,0.0 -73.995415,40.771004,0.0 -73.995735,40.77058,0.0 -73.995865,40.770679,0.0 -73.996033,40.7705,0.0 -73.995819,40.770401,0.0 -73.996315,40.769848,0.0 -73.998672,40.770809,0.0 -73.998978,40.770416,0.0 -73.996613,40.769409,0.0 -73.997063,40.768726,0.0 -73.999512,40.76975300000001,0.0 -73.999786,40.769409,0.0 -73.996483,40.768044,0.0 -73.997169,40.767185,0.0 -74.000389,40.768482,0.0 -74.000694,40.768158,0.0 -73.997429,40.766827,0.0 -73.997986,40.765984,0.0 -74.001335,40.76738,0.0 -74.001633,40.766926,0.0 -74.001549,40.766777000000005,0.0 -73.998352,40.765461,0.0 -73.998886,40.764614,0.0 -74.002106,40.765934,0.0 -74.002365,40.765526,0.0 -73.999168,40.764179,0.0 -73.999466,40.763592,0.0 -74.000008,40.763397,0.0 -74.003075,40.764778,0.0 -74.00322,40.764633,0.0 -74.003159,40.764339,0.0 -74.000969,40.763382,0.0 -74.001419,40.762859,0.0 -74.003548,40.763771,0.0 -74.00378400000001,40.763561,0.0 -74.00148,40.76257700000001,0.0 -74.00177,40.762211,0.0 -73.989944,40.757434999999994,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Midtown Center</name>
+				<styleUrl>#poly-66FF99-3-115-nodesc</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.976379,40.76562500000001,0.0 -73.9841,40.755028,0.0 -73.97451,40.750896,0.0 -73.966705,40.761562,0.0 -73.976379,40.76562500000001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Midtown East</name>
+				<styleUrl>#poly-9999FF-3-115-nodesc</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.974388,40.750896,0.0 -73.96803300000002,40.7481,0.0 -73.961983,40.754833000000005,0.0 -73.962669,40.754993,0.0 -73.964905,40.755936,0.0 -73.961945,40.759808,0.0 -73.966446,40.761562,0.0 -73.974388,40.750896,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Sutton Place</name>
+				<description><![CDATA[Sutton Place is one of the most affluent streets. The luxury townhouses have been called home by many celebrities. Sutton Place encompasses two public parks overlooking the East River, which have undergone much controversy given the close proximity to FDR Drive, a major expressway along Manhattan's eastern edge. One of these parks is, in fact, cantilevered over the expressway. Sutton Place is present in much popular culture, being the famous Dead End (http://en.wikipedia.org/wiki/Dead_End) of the 1935 play and 1937 movie of that name, and mentioned in the novel Catcher in the Rye (http://en.wikipedia.org/wiki/Catcher_in_the_Rye) as the location of a "swanky" apartment. (http://en.wikipedia.org/wiki/Catcher_in_the_Rye)]]></description>
+				<styleUrl>#poly-FFCC66-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.964767,40.756001,0.0 -73.962669,40.755077,0.0 -73.961876,40.754864,0.0 -73.960632,40.755856,0.0 -73.958656,40.758472,0.0 -73.961853,40.759789,0.0 -73.964767,40.756001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Upper East Side</name>
+				<description><![CDATA[Once known as the 'Silk Stocking (http://en.wikipedia.org/wiki/Stockings) District',[2] (http://en.wikipedia.org/wiki/Upper_East_Side#cite_note-1) it retains its position as one of the most affluent neighborhoods of New York City. The Upper East Side maintains one of the highest pricing per square foot in the United States. A 2002 report cited the average cost per square foot as $856; however, that price has noticed a substantial jump, increasing to almost as much as $1,200 per square foot as of 2006. The area is host to some of the most famous museums in the world. The string of museums along Fifth Avenue fronting Central Park has been dubbed "Museum Mile (http://en.wikipedia.org/wiki/Museum_Mile,_New_York)." It was once named "Millionaire's Row."]]></description>
+				<styleUrl>#poly-33CCFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.97316,40.764389,0.0 -73.958656,40.758537,0.0 -73.956207,40.760601,0.0 -73.954147,40.76252000000001,0.0 -73.949409,40.76788299999999,0.0 -73.94735,40.770256,0.0 -73.945671,40.771930999999995,0.0 -73.94381,40.773666000000006,0.0 -73.942413,40.77548999999999,0.0 -73.941963,40.776073,0.0 -73.942131,40.77713,0.0 -73.943764,40.78043,0.0 -73.943954,40.781677,0.0 -73.943573,40.782818000000006,0.0 -73.955971,40.788033,0.0 -73.97316,40.764389,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Upper West Side</name>
+				<description><![CDATA[Like the Upper East Side (http://en.wikipedia.org/wiki/Upper_East_Side), the Upper West Side is an upscale, primarily residential, area, with many of its residents working in more commercial areas in Midtown (http://en.wikipedia.org/wiki/Midtown_Manhattan) and Lower Manhattan (http://en.wikipedia.org/wiki/Lower_Manhattan). It has the reputation of being home to New York City's cultural and artistic workers, while the Upper East Side (http://en.wikipedia.org/wiki/Upper_East_Side) is traditionally perceived to be home to commercial and business types. Many landmarks and institutions are located here, including the Beacon Theater (http://en.wikipedia.org/wiki/Beacon_Theatre_%28New_York_City%29), the American Museum of Natural History (http://en.wikipedia.org/wiki/American_Museum_of_Natural_History), the Lincoln Center (http://en.wikipedia.org/wiki/Lincoln_Center), Tom's Restaurant (http://en.wikipedia.org/wiki/Tom%27s_Restaurant) - the "coffee shop" in the popular sitcom Seinfeld (http://en.wikipedia.org/wiki/Seinfeld), and  (http://en.wikipedia.org/wiki/Seinfeld)The Dakota, an apartment building on 72nd Street and Central Park West where musician  (http://en.wikipedia.org/wiki/The_Dakota)John Lennon (http://en.wikipedia.org/wiki/John_Lennon) was murdered (http://en.wikipedia.org/wiki/Death_of_John_Lennon) in 1980.]]></description>
+				<styleUrl>#poly-33CC00-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.981422,40.76853200000001,0.0 -73.95842,40.80055600000001,0.0 -73.970863,40.805949999999996,0.0 -73.97972900000002,40.793556,0.0 -73.9814,40.791363000000004,0.0 -73.982368,40.789818000000004,0.0 -73.98365,40.78786800000001,0.0 -73.986015,40.784538,0.0 -73.988075,40.781338,0.0 -73.989021,40.779892000000004,0.0 -73.991295,40.779812,0.0 -73.991463,40.779568,0.0 -73.988823,40.779728000000006,0.0 -73.990288,40.77763399999999,0.0 -73.990845,40.77763399999999,0.0 -73.99243200000001,40.775505,0.0 -73.99247,40.775066,0.0 -73.993912,40.77314799999999,0.0 -73.99601,40.774059,0.0 -73.99614,40.77393,0.0 -73.984985,40.769379,0.0 -73.984383,40.770106999999996,0.0 -73.982277,40.769215,0.0 -73.982239,40.768681,0.0 -73.981705,40.76866100000001,0.0 -73.981422,40.76853200000001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>East Harlem</name>
+				<description><![CDATA[Also known as Spanish Harlem and El Barrio. Since the 1920s, Harlem has been a major African-American (http://en.wikipedia.org/wiki/African-American) residential, cultural and business center. Originally a Dutch (http://en.wikipedia.org/wiki/Netherlands) village, formally organized in 1658, tt is named after the city of Haarlem (http://en.wikipedia.org/wiki/Haarlem) in the Netherlands (http://en.wikipedia.org/wiki/Netherlands). Harlem was annexed (http://en.wikipedia.org/wiki/Annexation) to New York City in 1873. Starting in 1946, the largest public works project took place here in East Harlem. Existing structures were torn down for new public housing, with the theory they would present a safer and more pleasant environment. The neighborhood suffers from unemployment (http://en.wikipedia.org/wiki/Unemployment) rates higher than the New York average (generally more than twice as high), and high mortality rates as well. With the end of the "crack wars (http://en.wikipedia.org/wiki/Crack_epidemic)" in the mid 90s and with the initiation of aggressive policing under mayor Rudolph Giuliani (http://en.wikipedia.org/wiki/Rudolph_Giuliani), crime in Harlem plummeted. Many places in Harlem are New York City Landmarks or Registered Historic Places or otherwise prominent.]]></description>
+				<styleUrl>#poly-FF6666-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.955849,40.788177,0.0 -73.943443,40.78301200000001,0.0 -73.942589,40.78389000000001,0.0 -73.94001,40.78512200000001,0.0 -73.937996,40.7873,0.0 -73.937096,40.789219,0.0 -73.935852,40.79106900000001,0.0 -73.930527,40.794415,0.0 -73.929672,40.795260999999996,0.0 -73.928856,40.797241,0.0 -73.928856,40.799709,0.0 -73.928986,40.80120500000001,0.0 -73.92971,40.80282999999999,0.0 -73.933578,40.807507,0.0 -73.934433,40.809425,0.0 -73.933922,40.81501,0.0 -73.933876,40.81842,0.0 -73.942848,40.805851,0.0 -73.941231,40.805168,0.0 -73.943054,40.802715,0.0 -73.944664,40.803398,0.0 -73.955849,40.788177,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Morningside Heights</name>
+				<description><![CDATA[This neighborhood is chiefly known as the home of institutions such as Columbia University (http://en.wikipedia.org/wiki/Columbia_University), Teachers College (http://en.wikipedia.org/wiki/Teachers_College,_Columbia_University), Barnard College (http://en.wikipedia.org/wiki/Barnard_College), the Manhattan School of Music (http://en.wikipedia.org/wiki/Manhattan_School_of_Music), among others. The neighborhood has been referred to as a "college town (http://en.wikipedia.org/wiki/College_town)" within New York City, the "Academic Acropolis", the "Acropolis of New York", and "Bloomingdale Village". A famous restaurant in Morningside Heights is Tom's Restaurant (http://en.wikipedia.org/wiki/Tom%27s_Restaurant_%28Manhattan%29), on Broadway (http://en.wikipedia.org/wiki/Broadway_%28New_York_City%29) at W. 112th (http://en.wikipedia.org/wiki/List_of_streets_in_Manhattan) St, as seen on the popular sitcom Seinfeld (http://en.wikipedia.org/wiki/Seinfeld). Notable residents include George Gershwin (http://en.wikipedia.org/wiki/George_Gershwin), who began composing his Rhapsody in Blue (http://en.wikipedia.org/wiki/Rhapsody_in_Blue) while living at 501 West 110th St. F. Scott Fitzgerald (http://en.wikipedia.org/wiki/F._Scott_Fitzgerald) lived at 200 Claremont Ave. while working in advertising and writing This Side of Paradise (http://en.wikipedia.org/wiki/This_Side_of_Paradise).]]></description>
+				<styleUrl>#poly-33CCFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.958374,40.800613,0.0 -73.951256,40.810333,0.0 -73.95460500000002,40.811699,0.0 -73.960915,40.818745,0.0 -73.963318,40.816601,0.0 -73.970779,40.80601500000001,0.0 -73.958374,40.800613,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Harlem</name>
+				<description><![CDATA[Since the 1920s, this Harlem has been a major African-American (http://en.wikipedia.org/wiki/African-American) residential, cultural and business center. Originally a Dutch (http://en.wikipedia.org/wiki/Netherlands) village, formally organized in 1658, it is named after the city of Haarlem (http://en.wikipedia.org/wiki/Haarlem) in the Netherlands (http://en.wikipedia.org/wiki/Netherlands). Harlem has been defined by a series of boom-and-bust (http://en.wikipedia.org/wiki/Boom-and-bust) cycles, with significant ethnic shifts accompanying each cycle. Black residents began to arrive en masse in 1904, with numbers fed by the Great Migration (http://en.wikipedia.org/wiki/Great_Migration_%28African_American%29). In the 1920s and 1930s, the neighborhood was the focus of the "Harlem Renaissance (http://en.wikipedia.org/wiki/Harlem_Renaissance)", an outpouring of artistic and professional works without precedent in the American black community. After years of false starts, Harlem began to see rapid gentrification (http://en.wikipedia.org/wiki/Gentrification) in the late 1990s, and in 2010, blacks ceased to be a majority of the population. There have been rallies against gentrification. Though Harlem musicians and writers are particularly well remembered, the community has also hosted numerous actors and theater companies. The New Heritage Repertory Theater, National Black Theater, and the Apollo Theater (http://en.wikipedia.org/wiki/Apollo_Theater) are all located here.]]></description>
+				<styleUrl>#poly-FFFF33-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.949387,40.797131,0.0 -73.944733,40.803398,0.0 -73.94619,40.80393600000001,0.0 -73.944405,40.806534,0.0 -73.942886,40.805885,0.0 -73.933853,40.818485,0.0 -73.934196,40.824997,0.0 -73.934685,40.82801799999999,0.0 -73.950226,40.834431,0.0 -73.951401,40.832451000000006,0.0 -73.954704,40.827873,0.0 -73.953674,40.827498999999996,0.0 -73.960846,40.818829,0.0 -73.954536,40.811764,0.0 -73.951164,40.81038300000001,0.0 -73.958138,40.800735,0.0 -73.949387,40.797131,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Manhatanville</name>
+				<description><![CDATA[Throughout the 19th century, Manhattanville was a town that bustled around a wharf active with ferry and daily river conveyances. Situated near the famous Bloomingdale Road, its hotels, houses of entertainment and post office made it an alluring destination of suburban retreat from the city. With the construction of road and railway viaducts over the valley in which the town sat, Manhattanville, increasingly absorbed into the growing city, became a marginalized industrial area. The neighborhood is now the site of a major planned expansion of Columbia University (http://en.wikipedia.org/wiki/Columbia_University), which has campuses in Morningside Heights to the south and Washington Heights (http://en.wikipedia.org/wiki/Washington_Heights,_Manhattan) to the north.]]></description>
+				<styleUrl>#poly-FFCCCC-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.949837,40.818001,0.0 -73.958702,40.82147200000001,0.0 -73.960846,40.818794000000004,0.0 -73.954536,40.81172900000001,0.0 -73.954041,40.81152,0.0 -73.954987,40.81015399999999,0.0 -73.955482,40.80940600000001,0.0 -73.952759,40.808353,0.0 -73.94986,40.812202,0.0 -73.95187400000002,40.812981,0.0 -73.94986,40.815758,0.0 -73.949814,40.816032,0.0 -73.950096,40.816555,0.0 -73.950157,40.817432,0.0 -73.949837,40.818001,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Hamilton Heights</name>
+				<description><![CDATA[The community derives its name from Founding Father Alexander Hamilton (http://en.wikipedia.org/wiki/Alexander_Hamilton), who lived the last two years of his life in the area when it was still largely farmland. Most of the housing here dates from the extension of the elevated and subway lines at the end of the 19th and the start of the 20th Century. The brownstone revival of the 1960s and 1970s led to a new movement of middle-class blacks in the area. Latinos arrived in large numbers in the 1980s, with Dominicans making up the majority. Today the local population is changing again, with Hispanics (http://en.wikipedia.org/wiki/Hispanic) constituting a majority of the population. Many actors, artists, teachers, and other professionals now reside in Hamilton Heights. Hamilton Heights is the home of City College of New York (http://en.wikipedia.org/wiki/City_College_of_New_York) (CCNY), Dance Theatre of Harlem (http://en.wikipedia.org/wiki/Dance_Theatre_of_Harlem), The Harlem School of the Arts (http://en.wikipedia.org/wiki/The_Harlem_School_of_the_Arts) and Aaron Davis Hall.]]></description>
+				<styleUrl>#poly-CCCCFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.948074,40.817333000000005,0.0 -73.944687,40.824039000000006,0.0 -73.943146,40.82624800000001,0.0 -73.941444,40.830826,0.0 -73.950203,40.834480000000006,0.0 -73.95134,40.832546,0.0 -73.954727,40.827904,0.0 -73.953674,40.827498999999996,0.0 -73.958641,40.821499,0.0 -73.948074,40.817333000000005,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Washington Heights</name>
+				<description><![CDATA[Manhattan's highest natural elevation, 265 ft (80.8 m) above sea level (http://en.wikipedia.org/wiki/Sea_level), at what was the location of Fort Washington, is located here. This played a critical role during the Battle of Fort Washington (http://en.wikipedia.org/wiki/Battle_of_Fort_Washington), which occurred on November 16, 1776, when the fort fell to the British at great cost to American forces. Over the years, the area has been home to Irish immigrants, European Jews escaping Nazism, and later many Greeks. The community was often referred to as the "Astoria (http://en.wikipedia.org/wiki/Astoria,_Queens) of Manhattan." In the 1980s, the area was severely affected by the crack cocaine epidemic (http://en.wikipedia.org/wiki/Crack_Epidemic), much of this attributed to the rampant gang activity of the time. By the 2000s, urban renewal began, along with white gentrification (http://en.wikipedia.org/wiki/Gentrification). Today, the majority of the population is of Dominican (http://en.wikipedia.org/wiki/Dominican_Republic) birth or descent, and is one Manhattan's safest neighborhoods. There are many noted sites in the area, including The Paul Robeson Home (http://en.wikipedia.org/wiki/Paul_Robeson_Home), and the Audubon Ballroom (http://en.wikipedia.org/wiki/Audubon_Ballroom), where Malcolm X (http://en.wikipedia.org/wiki/Malcolm_X) was assassinated during a speech.]]></description>
+				<styleUrl>#poly-FF9966-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.95018,40.834625,0.0 -73.934608,40.828197,0.0 -73.935165,40.833618,0.0 -73.934776,40.835667,0.0 -73.930916,40.842484,0.0 -73.929543,40.845665,0.0 -73.928429,40.847255999999994,0.0 -73.93589,40.850403,0.0 -73.940315,40.851574,0.0 -73.941086,40.85154000000001,0.0 -73.9431,40.852711,0.0 -73.946579,40.850986000000006,0.0 -73.94709,40.850048,0.0 -73.946579,40.848164000000004,0.0 -73.946877,40.847221,0.0 -73.946068,40.844139000000006,0.0 -73.948463,40.84008,0.0 -73.95018,40.834625,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Fort George</name>
+				<description><![CDATA[Fort George was one of five forts in the state of New York (http://en.wikipedia.org/wiki/New_York). There were four evolutions of Fort George, last is located here. Briefly named Fort Clinton and finally Fort George, from 1895 to 1914 it was the site of the Fort George Amusement Park, and is now George Washington High School (http://en.wikipedia.org/wiki/George_Washington_High_School_%28New_York_City%29). Fort George is a sub-neighborhood of  Washington Heights (http://en.wikipedia.org/wiki/Washington_Heights,_Manhattan), and shares much of it's overall history.]]></description>
+				<styleUrl>#poly-33CC00-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.928299,40.847416,0.0 -73.924561,40.85283999999999,0.0 -73.920418,40.858067,0.0 -73.922691,40.85894,0.0 -73.927177,40.865723,0.0 -73.931686,40.869392,0.0 -73.932587,40.86922800000001,0.0 -73.932327,40.868839,0.0 -73.932587,40.867607,0.0 -73.942848,40.852871,0.0 -73.94104,40.851704,0.0 -73.940224,40.851734,0.0 -73.935722,40.850533000000006,0.0 -73.928299,40.847416,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Inwood</name>
+				<description><![CDATA[Inwood is the northernmost neighborhood on the island of Manhattan, but not the northernmost neighborhood of the borough of Manhattan. That distinction is held by Marble Hill (http://en.wikipedia.org/wiki/Marble_Hill,_Manhattan,_New_York), situated just north of Inwood. Because of its water boundary on three sides, the hilly geography, and the limited local street connections, the neighborhood can feel somewhat physically detached from the rest of the borough. Inwood is very large in area for a Manhattan neighborhood, and its real estate is sharply bifurcated between east and west. The districts east of Broadway are of lower-income and Spanish-speaking. This area is also more industrial and commercial and has few parks and trees. Inwood Hill Park (http://en.wikipedia.org/wiki/Inwood_Hill_Park), on the Hudson River, is known for its caves (http://en.wikipedia.org/wiki/Cave) that were used by the Lenape (http://en.wikipedia.org/wiki/Lenape) before Europeans arrived, and the last salt marsh (http://en.wikipedia.org/wiki/Salt_marsh) in Manhattan. The Cloisters (http://en.wikipedia.org/wiki/The_Cloisters) in Fort Tryon Park (http://en.wikipedia.org/wiki/Fort_Tryon_Park), is the area's best known attraction. It is a branch of  the Metropolitan Museum of Art (http://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art) is devoted to Medieval art (http://en.wikipedia.org/wiki/Medieval_art) and culture.]]></description>
+				<styleUrl>#poly-CC66CC-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.920532,40.858162,0.0 -73.920242,40.858341,0.0 -73.920006,40.858406,0.0 -73.915421,40.863194,0.0 -73.914352,40.864655,0.0 -73.911301,40.868549,0.0 -73.9104,40.87150200000001,0.0 -73.91143,40.873287000000005,0.0 -73.915848,40.874714,0.0 -73.918167,40.87409600000001,0.0 -73.91864,40.873447,0.0 -73.919197,40.873936,0.0 -73.918854,40.874809,0.0 -73.920746,40.875492,0.0 -73.921303,40.875134,0.0 -73.920059,40.873901000000004,0.0 -73.9207,40.873318,0.0 -73.92173,40.873546999999995,0.0 -73.922546,40.874714,0.0 -73.922119,40.876564,0.0 -73.922714,40.877537,0.0 -73.92482,40.877666,0.0 -73.926323,40.877247,0.0 -73.926537,40.877766,0.0 -73.928596,40.87627,0.0 -73.930611,40.873837,0.0 -73.932289,40.87058999999999,0.0 -73.932205,40.869553,0.0 -73.931557,40.869617000000005,0.0 -73.927048,40.865772,0.0 -73.92263,40.859019999999994,0.0 -73.920532,40.858162,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Turtle Bay</name>
+				<description><![CDATA[Turtle Bay, so named in the 17th century, was a valuable shelter from the often harsh weather of the East River, and it also became a thriving site for shipbuilding. Some celebrity residents include actors Katharine Hepburn (http://en.wikipedia.org/wiki/Katharine_Hepburn), June Havoc (http://en.wikipedia.org/wiki/June_Havoc), Ricardo Montalban (http://en.wikipedia.org/wiki/Ricardo_Montalban) and Tyrone Power (http://en.wikipedia.org/wiki/Tyrone_Power), journalists Dorothy Thompson (http://en.wikipedia.org/wiki/Dorothy_Thompson) and E. B. White (http://en.wikipedia.org/wiki/E._B._White), who wrote Charlotte's Web (http://en.wikipedia.org/wiki/Charlotte%27s_Web) when living on 48th Street. It was designated the Turtle Bay Gardens Historic District in 1966.]]></description>
+				<styleUrl>#poly-CCCCFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.96859,40.747356,0.0 -73.967857,40.748135000000005,0.0 -73.962006,40.754749,0.0 -73.961487,40.755222,0.0 -73.970543,40.759041,0.0 -73.976593,40.750816,0.0 -73.96859,40.747356,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Manhattan Valley</name>
+				<description><![CDATA[Manhattan Valley was originally part of the Bloomingdale District (http://en.wikipedia.org/wiki/Bloomingdale_District) of Manhattan. Early development in the 1870s and 1880s focused on institutional care for the ill or aged. The area was populated mostly by Irish (http://en.wikipedia.org/wiki/Irish-American) and German (http://en.wikipedia.org/wiki/German-American) immigrants in the 1930s through 1950s, until their decline in the following years, mirroring a general urban deterioration in Manhattan.]]></description>
+				<styleUrl>#poly-FFCCFF-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.95842,40.800564,0.0 -73.966751,40.804226,0.0 -73.967781,40.80267,0.0 -73.968079,40.800327,0.0 -73.968468,40.79922500000001,0.0 -73.971855,40.79461299999999,0.0 -73.964844,40.79163700000001,0.0 -73.95842,40.800564,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Lincoln Square</name>
+				<description><![CDATA[Some areas share much of the same gritty past (as depicted in West Side Story (http://en.wikipedia.org/wiki/West_Side_Story_%28musical%29)) as Hell's Kitchen (http://en.wikipedia.org/wiki/Hell%27s_Kitchen,_Manhattan), to the south. The development of Lincoln Center, and more recently Trump Place (http://en.wikipedia.org/wiki/Trump_Place) and other upscale high-rise apartment buildings have brought a measure of gentrification (http://en.wikipedia.org/wiki/Gentrification) to the western end of Lincoln Square. Tourist information, sidewalk trash removal, and security patrol services are provided by the Lincoln Square BID (http://en.wikipedia.org/wiki/Business_Improvement_District). The famed Lincoln Center for the Performing Arts (http://en.wikipedia.org/wiki/Lincoln_Center_for_the_Performing_Arts) is located here. The reason for naming the area "Lincoln Square" is unknown.]]></description>
+				<styleUrl>#poly-FFFF99-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.975952,40.776203,0.0 -73.988068,40.781258,0.0 -73.988998,40.779956999999996,0.0 -73.991333,40.77981200000001,0.0 -73.99144,40.779583,0.0 -73.988846,40.779728,0.0 -73.990265,40.777649,0.0 -73.990883,40.777649,0.0 -73.992455,40.77547100000001,0.0 -73.99243200000001,40.775066,0.0 -73.993935,40.773182,0.0 -73.99601,40.77409,0.0 -73.996124,40.77393,0.0 -73.98502300000001,40.769409,0.0 -73.984383,40.770126,0.0 -73.982346,40.769234,0.0 -73.982193,40.76871100000001,0.0 -73.981705,40.768680999999994,0.0 -73.981445,40.768581,0.0 -73.975952,40.776203,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Lenox Hill</name>
+				<description><![CDATA[The neighborhood is named for the tenant farm of the immigrant Scottish merchant Robert Lenox (1759-1839). Lenox Hill Hospital (http://en.wikipedia.org/wiki/Lenox_Hill_Hospital), the former German Hospital, is located in this area. Its renaming in July 1918, as a result of anti-German sentiment during World War I, gave impetus to the name "Lenox Hill" for the area, doubtless on the analogy of fashionable Murray Hill (http://en.wikipedia.org/wiki/Murray_Hill,_Manhattan), though the hospital itself, a city block bounded on the north and south by 77th and 76th streets, and on the west and east by Park and Lexington Avenues, does not stand on former Lenox property.]]></description>
+				<styleUrl>#poly-FF9900-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.950745,40.766468,0.0 -73.966751,40.773228,0.0 -73.973183,40.764389,0.0 -73.958809,40.758572,0.0 -73.954262,40.762375,0.0 -73.950745,40.766468,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Yorkville</name>
+				<description><![CDATA[Historically, Yorkville's western half was referred to as "Irishtown", main artery, E 86th St (http://en.wikipedia.org/wiki/86th_Street_%28Manhattan%29), was sometimes called the "German Broadway (http://en.wikipedia.org/wiki/Broadway_%28New_York_City%29)," due to such habitants during the 19th and 20th century. Many of the area's long-time residents still live in Yorkville. Some prominent locations here include Brandy's Saloon, a popular 84th Street piano bar dating from the speak-easy era of the 1920s. Gracie Mansion (http://en.wikipedia.org/wiki/Gracie_Mansion), located here, is the official home of the mayor (http://en.wikipedia.org/wiki/Mayor) of New York City, and Carl Schurz Park (http://en.wikipedia.org/wiki/Carl_Schurz_Park).]]></description>
+				<styleUrl>#poly-FFCCCC-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.957268,40.774269,0.0 -73.94735,40.770206,0.0 -73.943489,40.774109,0.0 -73.94194,40.776218,0.0 -73.94207,40.77716100000001,0.0 -73.943832,40.78051,0.0 -73.943916,40.781712,0.0 -73.943619,40.782818,0.0 -73.949409,40.785286,0.0 -73.957268,40.774269,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Randall's Island</name>
+				<styleUrl>#poly-009900-3-115-nodesc</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.936195,40.78437399999999,0.0 -73.935165,40.783043,0.0 -73.931129,40.78249,0.0 -73.928253,40.781094,0.0 -73.927269,40.781124,0.0 -73.92572,40.78233,0.0 -73.924431,40.78233,0.0 -73.922806,40.783531,0.0 -73.922073,40.78570899999999,0.0 -73.918472,40.78937899999999,0.0 -73.91851,40.78980299999999,0.0 -73.917267,40.790451,0.0 -73.91658,40.790451,0.0 -73.916023,40.791428,0.0 -73.91375,40.793865,0.0 -73.913788,40.794544,0.0 -73.915123,40.797112,0.0 -73.920227,40.79929,0.0 -73.921906,40.801434,0.0 -73.92276,40.801922,0.0 -73.925552,40.802082,0.0 -73.927696,40.79837800000001,0.0 -73.92705500000001,40.796623,0.0 -73.927094,40.795002,0.0 -73.928551,40.792854,0.0 -73.928299,40.792175,0.0 -73.927094,40.791817,0.0 -73.92804,40.791039000000005,0.0 -73.929756,40.791458000000006,0.0 -73.93121300000001,40.79084,0.0 -73.935722,40.78574,0.0 -73.936195,40.78437399999999,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>West Village</name>
+				<description><![CDATA[Primarily residential, with a multitude of small restaurants, shops and services. Known as "Little Bohemia" starting in 1916, West Village is the center of the bohemian (http://en.wikipedia.org/wiki/Bohemianism) lifestyle on the West Side, with classic artist's lofts and new residential towers. The neighborhood is distinguished by streets that are "off the grid" — set at an angle to the other streets in Manhattan — sometimes confusing both tourists and city residents alike. These roads were laid out in an 18th century  (http://en.wikipedia.org/wiki/Loft)grid plan (http://en.wikipedia.org/wiki/Grid_plan), approximately parallel or perpendicular to the Hudson, long before the Commissioners' Plan of 1811 (http://en.wikipedia.org/wiki/Commissioners%27_Plan_of_1811) which created the main street grid plan for later parts of the city.]]></description>
+				<styleUrl>#poly-FF9900-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-74.005371,40.740967,0.0 -74.006546,40.739452,0.0 -74.009872,40.739258,0.0 -74.01071200000001,40.729290000000006,0.0 -74.002876,40.728382,0.0 -74.001228,40.731403,0.0 -73.99689500000001,40.737404,0.0 -74.005371,40.740967,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>NoMad</name>
+				<description><![CDATA["NOrth of MADison Square Park" encompasses Little India, aka "Curry Hill", as well as a variety of businesses of all sizes in landmarked office buildings. NoMad's early history is closely aligned with that of Madison Square Park (http://en.wikipedia.org/wiki/Madison_Square_Park), which has been a public space since 1686. A commercial boom followed with the growth of hotels, restaurants, entertainment venues and office buildings, many of which are still standing. NoMad is home to the Museum of Sex (http://en.wikipedia.org/wiki/Museum_of_Sex), the New York Comedy Club and Tada! Youth Theater, and is also a center for antique galleries and one of the city’s largest collections of weekend flea markets. Nightspots and clubs include the Breslin Lobby Bar, Jay Z (http://en.wikipedia.org/wiki/Jay_Z)’s 40/40, the rooftop bar at 230 Fifth Avenue, Gstaad, Hillstone’s, and the Park Avenue Country Club.]]></description>
+				<styleUrl>#poly-FF9900-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.991905,40.744217,0.0 -73.988609,40.742828,0.0 -73.988182,40.743462,0.0 -73.98658,40.742779,0.0 -73.98703,40.742176,0.0 -73.98555,40.741550000000004,0.0 -73.983322,40.744671000000004,0.0 -73.989662,40.747299,0.0 -73.991905,40.744217,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Tudor City</name>
+				<description><![CDATA[Tudor City is the first residential (http://en.wikipedia.org/wiki/Residential) skyscraper (http://en.wikipedia.org/wiki/Skyscraper) complex in the world. Before Tudor City, tenements (http://en.wikipedia.org/wiki/Tenement) and slums (http://en.wikipedia.org/wiki/Slum) dominated the area, which bordered a power plant (http://en.wikipedia.org/wiki/Power_plant) and slaughterhouses (http://en.wikipedia.org/wiki/Slaughterhouse). The area eventually developed into a shanty Irish community, and later a high rate of violent crime and a haven for waterfront thieves. Today it is considered to be quite safe. Tudor City is featured in a number of film and television programs, including The Godfather Part III (http://en.wikipedia.org/wiki/The_Godfather_Part_III) and Spider-Man (http://en.wikipedia.org/wiki/Spider-Man_%28film%29). (http://en.wikipedia.org/wiki/Spider-Man_%28film%29)]]></description>
+				<styleUrl>#poly-990000-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.973114,40.748566,0.0 -73.970802,40.747574,0.0 -73.969391,40.749573,0.0 -73.971756,40.750507,0.0 -73.973114,40.748566,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Diamond District</name>
+				<description><![CDATA[The area is one of the primary centers of the global diamond industry. It was created when dealers moved north from an earlier district near Canal Street (http://en.wikipedia.org/wiki/Canal_Street_%28Manhattan%29) and the Bowery (http://en.wikipedia.org/wiki/Bowery), and from the Financial District (http://en.wikipedia.org/wiki/Financial_District,_Manhattan). It grew in importance when the German Nazis (http://en.wikipedia.org/wiki/Nazis) invaded the Netherlands (http://en.wikipedia.org/wiki/Netherlands) and Belgium (http://en.wikipedia.org/wiki/Belgium), forcing thousands of Orthodox Jews (http://en.wikipedia.org/wiki/Orthodox_Jews) in the diamond business to flee to New York City. An estimated 90% of diamonds in the United States enter through this area. Total receipts for the value of a single day's trade on the block average $400 million.]]></description>
+				<styleUrl>#poly-000099-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.982063,40.757759,0.0 -73.978867,40.756393,0.0 -73.97839400000001,40.757034,0.0 -73.98159,40.758373,0.0 -73.982063,40.757759,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Roosevelt Island</name>
+				<styleUrl>#poly-0000FF-3-115-nodesc</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.961517,40.750076,0.0 -73.961655,40.749573,0.0 -73.96151,40.749435000000005,0.0 -73.961128,40.74949999999999,0.0 -73.960716,40.750046,0.0 -73.959534,40.75087400000001,0.0 -73.95903,40.751411,0.0 -73.95787,40.752182,0.0 -73.95672600000002,40.75320399999999,0.0 -73.955231,40.754791,0.0 -73.95504,40.754871,0.0 -73.953522,40.756172,0.0 -73.952255,40.757507,0.0 -73.951935,40.758263,0.0 -73.951111,40.758991,0.0 -73.950073,40.760132,0.0 -73.949318,40.7607,0.0 -73.94785300000001,40.762454999999996,0.0 -73.944832,40.7659,0.0 -73.942741,40.768435999999994,0.0 -73.941467,40.769257,0.0 -73.941101,40.769466,0.0 -73.940407,40.770466,0.0 -73.940208,40.770882,0.0 -73.940308,40.772408,0.0 -73.940018,40.77294499999999,0.0 -73.940308,40.77301800000001,0.0 -73.940628,40.772537,0.0 -73.941254,40.77235000000001,0.0 -73.942154,40.772068,0.0 -73.942474,40.771767000000004,0.0 -73.943314,40.770889000000004,0.0 -73.944435,40.770012,0.0 -73.944748,40.769783000000004,0.0 -73.945137,40.76913499999999,0.0 -73.94529000000001,40.76879099999999,0.0 -73.945572,40.768818,0.0 -73.945686,40.768703,0.0 -73.945541,40.768688,0.0 -73.94574,40.768387,0.0 -73.946068,40.768166,0.0 -73.946365,40.767574,0.0 -73.94754800000001,40.766266,0.0 -73.949081,40.764252000000006,0.0 -73.949333,40.764202000000004,0.0 -73.950157,40.763477,0.0 -73.951302,40.76209600000001,0.0 -73.95163,40.7617,0.0 -73.95209500000001,40.76088,0.0 -73.95298,40.759975,0.0 -73.953117,40.760048,0.0 -73.953407,40.759815,0.0 -73.953331,40.759731,0.0 -73.953728,40.759399,0.0 -73.953941,40.759171,0.0 -73.95507,40.757816,0.0 -73.955643,40.757042,0.0 -73.956055,40.756618,0.0 -73.958038,40.75449799999999,0.0 -73.958908,40.753605,0.0 -73.959084,40.753563,0.0 -73.95948,40.753029,0.0 -73.959984,40.751858,0.0 -73.961082,40.750717,0.0 -73.961121,40.7505,0.0 -73.961205,40.750393,0.0 -73.961197,40.75016,0.0 -73.961517,40.750076,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark>
+				<name>Marble Hill</name>
+				<description><![CDATA[Although it is politically part of Manhattan and New York County (http://en.wikipedia.org/wiki/New_York_County), because of the re-routing of the Harlem River (http://en.wikipedia.org/wiki/Harlem_River), it is located on the North American mainland contiguous to The Bronx (http://en.wikipedia.org/wiki/The_Bronx), not on Manhattan Island (http://en.wikipedia.org/wiki/Manhattan_Island). Because of its geography, Marble Hill is often associated with the Bronx; for instance, it is part of two of the Bronx's Community Board Districts. Marble Hill has been occupied since the Dutch colonial (http://en.wikipedia.org/wiki/Dutch_colonization_of_the_Americas) period.]]></description>
+				<styleUrl>#poly-FFCC00-3-115</styleUrl>
+				<Polygon>
+					<outerBoundaryIs>
+						<LinearRing>
+							<tessellate>1</tessellate>
+							<coordinates>-73.91555,40.875679,0.0 -73.912193,40.874744,0.0 -73.910858,40.87418699999999,0.0 -73.910278,40.873791,0.0 -73.909363,40.872814,0.0 -73.909019,40.872246,0.0 -73.907692,40.873528,0.0 -73.907112,40.87624,0.0 -73.908043,40.877593999999995,0.0 -73.909325,40.87842200000001,0.0 -73.909355,40.879013,0.0 -73.911163,40.879482,0.0 -73.911736,40.878754,0.0 -73.915146,40.876587,0.0 -73.91555,40.875679,0.0</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+		<Style id='poly-000099-3-115-normal'>
+			<LineStyle>
+				<color>ff990000</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73990000</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-000099-3-115-highlight'>
+			<LineStyle>
+				<color>ff990000</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73990000</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-000099-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-000099-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-000099-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-0000FF-3-115-nodesc-normal'>
+			<LineStyle>
+				<color>ffFF0000</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF0000</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-0000FF-3-115-nodesc-highlight'>
+			<LineStyle>
+				<color>ffFF0000</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF0000</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-0000FF-3-115-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-0000FF-3-115-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-0000FF-3-115-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-009900-3-115-nodesc-normal'>
+			<LineStyle>
+				<color>ff009900</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73009900</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-009900-3-115-nodesc-highlight'>
+			<LineStyle>
+				<color>ff009900</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73009900</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-009900-3-115-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-009900-3-115-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-009900-3-115-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-3366FF-3-115-normal'>
+			<LineStyle>
+				<color>ffFF6633</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF6633</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-3366FF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFF6633</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF6633</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-3366FF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-3366FF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-3366FF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-33CC00-3-115-normal'>
+			<LineStyle>
+				<color>ff00CC33</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7300CC33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-33CC00-3-115-highlight'>
+			<LineStyle>
+				<color>ff00CC33</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7300CC33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-33CC00-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-33CC00-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-33CC00-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-33CCFF-3-115-normal'>
+			<LineStyle>
+				<color>ffFFCC33</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFCC33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-33CCFF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFFCC33</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFCC33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-33CCFF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-33CCFF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-33CCFF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-33FF33-3-115-normal'>
+			<LineStyle>
+				<color>ff33FF33</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7333FF33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-33FF33-3-115-highlight'>
+			<LineStyle>
+				<color>ff33FF33</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7333FF33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-33FF33-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-33FF33-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-33FF33-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-33FFFF-3-115-normal'>
+			<LineStyle>
+				<color>ffFFFF33</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFFF33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-33FFFF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFFFF33</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFFF33</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-33FFFF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-33FFFF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-33FFFF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-66FF99-3-115-normal'>
+			<LineStyle>
+				<color>ff99FF66</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7399FF66</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-66FF99-3-115-highlight'>
+			<LineStyle>
+				<color>ff99FF66</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7399FF66</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-66FF99-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-66FF99-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-66FF99-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-66FF99-3-115-nodesc-normal'>
+			<LineStyle>
+				<color>ff99FF66</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7399FF66</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-66FF99-3-115-nodesc-highlight'>
+			<LineStyle>
+				<color>ff99FF66</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7399FF66</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-66FF99-3-115-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-66FF99-3-115-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-66FF99-3-115-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-66FFFF-3-115-normal'>
+			<LineStyle>
+				<color>ffFFFF66</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFFF66</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-66FFFF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFFFF66</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFFF66</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-66FFFF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-66FFFF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-66FFFF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-990000-3-115-normal'>
+			<LineStyle>
+				<color>ff000099</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73000099</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-990000-3-115-highlight'>
+			<LineStyle>
+				<color>ff000099</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73000099</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-990000-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-990000-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-990000-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-9999FF-3-115-normal'>
+			<LineStyle>
+				<color>ffFF9999</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF9999</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-9999FF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFF9999</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF9999</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-9999FF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-9999FF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-9999FF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-9999FF-3-115-nodesc-normal'>
+			<LineStyle>
+				<color>ffFF9999</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF9999</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-9999FF-3-115-nodesc-highlight'>
+			<LineStyle>
+				<color>ffFF9999</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF9999</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-9999FF-3-115-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-9999FF-3-115-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-9999FF-3-115-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-99FFFF-3-115-normal'>
+			<LineStyle>
+				<color>ffFFFF99</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFFF99</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-99FFFF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFFFF99</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFFF99</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-99FFFF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-99FFFF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-99FFFF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-CC66CC-3-115-normal'>
+			<LineStyle>
+				<color>ffCC66CC</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73CC66CC</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-CC66CC-3-115-highlight'>
+			<LineStyle>
+				<color>ffCC66CC</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73CC66CC</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-CC66CC-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-CC66CC-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-CC66CC-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-CCCCFF-3-115-normal'>
+			<LineStyle>
+				<color>ffFFCCCC</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFCCCC</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-CCCCFF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFFCCCC</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFCCCC</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-CCCCFF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-CCCCFF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-CCCCFF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FF6666-3-115-normal'>
+			<LineStyle>
+				<color>ff6666FF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>736666FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FF6666-3-115-highlight'>
+			<LineStyle>
+				<color>ff6666FF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>736666FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FF6666-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FF6666-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FF6666-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FF9900-3-115-normal'>
+			<LineStyle>
+				<color>ff0099FF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>730099FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FF9900-3-115-highlight'>
+			<LineStyle>
+				<color>ff0099FF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>730099FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FF9900-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FF9900-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FF9900-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FF9966-3-115-normal'>
+			<LineStyle>
+				<color>ff6699FF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>736699FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FF9966-3-115-highlight'>
+			<LineStyle>
+				<color>ff6699FF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>736699FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FF9966-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FF9966-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FF9966-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FF99FF-3-115-normal'>
+			<LineStyle>
+				<color>ffFF99FF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF99FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FF99FF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFF99FF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF99FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FF99FF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FF99FF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FF99FF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FF99FF-3-115-nodesc-normal'>
+			<LineStyle>
+				<color>ffFF99FF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF99FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<Style id='poly-FF99FF-3-115-nodesc-highlight'>
+			<LineStyle>
+				<color>ffFF99FF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FF99FF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+			<BalloonStyle>
+				<text><![CDATA[<h3>$[name]</h3>]]></text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='poly-FF99FF-3-115-nodesc'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FF99FF-3-115-nodesc-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FF99FF-3-115-nodesc-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFCC00-3-115-normal'>
+			<LineStyle>
+				<color>ff00CCFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7300CCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFCC00-3-115-highlight'>
+			<LineStyle>
+				<color>ff00CCFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7300CCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFCC00-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFCC00-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFCC00-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFCC66-3-115-normal'>
+			<LineStyle>
+				<color>ff66CCFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7366CCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFCC66-3-115-highlight'>
+			<LineStyle>
+				<color>ff66CCFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7366CCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFCC66-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFCC66-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFCC66-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFCCCC-3-115-normal'>
+			<LineStyle>
+				<color>ffCCCCFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73CCCCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFCCCC-3-115-highlight'>
+			<LineStyle>
+				<color>ffCCCCFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73CCCCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFCCCC-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFCCCC-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFCCCC-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFCCFF-3-115-normal'>
+			<LineStyle>
+				<color>ffFFCCFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFCCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFCCFF-3-115-highlight'>
+			<LineStyle>
+				<color>ffFFCCFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>73FFCCFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFCCFF-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFCCFF-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFCCFF-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFFF33-3-115-normal'>
+			<LineStyle>
+				<color>ff33FFFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7333FFFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFFF33-3-115-highlight'>
+			<LineStyle>
+				<color>ff33FFFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7333FFFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFFF33-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFFF33-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFFF33-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFFF66-3-115-normal'>
+			<LineStyle>
+				<color>ff66FFFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7366FFFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFFF66-3-115-highlight'>
+			<LineStyle>
+				<color>ff66FFFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7366FFFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFFF66-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFFF66-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFFF66-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='poly-FFFF99-3-115-normal'>
+			<LineStyle>
+				<color>ff99FFFF</color>
+				<width>3</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7399FFFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<Style id='poly-FFFF99-3-115-highlight'>
+			<LineStyle>
+				<color>ff99FFFF</color>
+				<width>5.0</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7399FFFF</color>
+				<fill>1</fill>
+				<outline>1</outline>
+			</PolyStyle>
+		</Style>
+		<StyleMap id='poly-FFFF99-3-115'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#poly-FFFF99-3-115-normal</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#poly-FFFF99-3-115-highlight</styleUrl>
+			</Pair>
+		</StyleMap>
+	</Document>
+</kml>

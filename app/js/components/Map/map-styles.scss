@@ -1,0 +1,51 @@
+:global(#map) {
+  @media only screen
+    and (min-width: 767px)
+    and (max-width: 1023px) {
+    padding: 1em;
+    display: flex;
+  }
+
+  @media only screen
+    and (max-width: 425px) {
+      padding: 0;
+    }
+
+  flex: 1;
+  position: relative;
+  padding: 4em;
+  :global(img, embed, object, video) {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  z-index: 10;
+}
+
+:global(#map > div:first-child) {
+  @media only screen
+    and (min-width: 767px)
+    and (max-width: 1023px) {
+    height: 80%;
+    align-self: center;
+  }
+
+  @media only screen
+    and (max-width: 425px) {
+      position: absolute;
+  }
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .gm-style {
+    position: relative;
+  }
+}
+
+:global(#map *) {
+    overflow:visible;
+}

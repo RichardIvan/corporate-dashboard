@@ -34,3 +34,14 @@ export const CLEAR_TIMESTAMP: string = 'CLEAR_TIMESTAMP'
 export const SET_RANGE: string = 'SET_RANGE'
 
 export const CHANGE_VISIBLE_CHART: string = 'CHANGE_VISIBLE_CHART'
+
+export const SET_ACTIVE_LOCATION: string = 'SET_ACTIVE_LOCATION'
+
+export const SET_GRAPH_DATA_PENDING_STATE: string = 'SET_GRAPH_DATA_PENDING_STATE'
+
+export const GEOSPACIAL = 'Geospacial'
+export const GRAPHS = 'Graphs'
+export const DATA = 'Data'
+
+export const MOBILE_STATE_CHANGE: string = 'MOBILE_STATE_CHANGE'
+export const MOBILE_NAVBAR_STATE_CHANGE = 'MOBILE_NAVBAR_STATE_CHANGE'

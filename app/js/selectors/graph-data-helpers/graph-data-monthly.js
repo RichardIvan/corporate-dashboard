@@ -12,7 +12,7 @@ import {
 } from '../../helpers/moment'
 
 
-export function getMonthlyTotals(data: Map, range: Map): Map {
+export function getMonthlyTotals (data: Map, range: Map): Map {
   const months: List<string> = getMonthlyDates(range)
 
   const dates: List<string> = reverseDateStrings(months)

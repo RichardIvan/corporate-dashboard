@@ -1,33 +1,33 @@
-export function getHeaderColumnNames() {
+export function getHeaderColumnNames () {
   return [
     {
       type: 'name',
-      name: 'Name',
+      name: 'Name'
     },
     {
       type: 'email_address',
-      name: 'Email',
+      name: 'Email'
     },
     {
       type: 'description',
-      name: 'Description',
+      name: 'Description'
     },
     {
       type: 'opening_timestamp',
-      name: 'Opened',
+      name: 'Opened'
     },
     {
       type: 'closing_timestamp',
-      name: 'Closed',
+      name: 'Closed'
     },
     {
       type: 'employee_name',
-      name: 'Empl.',
+      name: 'Empl.'
     },
     {
       type: 'open_status',
-      name: 'Status',
-    },
+      name: 'Status'
+    }
   ]
 }
 
@@ -39,5 +39,5 @@ export const mockedIssue = {
   opened: '10/12/16',
   closed: '11/12/16',
   employee: 'Rocky Balboa',
-  status: 'closed',
+  status: 'closed'
 }

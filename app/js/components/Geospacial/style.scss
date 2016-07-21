@@ -1,0 +1,28 @@
+.geo-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  background: #4D327E;
+
+  .header {
+    color: #928CA0;
+    height: 64px;
+    margin: 0 26px;
+    border-bottom: 1px solid #979797;
+    font-weight: 100;
+    font-style: italic;
+  }
+  :global(h2) {
+    // margin-left: 26px;
+    font-weight: 100;
+  }
+}
+
+.geo-inner-container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+
+  background: #4D327E;
+}

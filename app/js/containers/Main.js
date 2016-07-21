@@ -1,3 +1,4 @@
+
 'use strict'
 
 import m from 'mithril'
@@ -15,12 +16,12 @@ const Main = {
     return m(MainComponent,
       {
         ...vnode.attrs,
-        container: retrieveContainer(vnode.attrs.route),
+        container: retrieveContainer(vnode.attrs.route)
       },
       [
-        vnode.attrs.route === 'data' ? m(Pagination, { ...vnode.attrs }) : null,
+        vnode.attrs.route === 'data' ? m(Pagination, { ...vnode.attrs }) : null
       ])
-  },
+  }
 }
 
 export default Main

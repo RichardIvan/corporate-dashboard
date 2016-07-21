@@ -11,14 +11,14 @@ import {
   getHighestDate,
   getMonthlyTotals,
   getDailyTotals,
-  mergeResultsByType,
+  mergeResultsByType
 } from './graph-data-helpers'
 
 import {
-  formatDate,
+  formatDate
 } from '../helpers/moment'
 
-export function getGraphData(...args: Array<any>): Map {
+export function getGraphData (...args: Array<any>): Map {
   if (!args.length) {
     throw new Error('missing state argument')
   }
@@ -26,8 +26,11 @@ export function getGraphData(...args: Array<any>): Map {
   return state.graphData.get('data')
 }
 
+export function getGraphDataInfo (state) {
+  return state.graphData.get('info')
+}
 
-export function getGraphDataByRange(data: Map, range: Map, types: List<string>): List {
+export function getGraphDataByRange (data: Map, range: Map, types: List<string>, info: Map): List {
   if (!Map.isMap(data) || !Map.isMap(range) || !List.isList(types)) {
     throw new Error('incorrect argument(s)')
   }
@@ -37,20 +40,20 @@ export function getGraphDataByRange(data: Map, range: Map, types: List<string>):
   const rangeType: string = range.get('range')
 
   switch (rangeType) {
-  case 'all': {
-    const fullRange: Map = new Map({
-      from: formatDate(getLowestDate(data)),
-      to: formatDate(getHighestDate(data)),
-    })
-    result = getMonthlyTotals(data, fullRange)
-    break
-  }
-  case 'set': {
-    result = getDailyTotals(data, range)
-    break
-  }
-  default:
-    throw new Error('incorrect range type')
+    case 'all': {
+      const fullRange: Map = new Map({
+        from: formatDate(info.get('lowestDate')),
+        to: formatDate(info.get('highestDate'))
+      })
+      result = getMonthlyTotals(data, fullRange)
+      break
+    }
+    case 'set': {
+      result = getDailyTotals(data, range)
+      break
+    }
+    default:
+      throw new Error('incorrect range type')
   }
 
   // takes data and creates a an array of eitreis for the graph
@@ -59,4 +62,8 @@ export function getGraphDataByRange(data: Map, range: Map, types: List<string>):
   const mergedResult = mergeResultsByType(result, types)
 
   return mergedResult
+}
+
+export function getChartDataPendingState (state) {
+  return state.graphData.get('pending')
 }

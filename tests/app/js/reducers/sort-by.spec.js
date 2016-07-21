@@ -41,7 +41,6 @@ describe('Sort Reducer', () => {
 
     const action = setSort('opening_timestamp')
 
-    console.log(state)
     const newState = reducer(state, action)
 
     expect(newState).toEqual(fromJS({
@@ -53,8 +52,9 @@ describe('Sort Reducer', () => {
   // should return initial state
   it('should return initial state', () => {
     const action = setSort('a')
+    let undefinedState
 
-    const newState = reducer(undefined, action)
+    const newState = reducer(undefinedState, action)
 
     expect(newState).toEqual(fromJS({
       type: 'a',
@@ -64,13 +64,12 @@ describe('Sort Reducer', () => {
 
   // should return state for unrecognized action type
   it('should return state for unrecognized action type', () => {
-    const action = setSort('UNRECOGNIZED_TYPE')
+    const action = {
+      type: 'UNRECOGNIZED_TYPE',
+    }
 
     const newState = reducer(initialState, action)
 
-    expect(newState).toEqual(fromJS({
-      type: 'UNRECOGNIZED_TYPE',
-      asc: true,
-    }))
+    expect(newState).toEqual(initialState)
   })
 })

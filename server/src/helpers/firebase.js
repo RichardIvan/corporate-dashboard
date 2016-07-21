@@ -23,7 +23,7 @@ if (env !== 'test') {
 
   firebase.initializeApp(config)
   db = firebase.database()
-  data = db.ref('corporate-dashboard/data/issues').once('value').then((snap) => snap.val())
+  data = db.ref('corporate-dashboard/newData/issues').once('value').then((snap) => snap.val())
 }
 
 export function saveToFirebase (d) {
@@ -33,7 +33,7 @@ export function saveToFirebase (d) {
   }, {})
 
   Object.keys(issues)
-        .map((key) => db.ref(`corporate-dashboard/data/issues/${key}`)
+        .map((key) => db.ref(`corporate-dashboard/newData/issues/${key}`)
                         .set(issues[key]))
   // data.forEach((item) => {
   //   const key = item.id
@@ -41,10 +41,10 @@ export function saveToFirebase (d) {
   // })
 }
 
-export function fetchFirebase() {
-  return data.then((issues) => sampleSize(issues, 1000))
+export function fetchFirebase () {
+  return data.then((issues) => sampleSize(issues, 8))
 }
 
-export function fetchSingleItemFromFirebase() {
+export function fetchSingleItemFromFirebase () {
   return data.then((issues) => sampleSize(issues))
 }

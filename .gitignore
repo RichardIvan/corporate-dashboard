@@ -4,6 +4,6 @@ coverage
 .imdone
 misc
 npm-debug.log.*
-app/icons/
 !app/icons/google/msvg/navigation/menu.js
 ospec
+icons

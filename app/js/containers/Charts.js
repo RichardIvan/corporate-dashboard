@@ -4,25 +4,18 @@
 import m from 'mithril'
 import moment from 'moment'
 
-import {
-  List,
-} from 'immutable'
-
 import isEqual from 'lodash/isEqual'
-import isEmpty from 'lodash/isEmpty'
 
-if (isEmpty(process.env)) {
+const env = process.env.NODE_ENV
+
+if (env !== 'test') {
   require('amcharts3/amcharts/amcharts')
   require('amcharts3/amcharts/serial')
-  const amcharts = window.AmCharts
 }
 
 import styles from '../components/Charts/chart-styles.scss'
 
-import ChartComponent from '../components/Charts'
-
 // import armcharts
-import { setChartDataPendingState } from '../actions'
 import { generateChart } from '../services'
 import {
   getChartData,
@@ -47,7 +40,7 @@ const ChartContainer = {
     // console.log(getChartDataPendingState(state))
     if (getChartDataPendingState(state)) return
 
-    const dispatch = vnode.attrs.store.dispatch
+    // const dispatch = vnode.attrs.store.dispatch
     // dispatch(setChartDataPendingState(true))
 
     const newData = getChartData(state).toJS()

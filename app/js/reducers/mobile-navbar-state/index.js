@@ -10,7 +10,6 @@ import {
 } from '../../actions'
 
 export function mobileNavbarState (state = Map({ state: false }), action: Object): Map {
-  console.log(action)
   switch (action.type) {
     case MOBILE_NAVBAR_STATE_CHANGE:
       return state.set('state', action.payload.state.value)

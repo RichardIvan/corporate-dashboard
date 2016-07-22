@@ -20,7 +20,7 @@ const store = {
   }
 }
 
-describe.only('Range Selection Widget Component', () => {
+describe('Range Selection Widget Component', () => {
   // it should have two inputs
   it('should have two datetype inputs', () => {
     const out = mq(RangeSelectionComponent, { store })

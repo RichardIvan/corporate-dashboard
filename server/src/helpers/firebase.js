@@ -41,6 +41,10 @@ export function saveToFirebase (d) {
   // })
 }
 
+export function fetchAllItemsInFirebase () {
+  return data
+}
+
 export function fetchFirebase () {
   return data.then((issues) => sampleSize(issues, 8))
 }

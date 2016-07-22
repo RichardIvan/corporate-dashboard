@@ -4,18 +4,22 @@ import { pushData } from '../actions'
 
 import { generateSingleCustomerData } from './paying-customers'
 
+// import {
+//   fetchSingleItemFromFirebase
+// } from '../helpers/firebase'
+
 import {
-  fetchSingleItemFromFirebase,
-} from '../helpers/firebase'
+  fetchSingleItem
+} from '../helpers/data'
 
 export function startServerPush (socket) {
   console.log('STARTTED SERVER PUSH')
-  setInterval(() => fetchSingleItemFromFirebase()
+  setInterval(() => fetchSingleItem()
     .then((data) => socket.emit('data', {
       action: pushData({
         data,
-        payingCustomersData: generateSingleCustomerData(),
-      }),
+        payingCustomersData: generateSingleCustomerData()
+      })
     }))
   , 5000)
   return true

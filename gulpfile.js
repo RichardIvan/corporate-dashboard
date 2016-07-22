@@ -101,4 +101,12 @@ gulp.task('socket', () => gulp.src('', { read: false })
   .pipe(shell(['npm run server']))
 )
 
+gulp.task('db', () => gulp.src('', { read: false })
+  .pipe(shell(['npm run db']))
+)
+
+gulp.task('start', () => {
+  runSequence(['db', 'socket'])
+})
+
 gulp.task('default', ['socket', 'webpack-dev-server'])

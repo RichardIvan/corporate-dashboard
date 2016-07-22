@@ -66,10 +66,9 @@ describe('setRange actio creaator', () => {
     payload = {
       range: 'set',
       from: 123,
-      to: '',
+      to: ''
     }
     expect(setRange.bind(null, payload)).toNotThrow()
-
   })
 
   it('should calculate from number if only to is being passed in', () => {
@@ -86,7 +85,7 @@ describe('setRange actio creaator', () => {
       payload: {
         range: 'set',
         from: from,
-        to: to,
+        to: to
       }
     })
   })

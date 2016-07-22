@@ -15,7 +15,7 @@ module.exports = {
     index: './app/js/index.js'
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, './dist'),
     // Template based on keys in entry above
     filename: './js/[name].js'
   },
@@ -35,7 +35,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './app/index.html'
     }),
-    new ExtractTextPlugin('./css/main.css', { allChunks: true })
+    new ExtractTextPlugin('./css/main.css', { allChunks: true }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ],
   module: {
     loaders: [{
@@ -70,9 +75,10 @@ module.exports = {
     }],
     postcss () {
       return [precss, autoprefixer]
-    },
-    sassLoader: {
-      includePaths: [path.resolve(__dirname, './')]
     }
   }
+  //   sassLoader: {
+  //     includePaths: [path.resolve(__dirname, './')]
+  //   }
+  // }
 }

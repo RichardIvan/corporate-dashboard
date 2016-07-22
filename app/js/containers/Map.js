@@ -38,18 +38,14 @@ const MapContainer = {
   },
   onbeforeupdate (vnode) {
     const route = vnode.attrs.route
-    console.log(route)
     if (route !== 'geo') {
       const dom = vnode.dom
-      console.log(dom)
       vnode.state.infowindow = null
       vnode.state.map = null
       vnode.state.google = null
     }
 
     const infowindow = vnode.state.infowindow
-
-    console.log(infowindow)
 
     if (!infowindow) return false
 
@@ -128,8 +124,7 @@ const MapContainer = {
         // infowindow.open(map)
       })
 
-      map.data.addListener('*', (e) => {
-        console.log(e)
+      map.data.addListener('click', (e) => {
         map.data.overrideStyle(e.feature, {fillColor: '#FFFFFF'})
 
         const name = e.feature.H.name

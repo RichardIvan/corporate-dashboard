@@ -3,7 +3,7 @@
 
 
 # corporate-dashboard
-Udacity Corporate Dashboard Project - Focusing on modularity and component based application design.
+Udacity Corporate Dashboard Project - Focusing on modularity and component based application design. This application is accepting a CSV file on load and continuously updates data without full page refresh by pushing new JSON data through Socket IO connection, merging this data to Redux store and dom diffing this new state with Mithril's auto-redrawing system.
 
 ## Features & Technologies
 
@@ -14,6 +14,7 @@ Udacity Corporate Dashboard Project - Focusing on modularity and component based
 * Live reloading.
 * ES6 via [Babel](https://babeljs.io/).
 * [Standard](https://github.com/feross/standard) linting via ESLint.
+* [Socket io](http://socket.io/)
 * [Firebase](https://firebase.google.com/)
 * [Mocha](https://mochajs.org/) + [Expect](https://github.com/mjackson/expect)
 * [Mithril Query](https://github.com/StephanHoyer/mithril-query/tree/rewrite)

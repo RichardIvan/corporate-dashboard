@@ -5,6 +5,9 @@ coverage
 misc
 npm-debug.log.*
 !app/icons/google/msvg/navigation/menu.js
+app/icons/google/svg
+app/icons/google/mmsvg
 app/icons/templarian
 app/icons/zavoloklom
 ospec
+icons

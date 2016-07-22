@@ -4,3 +4,8 @@ coverage
 .imdone
 misc
 npm-debug.log.*
+app/icons/templarian
+app/icons/zavoloklom
+app/icons/google
+!app/icons/google/msvg/navigation/menu.js
+ospec

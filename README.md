@@ -7,19 +7,19 @@ Udacity Corporate Dashboard Project - Focusing on modularity and component based
 
 ## Features & Technologies
 
-* [https://github.com/lhorie/mithril.js/tree/rewrite](Mithril 1.0)
-* [https://github.com/webpack/webpack](Webpack build system)
-* [https://github.com/reactjs/redux](Redux) + [https://facebook.github.io/immutable-js/](Immutable JS)
-* [circleci.com](Circle CI) + Code Coverage via [coveralls.io](Coveralls)
+* [Mithril 1.0](https://github.com/lhorie/mithril.js/tree/rewrite)
+* [Webpack build system](https://github.com/webpack/webpack)
+* [Redux](https://github.com/reactjs/redux) + [Immutable JS](https://facebook.github.io/immutable-js/)
+* [Circle CI](circleci.com) + Code Coverage via [Coveralls](coveralls.io)
 * Live reloading.
-* ES6 via [https://babeljs.io/](Babel).
-* [https://github.com/feross/standard](Standard) linting via ESLint.
-* [https://firebase.google.com/](Firebase)
-* [https://mochajs.org/](Mocha) + [https://github.com/mjackson/expect](Expect)
-* [https://github.com/StephanHoyer/mithril-query/tree/rewrite](Mithril Query)
-* [https://github.com/StephanHoyer/mithril-node-render/tree/rewrite](Mithril Node Render)
-* [http://gulpjs.com/](Gulp)
-* [https://flowtype.org/](Flowtype) Typechecking
+* ES6 via [Babel](https://babeljs.io/).
+* [Standard](https://github.com/feross/standard) linting via ESLint.
+* [Firebase](https://firebase.google.com/)
+* [Mocha](https://mochajs.org/) + [Expect](https://github.com/mjackson/expect)
+* [Mithril Query](https://github.com/StephanHoyer/mithril-query/tree/rewrite)
+* [Mithril Node Render](https://github.com/StephanHoyer/mithril-node-render/tree/rewrite)
+* [Gulp](http://gulpjs.com/)
+* [Flowtype](https://flowtype.org/) Typechecking
 
 
 ## Installation

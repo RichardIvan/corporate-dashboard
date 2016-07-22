@@ -5,6 +5,7 @@ coverage
 misc
 npm-debug.log.*
 !app/icons/google/msvg/navigation/menu.js
+!app/icons/google/msvg/navigation
 app/icons/google/svg
 app/icons/google/mmsvg/action
 app/icons/google/mmsvg/alert
@@ -20,7 +21,7 @@ app/icons/google/mmsvg/maps
 app/icons/google/mmsvg/notification
 app/icons/google/mmsvg/places
 app/icons/google/mmsvg/social
-app/icons/google/mmsvg/toggle
+app/icons/google/mmsvg/togglegit
 app/icons/templarian
 app/icons/zavoloklom
 ospec

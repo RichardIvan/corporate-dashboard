@@ -117,7 +117,6 @@
     "reselect": "^2.5.1",
     "run-sequence": "^1.2.1",
     "sass-loader": "^3.2.0",
-    "serve-static": "^1.11.1",
     "socket.io": "^1.4.6",
     "socket.io-client": "^1.4.6",
     "standard": "^7.1.2",

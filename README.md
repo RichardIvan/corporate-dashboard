@@ -1,5 +1,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/RichardIvan/corporate-dashboard/badge.svg?branch=master)](https://coveralls.io/github/RichardIvan/corporate-dashboard?branch=master)
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7f21023e29374ae6a2ba214ac9d76035)](https://www.codacy.com/app/richardivan-com/corporate-dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=RichardIvan/corporate-dashboard&amp;utm_campaign=Badge_Grade)
 
 
 # corporate-dashboard

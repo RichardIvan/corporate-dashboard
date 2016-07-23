@@ -5,7 +5,7 @@ import { describe, it, beforeEach } from 'mocha'
 import expect from 'expect'
 
 import {
-  getLocations,
+  getLocations
 } from '../../../../../app/js/selectors'
 
 describe('Location Selector', () => {

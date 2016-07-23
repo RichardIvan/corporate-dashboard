@@ -10,7 +10,7 @@ const Navbar = {
       m(`ul.${style.navbar__ul}`, [
         m(`li.${style.navbar__li}`, m('span', 'D')),
         vnode.attrs.icons.map((icon, index) => m(`li.${style.navbar__li}`, {
-          onclick: () => m.route.setPath(`/dashboard/${vnode.attrs.routes[index]}`)
+          onclick: () => m.route.set(`/dashboard/${vnode.attrs.routes[index]}`)
         }, icon))
       ])
     ])

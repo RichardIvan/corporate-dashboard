@@ -6,7 +6,7 @@
   "scripts": {
     "_old_test": "babel-istanbul cover --report lcovonly ospec/bin/ospec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "_old_local-test": "babel-node ./ospec/bin/ospec",
-    "local-test": "node_modules/.bin/babel-node node_modules/.bin/_mocha --require mocha-clean/absolute_paths --require ./tests/setup --require clarify --recursive ./tests --require=env-test --color",
+    "local-test": "node_modules/.bin/babel-node node_modules/.bin/_mocha --require mocha-clean/absolute_paths --require ./tests/setup --require=env-test --require clarify --recursive ./tests --color",
     "local-test:watch": "npm run local-test -- --watch",
     "_old_cover": "babel-node _isparta cover --report lcovonly ospec/bin/ospec",
     "cover": "node_modules/.bin/babel-node node_modules/.bin/babel-istanbul cover node_modules/.bin/_mocha -- --require ./tests/setup --recursive ./tests",
@@ -43,7 +43,7 @@
   "devDependencies": {
     "amcharts": "^3.14.5",
     "amcharts3": "github:amcharts/amcharts3",
-    "babel-cli": "^6.9.0",
+    "babel-cli": "^6.11.4",
     "babel-core": "^6.9.1",
     "babel-eslint": "^6.0.4",
     "babel-istanbul": "^0.8.0",

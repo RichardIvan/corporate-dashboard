@@ -45,3 +45,5 @@ export const DATA = 'Data'
 
 export const MOBILE_STATE_CHANGE: string = 'MOBILE_STATE_CHANGE'
 export const MOBILE_NAVBAR_STATE_CHANGE = 'MOBILE_NAVBAR_STATE_CHANGE'
+
+export const DELETED_ISSUE: string = 'DELETED_ISSUE'

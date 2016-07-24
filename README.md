@@ -35,7 +35,7 @@ Get started by installing npm; please follow this tutorial -> [http://blog.npmjs
 
 * Run ```gulp start```
 
-View demo in the browser at 'http://localhost:8080'
+View demo in the browser at 'http://localhost:1337'
 
 Thank you for checking out this project.
 

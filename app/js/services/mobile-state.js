@@ -14,9 +14,9 @@ export function setWindowSizeListener (store: Object) {
     window.onresize = (e) => {
       const state = isMobile(store.getState())
       const width = document.documentElement.clientWidth
-      if (!state && width <= 425) {
+      if (!state && width <= 680) {
         store.dispatch(setMobileState(true))
-      } else if (state && width > 425) {
+      } else if (state && width > 680) {
         store.dispatch(setMobileState(false))
       }
     }

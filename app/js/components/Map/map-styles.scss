@@ -1,13 +1,13 @@
 :global(#map) {
   @media only screen
-    and (min-width: 767px)
+    and (min-width: 681px)
     and (max-width: 1023px) {
     padding: 1em;
     display: flex;
   }
 
   @media only screen
-    and (max-width: 425px) {
+    and (max-width: 680px) {
       padding: 0;
     }
 
@@ -26,14 +26,14 @@
 
 :global(#map > div:first-child) {
   @media only screen
-    and (min-width: 767px)
+    and (min-width: 681px)
     and (max-width: 1023px) {
     height: 80%;
     align-self: center;
   }
 
   @media only screen
-    and (max-width: 425px) {
+    and (max-width: 680px) {
       position: absolute;
   }
 

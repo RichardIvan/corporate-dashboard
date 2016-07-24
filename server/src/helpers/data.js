@@ -6,12 +6,13 @@ import {
   sampleSize
 } from 'lodash'
 
-const data = fetch('http://localhost:8080/issues').then(res => res.json())
+// const data = fetch('http://localhost:8080/issues').then(res => res.json())
+const fetchItems = () => fetch('http://localhost:1337/db/issues/').then(res => res.json())
 
 export function fetchData () {
-  return data.then(issues => sampleSize(issues, 111))
+  return fetchItems().then(issues => sampleSize(issues, 111))
 }
 
 export function fetchSingleItem () {
-  return data.then((issues) => sampleSize(issues))
+  return fetchItems().then((issues) => sampleSize(issues))
 }

@@ -17,6 +17,7 @@ import {
   SET_FILTER,
   SET_SORT,
   RESET_FILTERS,
+  DELETED_ISSUE
 } from '../actions'
 
 export const initialState = fromJS(new Array(10).fill(List.of()))
@@ -26,6 +27,7 @@ const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
     switch (action.type) {
     case INIT_LOAD:
     case PUSH_DATA:
+    case DELETED_ISSUE:
     case SET_FILTER:
     case RESET_FILTERS:
     case SET_SORT: {

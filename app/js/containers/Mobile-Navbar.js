@@ -39,7 +39,7 @@ const MobileNavbar = {
         routeName,
         isOpen: isOpen(vnode.attrs.store.getState()),
         onclick: (path) => () => {
-          m.route.setPath(`/dashboard/${path}`)
+          m.route.set(`/dashboard/${path}`)
           setMobileNavbarOpenState(false)
         }
       }

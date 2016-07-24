@@ -25,19 +25,19 @@ export const initialState = fromJS(new Array(10).fill(List.of()))
 const filteredSorted = createReducer({ filteredIssuesReducer, sortByReducer },
   (state = initialState, action, { filteredIssuesReducer, sortByReducer }) => {
     switch (action.type) {
-    case INIT_LOAD:
-    case PUSH_DATA:
-    case DELETED_ISSUE:
-    case SET_FILTER:
-    case RESET_FILTERS:
-    case SET_SORT: {
-      const sorted = filteredIssuesReducer.sortBy((item) =>
-                        item.getIn([sortByReducer.get('type'), 'original']))
-      return sortByReducer.get('asc') ? sorted : sorted.reverse()
-      // console.log('run sorted!!!')
-    }
-    default:
-      return state
+      case INIT_LOAD:
+      case PUSH_DATA:
+      case DELETED_ISSUE:
+      case SET_FILTER:
+      case RESET_FILTERS:
+      case SET_SORT: {
+        const sorted = filteredIssuesReducer.sortBy((item) =>
+                          item.getIn([sortByReducer.get('type'), 'original']))
+        return sortByReducer.get('asc') ? sorted : sorted.reverse()
+        // console.log('run sorted!!!')
+      }
+      default:
+        return state
     }
 
 

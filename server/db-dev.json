@@ -1,0 +1,70 @@
+{
+  "issues": [
+    {
+      "closing_timestamp": 1459795343583,
+      "description": "Vivamus in felis eu sapien cursus vestibulum.",
+      "email_address": "bedwardsg7@squarespace.com",
+      "employee_name": "Bruce Edwards",
+      "id": "000089ef-e282-44bb-93a5-5b3554992192",
+      "location": "Diamond District",
+      "name": "Marilyn Ward",
+      "open_status": false,
+      "opening_timestamp": 1452670529092
+    },
+    {
+      "closing_timestamp": 1461943598529,
+      "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "email_address": "eriverait@mediafire.com",
+      "employee_name": "Eric Rivera",
+      "id": "00047f4d-526c-42f4-abb4-56e81a496e27",
+      "location": "Meatpacking District",
+      "name": "Janice Butler",
+      "open_status": false,
+      "opening_timestamp": 1452721284169
+    },
+    {
+      "closing_timestamp": "",
+      "description": "Aenean lectus.",
+      "email_address": "lrichardson6z@marriott.com",
+      "employee_name": "Louis Richardson",
+      "id": "0015b6c7-9522-41a7-bcfa-a18d915cc819",
+      "location": "Chinatown",
+      "name": "Melissa Collins",
+      "open_status": true,
+      "opening_timestamp": 1438252707069
+    },
+    {
+      "closing_timestamp": 1465101266574,
+      "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+      "email_address": "jpetersonnt@microsoft.com",
+      "employee_name": "Joseph Peterson",
+      "id": "002c31f4-0fb5-4650-8773-7b274f88048f",
+      "location": "Little Italy",
+      "name": "Martin Greene",
+      "open_status": false,
+      "opening_timestamp": 1464998048990
+    },
+    {
+      "closing_timestamp": "",
+      "description": "Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
+      "email_address": "jharvey35@mit.edu",
+      "employee_name": "Jose Harvey",
+      "id": "0023daed-3edc-4269-bc7d-b98fa74c8457",
+      "location": "Hamilton Heights",
+      "name": "Christopher Stanley",
+      "open_status": true,
+      "opening_timestamp": 1457274607971
+    },
+    {
+      "closing_timestamp": 1452041998884,
+      "description": "Maecenas pulvinar lobortis est.",
+      "email_address": "abarnes6p@skype.com",
+      "employee_name": "Anthony Barnes",
+      "id": "00237dce-150c-4b41-aee1-4e49627f26c1",
+      "location": "Flatiron District",
+      "name": "Jeremy Hughes",
+      "open_status": false,
+      "opening_timestamp": 1444422441641
+    }
+  ]
+}

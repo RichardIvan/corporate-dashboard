@@ -55,12 +55,8 @@ server.use(express.static('dist/build'))
 server.use(middlewares)
 
 router.render = function (req, res) {
-  console.log(req.method)
-  console.log(res.locals.data)
   if (req.method === 'DELETE' && isEmpty(res.locals.data)) {
-    console.log('DELETED')
     const id = last(compact(req.path.split('/')))
-    console.log(id)
     io.sockets.emit('data', {
       action: deletedItem({
         id
@@ -77,7 +73,7 @@ server.use('/db/', router)
 
 // const httpServer = http.createServer((server))
 
-server.listen(1337, function () {
+server.listen(3000, function () {
   console.log('JSON Server is running')
 })
 //

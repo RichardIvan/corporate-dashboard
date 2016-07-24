@@ -22,7 +22,6 @@ export default function issues (state = new Map(), action) {
     }
     case DELETED_ISSUE: {
       const id = action.payload.id
-      console.log(state.has(id))
       return state
     }
     default:

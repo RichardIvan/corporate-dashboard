@@ -24,7 +24,6 @@ const issues = createReducer((state = Map(), action) => {
     }
     case DELETED_ISSUE: {
       const id = action.payload.id
-      console.log(state.has(id))
       return state.delete(id)
     }
     default:

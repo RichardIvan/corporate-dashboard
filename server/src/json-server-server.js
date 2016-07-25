@@ -43,29 +43,31 @@ var router = jsonServer.router('./server/db.json')
 var middlewares = jsonServer.defaults()
 server.use(express.static('dist/build'))
 
-// server.use((req, res, next) => {
-//   // console.error(err.stack)
-//   // console.log(req)
-//   // console.log(res)
-//   console.log('middleware bro')
-//   // res.status(500).send('Something broke!');
-//   next()
-// })
+const itemsForDeletion = {}
+
+server.use((req, res, next) => {
+  if (req.method === 'DELETE') {
+    const id = last(compact(req.path.split('/')))
+    const issue = router.db.get('issues').value().filter(issue => issue.id === id)[0]
+    itemsForDeletion[id] = issue
+  }
+  next()
+})
 
 server.use(middlewares)
 
 router.render = function (req, res) {
   if (req.method === 'DELETE' && isEmpty(res.locals.data)) {
+    // console.log(res)
     const id = last(compact(req.path.split('/')))
+    const issue = itemsForDeletion[id]
     io.sockets.emit('data', {
       action: deletedItem({
-        id
+        issue
       })
     })
+    delete itemsForDeletion[id]
   }
-  // res.jsonp({
-  //  body: res.locals.data
-  // })
   res.json(res.locals.data)
 }
 

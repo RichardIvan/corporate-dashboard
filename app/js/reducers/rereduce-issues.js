@@ -23,7 +23,7 @@ const issues = createReducer((state = Map(), action) => {
       return state.mergeDeep(fromJS(action.payload.data))
     }
     case DELETED_ISSUE: {
-      const id = action.payload.id
+      const id = action.payload.issue.id
       return state.delete(id)
     }
     default:

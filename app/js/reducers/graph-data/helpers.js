@@ -11,11 +11,11 @@ import reduce from 'lodash/reduce'
 import cloneDeep from 'lodash/cloneDeep'
 
 import {
-  getDatesInRange,
+  getDatesInRange
 } from '../../selectors/graph-data-helpers/general-graph-data-helpers'
 
 
-export function constructRange(issue: Object): Map {
+export function constructRange (issue: Object): Map {
   const from = issue.opening_timestamp.original
   const closingStamp = issue.closing_timestamp.original
   const status = issue.open_status.original
@@ -31,12 +31,12 @@ export function constructRange(issue: Object): Map {
   })
 }
 
-export function constructPath(path: Array<string>, date: string): Array<string> {
+export function constructPath (path: Array<string>, date: string): Array<string> {
   const dateArray = date.split('/')
   return path.concat(dateArray).concat(['openIssuesData'])
 }
 
-export function fillIssues(state: Map, i: Object): Map {
+export function fillIssues (state: Map, i: Object): Map {
   const issue = cloneDeep(i)
   const path: Array<string> = ['data']
   const range = constructRange(issue)
@@ -62,7 +62,7 @@ export function fillIssues(state: Map, i: Object): Map {
 
 // data passed in is json issues 0bject
 // state passed in is the complete state
-export function addOpenIssuesData(state: Map, data: Object): Map {
+export function addOpenIssuesData (state: Map, data: Object): Map {
   const transformed = reduce(data, (acc, issue) => {
     return fillIssues(acc, issue)
   }, state)

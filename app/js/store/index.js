@@ -7,7 +7,7 @@ import rootReducer from '../reducers'
 const middleware = [
   thunkMiddleware,
   // createLogger(),
-  mithrilMiddleware
+  // mithrilMiddleware
 ]
 
 const enhancer = applyMiddleware(...middleware)

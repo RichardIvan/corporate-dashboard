@@ -8,7 +8,8 @@ import { Map } from 'immutable'
 import {
   SET_RANGE,
   PUSH_DATA,
-  INIT_LOAD
+  INIT_LOAD,
+  DELETED_ISSUE
 } from '../actions'
 
 import issuesReducer from './rereduce-issues'
@@ -22,7 +23,6 @@ const openIssues = createReducer({ issuesReducer, rangeReducer },
       case INIT_LOAD:
       case PUSH_DATA:
       case SET_RANGE: {
-        console.log(range)
         if (range === 'all') {
           const total = issuesReducer.filter((issue) => {
             const status = issue.getIn(['open_status', 'original'])
@@ -58,6 +58,15 @@ const openIssues = createReducer({ issuesReducer, rangeReducer },
         }
         return state
       }
+      case DELETED_ISSUE:
+        const issue = action.payload.issue
+        const id = issue.id
+        if (state.get('issues').has(id)) {
+          const currentTotal = state.get('total')
+          return state.set('total', currentTotal > 0 ? currentTotal - 1 : 0)
+                      .set('issues', state.get('issues').delete(id))
+        }
+        return state
       default:
         return state
     }

@@ -23,17 +23,6 @@
       "opening_timestamp": 1452721284169
     },
     {
-      "closing_timestamp": "",
-      "description": "Aenean lectus.",
-      "email_address": "lrichardson6z@marriott.com",
-      "employee_name": "Louis Richardson",
-      "id": "0015b6c7-9522-41a7-bcfa-a18d915cc819",
-      "location": "Chinatown",
-      "name": "Melissa Collins",
-      "open_status": true,
-      "opening_timestamp": 1438252707069
-    },
-    {
       "closing_timestamp": 1465101266574,
       "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
       "email_address": "jpetersonnt@microsoft.com",
@@ -45,17 +34,6 @@
       "opening_timestamp": 1464998048990
     },
     {
-      "closing_timestamp": "",
-      "description": "Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
-      "email_address": "jharvey35@mit.edu",
-      "employee_name": "Jose Harvey",
-      "id": "0023daed-3edc-4269-bc7d-b98fa74c8457",
-      "location": "Hamilton Heights",
-      "name": "Christopher Stanley",
-      "open_status": true,
-      "opening_timestamp": 1457274607971
-    },
-    {
       "closing_timestamp": 1452041998884,
       "description": "Maecenas pulvinar lobortis est.",
       "email_address": "abarnes6p@skype.com",
@@ -65,6 +43,17 @@
       "name": "Jeremy Hughes",
       "open_status": false,
       "opening_timestamp": 1444422441641
+    },
+    {
+      "closing_timestamp": "",
+      "description": "Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
+      "email_address": "jharvey35@mit.edu",
+      "employee_name": "Jose Harvey",
+      "id": "0023daed-3edc-4269-bc7d-b98fa74c8457",
+      "location": "Hamilton Heights",
+      "name": "Christopher Stanley",
+      "open_status": true,
+      "opening_timestamp": 1457274607971
     }
   ]
 }

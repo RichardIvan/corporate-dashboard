@@ -24,6 +24,8 @@
 import { createReducer } from 'rereduce'
 import forEach from 'lodash/forEach'
 
+import m from 'mithril'
+
 import {
   Map,
   fromJS
@@ -35,6 +37,7 @@ import locations from '../../../data/geojson/markers.json'
 import {
   INIT_LOAD,
   PUSH_DATA,
+  DELETED_ISSUE,
   SET_ACTIVE_LOCATION
 } from '../../actions'
 
@@ -98,6 +101,31 @@ export function locationListReducer (state: Map, action: Object, openIssues: Map
     }
     case SET_ACTIVE_LOCATION:
       return state.set('active', action.payload.value)
+    case DELETED_ISSUE:
+      const issue = action.payload.issue
+      const id = issue.id
+      const location = issue.location
+      const employee = issue.employee_name
+
+      return state.setIn(['data', location, 'issues'], state.getIn(['data', location, 'issues']).delete(id))
+                  .setIn(['data', location, 'employees'], state.getIn(['data', location, 'employees']).delete(employee))
+      // const nextState = state.set('data', state.get('data').map(location => {
+      //   // console.log(location.get('locations').toJS())
+      //
+      //   
+      //   console.log(id)
+      //   let newIssue = location
+      //   if (location.has('issues')) {
+      //     const locationIssues = location.get('issues')
+      //     if (locationIssues.has(id)) {
+      //       console.log('was true')
+      //       newIssue = location.set('issues', location.get('issues').delete(id))
+      //     }
+      //   }
+      //   return newIssue
+      // }))
+      // console.log(nextState.toJS())
+      // return nextState
     default:
       return state
   }

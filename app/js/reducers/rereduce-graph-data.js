@@ -10,17 +10,20 @@ import { Map, fromJS } from 'immutable'
 import {
   INIT_LOAD,
   PUSH_DATA,
+  DELETED_ISSUE,
   SET_GRAPH_DATA_PENDING_STATE
 } from '../actions'
 
 import {
   addOpenIssuesData,
-  fillIssues
+  fillIssues,
+  constructPath
 } from './graph-data/helpers'
 
 import {
   getLowestDate,
-  getHighestDate
+  getHighestDate,
+  getDatesInRange
 } from '../selectors/graph-data-helpers/general-graph-data-helpers'
 
 export const initialState = Map({ data: Map(), pending: false })
@@ -65,6 +68,43 @@ const graphData = createReducer((state = initialState, action) => {
 
       return newState
     }
+    case DELETED_ISSUE:
+      const issue = action.payload.issue
+      const id = issue.id
+      const openingTimestamp = +issue.opening_timestamp
+      let closingTimestamp = issue.closing_timestamp
+
+      const date = moment().format('x')
+
+      closingTimestamp = closingTimestamp === '' ? +date : +closingTimestamp
+
+      const range = Map({
+        from: openingTimestamp,
+        to: closingTimestamp
+      })
+
+      const dates = getDatesInRange(range)
+
+      // const oldDate = state.get('data')
+      let newState = dates.reduce((acc, date) => {
+        const p = ['data']
+        const path = constructPath(p, date)
+        const entry = acc.getIn(path)
+        if (entry && entry.has(id)) {
+          return acc.setIn(path, entry.delete(id))
+        }
+        return acc
+      }, state)
+
+      // const p = ['data']
+      // const path = constructPath(p, date)
+      // console.log(path)
+      // const entry = state.getIn(path)
+      // console.log(entry)
+      // if (entry.has(id)) {
+      //   return state.setIn(path, entry.delete(id))
+      // }
+      return newState
     case SET_GRAPH_DATA_PENDING_STATE:
       return state.set('pending', action.payload.value)
     default:

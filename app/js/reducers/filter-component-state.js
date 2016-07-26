@@ -62,7 +62,6 @@ export default function(state: Map = initialState, action) {
     case EMAIL_TYPE:
     case EMPLOYEE_TYPE:
     case LOCATION_TYPE:
-      console.log(state.get('filterSearchQuery'))
       return state.set('filterSearchQuery', action.payload.term)
               .set('filterSearchQueryResults', fromJS(action.payload.results))
     default:

@@ -5,19 +5,19 @@ import Server from 'socket.io'
 const io = new Server(3333)
 
 import {
-  generatePayingCustomerData,
+  generatePayingCustomerData
 } from './helpers/paying-customers'
 
 import {
-  transformFirebaseEntryToCSV,
+  transformFirebaseEntryToCSV
 } from './helpers/transformer'
 
 import {
-  startServerPush,
+  startServerPush
 } from './helpers/server-push'
 
 import {
-  fetchFirebase,
+  fetchFirebase
 } from './helpers/firebase'
 
 import { initialFetch } from './actions'
@@ -33,13 +33,12 @@ export function startServer () {
       // .then(transformJSONtoCSV)
       .then(transformFirebaseEntryToCSV)
       .then((data) => socket.emit('data', {
-          action: initialFetch({
-            data,
-            payingCustomersData: generatePayingCustomerData(),
-          }),
-        }))
+        action: initialFetch({
+          data,
+          payingCustomersData: generatePayingCustomerData()
+        })
+      }))
       .then(startServerPush.bind(null, socket))
-
 
     // fetchMockaroo()
     //   .then(fillIDs)

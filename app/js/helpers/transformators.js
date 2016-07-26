@@ -43,19 +43,19 @@ function transformEmail(email: string) {
   return transformed
 }
 
-function transformTimestamp(timestamp: number) {
+function transformTimestamp (timestamp: number) {
   return moment(timestamp).format('DD/MM/YY')
 }
 
-function transformEmployeeName(name: string): string {
+function transformEmployeeName (name: string): string {
   return map(name.split(' '), (part) => `${upper(first(part))}.`).join('')
 }
 
-function transformOpenStatus(value): string {
+function transformOpenStatus (value): string {
   return (value === 'true' || value === true) ? 'open' : 'closed'
 }
 
-function transformLocation(value: string) {
+function transformLocation (value: string) {
   return `${value.substr(0, 2)}${value.substr(-2, 2)}`.toUpperCase()
 }
 

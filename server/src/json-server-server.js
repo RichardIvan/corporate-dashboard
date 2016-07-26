@@ -33,13 +33,15 @@ import {
 
 import {
   initialFetch,
-  deletedItem
+  deletedItem,
+  pushData
 } from './actions'
 // const http = require('http')
 
 var server = jsonServer.create()
 
 var router = jsonServer.router('./server/db.json')
+// var router = jsonServer.router('./server/dev-db.json')
 var middlewares = jsonServer.defaults()
 server.use(express.static('dist/build'))
 
@@ -67,6 +69,14 @@ router.render = function (req, res) {
       })
     })
     delete itemsForDeletion[id]
+  }
+  if (req.method === 'POST') {
+    const issue = res.locals.data
+    io.sockets.emit('data', {
+      action: pushData({
+        data: [issue]
+      })
+    })
   }
   res.json(res.locals.data)
 }

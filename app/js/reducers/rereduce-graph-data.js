@@ -49,6 +49,7 @@ const graphData = createReducer((state = initialState, action) => {
       requiredData.forEach((type) => {
         if (type === 'payingCustomersData') {
           // #TODO #FIX
+          if (!action.payload.payingCustomersData) return
 
           const newValue = fromJS(action.payload.payingCustomersData).getIn(path.splice(1))
           // console.log(newValue.toJS())

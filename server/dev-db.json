@@ -43,17 +43,6 @@
       "name": "Jeremy Hughes",
       "open_status": false,
       "opening_timestamp": 1444422441641
-    },
-    {
-      "closing_timestamp": "",
-      "description": "Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus. Phasellus in felis. Donec semper sapien a libero.",
-      "email_address": "jharvey35@mit.edu",
-      "employee_name": "Jose Harvey",
-      "id": "0023daed-3edc-4269-bc7d-b98fa74c8457",
-      "location": "Hamilton Heights",
-      "name": "Christopher Stanley",
-      "open_status": true,
-      "opening_timestamp": 1457274607971
     }
   ]
 }
